@@ -4,8 +4,8 @@ import {Link} from 'react-router-dom';
 export default (props) => {
     return (
         <div>
-            <div> PLayer List </div>
-            <h1>joined</h1>
+            <div>Host Event Game Page for Game 1 </div>
+            <Link to="/events/id/host" className="nav-link">Edit Game</Link>
             <Link to="/profile" className="nav-link">YOUR PROFILE</Link>
         </div>
 
