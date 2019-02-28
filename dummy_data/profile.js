@@ -1,0 +1,57 @@
+let profile = [
+   {
+      id: 1,
+      userPlayerName: "Rockstar",
+      userFirstName: "Matthew", 
+      userLastName: "Stan",
+      userDOB: "1982-06-22",
+      userEmail: "stan@email.com",
+      userPhone: 4145555555,
+      userJoinDate: "2019-02-19",
+      gameList: []
+   },
+   {
+      id: 2,
+      userPlayerName: "Puppies",
+      userFirstName: "John", 
+      userLastName: "Smith",
+      userDOB: "2001-06-01",
+      userEmail: "smith@email.com",
+      userPhone: 4445555555,
+      userJoinDate: "2018-01-19",
+      gameList: []
+   },
+   {
+      id: 3,
+      userPlayerName: "AlienHead",
+      userFirstName: "Joe", 
+      userLastName: "Bob",
+      userDOB: "1956-02-27",
+      userEmail: "bob@email.com",
+      userPhone: 9205555555,
+      userJoinDate: "2019-01-19",
+      gameList: []
+   },
+   {
+      id: 4,
+      userPlayerName: "Mr.Awesome",
+      userFirstName: "Awe", 
+      userLastName: "Some",
+      userDOB: "2013-10-22",
+      userEmail: "awesome@email.com",
+      userPhone: 3334445555,
+      userJoinDate: "2019-01-01",
+      gameList: []
+   },
+   {
+      id: 5,
+      userPlayerName: "Yo-Momma",
+      userFirstName: "Some", 
+      userLastName: "Guy",
+      userDOB: "1901-01-01",
+      userEmail: "someguy@email.com",
+      userPhone: 6664445555,
+      userJoinDate: "2019-02-19",
+      gameList: []
+   },
+]
