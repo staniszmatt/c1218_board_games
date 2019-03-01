@@ -1,43 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../assets/css/events.css';
 
 export default (props) => {
     return (
-       <div>
-           <h1 className="center "> Event Information</h1>
+        <div className='ceneter'>
+            <div className="header-container col s12">
+                <h1 className="">Available Events</h1>
+            </div>
+            <div className="main-container">
 
-          <div>
-              <div>Host: Topher Uchiha</div>
+                <Link to="/events/id" className="nav-link">
+                    <div className="event-container">
+                        <div className="event-info-container">
+                            <span className="event-title">Game 1 Title</span>
+                            <br />
+                            <span className="event-player-count">PlayerCount Here</span>
+                            <br />
+                            <span className="event-date-time">Event Time here Here</span>
+                        </div>
+                        <div className="event-image">
+                            <span>picture here</span>
+                        </div >
+                    </div>
+                </Link>
 
-              <div>Game Title: Magic The Gathering</div>
 
-              <div>
-                  <ul>
-                      <li>Date: 4-20-1984</li>
-                      <li>Time: 1:00P.M.</li>
-                  </ul>
-              </div>
+                <Link to="/events/id" className="nav-link">
+                <div className="event-container">
+                        <div className="event-info-container">
+                            <span className="event-title">Game 2 Title</span>
+                            <br />
+                            <span className="event-player-count">PlayerCount Here</span>
+                            <br />
+                            <span className="event-date-time">Event Time here Here</span>
+                        </div>
+                        <div className="event-image">
+                            <span>picture here</span>
+                        </div >
+                    </div>
+                </Link>
 
-              <div>
-                  <ul>
-                      <li>Address: Some Address</li>
-                      <li>City: Beverly Hills</li>
-                      <li>State: CA</li>
-                      <li>Zip: 90210</li>
-                  </ul>
-              </div>
 
-              <div>
-                  <div> 4 - 6 </div>
-              </div>
+                <Link to="/events/id" className="nav-link">
+                <div className="event-container">
+                        <div className="event-info-container">
+                            <span className="event-title">Game 3 Title</span>
+                            <br />
+                            <span className="event-player-count">PlayerCount Here</span>
+                            <br />
+                            <span className="event-date-time">Event Time here Here</span>
+                        </div>
+                        <div className="event-image">
+                            <span>picture here</span>
+                        </div >
+                    </div>
+                </Link>
 
-          </div>
-           <div>
-               <Link to="/events/id" className="nav-link">Game 1</Link>
-               <h1>game2</h1>
-               <Link to="/events/id" className="nav-link">Game 2</Link>
-           </div>
-       </div>
 
+            </div>
+            <div className="foot-conatiner">
+                <h3>nav</h3>
+            </div>
+        </div>
     );
 }
