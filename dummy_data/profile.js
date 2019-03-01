@@ -8,17 +8,29 @@ let profile = [
       userEmail: "stan@email.com",
       userPhone: 4145555555,
       userJoinDate: "2019-02-19",
+      location: {
+         streetAddress: "9999 Town Square",
+         city: "Milwaukee",
+         state: "WI",
+         zipCode: 53206
+      },
       gameList: []
    },
    {
       id: 2,
-      userPlayerName: "Puppies",
+      userPlayerName: "LMFAO",
       userFirstName: "John", 
       userLastName: "Smith",
       userDOB: "2001-06-01",
       userEmail: "smith@email.com",
       userPhone: 4445555555,
       userJoinDate: "2018-01-19",
+      location: {
+         streetAddress: "9999 Town Square",
+         city: "Milwaukee",
+         state: "WI",
+         zipCode: 53206
+      },
       gameList: []
    },
    {
@@ -41,6 +53,12 @@ let profile = [
       userEmail: "awesome@email.com",
       userPhone: 3334445555,
       userJoinDate: "2019-01-01",
+      location: {
+         streetAddress: "9999 Town Square",
+         city: "Milwaukee",
+         state: "WI",
+         zipCode: 53206
+      },
       gameList: []
    },
    {
@@ -52,6 +70,12 @@ let profile = [
       userEmail: "someguy@email.com",
       userPhone: 6664445555,
       userJoinDate: "2019-02-19",
+      location: {
+         streetAddress: "9999 Town Square",
+         city: "Milwaukee",
+         state: "WI",
+         zipCode: 53206
+      },
       gameList: []
    },
 ]
