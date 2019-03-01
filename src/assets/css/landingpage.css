@@ -1,0 +1,15 @@
+.landing-page-header {
+    color: chartreuse;
+    height: 20vh;
+}
+
+.main-continer {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainNav {
+    height: 20vh;
+}

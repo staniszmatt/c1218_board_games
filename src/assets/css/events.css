@@ -1,0 +1,33 @@
+.header-container{
+    height: 20VH;
+    text-align: center;
+}
+
+
+.main-container{
+    height: 60vh;
+    text-align: center;
+}
+
+.footer-container{
+    height: 60vh;
+    text-align: center;
+}
+
+.event-container{
+    height: 25%;
+    width: 100%;
+    display: inline-block;
+    border: black solid 1px;
+}
+
+.event-info-container{
+    display: inline-block;
+    width: 75%;
+    
+}
+
+.event-image {
+    display: inline-block;
+    width: 20%;
+}
