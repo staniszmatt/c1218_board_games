@@ -4,12 +4,11 @@ import '../assets/css/events.css';
 
 export default (props) => {
     return (
-        <div className='ceneter'>
+        <div className='center'>
             <div className="header-container col s12">
                 <h1 className="">Available Events</h1>
             </div>
             <div className="main-container">
-
                 <Link to="/events/id" className="event-list-button nav-link btn center">
                     <div className="event-container">
                         <div className="event-info-container">
@@ -24,8 +23,6 @@ export default (props) => {
                         </div >
                     </div>
                 </Link>
-
-
                 <Link to="/events/id" className="event-list-button nav-link btn">
                 <div className="event-container">
                         <div className="event-info-container">
@@ -40,8 +37,6 @@ export default (props) => {
                         </div >
                     </div>
                 </Link>
-
-
                 <Link to="/events/id" className="event-list-button nav-link btn">
                 <div className="event-container">
                         <div className="event-info-container">
@@ -56,8 +51,6 @@ export default (props) => {
                         </div >
                     </div>
                 </Link>
-
-
             </div>
         </div>
     );
