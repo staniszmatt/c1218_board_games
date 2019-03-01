@@ -1,0 +1,52 @@
+[{
+	"eventID": 3,
+	"userID": 2,
+	"date": "1969-12-25",
+	"startTime": "06:00:00",
+	"endTime": "08:00:11",
+	"gameTitle": "Starwars",
+	"gameImage": "http://cdn-blog-assets.bigfishgames.com/uploads/2013/11/Link-Top-10-best-video-game-characters.jpg",
+	"location": {
+		"streetAddress": "8851 Lakepoint Cir",
+		"city": "Franklin",
+		"state": "WI",
+		"zipCode": 53132
+	},
+	"playerList": [{
+		"userID": 2,
+		"userPlayerName": "LMFAO"
+	}, {
+		"userID": 3,
+		"userPlayerName": "AlienHead"
+	}, {
+		"userID": 4,
+		"userPlayerName": "Mr.Awesome"
+	}, {
+		"userID": 5,
+		"userPlayerName": "Yo-Momma"
+	}]
+}, {
+	"id": 6,
+	"userID": 4,
+	"date": "2019-03-20",
+	"startTime": "06:00:00",
+	"endTime": "08:00:11",
+	"gameTitle": "Settlers of Catain",
+	"gameImage": "http://cdn-blog-assets.bigfishgames.com/uploads/2013/11/Link-Top-10-best-video-game-characters.jpg",
+	"location": {
+		"streetAddress": "8851 Lakepoint Cir",
+		"city": "Lakeforest",
+		"state": "CA",
+		"zipCode": 94231
+	},
+	"playerList": [{
+		"userID": 2,
+		"userPlayerName": "LMFAO"
+	}, {
+		"userID": 3,
+		"userPlayerName": "AlienHead"
+	}, {
+		"userID": 4,
+		"userPlayerName": "Mr.Awesome"
+	}]
+}]
