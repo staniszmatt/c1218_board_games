@@ -1,3 +1,5 @@
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js//materialize.min';
 import React from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js//materialize.min';
@@ -13,8 +15,8 @@ import MyEvents from './myevents';
 import EventsHost from './events-host';
 import EventHostPage from './event-hostpage';
 import EditEvent from './edit-event';
-import JoinedEventDetails from './joined-event';
-
+import JoinedEventDetails from './joined-event'
+import Nav from './nav/nav'
 
 const App = () => (
     <div>
@@ -29,6 +31,7 @@ const App = () => (
         <Route path="/events/id/edit" component={EditEvent}/>
         <Route exact path="/events/myevents" component={MyEvents}/>
         <Route path="/events/myevents/id" component={JoinedEventDetails}/>
+         <Nav/>
     </div>
 );
 

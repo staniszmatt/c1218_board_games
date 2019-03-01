@@ -1,4 +1,4 @@
-let gamePlayAppData =  {
+const gamePlayAppData =  {
    1234: {
       "userID": 1234, 
       "userIcon": "iconImage.png",

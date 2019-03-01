@@ -4,7 +4,6 @@ import '../assets/css/events.css';
 
 export default (props) => {
     return (
-
         <div className='ceneter'>
             <div className="header-container col s12">
                 <h1 className="">Available Events</h1>
