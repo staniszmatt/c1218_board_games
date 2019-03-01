@@ -1,8 +1,8 @@
 import React from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js//materialize.min';
 import { Route } from 'react-router-dom';
 import '../assets/css/app.css';
-import logo from '../assets/images/logo.svg';
-import Test from './test';
 import LandingPage from './landing-page';
 import AvailableEvents from './events';
 import EventSelected from './event-id';
@@ -13,7 +13,8 @@ import MyEvents from './myevents';
 import EventsHost from './events-host';
 import EventHostPage from './event-hostpage';
 import EditEvent from './edit-event';
-import JoinedEventDetails from './joined-event'
+import JoinedEventDetails from './joined-event';
+
 
 const App = () => (
     <div>
