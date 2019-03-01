@@ -59,9 +59,6 @@ export default (props) => {
 
 
             </div>
-            <div className="foot-conatiner">
-                <h3>nav</h3>
-            </div>
         </div>
     );
 }
