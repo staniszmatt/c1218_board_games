@@ -1,0 +1,32 @@
+{
+	"eventID": 1,
+	"userID": 1,
+	"date": "1984-05-20",
+	"startTime": "06:00:00",
+	"endTime": "08:00:11",
+	"gameTitle": "Checkers",
+	"gameImage": "https://img.digitaltrends.com/image/zelda-5-1500x1000.jpg",
+	"playerLimit": 4,
+	"location": {
+		"streetAddress": "9999 Town Square",
+		"city": "Milwaukee",
+		"state": "WI",
+		"zipCode": 53206
+	},
+	"playerList": [{
+		"userID": 1,
+		"userPlayerName": "Rockstar"
+	}, {
+		"userID": 2,
+		"userPlayerName": "LMFAO"
+	}, {
+		"userID": 3,
+		"userPlayerName": "AlienHead"
+	}, {
+		"userID": 4,
+		"userPlayerName": "Mr.Awesome"
+	}, {
+		"userID": 5,
+		"userPlayerName": "Yo-Momma"
+	}]
+}
