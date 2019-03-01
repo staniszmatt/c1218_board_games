@@ -10,7 +10,7 @@ export default (props) => {
             </div>
             <div className="main-container">
 
-                <Link to="/events/id" className="nav-link">
+                <Link to="/events/id" className="event-list-button nav-link btn center">
                     <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 1 Title</span>
@@ -19,14 +19,14 @@ export default (props) => {
                             <br />
                             <span className="event-date-time">Event Time here Here</span>
                         </div>
-                        <div className="event-image">
+                        <div className="event-image center">
                             <span>picture here</span>
                         </div >
                     </div>
                 </Link>
 
 
-                <Link to="/events/id" className="nav-link">
+                <Link to="/events/id" className="event-list-button nav-link btn">
                 <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 2 Title</span>
@@ -42,7 +42,7 @@ export default (props) => {
                 </Link>
 
 
-                <Link to="/events/id" className="nav-link">
+                <Link to="/events/id" className="event-list-button nav-link btn">
                 <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 3 Title</span>

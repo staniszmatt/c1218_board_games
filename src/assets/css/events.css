@@ -1,5 +1,5 @@
 .header-container{
-    height: 20VH;
+    height: 15VH;
     text-align: center;
 }
 
@@ -18,7 +18,7 @@
     height: 25%;
     width: 100%;
     display: inline-block;
-    border: black solid 1px;
+
 }
 
 .event-info-container{
@@ -30,4 +30,9 @@
 .event-image {
     display: inline-block;
     width: 20%;
+}
+
+.event-list-button {
+    height: 15vh;
+    width: 100%;
 }
