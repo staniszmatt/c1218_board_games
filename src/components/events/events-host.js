@@ -1,15 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import '../assets/css/events.css';
+import {Link} from 'react-router-dom';
+import './events.css';
 
 export default (props) => {
     return (
+
         <div className='center'>
             <div className="header-container col s12">
-                <h1 className="">Available Events</h1>
+                <h1 className="">My Hosted Events</h1>
             </div>
             <div className="main-container">
-                <Link to="/events/id" className="event-list-button nav-link btn center">
+                <Link to="/events/id/host" className="event-list-button nav-link btn center">
                     <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 1 Title</span>
@@ -23,7 +24,7 @@ export default (props) => {
                         </div >
                     </div>
                 </Link>
-                <Link to="/events/id" className="event-list-button nav-link btn">
+                <Link to="/events/id/host" className="event-list-button nav-link btn">
                 <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 2 Title</span>
@@ -37,7 +38,7 @@ export default (props) => {
                         </div >
                     </div>
                 </Link>
-                <Link to="/events/id" className="event-list-button nav-link btn">
+                <Link to="/events/id/host" className="event-list-button nav-link btn">
                 <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 3 Title</span>
@@ -54,4 +55,5 @@ export default (props) => {
             </div>
         </div>
     );
+
 }

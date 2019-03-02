@@ -1,0 +1,14 @@
+.profile-button-container > .btn{
+    margin: 5px 5px;
+    width: 90%;
+}
+
+.profile-image {
+    height: 18vh;
+    border: 1px solid black;
+}
+
+.user-info {
+    height: 25vh;
+    border: 1px solid black;
+}
