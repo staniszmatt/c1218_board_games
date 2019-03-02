@@ -17,6 +17,10 @@
 .event-container{
     height: 100%;
     width: 100%;
+<<<<<<< HEAD:src/components/events/events.css
+=======
+    display: inline-block;
+>>>>>>> dev:src/assets/css/events.css
 
 }
 
@@ -28,6 +32,7 @@
 
 .event-image {
     display: inline-block;
+<<<<<<< HEAD:src/components/events/events.css
     width: 18vw;
 }
 
@@ -40,4 +45,12 @@
 
 h1 {
     font-size: 3.5rem;
+=======
+    width: 20%;
+}
+
+.event-list-button {
+    height: 15vh;
+    width: 100%;
+>>>>>>> dev:src/assets/css/events.css
 }
