@@ -9,11 +9,7 @@ export default (props) => {
                 <h1 className="">Available Events</h1>
             </div>
             <div className="main-container">
-<<<<<<< HEAD:src/components/events/events.js
-                <Link to="/events/id" className="event-list-button nav-link btn">
-=======
                 <Link to="/events/id" className="event-list-button nav-link btn center">
->>>>>>> dev:src/components/events.js
                     <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 1 Title</span>
