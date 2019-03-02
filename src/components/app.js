@@ -6,13 +6,13 @@ import 'materialize-css/dist/js//materialize.min';
 import { Route } from 'react-router-dom';
 import '../assets/css/app.css';
 import LandingPage from './landing-page';
-import AvailableEvents from './events';
-import EventSelected from './event-id';
+import AvailableEvents from './events/events';
+import EventSelected from './event-id/event-id';
 import PlayerList from './player-list';
-import Profile from './profile';
+import Profile from './profile/profile';
 import CreateNewEvent from './new-event';
-import MyEvents from './myevents';
-import EventsHost from './events-host';
+import MyEvents from './events/myevents';
+import EventsHost from './events/events-host';
 import EventHostPage from './event-hostpage';
 import EditEvent from './edit-event';
 import JoinedEventDetails from './joined-event'

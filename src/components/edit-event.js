@@ -3,9 +3,27 @@ import {Link} from 'react-router-dom';
 
 export default (props) => {
     return (
-        <div>
-            <div >Event - Edit </div>
-            <Link to="/events/id/host" className="nav-link">Submit</Link>
+        <div className="center">
+            <h1 className="center">EDIT EVENT</h1>
+            <form>
+                <div className="form-group">
+                    <label className="">Game Name</label>
+                    <input name="gameName" type="text" className="form-control" />
+                </div>
+                <div className="form-group">
+                    <label>Address </label>
+                    <input name="address" type="text" className="form-control" />
+                </div>
+                <div className="form-group">
+                    <label>Date and Time</label>
+                    <input name="dateAndTime" type="text" className="form-control" />
+                </div>
+                <div className="form-group">
+                    <label>Number of Players</label>
+                    <input name="numberOfPlayers" type="text" className="form-control" />
+                </div>
+            </form>
+            <Link to="/events/id/host" className="btn text-center nav-link">SUBMIT CHANGES</Link>
         </div>
 
     );
