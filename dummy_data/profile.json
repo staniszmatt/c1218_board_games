@@ -1,7 +1,7 @@
 [{
 	"id": 1,
 	"userPlayerName": "Rockstar",
-	"userFirstName": "Matthew",
+	"userFirstName": "Matt",
 	"userLastName": "Stan",
 	"userDOB": "1982-06-22",
 	"userEmail": "stan@email.com",
@@ -24,10 +24,10 @@
 	"userPhone": 4445555555,
 	"userJoinDate": "2018-01-19",
 	"location": {
-		"streetAddress": "9999 Town Square",
-		"city": "Milwaukee",
-		"state": "WI",
-		"zipCode": 53206
+		"streetAddress": "189 Orange Tree",
+		"city": "Orange",
+		"state": "CA",
+		"zipCode": 98876
 	},
 	"gameList": []
 }, {
@@ -39,6 +39,12 @@
 	"userEmail": "bob@email.com",
 	"userPhone": 9205555555,
 	"userJoinDate": "2019-01-19",
+	"location": {
+		"streetAddress": "12 Spectrum Square",
+		"city": "Irvine",
+		"state": "CA",
+		"zipCode": 92444
+	},
 	"gameList": []
 }, {
 	"id": 4,
@@ -50,7 +56,7 @@
 	"userPhone": 3334445555,
 	"userJoinDate": "2019-01-01",
 	"location": {
-		"streetAddress": "9999 Town Square",
+		"streetAddress": "9800 Town Square",
 		"city": "Milwaukee",
 		"state": "WI",
 		"zipCode": 53206
@@ -66,10 +72,10 @@
 	"userPhone": 6664445555,
 	"userJoinDate": "2019-02-19",
 	"location": {
-		"streetAddress": "9999 Town Square",
-		"city": "Milwaukee",
-		"state": "WI",
-		"zipCode": 53206
+		"streetAddress": "50 Lost Street",
+		"city": "Orange",
+		"state": "MI",
+		"zipCode": 44444
 	},
 	"gameList": []
 }]
