@@ -5,9 +5,9 @@ require_once('../config/mysql_connect.php');
 $output = [
    'success'=> false
 ];
-
-$id = $_GET['id'];
-$query = "SELECT * FROM `profile` WHERE `id` = $id";
+$hostID = $_GET['hostID'];
+   print($hostID);
+$query = "SELECT * FROM event WHERE hostID = $hostID";
 $result = $db->query($query);
 
 $data = [];
@@ -20,5 +20,4 @@ $output['success'] = true;
 $output['data'] = $data;
 $json_output = json_encode($output);
 print($json_output);
-
 ?>
