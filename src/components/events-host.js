@@ -1,16 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import './events.css';
+import '../assets/css/events.css';
 
 export default (props) => {
     return (
 
-        <div className='center'>
+        <div className='ceneter'>
             <div className="header-container col s12">
                 <h1 className="">My Hosted Events</h1>
             </div>
             <div className="main-container">
-                <Link to="/events/id/host" className="event-list-button nav-link btn center">
+
+                <Link to="/events/id/host" className="nav-link">
                     <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 1 Title</span>
@@ -19,12 +20,14 @@ export default (props) => {
                             <br />
                             <span className="event-date-time">Event Time here Here</span>
                         </div>
-                        <div className="event-image center">
+                        <div className="event-image">
                             <span>picture here</span>
                         </div >
                     </div>
                 </Link>
-                <Link to="/events/id/host" className="event-list-button nav-link btn">
+
+
+                <Link to="/events/id/host" className="nav-link">
                 <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 2 Title</span>
@@ -38,7 +41,9 @@ export default (props) => {
                         </div >
                     </div>
                 </Link>
-                <Link to="/events/id/host" className="event-list-button nav-link btn">
+
+
+                <Link to="/events/id/host" className="nav-link">
                 <div className="event-container">
                         <div className="event-info-container">
                             <span className="event-title">Game 3 Title</span>
@@ -52,6 +57,11 @@ export default (props) => {
                         </div >
                     </div>
                 </Link>
+
+
+            </div>
+            <div className="foot-conatiner">
+                <h3>nav</h3>
             </div>
         </div>
     );

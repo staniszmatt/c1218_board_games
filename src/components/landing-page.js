@@ -10,7 +10,10 @@ export default props => (
             <h1>BOARD GAMERS</h1>
         </div>
         <div className="main-continer center grey">
-            <Link to="/events" className="play-button nav-link btn">Play Games</Link>
+            <Link to="/events" className="nav-link btn">Play Games</Link>
         </div>
+        {/* <div className="mainNav red">
+            <h2 className="center red">Nav here</h2>
+        </div> */}
     </div>
 )
