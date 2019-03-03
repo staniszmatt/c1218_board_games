@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import './event-id.css';
 
-export default (props) => {
-    return (
 
+export default props => (
+
+    <div className="center">
 
         <div className="main-container">
             <div className="btn game-picture center">Image Place Holder</div>
@@ -32,9 +34,10 @@ export default (props) => {
             </div>
 
             <div className="center joinButton green lighten-4">
-                <Link to="/events/id/edit" className="nav-link">Edit Game</Link>
+                <Link to="/events/id/player-list" className="nav-link">Join Game</Link>
             </div>
 
         </div>
-    );
-}
+
+    </div>
+)

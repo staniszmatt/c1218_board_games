@@ -1,0 +1,9 @@
+<?php
+$creds = [
+   "host"=>"host",
+   "user"=>"user",
+   "pass"=>"user",
+   "database"=>"boardgamers",
+   "port"=>port
+]
+?>
