@@ -9,11 +9,11 @@ $output = [
 $hostID = $_GET['hostID'];
 $query = "SELECT e.*, 
             l.streetAddress, l.city, l.state, l.zipcode, p.playerName,
-            pl.userID AS player, pl.id
+            pl.userID AS player, pl.id AS playerID
          FROM event AS e
          JOIN location AS l
             ON e.location = l.id
-         JOIN playerList AS pl
+         RIGHT JOIN playerList AS pl
             ON pl.eventID = e.id
          JOIN profile AS p
             ON pl.userID = p.id
@@ -23,7 +23,9 @@ $data = [];
 
 if ($result){
    $output['success'] = true;
+
    while($row = $result->fetch_assoc()){
+      
       $row['location'] = [
          'streetAddress'=> $row['streetAddress'],
          'city'=> $row['city'],
@@ -31,11 +33,24 @@ if ($result){
          'zipcode'=> $row['zipcode']
       ];
 
+      $row['playerList'] = [
+         'playerName'=> $row['playerName'],
+         'player'=> $row['player'],
+         'playerID'=> $row['playerID']
+      ];
+
+      unset($row['playerName'], 
+            $row['player'],
+            $row['playerID']);
+
       unset($row['streetAddress'], 
             $row['city'],
             $row['state'],
             $row['zipcode']);
+      if($row['id']){
 
+         var_dump(array($data));
+      }
 
       $data[] = $row;
    }
