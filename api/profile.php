@@ -13,10 +13,10 @@ $result = $db->query($query);
 $data = [];
 
 while($row = $result->fetch_assoc()){
+   $output['success'] = true;
    $data[] = $row;
 }
 
-$output['success'] = true;
 $output['data'] = $data;
 $json_output = json_encode($output);
 print($json_output);
