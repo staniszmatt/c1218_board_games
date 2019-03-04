@@ -4,26 +4,44 @@ import {Link} from 'react-router-dom';
 export default props => (
     <div>
         <h3 className="center"> Please Provide the Following Information </h3>
-        <br/>
         <div className="center">
-            <h5> First Name </h5>
-            <br/>
-            <h5> Last Name </h5>
-            <br/>
-            <h5> Email </h5>
-            <br/>
-            <h5> Phone Number </h5>
-            <br/>
-            <h5>  Zip Code </h5>
-            <br/>
-            <h5>  Choose a User Name </h5>
-            <br/>
-            <h5>  Password </h5>
-        </div>
-        <br/>
-        <br/>
-        <div className="center">
-            <Link to="/events/myevents" className="btn blue">Submit</Link>
+            <form>
+                <div className="form-group">
+                    <label> First Name </label>
+                    <input name="" type="text"/>
+                </div>
+                <div className="form-group">
+                    <label> Last Name </label>
+                    <input name="" type="text"/>
+                </div>
+                <div className="form-group">
+                    <label> Email </label>
+                    <input name="" type="text"/>
+                </div>
+                <div className="form-group">
+                    <label> Phone Number </label>
+                    <input name="" type="text"/>
+                </div>
+                <div className="form-group">
+                    <label> Data of Birth </label>
+                    <input name="" type="text"/>
+                </div>
+                <div className="form-group">
+                    <label> Zip Code</label>
+                    <input name="" type="text"/>
+                </div>
+                <div className="form-group">
+                    <label> Choose User Name </label>
+                    <input name="" type="text"/>
+                </div>
+                <div className="form-group">
+                    <label> Password </label>
+                    <input name="" type="text"/>
+                </div>
+                <div className="center">
+                    <Link to="/events/myevents" className="btn blue">Submit</Link>
+                </div>
+            </form>
         </div>
     </div>
 
