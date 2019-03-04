@@ -15,8 +15,9 @@ import MyEvents from './events/myevents';
 import EventsHost from './events/events-host';
 import EventHostPage from './event-hostpage';
 import EditEvent from './edit-event';
-import JoinedEventDetails from './joined-event'
-import Nav from './nav/nav'
+import JoinedEventDetails from './joined-event';
+import Nav from './nav/nav';
+import players from '../../dummy_data/profile.json';
 
 const App = () => (
     <div>
@@ -24,7 +25,7 @@ const App = () => (
         <Route exact path="/events" component={Events} />
         <Route exact path="/events/id" component={EventSelected} />
         <Route path="/events/id/player-list" component={PlayerList} />
-        <Route path="/profile" component={Profile} />
+        <Route path="/profile" render={() => <Profile players={players}/>} />
         <Route path="/events/new-event" component={CreateNewEvent} />
         <Route path="/events/host" component={EventsHost} />
         <Route path="/events/id/host" component={EventHostPage}/>
