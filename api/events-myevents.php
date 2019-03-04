@@ -19,7 +19,7 @@ JOIN playerList AS pAll
 ON e.id = pAll.eventID
 JOIN profile AS p
 ON pAll.userID = p.id
-WHERE pl.userID = 1 AND NOT e.hostID = 1";
+WHERE pl.userID = $userID AND NOT e.hostID = $userID";
 $result = $db->query($query);
 $data = [];
 
@@ -28,35 +28,35 @@ if ($result){
 
    while($row = $result->fetch_assoc()){
       
-      // if(empty($data[$row['id']])){
-      //    $row['location'] = [
-      //       'streetAddress'=> $row['streetAddress'],
-      //       'city'=> $row['city'],
-      //       'state'=> $row['state'],
-      //       'zipcode'=> $row['zipcode']
-      //    ];
+      if(empty($data[$row['id']])){
+         $row['location'] = [
+            'streetAddress'=> $row['streetAddress'],
+            'city'=> $row['city'],
+            'state'=> $row['state'],
+            'zipcode'=> $row['zipcode']
+         ];
    
-      //    $row['playerList'][] = [
-      //       'playerName'=> $row['playerName'],
-      //       'player'=> $row['player'],
-      //       'playerID'=> $row['playerID']
-      //    ];
-      //    unset($row['streetAddress'], 
-      //          $row['city'],
-      //          $row['state'],
-      //          $row['zipcode'],
-      //          $row['player'],
-      //          $row['playerID'],
-      //          $row['playerName']);
+         $row['playerList'][] = [
+            'playerName'=> $row['playerName'],
+            'player'=> $row['player'],
+            'playerID'=> $row['playerID']
+         ];
+         unset($row['streetAddress'], 
+               $row['city'],
+               $row['state'],
+               $row['zipcode'],
+               $row['player'],
+               $row['playerID'],
+               $row['playerName']);
             
-      //    $data[$row['id']] = $row;
-      // } else {
-      //    $data[$row['id']]['playerList'][] = [
-      //       'playerName'=> $row['playerName'],
-      //       'player'=> $row['player'],
-      //       'playerID'=> $row['playerID']
-      //    ];
-      // }
+         $data[$row['id']] = $row;
+      } else {
+         $data[$row['id']]['playerList'][] = [
+            'playerName'=> $row['playerName'],
+            'player'=> $row['player'],
+            'playerID'=> $row['playerID']
+         ];
+      }
    }
 }
 
