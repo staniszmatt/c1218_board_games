@@ -19,6 +19,6 @@ while($row = $result->fetch_assoc()){
 
 $output['data'] = $data;
 $json_output = json_encode($output);
-print($json_output[0]['id']);
+print($json_output);
 
 ?>

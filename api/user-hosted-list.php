@@ -40,13 +40,13 @@ if ($result){
             'playerID'=> $row['playerID']
          ];
          unset($row['streetAddress'], 
-            $row['city'],
-            $row['state'],
-            $row['zipcode'],
-            $row['player'],
-            $row['playerID']);
+               $row['city'],
+               $row['state'],
+               $row['zipcode'],
+               $row['player'],
+               $row['playerID']);
             
-         $data[] = $row;
+         $data[$row['id']] = $row;
       } else {
          $data[$row['id']]['playerList'][] = [
             'playerName'=> $row['playerName'],
