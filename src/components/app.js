@@ -18,6 +18,7 @@ import EditEvent from './edit-event';
 import JoinedEventDetails from './joined-event';
 import Nav from './nav/nav';
 import players from '../../dummy_data/profile.json';
+import SignUp from './sign-up';
 
 const App = () => (
     <div>
@@ -32,6 +33,7 @@ const App = () => (
         <Route path="/events/id/edit" component={EditEvent}/>
         <Route exact path="/events/myevents" component={MyEvents}/>
         <Route path="/events/myevents/id" component={JoinedEventDetails}/>
+        <Route path="/sign-up" component={SignUp}/>
          <Nav/>
     </div>
 );
