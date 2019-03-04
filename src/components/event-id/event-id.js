@@ -1,43 +1,55 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './event-id.css';
+import EventData from '../../../dummy_data/event-eventID-edit';
 
 
-export default props => (
+class EventSelected extends Component {
+    state = {
+        eventId: EventData
+    }
+    render() {
+        const { eventId } = this.state;
+        const numberOfPlayers = eventId.playerList.length;
+        return (
+            <div className="center">
 
-    <div className="center">
+                <div className="main-container">
+                        <div className="btn game-picture center">
+                            <img src={eventId.gameImage}></img>
+                        </div>
+                        <div className="btn event-host grey ">Game: {eventId.gameTitle}</div>
+                        <div className="btn event-host grey darken-1">Host Name: {eventId.playerList[0].userPlayerName}</div>
 
-        <div className="main-container">
-            <div className="btn game-picture center">Image Place Holder</div>
-            <div className="btn event-host grey ">Game Title: Magic The Gathering</div>
-            <div className="btn event-host grey darken-1">Host: Topher Uchiha</div>
 
+                        <div className="date grey">
+                            <ul>
+                                <li>Date: {eventId.date}</li>
+                                <li>Start: {eventId.startTime}</li>
+                            </ul>
+                        </div>
 
-            <div className="date grey">
-                <ul>
-                    <li>Date: 4-20-1984</li>
-                    <li>Time: 1:00P.M.</li>
-                </ul>
+                        <div className="btn address grey darken-1">
+                            <ul>
+                                <li>Address: {eventId.location.streetAddress}</li>
+                                <li>City: {eventId.location.city}</li>
+                                <li>State: {eventId.location.state}</li>
+                                <li>Zip: {eventId.location.zipCode}</li>
+                            </ul>
+                        </div>
+
+                        <div className=" numberOfPlayers grey">
+                            <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
+                        </div>
+
+                        <div className="center joinButton green lighten-4">
+                            <Link to="/events/id/player-list" className="nav-link">Join Game</Link>
+                        </div>
+                </div>
+
             </div>
+        );
+    }
+}
 
-            <div className="btn address grey darken-1">
-                <ul>
-                    <li>Address: Some Address</li>
-                    <li>City: Beverly Hills</li>
-                    <li>State: CA</li>
-                    <li>Zip: 90210</li>
-                </ul>
-            </div>
-
-            <div className=" numberOfPlayers grey">
-                <div> 4 Players out of 6 have joined </div>
-            </div>
-
-            <div className="center joinButton green lighten-4">
-                <Link to="/events/id/player-list" className="nav-link">Join Game</Link>
-            </div>
-
-        </div>
-
-    </div>
-)
+export default EventSelected;

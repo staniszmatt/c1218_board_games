@@ -46,3 +46,9 @@ h1 {
     font-size: 24px;
     color: black;
 }
+
+.game-picture > img{
+    display: inline-block;
+    width: 40%;
+    z-index: -1;
+}
