@@ -25,34 +25,35 @@ if ($result){
    $output['success'] = true;
 
    while($row = $result->fetch_assoc()){
-      
-      $row['location'] = [
-         'streetAddress'=> $row['streetAddress'],
-         'city'=> $row['city'],
-         'state'=> $row['state'],
-         'zipcode'=> $row['zipcode']
-      ];
 
-      $row['playerList'] = [
-         'playerName'=> $row['playerName'],
-         'player'=> $row['player'],
-         'playerID'=> $row['playerID']
-      ];
-
-      unset($row['playerName'], 
-            $row['player'],
-            $row['playerID']);
-
-      unset($row['streetAddress'], 
+      if(empty($data[$row['id']])){
+         $row['location'] = [
+            'streetAddress'=> $row['streetAddress'],
+            'city'=> $row['city'],
+            'state'=> $row['state'],
+            'zipcode'=> $row['zipcode']
+         ];
+   
+         $row['playerList'][] = [
+            'playerName'=> $row['playerName'],
+            'player'=> $row['player'],
+            'playerID'=> $row['playerID']
+         ];
+         unset($row['streetAddress'], 
             $row['city'],
             $row['state'],
-            $row['zipcode']);
-      if($row['id']){
-
-         var_dump(array($data));
+            $row['zipcode'],
+            $row['player'],
+            $row['playerID']);
+            
+         $data[] = $row;
+      } else {
+         $data[$row['id']]['playerList'][] = [
+            'playerName'=> $row['playerName'],
+            'player'=> $row['player'],
+            'playerID'=> $row['playerID']
+         ];
       }
-
-      $data[] = $row;
    }
 }
 
