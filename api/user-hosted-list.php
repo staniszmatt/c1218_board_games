@@ -44,7 +44,8 @@ if ($result){
                $row['state'],
                $row['zipcode'],
                $row['player'],
-               $row['playerID']);
+               $row['playerID'],
+               $row['playerName']);
             
          $data[$row['id']] = $row;
       } else {
