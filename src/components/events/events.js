@@ -7,11 +7,6 @@ class Events extends Component {
     state = {
         eventList: EventData
     }
-    // componentDidMount(){
-    //     this.setState = {
-    //         Events
-    //     }
-    // }
 
     render() {
         console.log('This is Data:', this.state);
@@ -33,7 +28,7 @@ class Events extends Component {
                                 <span className="event-date-time">{event.date} {event.startTime}</span>
                             </div>
                             <div className="event-image center">
-                                {/* <img src={event.gameImage} alt={event.gameTitle}></img> */}
+                                <img src={event.gameImage} alt={event.gameTitle}></img>
                             </div >
                         </div>
                     </Link>))}

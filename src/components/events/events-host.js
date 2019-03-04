@@ -1,59 +1,44 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './events.css';
+// EventsHost
+import EventsHostData from '../../../dummy_data/user-host-list';
 
-export default (props) => {
-    return (
+class EventsHost extends Component {
+    state = {
+        hostEventsList: EventsHostData
+    }
 
-        <div className='center'>
-            <div className="header-container col s12">
-                <h1 className="">My Hosted Events</h1>
+    render() {
+        console.log('This is Data:', this.state);
+        const { hostEventsList } = this.state;
+        return (
+            <div className='center'>
+                <div className="header-container col s12">
+                    <h1 className="">My Hosted Events</h1>
+                </div>
+                <div className="main-container">
+                    {hostEventsList.map((event) => (
+                        <Link to="/events/id/host" className="event-list-button nav-link btn center">
+                            <div className="event-container" key={event.id} >
+                                <div className="event-info-container">
+                                    <span className="event-title">{event.gameTitle}</span>
+                                    <br />
+                                    <span className="event-player-count">Player Limit: {event.playerLimit}</span>
+                                    <br />
+                                    <span className="event-date-time">{event.date} {event.startTime}</span>
+                                </div>
+                                <div className="event-image center">
+                                    <img src={event.gameImage} alt={event.gameTitle}></img>
+                                </div >
+                            </div>
+                        </Link>))}
+                </div>
             </div>
-            <div className="main-container">
-                <Link to="/events/id/host" className="event-list-button nav-link btn center">
-                    <div className="event-container">
-                        <div className="event-info-container">
-                            <span className="event-title">Game 1 Title</span>
-                            <br />
-                            <span className="event-player-count">PlayerCount Here</span>
-                            <br />
-                            <span className="event-date-time">Event Time here Here</span>
-                        </div>
-                        <div className="event-image center">
-                            <span>picture here</span>
-                        </div >
-                    </div>
-                </Link>
-                <Link to="/events/id/host" className="event-list-button nav-link btn">
-                <div className="event-container">
-                        <div className="event-info-container">
-                            <span className="event-title">Game 2 Title</span>
-                            <br />
-                            <span className="event-player-count">PlayerCount Here</span>
-                            <br />
-                            <span className="event-date-time">Event Time here Here</span>
-                        </div>
-                        <div className="event-image">
-                            <span>picture here</span>
-                        </div >
-                    </div>
-                </Link>
-                <Link to="/events/id/host" className="event-list-button nav-link btn">
-                <div className="event-container">
-                        <div className="event-info-container">
-                            <span className="event-title">Game 3 Title</span>
-                            <br />
-                            <span className="event-player-count">PlayerCount Here</span>
-                            <br />
-                            <span className="event-date-time">Event Time here Here</span>
-                        </div>
-                        <div className="event-image">
-                            <span>picture here</span>
-                        </div >
-                    </div>
-                </Link>
-            </div>
-        </div>
-    );
-
+        )
+    }
 }
+
+
+
+export default EventsHost;
