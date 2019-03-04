@@ -25,15 +25,13 @@ if ($result){
    $output['success'] = true;
 
    while($row = $result->fetch_assoc()){
-
       if(empty($data[$row['id']])){
          $row['location'] = [
             'streetAddress'=> $row['streetAddress'],
             'city'=> $row['city'],
             'state'=> $row['state'],
             'zipcode'=> $row['zipcode']
-         ];
-   
+         ];  
          $row['playerList'][] = [
             'playerName'=> $row['playerName'],
             'player'=> $row['player'],
@@ -45,8 +43,7 @@ if ($result){
                $row['zipcode'],
                $row['player'],
                $row['playerID'],
-               $row['playerName']);
-            
+               $row['playerName']);           
          $data[$row['id']] = $row;
       } else {
          $data[$row['id']]['playerList'][] = [
