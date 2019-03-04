@@ -32,6 +32,12 @@
     width: 18vw;
 }
 
+.event-image > img{
+    display: inline-block;
+    width: 100%;
+    align-content: center;
+}
+
 .event-list-button {
     display: inline-block;
     height: 20vh;
