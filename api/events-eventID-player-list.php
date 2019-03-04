@@ -28,12 +28,23 @@ if ($result){
 
       if(empty($data[$row['id']])){
    
+         $row['location'] = [
+            'streetAddress'=> $row['streetAddress'],
+            'city'=> $row['city'],
+            'state'=> $row['state'],
+            'zipcode'=> $row['zipcode']
+         ];
+   
          $row['playerList'][] = [
             'playerName'=> $row['playerName'],
             'player'=> $row['player'],
             'playerID'=> $row['playerID']
          ];
-         unset($row['player'],
+         unset($row['streetAddress'], 
+               $row['city'],
+               $row['state'],
+               $row['zipcode'],
+               $row['player'],
                $row['playerID'],
                $row['playerName']);
             
