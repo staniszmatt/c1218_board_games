@@ -21,19 +21,19 @@ import players from '../../dummy_data/profile.json';
 import SignUp from './sign-up';
 
 const App = () => (
-    <div>
+    <div className="main-div">
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/events" component={Events} />
-        <Route exact path="/events/id" component={EventSelected} />
-        <Route path="/events/id/player-list" component={PlayerList} />
         <Route path="/profile" render={() => <Profile players={players}/>} />
-        <Route path="/events/new-event" component={CreateNewEvent} />
+        <Route path="/new-event" component={CreateNewEvent} />
         <Route path="/events/host" component={EventsHost} />
-        <Route path="/events/id/host" component={EventHostPage}/>
-        <Route path="/events/id/edit" component={EditEvent}/>
-        <Route exact path="/events/myevents" component={MyEvents}/>
-        <Route path="/events/myevents/id" component={JoinedEventDetails}/>
+        <Route path="/events/myevents" component={MyEvents}/>
         <Route path="/sign-up" component={SignUp}/>
+        <Route exact path="/events/myevents/:id" component={JoinedEventDetails}/>
+        <Route path="/events/:id/player-list" component={PlayerList} />
+        <Route path="/events/:id/host" component={EventHostPage}/>
+        <Route path="/events/:id/edit" component={EditEvent}/>
+        <Route exact path="/events/:id" component={EventSelected} />
+        <Route exact path="/events" component={Events} />
          <Nav/>
     </div>
 );

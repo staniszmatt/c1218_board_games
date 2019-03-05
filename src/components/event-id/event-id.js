@@ -13,7 +13,6 @@ class EventSelected extends Component {
         const numberOfPlayers = eventId.playerList.length;
         return (
             <div className="center">
-
                 <div className="main-container">
                         <div className="btn game-picture center">
                             <img src={eventId.gameImage}></img>
@@ -43,7 +42,7 @@ class EventSelected extends Component {
                         </div>
 
                         <div className="center joinButton green lighten-4">
-                            <Link to="/events/id/player-list" className="nav-link">Join Game</Link>
+                            <Link to={"/events/"+eventId.eventID+"/player-list"} className="nav-link">Join Game</Link>
                         </div>
                 </div>
 
