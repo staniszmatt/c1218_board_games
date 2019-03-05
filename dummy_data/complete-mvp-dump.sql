@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Mar 02, 2019 at 12:25 AM
+-- Generation Time: Mar 05, 2019 at 03:33 AM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -21,15 +21,15 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `event` (
-   `id` bigint(20) UNSIGNED NOT NULL,
-   `hostID` bigint(20) UNSIGNED NOT NULL,
-   `date` date NOT NULL,
-   `startTime` time NOT NULL,
-   `endTime` time NOT NULL,
-   `gameTitle` varchar(60) NOT NULL,
-   `gameImages` text NOT NULL,
-   `playerLimit` smallint(2) UNSIGNED NOT NULL,
-   `location` bigint(20) UNSIGNED NOT NULL
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `hostID` bigint(20) UNSIGNED NOT NULL,
+  `date` date NOT NULL,
+  `startTime` time NOT NULL,
+  `endTime` time NOT NULL,
+  `gameTitle` varchar(60) NOT NULL,
+  `gameImages` text NOT NULL,
+  `playerLimit` smallint(2) UNSIGNED NOT NULL,
+  `location` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -51,11 +51,11 @@ INSERT INTO `event` (`id`, `hostID`, `date`, `startTime`, `endTime`, `gameTitle`
 --
 
 CREATE TABLE `location` (
-   `id` bigint(20) UNSIGNED NOT NULL,
-   `streetAddress` varchar(20) NOT NULL,
-   `city` varchar(20) NOT NULL,
-   `state` varchar(20) NOT NULL,
-   `zipcode` mediumint(5) UNSIGNED NOT NULL
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `streetAddress` varchar(20) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `state` varchar(20) NOT NULL,
+  `zipcode` mediumint(5) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -82,9 +82,9 @@ INSERT INTO `location` (`id`, `streetAddress`, `city`, `state`, `zipcode`) VALUE
 --
 
 CREATE TABLE `playerList` (
-   `id` bigint(20) UNSIGNED NOT NULL,
-   `userID` bigint(20) UNSIGNED NOT NULL,
-   `eventID` bigint(20) UNSIGNED NOT NULL
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `userID` bigint(20) UNSIGNED NOT NULL,
+  `eventID` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -123,15 +123,15 @@ INSERT INTO `playerList` (`id`, `userID`, `eventID`) VALUES
 --
 
 CREATE TABLE `profile` (
-   `id` bigint(20) UNSIGNED NOT NULL,
-   `playerName` varchar(20) NOT NULL,
-   `firstName` varchar(20) NOT NULL,
-   `lastName` varchar(30) NOT NULL,
-   `dateOfBirth` date NOT NULL,
-   `email` varchar(30) NOT NULL,
-   `phone` int(10) UNSIGNED NOT NULL,
-   `joinDate` datetime NOT NULL,
-   `location` bigint(20) UNSIGNED NOT NULL
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `playerName` varchar(20) NOT NULL,
+  `firstName` varchar(20) NOT NULL,
+  `lastName` varchar(30) NOT NULL,
+  `dateOfBirth` date NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `phone` int(10) UNSIGNED NOT NULL,
+  `joinDate` datetime NOT NULL,
+  `location` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -153,25 +153,25 @@ INSERT INTO `profile` (`id`, `playerName`, `firstName`, `lastName`, `dateOfBirth
 -- Indexes for table `event`
 --
 ALTER TABLE `event`
-   ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `location`
 --
 ALTER TABLE `location`
-   ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `playerList`
 --
 ALTER TABLE `playerList`
-   ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `profile`
 --
 ALTER TABLE `profile`
-   ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -181,22 +181,22 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `location`
 --
 ALTER TABLE `location`
-   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `playerList`
 --
 ALTER TABLE `playerList`
-   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
