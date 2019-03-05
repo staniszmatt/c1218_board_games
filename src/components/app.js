@@ -20,6 +20,7 @@ import Nav from './nav/nav';
 import players from '../../dummy_data/profile.json';
 import SignUp from './sign-up';
 import SignOut from './sign-out';
+import SignIn from './sign-in';
 
 const App = () => (
     <div>
@@ -35,7 +36,8 @@ const App = () => (
         <Route exact path="/events/myevents" component={MyEvents}/>
         <Route path="/events/myevents/id" component={JoinedEventDetails}/>
         <Route path="/sign-up" component={SignUp}/>
-        <Route path="/signout" component={SignOut}/>
+        <Route path="/sign-out" component={SignOut}/>
+        <Route path="/sign-in" component={SignIn}/>
          <Nav/>
     </div>
 );

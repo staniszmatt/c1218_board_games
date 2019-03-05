@@ -12,7 +12,9 @@
 
 .nav-item {
   display: inline-block;
-  width:35%;
+  width:33%;
+
+
 }
 
 label{
@@ -22,6 +24,6 @@ label{
 .nav li {
   display: inline-block;
   font-size: 20px;
-  padding: 20px;
+  padding: 10px;
 
 }
