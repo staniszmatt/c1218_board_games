@@ -30,10 +30,10 @@ const App = () => (
         <Route path="/events/host" component={EventsHost} />
         <Route path="/events/myevents" component={MyEvents}/>
         <Route path="/sign-up" component={SignUp}/>
-        <Route exact path="/events/myevents/:id" component={JoinedEventDetails}/>
         <Route path="/events/:id/player-list" component={PlayerList} />
         <Route path="/events/:id/host" component={EventHostPage}/>
         <Route path="/events/:id/edit" component={EditEvent}/>
+        <Route path="/events/myevents/:id" component={JoinedEventDetails}/>
         <Route exact path="/events/:id" component={EventSelected} />
         <Route exact path="/events" component={Events} />
         <Route path="/sign-out" component={SignOut}/>
