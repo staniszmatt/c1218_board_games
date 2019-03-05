@@ -2,28 +2,34 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './events.css';
 import EventRow from './events-row';
-import EventData from '../../../dummy_data/event';
-// import axios from 'axios';
+// import EventData from '../../../dummy_data/event';
+import axios from 'axios';
 
 class Events extends Component {
     state = {
-        eventList: EventData
+        eventList: []
     }
 
-    // componentDidMount() {
-    //     this.getEventList();
-    // }
+    componentDidMount() {
+        this.getEventList();
+    }
 
-    // async getEventList(){
-    //     const resp = await axios.get('/api/events.php');
-    //     this.setState({
-    //         eventList: resp.data
-    //     });
-    //     console.log('resp: ', resp);
-    // }
+    async getEventList(){
+        const resp = await axios.get('/api/events.php');
+        
+        console.log('resp: ', resp);
+        
+        this.setState({
+            eventList: resp.data.event
+        });
+        
+    }
 
     render() {
         const { eventList } = this.state;
+
+        console.log('Event List:', eventList);
+
         let eventRow = [];
 
         eventRow = eventList.map((event) => { 
