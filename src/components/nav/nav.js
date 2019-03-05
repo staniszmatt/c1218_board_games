@@ -11,7 +11,7 @@ export default props => (
             </li>
 
             <li className="nav-item">
-                <Link to="/signout" className="btn nav-link pulse center font-color: red">Sign Out</Link>
+                <Link to="/sign-out" className="btn nav-link pulse center font-color: red">Sign Out</Link>
             </li>
 
             <li className="nav-item">

@@ -19,6 +19,8 @@ import JoinedEventDetails from './joined-event';
 import Nav from './nav/nav';
 import players from '../../dummy_data/profile.json';
 import SignUp from './sign-up';
+import SignOut from './sign-out';
+import SignIn from './sign-in';
 
 const App = () => (
     <div className="main-div">
@@ -34,6 +36,9 @@ const App = () => (
         <Route path="/events/:id/edit" component={EditEvent}/>
         <Route exact path="/events/:id" component={EventSelected} />
         <Route exact path="/events" component={Events} />
+        <Route path="/sign-out" component={SignOut}/>
+        <Route path="/sign-in" component={SignIn}/>
+
          <Nav/>
     </div>
 );
