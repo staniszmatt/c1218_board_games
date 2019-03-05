@@ -8,15 +8,16 @@ $output = [
 
 $eventID = $_GET['eventID'];
 $query = "SELECT e.*, 
-            l.streetAddress, l.city, l.state, l.zipcode, p.playerName,
-            pl.userID AS player, pl.id AS playerID
+            l.streetAddress, l.city, l.state, l.zipcode, 
+            p.playerName,
+            plAll.userID AS player, plAll.id AS playerID
          FROM event AS e
          JOIN location AS l
             ON e.location = l.id
-         RIGHT JOIN playerList AS pl
-            ON pl.eventID = e.id
+         JOIN playerList AS plAll
+            ON e.id = plAll.eventID
          JOIN profile AS p
-            ON pl.userID = p.id
+            ON plAll.userID = p.id
          WHERE e.id = $eventID";
 $result = $db->query($query);
 $data = [];
