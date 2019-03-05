@@ -12,14 +12,15 @@ class EventsHost extends Component {
     render() {
         console.log('This is Data:', this.state);
         const { hostEventsList } = this.state;
+        const eventId = this.state.hostEventsList;
         return (
             <div className='center'>
                 <div className="header-container col s12">
                     <h1 className="">My Hosted Events</h1>
                 </div>
                 <div className="main-container">
-                    {hostEventsList.map((event) => (
-                        <Link to="/events/id/host" className="event-list-button nav-link btn center">
+                    {hostEventsList.map((event, index) => (
+                        <Link to={'/events/'+eventId[index].eventID+'/host'} className="event-list-button nav-link btn center">
                             <div className="event-container" key={event.id} >
                                 <div className="event-info-container">
                                     <span className="event-title">{event.gameTitle}</span>
