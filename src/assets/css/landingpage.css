@@ -7,13 +7,14 @@
 }
 
 .landingpage-main-container {
-    height: 60vh;
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("https://cf.geekdo-images.com/imagepage/img/xKE9T1SxkuamD3kDIzlTnnSyd8Q=/fit-in/900x600/filters:no_upscale()/pic1827515.png");
+    background-image: url("https://i.imgur.com/3QhNw7q.jpg?1");
     background-position: center;
-    background-size: auto;
+    background-size: cover;
+
 }
 
 .mainNav {
