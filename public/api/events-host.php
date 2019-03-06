@@ -1,61 +1,53 @@
 <?php
-require_once('../config/setup.php');
-require_once('../config/mysql_connect.php');
+require_once('../../config/setup.php');
+require_once('../../config/mysql_connect.php');
 
 $output = [
    'success'=> false
 ];
 
-$hostID = $_GET['hostID'];
-$query = "SELECT e.*, 
-            l.streetAddress, l.city, l.state, l.zipcode, p.playerName,
-            pl.userID AS player, pl.id AS playerID
+$userID = $_GET['userID'];
+$query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime, e.gameTitle, 
+            e.gameImages, e.playerLimit, COUNT(pl.eventID) AS playerCount, e.location,
+            l.city, l.state
          FROM event AS e
          JOIN location AS l
             ON e.location = l.id
-         RIGHT JOIN playerList AS pl
+         JOIN playerList AS pl
             ON pl.eventID = e.id
-         JOIN profile AS p
-            ON pl.userID = p.id
-         WHERE hostID = $hostID";
+         JOIN playerList as plu
+            ON plu.eventID = e.id
+         WHERE pl.userID = 1 AND e.hostID = pl.userID
+         GROUP BY e.id";
 $result = $db->query($query);
-$data = [];
+$userID = [];
 
 if ($result){
    $output['success'] = true;
-
+$index = 0;
    while($row = $result->fetch_assoc()){
-      if(empty($data[$row['id']])){
-         $row['location'] = [
-            'streetAddress'=> $row['streetAddress'],
-            'city'=> $row['city'],
-            'state'=> $row['state'],
-            'zipcode'=> $row['zipcode']
-         ];  
-         $row['playerList'][] = [
-            'playerName'=> $row['playerName'],
-            'player'=> $row['player'],
-            'playerID'=> $row['playerID']
-         ];
-         unset($row['streetAddress'], 
-               $row['city'],
-               $row['state'],
-               $row['zipcode'],
-               $row['player'],
-               $row['playerID'],
-               $row['playerName']);           
-         $data[$row['id']] = $row;
-      } else {
-         $data[$row['id']]['playerList'][] = [
-            'playerName'=> $row['playerName'],
-            'player'=> $row['player'],
-            'playerID'=> $row['playerID']
-         ];
-      }
+      $userID[] = [
+         "eventID"=> $row["eventID"],
+         "hostID"=> $row["hostID"],
+         "date"=> $row["date"],
+         "startTime"=> $row["startTime"],
+         "endTime"=> $row["endTime"],
+         "gameTitle"=> $row["gameTitle"],
+         "gameImages"=> $row["gameImages"],
+         "playerLimit"=> $row["playerLimit"],
+         "playerCount"=> $row["playerCount"],
+         "location"=> $row["location"]
+      ];
+
+      $userID[$index]['location'] = [
+         "city"=> $row["city"],
+         "state"=> $row["state"]
+      ];   
+      $index++;
    }
 }
 
-$output['data'] = $data;
+$output['userID'] = $userID;
 $json_output = json_encode($output);
 print($json_output);
 ?>
