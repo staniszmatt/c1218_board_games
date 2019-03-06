@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import PlayerListData from '../../../dummy_data/player-list';
-
+import axios from 'axios';
 
 class PlayerList extends Component {
     state = {
@@ -12,7 +12,12 @@ class PlayerList extends Component {
         this.getPlayerListData();
     }
 
-    getPlayerListData() {
+    async getPlayerListData() {
+
+        const resp = await axios.get('/api/events-eventID.php?eventID=1');
+
+        console.log('resp: ', resp);
+
         this.setState({
             data: PlayerListData[0]
         });
