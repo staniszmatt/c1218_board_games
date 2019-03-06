@@ -16,51 +16,51 @@ class EventSelected extends Component {
     }
 
     async getEventId (){
-        const resp = await axios.get('/api/events-eventID.php');
+        const resp = await axios.get('api/events-myevents.php?id=4');
 
         console.log('resp: ', resp);
 
         this.setState({
-            eventId: resp.data.eventID
+            userId: resp.event.eventID
         });
     }
 
 
     render() {
-        const { eventId } = this.state;
-        const numberOfPlayers = eventId.playerList.length;
+        const { userId } = this.state;
+        const numberOfPlayers = userId.playerList.length;
         return (
             <div className="center">
                 <div className="main-container">
                         <div className="btn game-picture center">
-                            <img src={eventId.gameImage}></img>
+                            <img src={userId.gameImage}></img>
                         </div>
-                        <div className="btn event-host grey ">Game: {eventId.gameTitle}</div>
-                        <div className="btn event-host grey darken-1">Host Name: {eventId.playerList[0].userPlayerName}</div>
+                        <div className="btn event-host grey ">Game: {userId.gameTitle}</div>
+                        <div className="btn event-host grey darken-1">Host Name: {userId.playerList[0].userPlayerName}</div>
 
 
                         <div className="date grey">
                             <ul>
-                                <li>Date: {eventId.date}</li>
-                                <li>Start: {eventId.startTime}</li>
+                                <li>Date: {userId.date}</li>
+                                <li>Start: {userId.startTime}</li>
                             </ul>
                         </div>
 
                         <div className="btn address grey darken-1">
                             <ul>
-                                <li>Address: {eventId.location.streetAddress}</li>
-                                <li>City: {eventId.location.city}</li>
-                                <li>State: {eventId.location.state}</li>
-                                <li>Zip: {eventId.location.zipCode}</li>
+                                <li>Address: {userId.location.streetAddress}</li>
+                                <li>City: {userId.location.city}</li>
+                                <li>State: {userId.location.state}</li>
+                                <li>Zip: {userId.location.zipCode}</li>
                             </ul>
                         </div>
 
                         <div className=" numberOfPlayers grey">
-                            <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
+                            <div> {numberOfPlayers} Players out of {userId.playerLimit} have joined </div>
                         </div>
 
                         <div className="center joinButton green lighten-4">
-                            <Link to={"/events/"+eventId.eventID+"/player-list"} className="nav-link">Join Game</Link>
+                            <Link to={"/events/"+userId.eventID+"/player-list"} className="nav-link">Join Game</Link>
                         </div>
                 </div>
 
