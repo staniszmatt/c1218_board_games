@@ -13,10 +13,7 @@ class EventSelected extends Component {
 
     async componentDidMount() {
         const ID = this.props.match.params.id;
-
         const resp = await axios.get(`/api/events-eventID.php?eventID=${ID}`);
-        // const resp = await axios.get(`/api/events-eventID.php?eventID=${ID}`);
-
         console.log('resp: ', resp);
         console.log('resp: ', ID);
         this.setState({
@@ -24,22 +21,6 @@ class EventSelected extends Component {
         });
 
     }
-
-    // async getEventId (){
-    //     console.log('Student ID: ',this.props.match.params.id);
-    //     const ID = this.props.match.params.id;
-
-    //     const resp = await axios.get('/api/events-eventID.php?eventID=2');
-    //     // const resp = await axios.get(`/api/events-eventID.php?eventID=${ID}`);
-
-    //     console.log('resp: ', resp);
-    //     console.log('resp: ', ID);
-    //     this.setState({
-    //         eventId: resp.data.event
-    //     });
-    // }
-
-
     render() {
         const { eventId } = this.state;
         console.log(eventId);
@@ -52,7 +33,6 @@ class EventSelected extends Component {
                             <p>Page is Loading...</p>
                         </div>
                     </div>
-
                 </div>
             );
         } else {
@@ -69,22 +49,22 @@ class EventSelected extends Component {
     
                         <div className="date grey">
                             <ul>
-                                <li>Date: {eventId.date}</li>
-                                <li>Start: {eventId.startTime}</li>
+                                <li>Date: {userId.date}</li>
+                                <li>Start: {userId.startTime}</li>
                             </ul>
                         </div>
     
                         <div className="btn address grey darken-1">
                             <ul>
-                                <li>Address: {eventId.location.streetAddress}</li>
-                                <li>City: {eventId.location.city}</li>
-                                <li>State: {eventId.location.state}</li>
-                                <li>Zip: {eventId.location.zipCode}</li>
+                                <li>Address: {userId.location.streetAddress}</li>
+                                <li>City: {userId.location.city}</li>
+                                <li>State: {userId.location.state}</li>
+                                <li>Zip: {userId.location.zipCode}</li>
                             </ul>
                         </div>
     
                         <div className=" numberOfPlayers grey">
-                            <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
+                            <div> {numberOfPlayers} Players out of {userId.playerLimit} have joined </div>
                         </div>
     
                         <div className="center joinButton green lighten-4">

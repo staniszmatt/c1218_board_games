@@ -28,7 +28,6 @@ class PlayerList extends Component {
 
         return (
             <div>
-                <div> http://localhost:3000/events/id/player-list</div>
                 <h3 className="center">
                     Checkers
                 </h3>
