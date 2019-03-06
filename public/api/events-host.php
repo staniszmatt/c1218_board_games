@@ -17,7 +17,7 @@ $query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime, e.ga
             ON pl.eventID = e.id
          JOIN playerList as plu
             ON plu.eventID = e.id
-         WHERE pl.userID = 1 AND e.hostID = pl.userID
+         WHERE pl.userID = $userID AND e.hostID = pl.userID
          GROUP BY e.id";
 $result = $db->query($query);
 $userID = [];
