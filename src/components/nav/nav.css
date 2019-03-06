@@ -1,4 +1,16 @@
-.nav {
+.nav-page-footer{
+  background-color: grey;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+}
+
+/* .nav {
   background-color: grey;
   list-style-type: none;
   text-align: center;
@@ -8,7 +20,7 @@
   height: 12vh;
   position: fixed;
   bottom: 0;
-}
+} */
 
 .nav-item {
   display: inline-block;
