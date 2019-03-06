@@ -1,14 +1,10 @@
-.nav-page-footer{
-  background-color: grey;
-  list-style-type: none;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  height: 10vh;
+
+.nav {
+  background-color: darkslategrey;
   position: fixed;
   bottom: 0;
 }
+
 
 /* .nav {
   background-color: grey;
@@ -35,7 +31,9 @@ label{
 
 .nav li {
   display: inline-block;
-  font-size: 20px;
-  padding: 10px;
+  font-size: 15px;
+  width: 33%;
 
 }
+
+

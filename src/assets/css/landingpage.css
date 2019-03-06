@@ -1,20 +1,36 @@
+
 .landing-page-header {
-    color: chartreuse;
+    background-color: darkslategrey;
+    color: white;
     height: 20vh;
+    padding: 10px 0 0 0;
 }
 
-.main-continer {
+.main-container {
     height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("https://cf.geekdo-images.com/imagepage/img/xKE9T1SxkuamD3kDIzlTnnSyd8Q=/fit-in/900x600/filters:no_upscale()/pic1827515.png");
+    background-position: center;
+    background-size: auto;
 }
 
 .mainNav {
     height: 20vh;
+
 }
 
 .play-button{
     height: 20%;
-    width: 80%;
+    width: 50%;
+    padding: 10px;
 }
+
+.btn {
+    background-color: darkslategray;
+    padding: 10px;
+    height: 10%;
+    width: 50%;
+}
+

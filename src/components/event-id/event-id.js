@@ -2,12 +2,30 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './event-id.css';
 import EventData from '../../../dummy_data/event-eventID-edit';
+import axios from 'axios';
 
 
 class EventSelected extends Component {
     state = {
-        eventId: EventData
+        eventId: []
     }
+
+    componentDidMount(){
+        this.displayEvents();
+
+    }
+
+    async displayEvents (){
+        const resp = await axios.get('/api/events-eventID.php');
+
+        console.log('resp: ', )
+
+        this.setState({
+            eventId: resp.data.eventID
+        });
+    }
+
+
     render() {
         const { eventId } = this.state;
         const numberOfPlayers = eventId.playerList.length;
