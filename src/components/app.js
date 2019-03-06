@@ -8,19 +8,19 @@ import '../assets/css/app.css';
 import LandingPage from './landing-page';
 import Events from './events/events';
 import EventSelected from './event-id/event-id';
-import PlayerList from './player-list';
+import PlayerList from './event-details/player-list';
 import Profile from './profile/profile';
-import CreateNewEvent from './new-event';
+import CreateNewEvent from './create_edit/new-event';
 import MyEvents from './events/myevents';
 import EventsHost from './events/events-host';
-import EventHostPage from './event-hostpage';
-import EditEvent from './edit-event';
-import JoinedEventDetails from './joined-event';
+import EventHostPage from './event-id/event-hostpage';
+import EditEvent from './create_edit/edit-event';
+import JoinedEventDetails from './event-details/joined-event';
 import Nav from './nav/nav';
 import players from '../../dummy_data/profile.json';
-import SignUp from './sign-up';
-import SignOut from './sign-out';
-import SignIn from './sign-in';
+import SignUp from './sign-in-out/sign-up';
+import SignOut from './sign-in-out/sign-out';
+import SignIn from './sign-in-out/sign-in';
 
 const App = () => (
     <div className="main-div">

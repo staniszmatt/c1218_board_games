@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
 import {Link} from 'react-router-dom';
-import EventData from '../../dummy_data/event-eventID-edit';
+import EventData from '../../../dummy_data/event-eventID-edit';
 
 class EditEvent extends Component{
     state = {

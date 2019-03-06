@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import PlayerListData from '../../dummy_data/player-list';
+import PlayerListData from '../../../dummy_data/player-list';
 
 
 class PlayerList extends Component {

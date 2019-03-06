@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 //EventHostPage
-import EventHostData from '../../dummy_data/event-eventID-edit';
+import EventHostData from '../../../dummy_data/event-eventID-edit';
 
 
 

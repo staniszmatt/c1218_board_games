@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/sign-out.css';
+import '../../assets/css/sign-out.css';
 
 export default props => (
     <div>
