@@ -4,7 +4,7 @@ import './nav.css';
 
 
 export default props => (
-    <footer className="page-footer">
+    <div>
         <ul className="nav">
             <li className="nav-item">
                 <Link to="/profile" className="btn nav-link pulse center font-color: black">Profile</Link>
@@ -18,5 +18,5 @@ export default props => (
                 <Link to="/events" className="btn nav-link pulse center font-color: black">Events</Link>
             </li>
         </ul>
-    </footer>
+    </div>
 )
