@@ -4,11 +4,11 @@ import {Link} from 'react-router-dom';
 
 const EventRow = (props) => {
 
-    const { startTime, date, gameTitle, id, gameImage, playerLimit } = props.event;
+    const { startTime, date, gameTitle, id, gameImages, playerLimit } = props.event;
 
     return (
             <Link to={'/events/' + id} className="events-list-button nav-link btn center">
-                <div className="events-container" key={id} >
+                <div className="events-container" key={id} eventId={id} >
                     <div className="events-info-container">
                         <span className="events-title">{gameTitle}</span>
                         <br />
@@ -17,7 +17,7 @@ const EventRow = (props) => {
                         <span className="events-date-time">{date} {startTime}</span>
                     </div>
                     <div className="events-image center">
-                        <img src={gameImage} alt={gameTitle}></img>
+                        <img src={gameImages} alt={gameTitle}></img>
                     </div >
                 </div>
             </Link>
