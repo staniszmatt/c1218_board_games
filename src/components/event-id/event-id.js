@@ -7,22 +7,21 @@ import axios from 'axios';
 
 class EventSelected extends Component {
     state = {
-        eventId: EventData
+        eventId: []
     }
 
     componentDidMount(){
-        this.displayEvents();
+        this.getEventId();
 
     }
 
-    async displayEvents (){
+    async getEventId (){
         const resp = await axios.get('/api/events-eventID.php');
 
-        console.log('resp: ', )
+        console.log('resp: ', resp);
 
         this.setState({
-            eventId: EventData
-            // eventId: resp.data.eventID
+            eventId: resp.data.eventID
         });
     }
 
