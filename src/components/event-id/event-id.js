@@ -7,7 +7,7 @@ import axios from 'axios';
 
 class EventSelected extends Component {
     state = {
-        eventId: []
+        eventId: EventData
     }
 
     componentDidMount(){
@@ -21,7 +21,8 @@ class EventSelected extends Component {
         console.log('resp: ', )
 
         this.setState({
-            eventId: resp.data.eventID
+            eventId: EventData
+            // eventId: resp.data.eventID
         });
     }
 
