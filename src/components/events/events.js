@@ -38,10 +38,10 @@ class Events extends Component {
 
         return (
             <div className='center'>
-                <div className="header-container col s12">
+                <div className="header-events-container col s12">
                     <h1 className="">Available Events</h1>
                 </div>
-                <div className="main-container">
+                <div className="main-events-container">
                     {eventRow}
                 </div>
             </div>

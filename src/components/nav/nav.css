@@ -1,14 +1,29 @@
+
 .nav {
   background-color: darkslategrey;
-  list-style-type: none;
-  text-align: center;
-  width: 100%;
-  margin: 0 auto;
-  height: 13vh;
   position: fixed;
   bottom: 0;
 }
 
+
+/* .nav {
+  background-color: grey;
+  list-style-type: none;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  height: 12vh;
+  position: fixed;
+  bottom: 0;
+} */
+
+.nav-item {
+  display: inline-block;
+  width:33%;
+
+
+}
 
 label{
   font-size: 1.5rem;
