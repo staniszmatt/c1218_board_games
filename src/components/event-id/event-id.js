@@ -7,45 +7,53 @@ import axios from 'axios';
 
 class EventSelected extends Component {
     state = {
-        eventId: []
+        eventId: null,
     }
 
-    componentDidMount(){
-        this.getEventId();
 
-    }
-
-    async getEventId (){
-        const resp = await axios.get('api/events-myevents.php?id=4');
-
+    async componentDidMount() {
+        const ID = this.props.match.params.id;
+        const resp = await axios.get(`/api/events-eventID.php?eventID=${ID}`);
         console.log('resp: ', resp);
-
+        console.log('resp: ', ID);
         this.setState({
-            userId: resp.event.eventID
+            eventId: resp.data.event
         });
+
     }
-
-
     render() {
-        const { userId } = this.state;
-        const numberOfPlayers = userId.playerList.length;
-        return (
-            <div className="center">
-                <div className="main-container">
+        const { eventId } = this.state;
+        console.log(eventId);
+
+        if (eventId === null) {
+            return (
+                <div className="center">
+                    <div className="main-container">
                         <div className="btn game-picture center">
-                            <img src={userId.gameImage}></img>
+                            <p>Page is Loading...</p>
                         </div>
-                        <div className="btn event-host grey ">Game: {userId.gameTitle}</div>
-                        <div className="btn event-host grey darken-1">Host Name: {userId.playerList[0].userPlayerName}</div>
-
-
+                    </div>
+                </div>
+            );
+        } else {
+            const numberOfPlayers = eventId.playerList.length;
+            return (
+                <div className="center">
+                    <div className="main-container">
+                        <div className="btn game-picture center">
+                            <img src={eventId.gameImages}></img>
+                        </div>
+                        <div className="btn event-host grey ">Game: {eventId.gameTitle}</div>
+                        <div className="btn event-host grey darken-1">Host Name: {eventId.playerList[0].playerName}</div>
+    
+    
                         <div className="date grey">
                             <ul>
                                 <li>Date: {userId.date}</li>
                                 <li>Start: {userId.startTime}</li>
                             </ul>
                         </div>
-
+    
                         <div className="btn address grey darken-1">
                             <ul>
                                 <li>Address: {userId.location.streetAddress}</li>
@@ -54,18 +62,20 @@ class EventSelected extends Component {
                                 <li>Zip: {userId.location.zipCode}</li>
                             </ul>
                         </div>
-
+    
                         <div className=" numberOfPlayers grey">
                             <div> {numberOfPlayers} Players out of {userId.playerLimit} have joined </div>
                         </div>
-
+    
                         <div className="center joinButton green lighten-4">
-                            <Link to={"/events/"+userId.eventID+"/player-list"} className="nav-link">Join Game</Link>
+                            <Link to={"/events/" + eventId.eventID + "/player-list"} className="nav-link">Join Game</Link>
                         </div>
+                    </div>
+    
                 </div>
+            );
+        }
 
-            </div>
-        );
     }
 }
 
