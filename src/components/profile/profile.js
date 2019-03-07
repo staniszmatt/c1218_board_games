@@ -25,26 +25,28 @@ class Profile extends Component {
         const fullName = `${this.state.userProfile.userFirstName} ${this.state.userProfile.userLastName}`
         return (
             <div className="center">
-                <div className="center user-info">
+                <div className="center user-image">
                     <div className="center profile-image"> User Profile Picture here</div>
+                </div>
+                <div className="center user-info">
                     <div className="center">Full Name: {fullName}</div>
                     <div className="center">User Name: {userPlayerName}</div>
                 </div>
                 <div className="profile-button-container center">
                     <div>
-                        <Link to="/new-event" className="btn nav-link ">Create Event</Link>
+                        <Link to="/new-event" className="btn nav-link green">Create Event</Link>
                     </div>
 
                     <div>
-                        <Link to="/events" className="btn nav-link ">View Available Events</Link>
+                        <Link to="/events" className="btn nav-link green">View Available Events</Link>
                     </div>
 
                     <div>
-                        <Link to="/events/host" className="btn nav-link ">My Hosted Events</Link>
+                        <Link to="/events/host" className="btn nav-link green">My Hosted Events</Link>
                     </div>
 
                     <div>
-                        <Link to="/events/myevents" className="btn nav-link ">My Joined Events</Link>
+                        <Link to="/events/myevents" className="btn nav-link green">My Joined Events</Link>
                     </div>
                 </div>
             </div>
