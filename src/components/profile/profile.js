@@ -15,8 +15,6 @@ class Profile extends Component {
     async getUserProfile(){
         const resp = await axios.get('/api/profile.php?id=1');
 
-        console.log('resp: ', resp);
-
         const userId = 0;
         this.setState({
             userProfile: UserData[userId] || []

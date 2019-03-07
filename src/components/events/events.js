@@ -15,9 +15,7 @@ class Events extends Component {
     }
 
     async getEventList(){
-        const resp = await axios.get('/api/events.php');
-        
-        console.log('resp: ', resp);
+        const resp = await axios.get(`/api/events.php`);
         
         this.setState({
             eventList: resp.data.event
@@ -27,8 +25,6 @@ class Events extends Component {
 
     render() {
         const { eventList } = this.state;
-
-        console.log('Event List:', eventList);
 
         let eventRow = [];
 
