@@ -34,7 +34,7 @@ class Profile extends Component {
                 </div>
                 <div className="profile-button-container center">
                     <div>
-                        <Link to="/new-event" className="btn nav-link green">Create Event</Link>
+                        <Link to="/new-event" className="btn nav-link green create-event-btn">Create Event</Link>
                     </div>
 
                     <div>
