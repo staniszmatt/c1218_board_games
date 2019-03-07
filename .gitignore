@@ -2,5 +2,4 @@
 .DS_Store
 node_modules
 
-config/*.php
-!config/mysqlcres.php.template
+config/mysqlcreds.php
