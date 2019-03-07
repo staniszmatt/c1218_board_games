@@ -31,7 +31,18 @@ class Events extends Component {
         eventRow = eventList.map((event) => {
             return <EventRow key={event.id} event={event} eventId={event.id}/>
         });
-
+        if(eventList.length <= 0){
+            return (
+                <div className='center'>
+                    <div className="header-events-container col s12">
+                        <h1 className="">Available Events</h1>
+                    </div>
+                    <div className="main-events-container">
+                        Events Are Loading...
+                    </div>
+                </div>
+            )
+        }
         return (
             <div className='center'>
                 <div className="header-events-container col s12">
