@@ -8,7 +8,7 @@ const EventRow = (props) => {
 
     return (
             <Link to={'/events/' + id} className="events-list-button nav-link btn center">
-                <div className="events-container" key={id} eventId={id} >
+                <div className="events-container" key={id} data-event-id={id} >
                     <div className="events-info-container">
                         <span className="events-title">{gameTitle}</span>
                         <br />

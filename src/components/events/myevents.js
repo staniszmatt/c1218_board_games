@@ -2,42 +2,58 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './events.css';
 import MyEventData from '../../../dummy_data/user-joined-list';
+import EventRowMyEvents from './events-row-host';
+import axios from 'axios';
 
 class MyEvents extends Component {
     state = {
-        myEventList: MyEventData
+        myEventList: []
+    }
+
+    async componentDidMount() {
+        const userID = 1;
+        const resp = await axios.get(`/api/events-host.php?userID=${userID}`);
+
+
+        this.setState({
+            myEventList: resp.data.userID
+        });
     }
 
     render() {
-        console.log('This is Data:', this.state);
         const { myEventList } = this.state;
-        const eventId = this.state.hostEventsList;
-        return (
-            <div className='center'>
-                <div className="header-container col s12">
-                    <h1 className="">My Events</h1>
+        const eventId = this.state.myEventList;
+        if (myEventList.length <= 0) {
+            return (
+                <div className='center'>
+                    <div className="header-container col s12">
+                        <h1 className="">My Joined Events</h1>
+                    </div>
+                    <div className="events-main-container">
+                        LOADING....
                 </div>
-                <div className="main-container">
-                    {myEventList.map((event, index) => (
-                        <Link to={'/events/' + event.eventID} className="events-list-button nav-link btn center">
-                            <div className="events-container" key={event.id} >
-                                <div className="events-info-container">
-                                    <span className="events-title">{event.gameTitle}</span>
-                                    <br />
-                                    <span className="events-player-count">Player Limit: {event.playerLimit}</span>
-                                    <br />
-                                    <span className="events-date-time">{event.date} {event.startTime}</span>
-                                </div>
-                                <div className="events-image center">
-                                    <img src={event.gameImage} alt={event.gameTitle}></img>
-                                </div >
-                            </div>
-                        </Link>))}
+                </div>
+            );
+        }
+        let eventRow = [];
+        eventRow = myEventList.map((event) => {
+            return <EventRowMyEvents key={event.eventID} event={event} eventId={event.eventID} />
+        });
+        console.log
+        return (
+
+            <div className='center'>
+                <div className="header-events-container col s12">
+                    <h1 className="">My Joined Events</h1>
+                </div>
+                <div className="main-events-container">
+                    {eventRow}
                 </div>
             </div>
-        )
+        );
     }
 }
+
 
 
 
