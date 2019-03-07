@@ -1,6 +1,6 @@
 import React, {Component } from 'react';
 import {Link} from 'react-router-dom';
-import EventData from '../../../dummy_data/event-eventID-edit';
+import './edit-event.css';
 import axios from 'axios';
 
 class EditEvent extends Component{
@@ -21,6 +21,7 @@ class EditEvent extends Component{
         this.setState({
             eventId: this.props.match.params.id
         });
+
         this.getEditEventData();
     }
 
@@ -28,12 +29,12 @@ class EditEvent extends Component{
 
         const resp = await axios.get('/api/events-eventID-edit.php?eventID=1');
 
-        console.log('resp: ', resp);
+        console.log('resp: ', resp.data.event);
 
         this.setState({
-            ...resp.event,
-            eventId: this.state.eventId
+            ...resp.data.event
         });
+        console.log(this.state);
     }
 
     handleKeyPress = (event) => {
@@ -43,8 +44,10 @@ class EditEvent extends Component{
     }
 
     render(){
-        const  {gameTitle, eventId, startTime, endTime, playerLimit} = this.state;
+        const  {gameTitle, eventId, location, startTime, endTime, playerLimit} = this.state;
         const  {streetAddress, city, state, zipcode} = this.state.location;
+        const eventLocation = location.streetAddress + ' ' +location.city+ ' ' +location.state+ ' ' +location.zipcode;
+        const eventTime = startTime+ ' to ' +endTime;
         
         return (
 
@@ -53,21 +56,20 @@ class EditEvent extends Component{
 
                 <form onSubmit={this.handleKeyPress}>
                     <div className="form-group">
-                        <div>{gameTitle}</div>
-                        <input onChange={this.handleKeyPress} name="gameTitle" type="text" id="gameTitle"  value={gameTitle} className="form-control"  />
                         <label htmlFor="gameTitle">Game Title</label>
+                        <input onChange={this.handleKeyPress} name="gameTitle" type="text" id="gameTitle"  value={gameTitle} className="form-control"  />
                     </div>
                     <div className="form-group">
-                        <input name="address" type="text" className="form-control" value={eventId.location}/>
                         <label htmlFor="gameTitle">Location</label>
+                        <input onChange={this.handleKeyPress} name="address" type="text" id="address"  value={eventLocation} className="form-control" />
                     </div>
                     <div className="form-group">
-                        <input name="dateAndTime" type="text" className="form-control" value={eventId.startTime}/>
                         <label htmlFor="gameTitle">Time</label>
+                        <input onChange={this.handleKeyPress} name="dateAndTime" type="text" id="dateAndTime"  value={eventTime} className="form-control" />
                     </div>
                     <div className="form-group">
-                        <input name="numberOfPlayers" type="text" className="form-control" value={eventId.playerLimit}/>
                         <label htmlFor="">Player Limit</label>
+                        <input onChange={this.handleKeyPress} name="numberOfPlayers" type="text"  id="numberOfPlayers" value={playerLimit} className="form-control" />
                     </div>
                 </form>
 
