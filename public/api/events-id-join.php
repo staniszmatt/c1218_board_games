@@ -13,14 +13,13 @@ if(!empty($output['error'])){
    exit();
 }
 $query = "INSERT INTO playerList 
-         SET eventID='{$eventID}', 
-            userID='{$_POST['hostID']}'";
+         SET eventID='{$_POST[eventID]}', 
+            userID='{$_POST['userID']}'";
 $result =$db->query($query);
 if($result){
    $output['success'] = true;
-   $output['eventID'] = $eventID;
+   $output['playerListID'] = $result;
    } else {
-      print("Error for player");
       $output['error'] = mysqli_error($db);
    }
 $json_output = json_encode($output);
