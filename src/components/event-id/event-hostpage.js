@@ -44,7 +44,7 @@ class EventHostPage extends Component {
                         </div>
 
                         <div className="center joinButton green lighten-4">
-                            <Link to="/events/id/edit" className="nav-link">Edit Game</Link>
+                            <Link to="/events/1/edit" className="nav-link">Edit Game</Link>
                         </div>
                 </div>
 

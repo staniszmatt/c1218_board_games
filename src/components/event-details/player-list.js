@@ -51,34 +51,28 @@ class PlayerList extends Component {
 
                     <table>
                         <thead>
-                        <tr>
+                        <tr className="center">
                             <th className="center">UserName</th>
-                            <th className="center">Rank</th>
 
                         </tr>
                         </thead>
 
                         <tbody>
                         {data.players.map((player) => (
-                            <tr key={player.userPlayerName}>
-                                <td colSpan="2">
+                            <tr  key={player.userPlayerName}>
+                                <td className="center"colSpan="2">
                                     {player.userID}<br/>
                                     {player.userPlayerName}
                                 </td>
                             </tr>))}
                         <tr>
-                            <td className="center">
-                                <div>OPEN</div>
-                            </td>
+
                             <td className="center">
                                 <Link to="/events/myevents" className="btn">JOIN</Link>
                             </td>
                         </tr>
-                        <tr>
-                            <td className="center">
-                                <div>OPEN</div>
-                            </td>
-                            <td className="center">
+                        <tr className="center">
+                            <td>
                                 <Link to="/events/myevents" className="btn">JOIN</Link>
                             </td>
                         </tr>
