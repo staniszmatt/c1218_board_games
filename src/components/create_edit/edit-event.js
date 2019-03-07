@@ -38,9 +38,18 @@ class EditEvent extends Component{
     }
 
     handleKeyPress = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
+        console.log(event);
+        if (['streetAddress'].includes(event.target.name)){
+            this.setState({
+                location: {
+                    [event.target.name]: event.target.value
+                }
+            });
+        } else {
+            this.setState({
+                [event.target.name]: event.target.value
+            });
+        }
     }
 
     render(){
