@@ -14,8 +14,6 @@ class EventSelected extends Component {
     async componentDidMount() {
         const ID = this.props.match.params.id;
         const resp = await axios.get(`/api/events-eventID.php?eventID=${ID}`);
-        console.log('resp: ', resp);
-        console.log('resp: ', ID);
         this.setState({
             eventId: resp.data.event
         });
@@ -23,7 +21,6 @@ class EventSelected extends Component {
     }
     render() {
         const { eventId } = this.state;
-        console.log(eventId);
 
         if (eventId === null) {
             return (
