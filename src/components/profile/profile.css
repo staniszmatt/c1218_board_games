@@ -1,14 +1,22 @@
 .profile-button-container .btn{
-    margin: 15px 15px;
-    width: 90%;
-}
+    border-radius: 25px;
+    margin: 30px 15px;
+    font-size: 14px;
+    font-weight: bold;
+
+ }
 
 .profile-image {
+    padding: 54px;
     height: 18vh;
     border: 1px solid black;
+    margin: 0px 0px 10px 0px;
 }
 
 .user-info {
-    height: 25vh;
+    margin: 0 auto;
+    height: 7vh;
     border: 1px solid black;
+    width: 50%;
 }
+

@@ -7,15 +7,15 @@ export default props => (
     <div>
         <ul className="nav">
             <li className="nav-item">
-                <Link to="/profile" className="btn nav-link pulse center font-color: black">Profile</Link>
+                <Link to="/profile" className="btn nav-link center font-color: black">Profile</Link>
             </li>
 
             <li className="nav-item">
-                <Link to="/sign-out" className="btn nav-link pulse center font-color: red">Sign Out</Link>
+                <Link to="/sign-out" className="btn nav-link  center font-color: red">Sign Out</Link>
             </li>
 
             <li className="nav-item">
-                <Link to="/events" className="btn nav-link pulse center font-color: black">Events</Link>
+                <Link to="/events" className="btn nav-link  center font-color: black">Events</Link>
             </li>
         </ul>
     </div>
