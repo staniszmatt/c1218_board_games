@@ -23,7 +23,7 @@ export default (props) => {
                     <input name="numberOfPlayers" type="text" className="form-control" />
                 </div>
             </form>
-            <Link to="/events/id/host" className="btn text-center nav-link">SUBMIT EVENT</Link>
+            <Link to="/events/:id/host" className="btn text-center nav-link">SUBMIT EVENT</Link>
         </div>
 
     );
