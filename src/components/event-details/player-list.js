@@ -71,11 +71,6 @@ class PlayerList extends Component {
                                 <Link to="/events/myevents" className="btn">JOIN</Link>
                             </td>
                         </tr>
-                        <tr className="center">
-                            <td>
-                                <Link to="/events/myevents" className="btn">JOIN</Link>
-                            </td>
-                        </tr>
                         </tbody>
                     </table>
                 </div>
