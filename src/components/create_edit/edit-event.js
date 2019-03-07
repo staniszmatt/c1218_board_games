@@ -44,7 +44,7 @@ class EditEvent extends Component{
     }
 
     render(){
-        const  {gameTitle, eventId, location, startTime, endTime, playerLimit} = this.state;
+        const  {gameTitle, eventId, date, location, startTime, endTime, playerLimit} = this.state;
         const  {streetAddress, city, state, zipcode} = this.state.location;
         const eventLocation = location.streetAddress + ' ' +location.city+ ' ' +location.state+ ' ' +location.zipcode;
         const eventTime = startTime+ ' to ' +endTime;
@@ -60,12 +60,32 @@ class EditEvent extends Component{
                         <input onChange={this.handleKeyPress} name="gameTitle" type="text" id="gameTitle"  value={gameTitle} className="form-control"  />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="gameTitle">Location</label>
-                        <input onChange={this.handleKeyPress} name="address" type="text" id="address"  value={eventLocation} className="form-control" />
+                        <label htmlFor="streetAddress">Street Address</label>
+                        <input onChange={this.handleKeyPress} name="streetAddress" type="text" id="streetAddress"  value={location.streetAddress} className="form-control" />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="gameTitle">Time</label>
-                        <input onChange={this.handleKeyPress} name="dateAndTime" type="text" id="dateAndTime"  value={eventTime} className="form-control" />
+                        <label htmlFor="city">City</label>
+                        <input onChange={this.handleKeyPress} name="city" type="text" id="city"  value={location.city} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="state">State</label>
+                        <input onChange={this.handleKeyPress} name="state" type="text" id="state"  value={location.state} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="zipcode">Zip Code</label>
+                        <input onChange={this.handleKeyPress} name="zipcode" type="text" id="zipcode"  value={location.zipcode} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="date">Date</label>
+                        <input onChange={this.handleKeyPress} name="date" type="date" id="text"  value={date} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="startTime">Start Time</label>
+                        <input onChange={this.handleKeyPress} name="startTime" type="text" id="startTime"  value={startTime} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="endTime">End Time</label>
+                        <input onChange={this.handleKeyPress} name="endTime" type="text" id="endTime"  value={endTime} className="form-control" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="">Player Limit</label>
