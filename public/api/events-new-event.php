@@ -43,7 +43,7 @@ if($result){
    }
    $query = "INSERT INTO playerList 
    SET eventID='{$eventID}', 
-      userID='{$_POST['userID']}'";
+      userID='{$_POST['hostID']}'";
 $result =$db->query($query);
 if($result){
    $output['success'] = true;
