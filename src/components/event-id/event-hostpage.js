@@ -13,7 +13,8 @@ class EventHostPage extends Component {
     async componentDidMount() {
         const eventId = this.props.match.params.id
         console.log(eventId);
-        const resp = await axios.get(`/api/events-eventID-edit.php?eventID=${eventId}`);
+        const resp = await axios.get('/api/events-eventID-edit.php?eventID='+eventId+'');
+        console.log(resp);
         this.setState({
             hostEventId: resp.data.event
         });
@@ -21,6 +22,7 @@ class EventHostPage extends Component {
     }
 
     render() {
+        console.log(this.state);
         const { hostEventId } = this.state;
         if (hostEventId === null) {
             return (

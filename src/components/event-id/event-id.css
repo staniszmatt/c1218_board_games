@@ -1,6 +1,7 @@
 .header-container{
     height: 10VH;
     text-align: center;
+    
 }
 
 
@@ -15,7 +16,7 @@
     display: inline-block;
     width: 100%;
     height: 16vh;
-    background: blue;
+    background: darkslategrey;
 }
 
 .main-container > div {
@@ -50,5 +51,5 @@ h1 {
 .game-picture > img{
     display: inline-block;
     width: 40%;
-    z-index: -1;
+    height: 100%;
 }
