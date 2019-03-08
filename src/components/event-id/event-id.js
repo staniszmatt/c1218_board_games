@@ -19,6 +19,14 @@ class EventSelected extends Component {
         });
 
     }
+    sendUserData = async ()=> {
+        const resp = await axios.post(`/api/events-id-join.php`,{
+            userID: 5,
+            eventID: this.props.match.params.id
+        });
+        console.log("Sent Player Response ", resp)
+        this.props.history.push("/events/" + this.state.eventId + "/player-list")
+    }
     render() {
         const { eventId } = this.state;
 
@@ -65,10 +73,10 @@ class EventSelected extends Component {
                         </div>
 
                         <div className="center joinButton green lighten-4">
-                            <Link to={"/events/" + eventId.eventID + "/player-list"} className="nav-link">Join Game</Link>
+                        <button className="btn" onClick={this.sendUserData}></button>
+                            {/* <Link onClick={this.sendUserData} to={"/events/" + eventId.eventID + "/player-list"} className="nav-link">Join Game</Link> */}
                         </div>
                     </div>
-
                 </div>
             );
         }
