@@ -18,7 +18,7 @@ class SignUp extends Component {
     handleSubmit = async (event) => {
         event.preventDefault();
 
-        const resp = await axios.post('/api/events-new-event.php', formattedNewEvent);
+        const resp = await axios.post('/api/events-new-event.php',  );
 
         this.props.history.push(``);
     }
