@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './events.css';
-import MyEventData from '../../../dummy_data/user-joined-list';
-import EventRowMyEvents from './events-row-host';
+import EventRowMyEvents from './events-row-myevents';
 import axios from 'axios';
 
 class MyEvents extends Component {
@@ -12,7 +11,7 @@ class MyEvents extends Component {
 
     async componentDidMount() {
         const userID = 1;
-        const resp = await axios.get(`/api/events-host.php?userID=${userID}`);
+        const resp = await axios.get(`/api/events-myevents.php?userID=${userID}`);
 
 
         this.setState({
@@ -37,9 +36,10 @@ class MyEvents extends Component {
         }
         let eventRow = [];
         eventRow = myEventList.map((event) => {
+            console.log(event.eventID);
             return <EventRowMyEvents key={event.eventID} event={event} eventId={event.eventID} />
         });
-        console.log
+
         return (
 
             <div className='center'>
