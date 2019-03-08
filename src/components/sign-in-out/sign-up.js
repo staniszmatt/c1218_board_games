@@ -1,50 +1,100 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 
-export default props => (
-    <div>
-        <h3 className="center"> Please Provide the Following Information </h3>
-        <div className="center">
-            <form>
-                <div className="form-group">
-                    <label> First Name </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Last Name </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Email </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Phone Number </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Data of Birth </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Zip Code</label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Choose User Name </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Password </label>
-                    <input name="" type="text"/>
-                </div>
+
+class SignUp extends Component {
+    state = {
+        firstName: '',
+        lastName: '',
+        email: '',
+        phoneNumber: '',
+        dateOfBirth: '',
+        zipcode: '',
+        playerName: '',
+        password: ''
+    }
+
+    handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const resp = await axios.post('/api/events-new-event.php', formattedNewEvent);
+
+        this.props.history.push(``);
+    }
+
+    handleKeyPress = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+
+        });
+    }
+
+    resetForm = () => {
+        this.setState({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phoneNumber: '',
+            dateOfBirth: '',
+            zipcode: '',
+            playerName: '',
+            password: ''
+        });
+    }
+
+    render(){
+        const {firstName, lastName, email, phoneNumber, dateOfBirth, zipcode, playerName, password} = this.state;
+        return(
+            <div>
+                <h3 className="center"> Please Provide the Following Information </h3>
                 <div className="center">
-                    <Link to="/events/myevents" className="btn blue">Submit</Link>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="form-group">
+                            <label> First Name </label>
+                            <input onChange={this.handleKeyPress} name="firstName" type="text" id="first-name" value={firstName}/>
+                        </div>
+                        <div className="form-group">
+                            <label> Last Name </label>
+                            <input onChange={this.handleKeyPress} name="lastName" type="text" id="last-name" value={lastName}/>
+                        </div>
+                        <div className="form-group">
+                            <label> Email </label>
+                            <input onChange={this.handleKeyPress} name="email" type="text" id="email" value={email}/>
+                        </div>
+                        <div className="form-group">
+                            <label> Phone Number </label>
+                            <input onChange={this.handleKeyPress} name="phoneNumber" type="text" id="phone-number" value={phoneNumber}/>
+                        </div>
+                        <div className="form-group">
+                            <label> Date of Birth </label>
+                            <input onChange={this.handleKeyPress} name="dateOfBirth" type="text" id="date-of-birth" value={dateOfBirth}/>
+                        </div>
+                        <div className="form-group">
+                            <label> Zip Code</label>
+                            <input onChange={this.handleKeyPress} name="zipcode" type="text" id="zipcode" value={zipcode}/>
+                        </div>
+                        <div className="form-group">
+                            <label> Player Name</label>
+                            <input onChange={this.handleKeyPress} name="playerName" type="text" id="player-name" value={playerName}/>
+                        </div>
+                        <div className="form-group">
+                            <label> Password </label>
+                            <input onChange={this.handleKeyPress} name="password" type="text" id="password" value={password}/>
+                        </div>
+                        <div className="center">
+                            <button onClick={this.handleSubmit} className="btn  blue">Submit</button>
+                            <button onClick={this.resetForm} type="button" className="btn red darken-2 waves-effect waves-light">Clear</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
-    </div>
+            </div>
+        );
+    }
+}
+
+export default SignUp;
 
 
 
-)
+
