@@ -43,7 +43,7 @@ class EventsHost extends Component {
         eventRow = hostEventsList.map((event) => {
             return <EventRowHost key={event.eventID} event={event} eventId={event.eventID}/>
         });
-        console.log
+
         return (
             
             <div className='center'>

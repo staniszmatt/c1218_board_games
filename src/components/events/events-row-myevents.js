@@ -6,8 +6,9 @@ const EventRowMyEvents = (props) => {
 
     const { startTime, date, gameTitle, eventID, gameImages, playerLimit } = props.event;
 
+
     return (
-        <Link to={'/events/' + event.eventID +'/myevents'} className="events-list-button nav-link btn center">
+        <Link to={'/events/' + eventID +'/myevents'} className="events-list-button nav-link btn center">
             <div className="events-container" key={eventID} >
                 <div className="events-info-container">
                     <span className="events-title">{gameTitle}</span>
