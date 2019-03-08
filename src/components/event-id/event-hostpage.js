@@ -12,9 +12,8 @@ class EventHostPage extends Component {
 
     async componentDidMount() {
         const eventId = this.props.match.params.id
-        console.log(eventId);
         const resp = await axios.get('/api/events-eventID-edit.php?eventID='+eventId+'');
-        console.log(resp);
+        
         this.setState({
             hostEventId: resp.data.event
         });
@@ -22,8 +21,8 @@ class EventHostPage extends Component {
     }
 
     render() {
-        console.log(this.state);
         const { hostEventId } = this.state;
+
         if (hostEventId === null) {
             return (
                 <div className="center">
@@ -67,7 +66,7 @@ class EventHostPage extends Component {
                         </div>
 
                         <div className="center joinButton green lighten-4">
-                            <Link to="/events/1/edit" className="nav-link">Edit Game</Link>
+                            <Link to={'/events/' + hostEventId.eventID + '/edit'} className="nav-link">Edit Game</Link>
                         </div>
                     </div>
 

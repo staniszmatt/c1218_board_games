@@ -24,8 +24,11 @@ class NewEvent extends Component {
         const formattedNewEvent = this.state;
 
         const resp = await axios.post('/api/events-new-event.php', formattedNewEvent);
-        console.log("response",resp);
+        console.log("response", resp);
         const eventID = resp.data.eventID;
+        this.setState({
+            eventId: resp.data.eventID
+        })
 
         this.props.history.push(`events/${eventID}/host`);
     }
@@ -110,7 +113,9 @@ class NewEvent extends Component {
                     <button onClick={this.handleSubmit} className="btn green darken">Create Event</button>
                 </div>
                 <div className="col s6 center">
-                    <button onClick={this.resetForm} type="button" className="btn red darken-2 waves-effect waves-light">Clear</button>
+                    <Link to="">
+                        <button onClick={this.resetForm} type="button" className="btn red darken-2 waves-effect waves-light">Clear</button>
+                    </Link>
                 </div>
             </div>
 
