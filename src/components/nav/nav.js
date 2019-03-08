@@ -4,10 +4,10 @@ import './nav.css';
 
 
 export default props => (
-    <div>
+    <div className="nav">
         <ul className="nav">
             <li className="nav-item">
-                <Link to="/profile" className="btn nav-link center font-color: black profile-btn">Profile</Link>
+                <Link to="/profile" className="btn nav-link black center profile-btn">Profile</Link>
             </li>
 
             <li className="nav-item">
