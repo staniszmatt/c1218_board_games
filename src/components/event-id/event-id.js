@@ -64,7 +64,7 @@ class EventSelected extends Component {
                                 <li>Address: {eventId.location.streetAddress}</li>
                                 <li>City: {eventId.location.city}</li>
                                 <li>State: {eventId.location.state}</li>
-                                <li>Zip: {eventId.location.zipCode}</li>
+                                <li>Zip: {eventId.location.zipcode}</li>
                             </ul>
                         </div>
 

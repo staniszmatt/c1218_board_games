@@ -43,23 +43,15 @@ class PlayerList extends Component {
                         </div>
                     </div>
                     <div className="center">
-                        <div> Player Limit
+                        <div> Player Limit <br/>
                             {data.playerLimit}
                         </div>
                     </div>
-
                     <div>
-
                         <h5 className="center"> Players </h5>
-
                         <table>
                             <thead>
-                            <tr className="center">
-                                <th className="center">UserName</th>
-
-                            </tr>
                             </thead>
-
                             <tbody>
                             {data.playerList.map((player) => (
                                 <tr key={player.playerName}>

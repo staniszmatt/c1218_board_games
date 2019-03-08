@@ -14,7 +14,6 @@ export default props => (
                     <label> Password </label>
                     <input name="" type="text"/>
                 </div>
-
                 <div className="center">
                     <Link to="/profile" className="btn blue">Submit</Link>
                 </div>
