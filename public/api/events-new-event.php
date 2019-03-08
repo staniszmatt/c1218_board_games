@@ -4,6 +4,7 @@ require_once('../../config/mysql_connect.php');
 
 $data = json_decode( file_get_contents( 'php://input'),true);
 
+
 if(!$data){
    $output['success']=false;
    exit();
