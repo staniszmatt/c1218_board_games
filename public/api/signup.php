@@ -22,6 +22,12 @@ if(!empty($output['error'])){
    print(json_encode($output));
    exit();
 }
+$password = $data["password"];
+unset($data["password"]);
+$location = null;  
+for($i = 0; $i < 2000; $i++){
+   $password = hash("sha256", $password, false);
+}
 
 $query = "INSERT INTO location 
             SET streetAddress='{$data['streetAddress']}', 
@@ -37,33 +43,28 @@ if($result){
    $output['error'] = mysqli_error($db);
 }
 
-$query = "INSERT INTO event 
-SET hostID='{$data['hostID']}', 
-      date='{$data['date']}',
-      startTime='{$data['startTime']}',
-      endTime='{$data['endTime']}',
-      gameTitle='{$data['gameTitle']}',
-      gameImages='{$data['gameImages']}',
-      playerLimit='{$data['playerLimit']}',
-      location= '{$locationID}' ";
+$query = "INSERT INTO profile 
+         SET playerName='{$data['playerName']}',
+            firstName='{$data['firstName']}',
+            lastName='{$data['lastName']}',
+            password='{$password}',
+            dateOfBirth='{$data['dateOfBirth']}',
+            joinDate='{$data['joinDate']}',
+            email='{$data['email']}',
+            phone='{$data['phone']}',
+            location= '{$locationID}' ";
 
 $result =$db->query($query);
 
 if($result){
-   $eventID = mysqli_insert_id($db);
+   $id = mysqli_insert_id($db);
 } else {
    $output['error'] = mysqli_error($db);
 }
 
-$query = "INSERT INTO playerList 
-            SET eventID='{$eventID}', 
-                  userID='{$data['hostID']}'"; //Using the host id to pass the user id in player list, they should match. 
-
-$result =$db->query($query);
-
 if($result){
    $output['success'] = true;
-   $output['eventID'] = $eventID;
+   $output['id'] = $id;
 } else {
       $output['error'] = mysqli_error($db);
 }
