@@ -22,7 +22,7 @@ $query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime,e.gam
             ON e.id = pla.eventID
          JOIN profile AS pn
             ON pla.userID = pn.id
-         WHERE e.id = $eventID AND p.id = $eventID";
+         WHERE e.id = $eventID";
 $result = $db->query($query);
 $event = [];
 
