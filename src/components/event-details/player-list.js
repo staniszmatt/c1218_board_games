@@ -42,6 +42,11 @@ class PlayerList extends Component {
                             {data.location.zipCode}
                         </div>
                     </div>
+                    <div className="center">
+                        <div> Player Limit
+                            {data.playerLimit}
+                        </div>
+                    </div>
 
                     <div>
 
