@@ -10,8 +10,11 @@ class SignUp extends Component {
         email: '',
         phoneNumber: '',
         dateOfBirth: '',
-        zipcode: '',
         playerName: '',
+        streetAddress: '',
+        city: '',
+        state:'',
+        zipcode: '',
         password: ''
     }
 
@@ -37,6 +40,9 @@ class SignUp extends Component {
             email: '',
             phoneNumber: '',
             dateOfBirth: '',
+            streetAddress: '',
+            city: '',
+            state:'',
             zipcode: '',
             playerName: '',
             password: ''
@@ -44,7 +50,7 @@ class SignUp extends Component {
     }
 
     render(){
-        const {firstName, lastName, email, phoneNumber, dateOfBirth, zipcode, playerName, password} = this.state;
+        const {firstName, lastName, email, phoneNumber, dateOfBirth, streetAddress, city, zipcode, state, playerName, password} = this.state;
         return(
             <div>
                 <h3 className="center"> Please Provide the Following Information </h3>
@@ -69,6 +75,18 @@ class SignUp extends Component {
                         <div className="form-group">
                             <label> Date of Birth </label>
                             <input onChange={this.handleKeyPress} name="dateOfBirth" type="text" id="date-of-birth" value={dateOfBirth}/>
+                        </div>
+                        <div className="form-group">
+                            <label> Street Address</label>
+                            <input onChange={this.handleKeyPress} name="streetAddress" type="text" id="streetAddress" value={streetAddress}/>
+                        </div>
+                        <div className="form-group">
+                            <label> City</label>
+                            <input onChange={this.handleKeyPress} name="city" type="text" id="city" value={city}/>
+                        </div>
+                        <div className="form-group">
+                            <label> State </label>
+                            <input onChange={this.handleKeyPress} name="state" type="text" id="state" value={state}/>
                         </div>
                         <div className="form-group">
                             <label> Zip Code</label>
