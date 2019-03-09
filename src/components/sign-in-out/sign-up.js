@@ -15,7 +15,9 @@ class SignUp extends Component {
         city: '',
         state:'',
         zipcode: '',
-        password: ''
+        password: '',
+        joinDate: ''
+
     }
 
     handleSubmit = async (event) => {
@@ -48,7 +50,8 @@ class SignUp extends Component {
             state: '',
             zipcode: '',
             playerName: '',
-            password: ''
+            password: '',
+            joinDate: ''
         });
     }
 
@@ -104,10 +107,10 @@ class SignUp extends Component {
                             <label> Password </label>
                             <input onChange={this.handleKeyPress} name="password" type="text" id="password" value={password}/>
                         </div>
-                        {/*<div className="form-group">*/}
-                            {/*<label> Join Data </label>*/}
-                            {/*<input onChange={this.handleKeyPress} name="joinDate" type="text" id="join-date" value={joinDate}/>*/}
-                        {/*</div>*/}
+                        <div className="form-group">
+                            <label> Join Data </label>
+                            <input onChange={this.handleKeyPress} name="joinDate" type="text" id="join-date" value={joinDate}/>
+                        </div>
                         <div className="center">
                             <button onClick={this.handleSubmit} className="btn  blue">Submit</button>
                             <button onClick={this.resetForm} type="button" className="btn red darken-2 waves-effect waves-light">Clear</button>
