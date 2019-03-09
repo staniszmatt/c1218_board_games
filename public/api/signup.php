@@ -42,14 +42,14 @@ if($result){
 } else {
    $output['error'] = mysqli_error($db);
 }
-
+$jointDate = date("y-m-d h:i:s");
 $query = "INSERT INTO profile 
          SET playerName='{$data['playerName']}',
             firstName='{$data['firstName']}',
             lastName='{$data['lastName']}',
             password='{$password}',
             dateOfBirth='{$data['dateOfBirth']}',
-            joinDate='{$data['joinDate']}',
+            joinDate='{$jointDate}',
             email='{$data['email']}',
             phone='{$data['phone']}',
             location= '{$locationID}' ";
