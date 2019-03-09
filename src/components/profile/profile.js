@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import UserData from '../../../dummy_data/profile';
 import './profile.css';
 import axios from 'axios';
 

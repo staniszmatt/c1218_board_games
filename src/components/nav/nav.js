@@ -1,13 +1,13 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './nav.css';
 
 
 export default props => (
-    <div className="nav">
+    <footer className="nav-wrapper">
         <ul className="nav">
             <li className="nav-item">
-                <Link to="/profile" className="btn nav-link black center profile-btn">Profile</Link>
+                <Link to="/profile" className="btn nav-btn-style nav-link black center profile-btn">Profile</Link>
             </li>
 
             <li className="nav-item">
@@ -18,5 +18,7 @@ export default props => (
                 <Link to="/events" className="btn nav-link  center font-color: black event-btn">Events</Link>
             </li>
         </ul>
-    </div>
+    </footer>
+
+
 )

@@ -34,11 +34,8 @@ class Events extends Component {
         if(eventList.length <= 0){
             return (
                 <div className='center'>
-                    <div className="header-events-container col s12">
-                        <h1 className="">Available Events</h1>
-                    </div>
-                    <div className="main-events-container">
-                        Events Are Loading...
+                    <div className="main-events-container loading-text">
+                        Loading...
                     </div>
                 </div>
             )

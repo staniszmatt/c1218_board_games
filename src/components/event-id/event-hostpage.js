@@ -35,7 +35,7 @@ class EventHostPage extends Component {
             const numberOfPlayers = hostEventId.playerList.length;
             return (
                 <div className="center">
-                    <div className="main-container">
+                    <div className="main-container-event">
                         <div className="btn game-picture center">
                             <img src={hostEventId.gameImages}></img>
                         </div>
