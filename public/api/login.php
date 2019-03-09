@@ -23,8 +23,6 @@ if(!empty($output['error'])){
    exit();
 }
 print_r($data);
-
-echo date("M,d,Y h:i:s ") ;
 // $query = "INSERT INTO location 
 //             SET streetAddress='{$data['streetAddress']}', 
 //                city='{$data['city']}',
