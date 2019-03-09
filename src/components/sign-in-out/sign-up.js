@@ -10,13 +10,12 @@ class SignUp extends Component {
         email: '',
         phone: '',
         dateOfBirth: '',
-        streetAddress:'',
-        city: '',
-        state: '',
-        zipcode: '',
         playerName: '',
-        password: '',
-        // joinDate: ''
+        streetAddress: '',
+        city: '',
+        state:'',
+        zipcode: '',
+        password: ''
     }
 
     handleSubmit = async (event) => {
@@ -49,12 +48,12 @@ class SignUp extends Component {
             state: '',
             zipcode: '',
             playerName: '',
-            password: '',
-            // joinDate: '',
+            password: ''
         });
     }
 
     render(){
+
         const {firstName, lastName, email, phone, dateOfBirth, streetAddress, city, zipcode, state, playerName, password, joinDate} = this.state;
         return(
             <div>
@@ -83,7 +82,7 @@ class SignUp extends Component {
                         </div>
                         <div className="form-group">
                             <label> Street Address</label>
-                            <input onChange={this.handleKeyPress} name="streetAddress" type="text" id="street-address" value={streetAddress}/>
+                            <input onChange={this.handleKeyPress} name="streetAddress" type="text" id="streetAddress" value={streetAddress}/>
                         </div>
                         <div className="form-group">
                             <label> City</label>
