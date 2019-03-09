@@ -8,7 +8,7 @@ class SignUp extends Component {
         firstName: '',
         lastName: '',
         email: '',
-        phoneNumber: '',
+        phone: '',
         dateOfBirth: '',
         playerName: '',
         streetAddress: '',
@@ -21,9 +21,12 @@ class SignUp extends Component {
     handleSubmit = async (event) => {
         event.preventDefault();
 
-        const resp = await axios.post('/api/events-new-event.php',  );
+        const formattedNewEvent = this.state;
 
-        this.props.history.push(``);
+        const resp = await axios.post('/api/signup.php',  formattedNewEvent);
+        console.log("the data was posted", resp);
+
+        this.props.history.push(`sign-up`);
     }
 
     handleKeyPress = (event) => {
@@ -38,11 +41,11 @@ class SignUp extends Component {
             firstName: '',
             lastName: '',
             email: '',
-            phoneNumber: '',
+            phone: '',
             dateOfBirth: '',
-            streetAddress: '',
+            streetAddress:'',
             city: '',
-            state:'',
+            state: '',
             zipcode: '',
             playerName: '',
             password: ''
@@ -50,7 +53,8 @@ class SignUp extends Component {
     }
 
     render(){
-        const {firstName, lastName, email, phoneNumber, dateOfBirth, streetAddress, city, zipcode, state, playerName, password} = this.state;
+
+        const {firstName, lastName, email, phone, dateOfBirth, streetAddress, city, zipcode, state, playerName, password, joinDate} = this.state;
         return(
             <div>
                 <h3 className="center"> Please Provide the Following Information </h3>
@@ -70,7 +74,7 @@ class SignUp extends Component {
                         </div>
                         <div className="form-group">
                             <label> Phone Number </label>
-                            <input onChange={this.handleKeyPress} name="phoneNumber" type="text" id="phone-number" value={phoneNumber}/>
+                            <input onChange={this.handleKeyPress} name="phone" type="text" id="phone" value={phone}/>
                         </div>
                         <div className="form-group">
                             <label> Date of Birth </label>
@@ -85,7 +89,7 @@ class SignUp extends Component {
                             <input onChange={this.handleKeyPress} name="city" type="text" id="city" value={city}/>
                         </div>
                         <div className="form-group">
-                            <label> State </label>
+                            <label> State</label>
                             <input onChange={this.handleKeyPress} name="state" type="text" id="state" value={state}/>
                         </div>
                         <div className="form-group">
@@ -100,6 +104,10 @@ class SignUp extends Component {
                             <label> Password </label>
                             <input onChange={this.handleKeyPress} name="password" type="text" id="password" value={password}/>
                         </div>
+                        {/*<div className="form-group">*/}
+                            {/*<label> Join Data </label>*/}
+                            {/*<input onChange={this.handleKeyPress} name="joinDate" type="text" id="join-date" value={joinDate}/>*/}
+                        {/*</div>*/}
                         <div className="center">
                             <button onClick={this.handleSubmit} className="btn  blue">Submit</button>
                             <button onClick={this.resetForm} type="button" className="btn red darken-2 waves-effect waves-light">Clear</button>
