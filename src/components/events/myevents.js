@@ -42,7 +42,7 @@ class MyEvents extends Component {
         return (
 
             <div className='center'>
-                <div className="header-events-container page-header col s12">
+                <div className="header-events-container col s12">
                     <h1 className="">My Joined Events</h1>
                 </div>
                 <div className="main-events-container">
