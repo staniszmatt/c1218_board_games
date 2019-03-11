@@ -19,14 +19,15 @@ label{
 .nav li {
   display: inline-block;
   font-size: 15px;
-  width: 33%;
+  width: 25%;
 
 }
 
-.sign-out-btn, .profile-btn, .event-btn {
-  font-size: 9px;
+.sign-out-btn, .profile-btn, .event-btn, .sign-in-btn{
+  font-size: 7px;
   margin-top: 10px;
   border-radius: 25px;
+  padding: 11px;
 }
 
 
