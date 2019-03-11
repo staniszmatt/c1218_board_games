@@ -13,7 +13,7 @@ const SignInForm = props => {
                 <Field name="email" component={Input} label="Enter your email"/>
             </div>
             <div className="row">
-                <Field name="password " component={Input} label="Enter your password" type="password"/>
+                <Field name="password" component={Input} label="Enter your password" type="password"/>
             </div>
             <div className="row">
                 <div className="col s12 center">
@@ -34,6 +34,9 @@ function validate(values){
     if(!password){
         errors.password= 'Please enter your password';
     }
+
+    console.log('Errors:', errors);
+
     return errors;
 }
 
