@@ -18,6 +18,7 @@ class EditEvent extends Component{
         }
     }
     componentDidMount(){
+        this.state.eventId = this.props.match.params.id;
         this.setState({
             eventId: this.props.match.params.id
         });
@@ -26,8 +27,9 @@ class EditEvent extends Component{
     }
 
     async getEditEventData() {
-
-        const resp = await axios.get('/api/events-eventID-edit.php?eventID=1');
+        const eventId = this.state.eventId
+        console.log('eventid',eventId)
+        const resp = await axios.get('/api/events-eventID-edit.php?eventID='+eventId+'');
 
         console.log('resp: ', resp.data.event);
 
@@ -37,20 +39,34 @@ class EditEvent extends Component{
         console.log(this.state);
     }
 
-    handleKeyPress = (event) => {
-        console.log(event);
-        if (['streetAddress'].includes(event.target.name)){
-            this.setState({
-                location: {
-                    [event.target.name]: event.target.value
-                }
-            });
-        } else {
-            this.setState({
-                [event.target.name]: event.target.value
-            });
-        }
-    }
+    // handleSubmit = async (event) => {
+    //     event.preventDefault();
+
+    //     const formattedNewEvent = this.state;
+
+    //     const resp = await axios.post('/api/events-new-event.php', formattedNewEvent);
+    //     console.log("response", resp);
+    //     const eventID = resp.data.eventID;
+    //     this.setState({
+    //         eventId: resp.data.event
+    //     })
+
+    //     this.props.history.push(`events/${eventID}/host`);
+    // }
+
+    // handleKeyPress = (event) => {
+    //     if (['streetAddress'].includes(event.target.name)){
+    //         this.setState({
+    //             location: {
+    //                 [event.target.name]: event.target.value
+    //             }
+    //         });
+    //     } else {
+    //         this.setState({
+    //             [event.target.name]: event.target.value
+    //         });
+    //     }
+    // }
 
     render(){
         const  {gameTitle, eventId, date, location, startTime, endTime, playerLimit} = this.state;
@@ -60,8 +76,11 @@ class EditEvent extends Component{
         
         return (
 
-            <div className="center">
-                <h1 className="center">EDIT EVENT</h1>
+            <div className="center edit-event-container">
+                <div className="page-header center">
+                    <h1 className="center">EDIT EVENT</h1>
+                </div>
+                
 
                 <form onSubmit={this.handleKeyPress}>
                     <div className="form-group">

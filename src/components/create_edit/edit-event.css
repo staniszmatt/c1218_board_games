@@ -6,3 +6,9 @@ input{
     height: 88vh;
     overflow: scroll;
 }
+
+.create-game-buttons{
+    display: inline-block;
+    margin-right: 2%;
+    margin-left: 2%;
+}

@@ -10,7 +10,11 @@
     padding: 54px;
     height: 18vh;
     border: 1px solid black;
+    width:50%;
+    border-radius: 50%;
     margin: 0px 0px 10px 0px;
+    background-color: darkslategray;
+    display: inline-block;
 }
 
 .user-info {

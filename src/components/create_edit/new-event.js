@@ -70,7 +70,10 @@ class NewEvent extends Component {
 
         return (
             <div className="center create-event-container">
-                <h1 className="center">CREATE EVENT</h1>
+                <div className="page-header center">
+                    <h1 className="center ">CREATE EVENT</h1>
+                </div>
+
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label className="">Game Name</label>
@@ -109,11 +112,11 @@ class NewEvent extends Component {
                         <input className="form-control" onChange={this.handleKeyPress} name="playerLimit" type="number" id="player-limit" value={playerLimit} />
                     </div>
                 </form>
-                <div className="col s6 center">
-                    <button onClick={this.handleSubmit} className="btn green darken">Create Event</button>
+                <div className="create-game-buttons col s6 center">
+                    <button onClick={this.handleSubmit} className="col s6 btn green darken">Create Event</button>
                 </div>
-                <div className="col s6 center">
-                        <button onClick={this.resetForm} type="button" className="btn red darken-2 waves-effect waves-light">Clear</button>
+                <div className="create-game-buttons col s6 center">
+                    <button onClick={this.resetForm} type="button" className="col s6 btn red darken-2 waves-effect waves-light">Clear</button>
                 </div>
             </div>
 
