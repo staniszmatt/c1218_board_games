@@ -30,7 +30,7 @@ class EventsHost extends Component {
         if (hostEventsList.length <= 0){
             return(
             <div className='center'>
-                <div className="page-headerheader-container col s12">
+                <div className="header-container col s12">
                     <h1 className="">My Hosted Events</h1>
                 </div>
                 <div className="events-main-container">
@@ -47,7 +47,7 @@ class EventsHost extends Component {
         return (
             
             <div className='center'>
-                <div className="header-events-container page-header col s12">
+                <div className="header-events-container col s12">
                     <h1 className="">Hosted Events</h1>
                 </div>
                 <div className="main-events-container">

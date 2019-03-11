@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import axios from 'axios';
 
 class PlayerList extends Component {
@@ -11,6 +11,7 @@ class PlayerList extends Component {
 
     async getPlayerListData() {
         const resp = await axios.get('/api/events-eventID.php?eventID=1');
+
         console.log('resp: ', resp)
         this.setState({
             data: resp.data.event
@@ -19,16 +20,15 @@ class PlayerList extends Component {
 
     render() {
         const { data } = this.state;
+
         if (data === undefined) {
             return <div>No data</div>;
         } else {
             return (
-                <div className="generic-container">
-                    <div className="page-header cetner">
-                        <h3 className="center">
-                            Checkers
+                <div>
+                    <h3 className="center">
+                        Checkers
                     </h3>
-                    </div>
                     <div className="center">Date and Time
                         <div>
                             {Date(data.date)} from {data.startTime} to {data.endTime}
@@ -36,9 +36,9 @@ class PlayerList extends Component {
                     </div>
                     <div className="center">Location
                         <div>
-                            {data.location.streetAddress},<br />
-                            {data.location.city},<br />
-                            {data.location.state},<br />
+                            {data.location.streetAddress},<br/>
+                            {data.location.city},<br/>
+                            {data.location.state},<br/>
                             {data.location.zipCode}
                         </div>
                     </div>
@@ -51,17 +51,15 @@ class PlayerList extends Component {
                         <h5 className="center"> Players </h5>
                         <table>
                             <thead>
-                                <tr className="center">
-                                    <th className="center">UserName</th>
                             </thead>
                             <tbody>
-                                {data.playerList.map((player) => (
-                                    <tr key={player.playerName}>
-                                        <td className="center" colSpan="2">
-                                            {player.playerID}<br />
-                                            {player.playerName}
-                                        </td>
-                                    </tr>))}
+                            {data.playerList.map((player) => (
+                                <tr key={player.playerName}>
+                                    <td className="center"colSpan="2">
+                                        {player.playerID}<br/>
+                                        {player.playerName}
+                                    </td>
+                                </tr>))}
                             </tbody>
                         </table>
                     </div>
