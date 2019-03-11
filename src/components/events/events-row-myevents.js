@@ -11,15 +11,13 @@ const EventRowMyEvents = (props) => {
         <Link to={'/events/' + eventID +'/myevents'} className="events-list-button nav-link btn center">
             <div className="events-container" key={eventID} >
                 <div className="events-info-container">
-                    <span className="events-title">{gameTitle}</span>
-                    <br />
-                    <span className="events-player-count">Player Limit: {playerLimit}</span>
-                    <br />
-                    <span className="events-date-time">{date} {startTime}</span>
+                    <p className="events-title">{gameTitle}</p>
+
+                    <p className="events-player-count">Player Limit: {playerLimit}</p>
+
+                    <p className="events-date-time">{date} {startTime}</p>
                 </div>
-                <div className="events-image center">
-                    <img src={gameImages} alt={gameTitle}></img>
-                </div >
+                <div style={{ backgroundImage: "url(" + gameImages + ")" }} className="events-image center"></div>
             </div>
         </Link>
     );
