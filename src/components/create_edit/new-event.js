@@ -69,7 +69,7 @@ class NewEvent extends Component {
         const hostID = this.state.hostID;
 
         return (
-            <div className="center">
+            <div className="center create-event-container">
                 <h1 className="center">CREATE EVENT</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
@@ -90,32 +90,30 @@ class NewEvent extends Component {
                     </div>
                     <div className="form-group">
                         <label>Zip Code </label>
-                        <input className="form-control" onChange={this.handleKeyPress} name="zipcode" type="text" id="zip-code" value={zipcode} />
+                        <input className="form-control" onChange={this.handleKeyPress} name="zipcode" type="number" id="zip-code" value={zipcode} />
                     </div>
                     <div className="form-group">
                         <label>Date</label>
-                        <input className="form-control" onChange={this.handleKeyPress} name="date" type="text" id="date" value={date} />
+                        <input className="form-control" onChange={this.handleKeyPress} name="date" type="date" id="date" value={date} />
                     </div>
                     <div className="form-group">
                         <label>Start Time</label>
-                        <input className="form-control" onChange={this.handleKeyPress} name="startTime" type="text" id="start-time" value={startTime} />
+                        <input className="form-control" onChange={this.handleKeyPress} name="startTime" type="time" id="start-time" value={startTime} />
                     </div>
                     <div className="form-group">
-                        <label>Start Time</label>
-                        <input className="form-control" onChange={this.handleKeyPress} name="endTime" type="text" id="start-time" value={endTime} />
+                        <label>End Time</label>
+                        <input className="form-control" onChange={this.handleKeyPress} name="endTime" type="time" id="start-time" value={endTime} />
                     </div>
                     <div className="form-group">
                         <label>Number of Players</label>
-                        <input className="form-control" onChange={this.handleKeyPress} name="playerLimit" type="text" id="player-limit" value={playerLimit} />
+                        <input className="form-control" onChange={this.handleKeyPress} name="playerLimit" type="number" id="player-limit" value={playerLimit} />
                     </div>
                 </form>
                 <div className="col s6 center">
                     <button onClick={this.handleSubmit} className="btn green darken">Create Event</button>
                 </div>
                 <div className="col s6 center">
-                    <Link to="">
                         <button onClick={this.resetForm} type="button" className="btn red darken-2 waves-effect waves-light">Clear</button>
-                    </Link>
                 </div>
             </div>
 

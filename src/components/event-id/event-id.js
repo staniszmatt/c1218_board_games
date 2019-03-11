@@ -23,7 +23,7 @@ class EventSelected extends Component {
             userID: 5,
             eventID: this.props.match.params.id
         });
-        console.log("Sent Player Response ", resp)
+
         this.props.history.push("/events/" + this.state.eventId + "/player-list")
     }
     render() {
@@ -32,7 +32,7 @@ class EventSelected extends Component {
         if (eventId === null) {
             return (
                 <div className="center">
-                    <div className="main-container">
+                    <div className="main-container-event">
                         <div className="btn game-picture center">
                             <p>Page is Loading...</p>
                         </div>
@@ -43,7 +43,7 @@ class EventSelected extends Component {
             const numberOfPlayers = eventId.playerList.length;
             return (
                 <div className="center">
-                    <div className="main-container">
+                    <div className="main-container-event">
                         <div className="btn game-picture center">
                             <img src={eventId.gameImages}></img>
                         </div>
@@ -72,7 +72,7 @@ class EventSelected extends Component {
                         </div>
 
                         <div className="center joinButton green lighten-4">
-                        <button className="btn" onClick={this.sendUserData}></button>
+                            <button className="btn join-game-button" onClick={this.sendUserData}>Join Game</button>
                             {/* <Link onClick={this.sendUserData} to={"/events/" + eventId.eventID + "/player-list"} className="nav-link">Join Game</Link> */}
                         </div>
                     </div>

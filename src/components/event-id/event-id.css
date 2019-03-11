@@ -5,29 +5,47 @@
 }
 
 
-.main-container{
+.main-container-event.center.main-div{
     height: 80vh;
     text-align: center;
+    overflow: scroll;
+}
+
+.joinButton {
+    margin-top: 5px;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.center > .main-container-event > .joinButton {
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      display: flex;
 }
 
 
-
-.main-container > .game-picture {
+.main-container-event > .game-picture {
     display: inline-block;
     width: 100%;
     height: 16vh;
     background: darkslategrey;
 }
 
-.main-container > div {
+.main-container-event > div {
     height: 10%;
     width: 100%;
     display: inline-block;
     border: black 1px solid;
     margin-top: 2%;
+    
 }
 
-.main-container > .address{
+.main-container-event > .address {
     height: 27%;
     color: black;
     padding:0;
@@ -42,11 +60,7 @@ h1 {
     font-size: 3.5rem;
 }
 
-.joinButton{
-    margin-top: 5px;
-    font-size: 24px;
-    color: black;
-}
+
 
 .game-picture > img{
     display: inline-block;
