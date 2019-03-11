@@ -55,7 +55,7 @@ class EventHostPage extends Component {
                                 <li>Address: {hostEventId.location.streetAddress}</li>
                                 <li>City: {hostEventId.location.city}</li>
                                 <li>State: {hostEventId.location.state}</li>
-                                <li>Zip: {hostEventId.location.zipCode}</li>
+                                <li>Zip: {hostEventId.location.zipcode}</li>
                             </ul>
                         </div>
 

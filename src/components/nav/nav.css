@@ -31,26 +31,14 @@ label{
 .nav li {
   display: inline-block;
   font-size: 15px;
-  width: 33%;
+  width: 25%;
 
 }
-
-.nav li a{
-  display: inline-block;
-  font-size: 15px;
-  width: 90%;
-
-
-}
-
-.sign-out-btn, .profile-btn, .event-btn {
-  font-size: 9px;
+.sign-out-btn, .profile-btn, .event-btn, .sign-in-btn{
+  font-size: 7px;
   margin-top: 10px;
   border-radius: 25px;
-      background-color: darkslategray;
-      padding: 10px;
-      height: 10%;
-      width: 50%;
+  padding: 11px;
 }
 
 

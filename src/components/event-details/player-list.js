@@ -11,7 +11,6 @@ class PlayerList extends Component {
 
     async getPlayerListData() {
         const resp = await axios.get('/api/events-eventID.php?eventID=1');
-
         console.log('resp: ', resp)
         this.setState({
             data: resp.data.event
@@ -20,7 +19,6 @@ class PlayerList extends Component {
 
     render() {
         const { data } = this.state;
-
         if (data === undefined) {
             return <div>No data</div>;
         } else {
@@ -31,7 +29,6 @@ class PlayerList extends Component {
                             Checkers
                     </h3>
                     </div>
-
                     <div className="center">Date and Time
                         <div>
                             {Date(data.date)} from {data.startTime} to {data.endTime}
@@ -46,23 +43,17 @@ class PlayerList extends Component {
                         </div>
                     </div>
                     <div className="center">
-                        <div> Player Limit
+                        <div> Player Limit <br/>
                             {data.playerLimit}
                         </div>
                     </div>
-
                     <div>
-
                         <h5 className="center"> Players </h5>
-
                         <table>
                             <thead>
                                 <tr className="center">
                                     <th className="center">UserName</th>
-
-                                </tr>
                             </thead>
-
                             <tbody>
                                 {data.playerList.map((player) => (
                                     <tr key={player.playerName}>
