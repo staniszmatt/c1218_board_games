@@ -7,10 +7,31 @@
     font-size: 4rem;
 }
 
+.page-header{
+    background-color: darkslategray;
+    color: blanchedalmond;
+    box-shadow: 0px 0px 8px 8px darkslategray inset;
+    height: 10vh;
+    vertical-align: top;
+
+}
+
+.generic-container{
+    height: 82vh;
+    overflow: scroll;
+}
+
+.edit-event-container{
+    height: 82vh;
+    overflow: scroll;
+}
+
 body {
     margin: 0;
 
 }
+
+
 
 .btn{
     background-color: darkslategray;
