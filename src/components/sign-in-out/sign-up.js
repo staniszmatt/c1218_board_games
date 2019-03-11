@@ -15,8 +15,8 @@ class SignUp extends Component {
         city: '',
         state:'',
         zipcode: '',
-        password: '',
-        joinDate: ''
+        password: ''
+
 
     }
 
@@ -50,14 +50,13 @@ class SignUp extends Component {
             state: '',
             zipcode: '',
             playerName: '',
-            password: '',
-            joinDate: ''
+            password: ''
         });
     }
 
     render(){
 
-        const {firstName, lastName, email, phone, dateOfBirth, streetAddress, city, zipcode, state, playerName, password, joinDate} = this.state;
+        const {firstName, lastName, email, phone, dateOfBirth, streetAddress, city, zipcode, state, playerName, password} = this.state;
         return(
             <div>
                 <h3 className="center"> Please Provide the Following Information </h3>
@@ -106,10 +105,6 @@ class SignUp extends Component {
                         <div className="form-group">
                             <label> Password </label>
                             <input onChange={this.handleKeyPress} name="password" type="text" id="password" value={password}/>
-                        </div>
-                        <div className="form-group">
-                            <label> Join Data </label>
-                            <input onChange={this.handleKeyPress} name="joinDate" type="text" id="join-date" value={joinDate}/>
                         </div>
                         <div className="center">
                             <button onClick={this.handleSubmit} className="btn  blue">Submit</button>
