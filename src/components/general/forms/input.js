@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default props => {
-    console.log('Input Props:', props);
+    // console.log('Input Props:', props);
 
     const { input, label, type='text', meta: {error, touched}} = props;
 
