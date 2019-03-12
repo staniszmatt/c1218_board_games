@@ -1,12 +1,14 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
+import './sign-up.css';
 import Input from '../general/forms/input';
 
 const CreateSignUpForm = props => {
 
-    console.log('Sign in Form props:', props);
+    // console.log('Sign in Form props:', props);
 
     const { handleSubmit, onSubmit } = props;
+    // console.log('there was a post response', handleSubmit)
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
@@ -41,12 +43,10 @@ const CreateSignUpForm = props => {
                 <Field name="playerName" component={Input} label="Enter your player name" type="text"/>
             </div>
             <div className="row">
-                <Field name="password" component={Input} label="Enter your player name" type="word"/>
+                <Field name="password" component={Input} label="Enter your password" type="text"/>
             </div>
-            <div className="row">
-                <div className="col s12 center">
-                    <button className="btn blue lighten-1">Sign Up</button>
-                </div>
+            <div className="center row">
+                <button onClick={handleSubmit} className="blue lighten-1 sign-up">Submit</button>
             </div>
         </form>
     );
