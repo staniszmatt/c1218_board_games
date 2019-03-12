@@ -1,4 +1,17 @@
+form{
+    height: 100vh;
+    overflow: auto;
+    margin-bottom: 110px;
+}
+
+/*.form-row{*/
+    /**/
+/*}*/
+
 .sign-up {
-margin: 0px;
-border-radius: 50%;
+    margin: 0px;
+    border-radius: 50px;
+    font-size: 40px;
+    font-color: white;
+
 }
