@@ -41,6 +41,41 @@ class EventSelected extends Component {
             );
         } else {
             const numberOfPlayers = eventId.playerList.length;
+            if(numberOfPlayers >= eventId.playerLimit){
+                return (
+                    <div className="center">
+                        <div className="main-container-event">
+                            <div className="btn game-picture center">
+                                <img src={eventId.gameImages}></img>
+                            </div>
+                            <div className="btn event-host grey ">Game: {eventId.gameTitle}</div>
+                            <div className="btn event-host grey darken-1">Host Name: {eventId.playerList[0].playerName}</div>
+
+
+                            <div className="date grey">
+                                <ul>
+                                    <li>Date: {eventId.date}</li>
+                                    <li>Start: {eventId.startTime}</li>
+                                </ul>
+                            </div>
+
+                            <div className="btn address grey darken-1">
+                                <ul>
+                                    <li>Address: {eventId.location.streetAddress}</li>
+                                    <li>City: {eventId.location.city}</li>
+                                    <li>State: {eventId.location.state}</li>
+                                    <li>Zip: {eventId.location.zipcode}</li>
+                                </ul>
+                            </div>
+
+                            <div className=" numberOfPlayers grey">
+                                <div> Game Is Full!</div>
+                            </div>
+
+                        </div>
+                    </div>
+                );
+            }
             return (
                 <div className="center">
                     <div className="main-container-event">

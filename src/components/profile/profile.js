@@ -14,14 +14,12 @@ class Profile extends Component {
     async getUserProfile(){
         const userId = 1;
         const resp = await axios.get(`/api/profile.php?id=${userId}`);
-        console.log(resp);
         this.setState({
             userProfile: resp.data.data[0] || []
             
         });
     }
 render(){
-    console.log(this.state.userProfile)
     // return(
     //     <div>teset</div>
     // )
