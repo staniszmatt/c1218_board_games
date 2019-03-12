@@ -41,7 +41,7 @@ class NewEvent extends Component {
 
         return (
             <div className="create-event-container">
-                <h1 className="center">Sign In</h1>
+                <h1 className="center">Create Event</h1>
                 <CreateEventForm onSubmit={this.handleSubmit} />
             </div>
         );
@@ -53,8 +53,7 @@ class NewEvent extends Component {
 }
 
 export default NewEvent;
-// form: 'sign_in_form',
-// validate: validate
+
 
 
 
