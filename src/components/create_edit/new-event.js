@@ -46,9 +46,6 @@ class NewEvent extends Component {
             </div>
         );
 
-
-        
-
     }
 }
 

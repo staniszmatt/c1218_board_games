@@ -5,48 +5,45 @@ import Input from '../general/forms/input';
 
 const CreateSignUpForm = props => {
 
-    // console.log('Sign in Form props:', props);
-
     const { handleSubmit, onSubmit } = props;
-    // console.log('there was a post response', handleSubmit)
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="row">
+            <div className="form-row">
                 <Field name="firstName" component={Input} label="Enter your first name" type="text"/>
             </div>
-            <div className="row">
-                <Field name="lastName" component={Input} label="Enter your password" type="text"/>
+            <div className="form-row">
+                <Field name="lastName" component={Input} label="Enter your last name" type="text"/>
             </div>
-            <div className="row">
+            <div className="form-row">
                 <Field name="email" component={Input} label="Enter your email" type="text"/>
             </div>
-            <div className="row">
-                <Field name="phone" component={Input} label="Enter your phone number" type="text"/>
+            <div className="form-row">
+                <Field name="phone" component={Input} label="Enter your phone number" type="number" placeholder="Phone Number"/>
             </div>
-            <div className="row">
-                <Field name="dateOfBirth" component={Input} label="Enter your date of birth" type="text"/>
+            <div className="form-row">
+                <Field name="dateOfBirth" component={Input} label="Enter your date of birth" type="date"/>
             </div>
-            <div className="row">
+            <div className="form-row">
                 <Field name="streetAddress" component={Input} label="Enter your street address" type="text"/>
             </div>
-            <div className="row">
+            <div className="form-row">
                 <Field name="city" component={Input} label="Enter your City" type="text"/>
             </div>
-            <div className="row">
+            <div className="form-row">
                 <Field name="state" component={Input} label="Enter your state" type="text"/>
             </div>
-            <div className="row">
+            <div className="form-row">
                 <Field name="zipcode" component={Input} label="Enter your zipcode" type="text"/>
             </div>
-            <div className="row">
+            <div className="form-row">
                 <Field name="playerName" component={Input} label="Enter your player name" type="text"/>
             </div>
-            <div className="row">
-                <Field name="password" component={Input} label="Enter your password" type="text"/>
+            <div className="form-row">
+                <Field name="password" component={Input} label="Enter your password" type="password"/>
             </div>
-            <div className="center row">
-                <button onClick={handleSubmit} className="blue lighten-1 sign-up">Submit</button>
+            <div className="col s6 center">
+                <button className="btn green darken">Sign Up</button>
             </div>
         </form>
     );

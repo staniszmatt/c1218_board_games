@@ -17,9 +17,8 @@ body {
   text-align: center;
   width: 100%;
   margin: 0 auto;
-  height: 12vh;
-  position: fixed;
-  bottom: 0;
+  margin-top: 15px;
+  height: 13vh;
 }
 
 
@@ -37,7 +36,7 @@ label{
 .sign-out-btn, .profile-btn, .event-btn, .sign-in-btn{
   font-size: 10px;
   margin: 0 auto;
-  margin-top: 16px;
+  margin-top: 3px;
   border-radius: 50px;
   padding: 30px;
   text-align: center;
