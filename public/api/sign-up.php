@@ -54,7 +54,7 @@ $query = "INSERT INTO profile
             phone='{$data['phone']}',
             location= '{$locationID}' ";
 
-$result =$db->query($query);
+$result = $db->query($query);
 
 if($result){
    $id = mysqli_insert_id($db);
