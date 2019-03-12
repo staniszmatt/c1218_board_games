@@ -45,7 +45,6 @@ $result = $db->query($query);
 
 while($row = $result->fetch_assoc()){
    $userID = $row;
-   unset($userID['password']);
 }
 
 if(!$userID){
