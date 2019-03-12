@@ -1,18 +1,34 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './nav.css';
+import axios from 'axios';
 
 class Nav extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            activeUser: false
+        }
     }
 
 
+
+    // signOut = async () => {
+     
+    //     const resp = await axios.get('/api/sign-out.php');
+    //     console.log(resp);
+    //     console.log('logged in',resp.data['logged-in'])
+    //     this.render.userID = false;
+    // }
+
+
+
+
     render() {
-        const userID  = 1;
-        if (userID === null) {
-        return (
- 
+        const activeUser = false;
+        // const userID = this.props.match.params.loggedIn;
+        if (activeUser === false) {
+        return ( 
             <footer className="nav-wrapper">
                 <ul className="nav">
                     <li className="nav-item">
@@ -42,7 +58,7 @@ class Nav extends Component {
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/sign-out" className="btn nav-link  center font-color: black sign-in-btn">Sign Out</Link>
+                            <Link to="/sign-out" className="btn nav-link  center font-color: black sign-in-btn">Sign Out</Link>
                     </li>
                 </ul>
             </footer>
