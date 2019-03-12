@@ -31,14 +31,17 @@ label{
 .nav li {
   display: inline-block;
   font-size: 15px;
-  width: 25%;
+  width: 33%;
 
 }
 .sign-out-btn, .profile-btn, .event-btn, .sign-in-btn{
-  font-size: 7px;
-  margin-top: 10px;
-  border-radius: 25px;
-  padding: 11px;
+  font-size: 10px;
+  margin: 0 auto;
+  margin-top: 16px;
+  border-radius: 50px;
+  padding: 30px;
+  text-align: center;
+  line-height: 0px;
 }
 
 
