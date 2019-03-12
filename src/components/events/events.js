@@ -16,7 +16,7 @@ class Events extends Component {
 
     async getEventList(){
         const resp = await axios.get(`/api/events.php`);
-        
+        console.log(resp)
         this.setState({
             eventList: resp.data.event
         });
