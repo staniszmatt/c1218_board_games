@@ -1,10 +1,12 @@
 <?php
+session_start();
 require_once('../../config/setup.php');
 require_once('../../config/mysql_connect.php');
 
 $output = [
    'success'=> false
 ];
+
 $eventID = $_GET['eventID'];
 $query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime,e.gameTitle, e.gameImages, e.playerLimit, e.location,
             l.streetAddress, l.city, l.state, l.zipcode, 
@@ -23,6 +25,13 @@ $event = [];
 
 if ($result){
    $output['success'] = true;
+
+   if (!isset($_SESSION['userID'])){
+      $output['logged-in'] = false;
+   } else {
+      $output['logged-in']= true;
+   }
+   
    while($row = $result->fetch_assoc()){
       if ($event) {
          $event['playerList'][] = [
@@ -57,6 +66,7 @@ if ($result){
 }
 
 $output['event'] = $event;
+
 $json_output = json_encode($output);
 print($json_output);
 ?>
