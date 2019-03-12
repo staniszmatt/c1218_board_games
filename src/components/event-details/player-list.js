@@ -22,7 +22,7 @@ class PlayerList extends Component {
         const { data } = this.state;
 
         if (data === undefined) {
-            return <div>No data</div>;
+            return <h3>Page is Loading...</h3>;
         } else {
             return (
                 <div className="generic-container">
