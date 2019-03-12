@@ -42,13 +42,31 @@ function validate(values) {
         playerLimit } = values;
     const errors = {};
 
-    // if (!email) {
-    //     errors.email = 'Please enter your email';
-    // }
-    // if (!password) {
-    //     errors.password = 'Please enter your password';
-    // }
-    // return errors;
+    if (!streetAddress) {
+        errors.streetAddress = 'Please enter your street address';
+    }
+    if (!city) {
+        errors.city = 'Please enter your city';
+    }
+    if (!date) {
+        errors.date = 'Please enter the date';
+    }
+    if (!zipcode) {
+        errors.zipcode = 'Please enter your zip code';
+    }
+    if (!startTime) {
+        errors.startTime = 'Please enter the start time';
+    }
+    if (!endTime) {
+        errors.endTime = 'Please enter the end time';
+    }
+    if (!gameTitle) {
+        errors.gameTitle = 'Please enter your Game Title';
+    }
+    if (!playerLimit) {
+        errors.playerLimit = 'Please enter the number of players';
+    }
+    return errors;
 }
 
 export default reduxForm({
