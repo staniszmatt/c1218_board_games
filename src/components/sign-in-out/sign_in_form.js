@@ -3,14 +3,13 @@ import {Field, reduxForm} from 'redux-form';
 import Input from '../general/forms/input';
 
 const SignInForm = props => {
-    console.log('Sign in Form props:', props);
 
     const { handleSubmit, onSubmit } = props;
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="row">
-                <Field name="email" component={Input} label="Enter your email"/>
+                <Field name="email" component={Input} label="Enter your email" type='text'/>
             </div>
             <div className="row">
                 <Field name="password" component={Input} label="Enter your password" type="password"/>

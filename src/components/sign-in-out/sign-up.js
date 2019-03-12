@@ -27,7 +27,7 @@ class SignUp extends Component {
 
         const formattedNewEvent = this.state;
 
-        const resp = await axios.post('/api/signup.php',  formattedNewEvent);
+        const resp = await axios.post('/api/sign-up.php',  formattedNewEvent);
         console.log("the data was posted", resp);
 
         this.props.history.push(`sign-up`);
