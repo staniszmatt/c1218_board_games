@@ -21,24 +21,25 @@ import players from '../../dummy_data/profile.json';
 import SignUp from './sign-in-out/sign-up';
 import SignOut from './sign-in-out/sign-out';
 import SignIn from './sign-in-out/sign-in';
+import auth from '../hoc/auth';
 
 const App = () => (
     <div className="main-div">
         <Switch>
             <Route exact path="/" component={LandingPage} />
-            <Route path="/profile" render={() => <Profile players={players}/>} />
-            <Route path="/new-event" component={CreateNewEvent} />
-            <Route path="/events/host" component={EventsHost} />
-            <Route path="/events/myevents" component={MyEvents}/>
-            <Route path="/sign-up" component={SignUp}/>
-            <Route path="/events/:id/player-list" component={PlayerList} />
-            <Route path="/events/:id/host" component={EventHostPage}/>
-            <Route path="/events/:id/edit" component={EditEvent}/>
-            <Route path="/events/:id/myevents" component={JoinedEventDetails}/>
-            <Route exact path="/events/:id" component={EventSelected} />
+            <Route path="/profile" component={auth(Profile)} />
+            <Route path="/new-event" component={auth(CreateNewEvent)} />
+            <Route path="/events/host" component={auth(EventsHost)} />
+            <Route path="/events/myevents" component={auth(MyEvents)}/>
+            <Route path="/sign-up" component={auth(SignUp, '/profile', false)}/>
+            <Route path="/events/:id/player-list" component={auth(PlayerList)} />
+            <Route path="/events/:id/host" component={auth(EventHostPage)}/>
+            <Route path="/events/:id/edit" component={auth(EditEvent)}/>
+            <Route path="/events/:id/myevents" component={auth(JoinedEventDetails)}/>
+            <Route exact path="/events/:id" component={auth(EventSelected)} />
             <Route exact path="/events" component={Events} />
-            <Route path="/sign-out" component={SignOut}/>
-            <Route path="/sign-in" component={SignIn}/>
+            <Route path="/sign-out" component={auth(SignOut, '/')}/>
+            <Route path="/sign-in" component={auth(SignIn, '/profile', false)}/>
         </Switch>
         
          <Nav/>
