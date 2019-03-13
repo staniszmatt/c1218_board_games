@@ -67,7 +67,8 @@ if (!isset($_SESSION['userID'])){
    
    if($result){
       $output['success'] = true;
-      $output['id'] = $id;
+
+      $_SESSION['userID'] = $id;
    } else {
          $output['error'] = mysqli_error($db);
    }

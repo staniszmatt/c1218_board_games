@@ -53,8 +53,8 @@ if(!$userID){
 } else {
    $output['success'] = true;
    $output['logged-in'] = true;
-   $output['userID'] = $userID;
-   $_SESSION['userID'] = $userID;
+   
+   $_SESSION['userID'] = $userID['userID'];
 }
 
 $json_output = json_encode($output);
