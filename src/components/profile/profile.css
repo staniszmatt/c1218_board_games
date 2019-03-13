@@ -1,22 +1,55 @@
-.profile-button-container .btn{
-    border-radius: 25px;
-    margin: 10% 10%;
+.profile {
+    background-color: #4EA68B ;
+    height: 100vh;
+}
+
+h2{
+    background-color: #0F4434;
+    box-shadow: 0px 0px 10px 10px black inset;
+    padding: 18px;
+    height: 15h;
+    color: #8AE8CB;
+    margin: 0;
+}
+
+.profile-button-container{
+    background-color: #0F4434;
+    box-shadow: 0px 0px 10px 10px black inset;
     font-size: 14px;
     font-weight: bold;
-
+    padding: 1px;
+    overflow: hidden;
  }
 
 .profile-image {
+    background-color: #0F4434;
+    box-shadow: 0px 0px 10px 10px black inset;
     padding: 54px;
     height: 18vh;
     border: 1px solid black;
-    margin: 0px 0px 10px 0px;
+    margin: 0px;
+    color: #8AE8CB;
 }
 
 .user-info {
-    margin: 0 auto;
-    height: 7vh;
+    background-color: #0F4434;
+    box-shadow: 0px 0px 10px 10px black inset;
+    margin: 0;
+    height: 10vh;
     border: 1px solid black;
-    width: 50%;
+    padding: 12px;
+    color: #8AE8CB;
 }
+
+.center.profile{
+    height: 100vh;
+}
+
+.buttons > link {
+    height: 55vh;
+}
+.create-event-btn, .available-events-btn, .my-hosted-events-btn, .my-joined-events-btn{
+    margin: 34px 0;
+}
+
 
