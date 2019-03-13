@@ -3,7 +3,7 @@ session_start();
 require_once('../../config/setup.php');
 require_once('../../config/mysql_connect.php');
 //TODO: Setup an array of data fields that is allowed to change and reject the rest 
-$dataCheck = [ "eventID", "date", "startTime", "endTime", "gameTitle", "gameImages", "streetAddress", "city", "state", "zipcode" ];
+$dataCheck = [ "eventID", "date", "startTime", "endTime", "gameTitle", "gameImages"];
 
 if (!isset($_SESSION['userID'])){
    $output['success'] = true;
@@ -34,19 +34,36 @@ if (!isset($_SESSION['userID'])){
    unset($data['eventID']);
 
    foreach($data as $key=>$value){
-      $query = "UPDATE event SET '{$key}' = '{$value}' WHERE id = '{$eventID}'";
-      echo("<div>");
-      print_r($query."<br>");
-      echo("</div>");
-      $result = $db->query($query);
-      echo("<div>");
-      echo($result."<br>");
-      echo("</div>");
-      if (!$result){
-         $output['error'][] = $result;
-      } else {
-         $output['success'] = true;
-         $output['updated'][] = $result;
+      
+      for ($index = 0; $index < sizeof($dataCheck); $index++ ){
+         if ($key === $dataCheck[$index]){
+            $checkValue = true; 
+            echo("work here!");
+            return; 
+         } else {
+            $checkValue = false; 
+         }
+      }
+      
+      echo($checkValue);
+      if (!$checkValue){
+         $output['error'][] = "Can not edit {$key}!";
+      } 
+      else {
+         $query = "UPDATE event SET {$key} = '{$value}' WHERE id = '{$eventID}'";
+         echo("<div>");
+         print_r($query."<br>");
+         echo("</div>");
+         $result = $db->query($query);
+         echo("<div>");
+         echo($result."<br>");
+         echo("</div>");
+         if (!$result){
+            $output['error'][] = $result;
+         } else {
+            $output['success'] = true;
+            $output['updated'][] = $result;
+         }
       }
    }
 }
