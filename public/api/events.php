@@ -25,7 +25,7 @@ if (!isset($_SESSION['userID'])){
                ON pl.eventID
                   JOIN location AS l
                      ON e.location = l.id
-                        WHERE e.id = pl.eventID AND NOT e.hostID = '{$_SESSION['userID']['userID']}'
+                        WHERE e.id = pl.eventID AND NOT e.hostID = '{$_SESSION['userID']}'
                            GROUP BY e.id";
 }
 

@@ -22,7 +22,7 @@ if (!isset($_SESSION['userID'])){
                ON pl.eventID = e.id
             JOIN playerList as plu
                ON plu.eventID = e.id
-            WHERE pl.userID = '{$_SESSION['userID']['userID']}' AND NOT pl.userID = e.hostID
+            WHERE pl.userID = '{$_SESSION['userID']}' AND NOT pl.userID = e.hostID
             GROUP BY e.id";
    $result = $db->query($query);
    $userID = [];
@@ -33,7 +33,7 @@ if (!isset($_SESSION['userID'])){
       while($row = $result->fetch_assoc()){
          $userID[] = [
             "eventID"=> $row["eventID"],
-            "hostID"=> "{$_SESSION['userID']['userID']}",
+            "hostID"=> "{$_SESSION['userID']}",
             "date"=> $row["date"],
             "startTime"=> $row["startTime"],
             "endTime"=> $row["endTime"],

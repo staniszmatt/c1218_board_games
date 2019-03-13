@@ -73,7 +73,6 @@ if(!$userID){
 } else {
    $output['success'] = true;
    $output['logged-in'] = true;
-   
    $_SESSION['userID'] = $userID['userID'];
 }
 

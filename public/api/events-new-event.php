@@ -40,9 +40,9 @@ if (!isset($_SESSION['userID'])){
    } else {
       $output['error'] = mysqli_error($db);
    }
-   print_r("user ID from session ", $_SESSION['userID']['userID']);
+   print_r("user ID from session ", $_SESSION['userID']);
    $query = "INSERT INTO event 
-   SET hostID='{$_SESSION['userID']['userID']}', 
+   SET hostID='{$_SESSION['userID']}', 
          date='{$data['date']}',
          startTime='{$data['startTime']}',
          endTime='{$data['endTime']}',
@@ -61,7 +61,7 @@ if (!isset($_SESSION['userID'])){
    
    $query = "INSERT INTO playerList 
                SET eventID='{$eventID}', 
-                     userID='{$_SESSION['userID']['userID']}'"; //Using the host id to pass the user id in player list, they should match. 
+                     userID='{$_SESSION['userID']}'"; //Using the host id to pass the user id in player list, they should match. 
    
    $result =$db->query($query);
    
