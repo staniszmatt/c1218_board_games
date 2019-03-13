@@ -24,11 +24,11 @@ class EventSelected extends Component {
             eventID: this.props.match.params.id
         });
 
-        this.props.history.push("/events/" + this.state.eventId + "/player-list")
+        this.props.history.push("/events/" + this.props.match.params.id + "/player-list")
     }
     render() {
         const { eventId } = this.state;
-
+console.log(eventId)
         if (eventId === null) {
             return (
                 <div className="center">
@@ -107,7 +107,7 @@ class EventSelected extends Component {
                         </div>
 
                         <div className="center joinButton green lighten-4">
-                            <button className="btn join-game-button" onClick={this.sendUserData}>Join Game</button>
+                            <Link className="btn join-game-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID+'/player-list'}>Join Game</Link>
                             {/* <Link onClick={this.sendUserData} to={"/events/" + eventId.eventID + "/player-list"} className="nav-link">Join Game</Link> */}
                         </div>
                     </div>

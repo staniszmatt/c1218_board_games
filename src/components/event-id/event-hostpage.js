@@ -10,11 +10,12 @@ class EventHostPage extends Component {
 
     async componentDidMount() {
         const eventId = this.props.match.params.id
-        const resp = await axios.get('/api/events-eventID-edit.php?eventID='+eventId+'');
-        
+        const resp = await axios.get('/api/events-eventID-host.php?eventID='+eventId+'');   
+
         this.setState({
             hostEventId: resp.data.event
         });
+        
 
     }
 
@@ -32,6 +33,7 @@ class EventHostPage extends Component {
                 </div>
             );
         } 
+        console.log(hostEventId)
             const numberOfPlayers = hostEventId.playerList.length;
             if(numberOfPlayers >= hostEventId.playerLimit){
                 return (
