@@ -41,7 +41,10 @@ render(){
     const fullName = `${this.state.userProfile.firstName} ${this.state.userProfile.lastName}`;
         return (
             
-            <div className="center">
+            <div className="center profile">
+                <div>
+                    <h2> Profile </h2>
+                </div>
                 <div className="center user-image">
                     <div className="center profile-image"> User Profile Picture here</div>
                 </div>
@@ -50,20 +53,22 @@ render(){
                     <div className="center">User Name: {playerName}</div>
                 </div>
                 <div className="profile-button-container center">
-                    <div>
-                        <Link to="/new-event" className="btn nav-link green create-event-btn">Create Event</Link>
-                    </div>
+                    <div className="buttons">
+                        <div>
+                            <Link to="/new-event" className="btn nav-link green create-event-btn">Create Event</Link>
+                        </div>
 
-                    <div>
-                        <Link to="/events" className="btn nav-link green">View Available Events</Link>
-                    </div>
+                        <div>
+                            <Link to="/events" className="btn nav-link green available-events-btn">View Available Events</Link>
+                        </div>
 
-                    <div>
-                        <Link to="/events/host" className="btn nav-link green">My Hosted Events</Link>
-                    </div>
+                        <div>
+                            <Link to="/events/host" className="btn nav-link green my-hosted-events-btn">My Hosted Events</Link>
+                        </div>
 
-                    <div>
-                        <Link to="/events/myevents" className="btn nav-link green">My Joined Events</Link>
+                        <div>
+                            <Link to="/events/myevents" className="btn nav-link green my-joined-events-btn">My Joined Events</Link>
+                        </div>
                     </div>
                 </div>
             </div>

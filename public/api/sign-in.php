@@ -49,10 +49,11 @@ if(isset($_SESSION['userID'])){
       $output['success'] = false;
       $output['error'] = "User Doesn't Exist";
    } else {
-      $_SESSION['userID'] = $userID;
+      $_SESSION['userID'] = $userID['userID'];
       $output['success'] = true;
       $output['logged-in'] = true;
    }
+   print_r($_SESSION['userID']);
 }
 
 $json_output = json_encode($output);
