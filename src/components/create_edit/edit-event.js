@@ -21,13 +21,14 @@ class EditEvent extends Component{
         this.setState({
             eventId: this.props.match.params.id
         });
+        console.log("props id", this.props.match.params.id)
 
         this.getEditEventData();
     }
 
     async getEditEventData() {
 
-        const resp = await axios.get('/api/events-eventID-edit.php?eventID=1');
+        const resp = await axios.get('/api/events-eventID-edit.php?eventID=' + this.props.match.params.id+"");
 
         console.log('resp: ', resp.data.event);
 
@@ -36,6 +37,18 @@ class EditEvent extends Component{
         });
         console.log(this.state);
     }
+
+    handleSubmit = async (event) => {
+        const formattedNewEvent = event; //event is being pulled from the form - follow that formatting
+
+        const resp = await axios.post('/api/events-eventID-edit.php?eventID=', formattedNewEvent);
+        const eventID = resp.data.eventID;
+
+
+
+        this.props.history.push(`events/${eventID}/host`);
+    }
+
 
     handleKeyPress = (event) => {
         console.log(event);
@@ -102,7 +115,7 @@ class EditEvent extends Component{
                     </div>
                 </form>
 
-                <Link to="/events/id/host" className="btn text-center nav-link">SUBMIT CHANGES</Link>
+                <Link to="/events/id/host" onSubmit={this.handleSubmit} className="btn text-center nav-link">SUBMIT CHANGES</Link>
             </div>
     
         );

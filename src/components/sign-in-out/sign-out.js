@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import '../../assets/css/sign-out.css';
 import {Link} from 'react-router-dom';
 import { signOut } from '../../actions';
+import { Link  } from 'react-router-dom';
 
 
 class SignOut extends Component {

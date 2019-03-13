@@ -13,7 +13,6 @@ class Nav extends Component {
 
 
     render() {
-        console.log('Nav Auth Info:', this.props.auth);
         const activeUser = this.props.auth;
         // const userID = this.props.match.params.loggedIn;
         if (activeUser === false) {
