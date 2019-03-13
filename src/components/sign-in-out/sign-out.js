@@ -27,21 +27,10 @@ class SignOut extends Component {
                         <Link to="/" className="btn nav-link green">O K</Link>
                 </div>
             </div>
-
         )
     }
-
-
 
 }
 
 export default SignOut;
 
-// export default props => (
-//     <div>
-//         <h3 className="header"> Board Gamers </h3>
-
-//         <div className="sign-out"> You have been signed out </div>
-
-//     </div>
-// )
