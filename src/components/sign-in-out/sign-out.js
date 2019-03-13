@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../../assets/css/sign-out.css';
+import {Link} from 'react-router-dom';
 import { signOut } from '../../actions';
+
 
 class SignOut extends Component {
     componentDidMount(){
