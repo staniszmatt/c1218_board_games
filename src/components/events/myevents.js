@@ -20,6 +20,7 @@ class MyEvents extends Component {
     }
 
     render() {
+        
         const { myEventList } = this.state;
   
         if (myEventList.length <= 0) {
@@ -36,6 +37,7 @@ class MyEvents extends Component {
         }
         let eventRow = [];
         eventRow = myEventList.map((event) => {
+            console.log("My events",event);
             return <EventRowMyEvents key={event.eventID} event={event} eventId={event.eventID} />
         });
 

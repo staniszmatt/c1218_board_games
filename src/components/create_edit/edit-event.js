@@ -38,16 +38,16 @@ class EditEvent extends Component{
         console.log(this.state);
     }
 
-    handleSubmit = async (event) => {
-        const formattedNewEvent = event; //event is being pulled from the form - follow that formatting
+    // handleSubmit = async (event) => {
+    //     const formattedNewEvent = event; //event is being pulled from the form - follow that formatting
 
-        const resp = await axios.post('/api/events-eventID-edit.php?eventID=', formattedNewEvent);
-        const eventID = resp.data.eventID;
+    //     const resp = await axios.post('/api/events-eventID-edit.php?eventID=', formattedNewEvent);
+    //     const eventID = resp.data.eventID;
 
 
 
-        this.props.history.push(`events/${eventID}/host`);
-    }
+    //     this.props.history.push(`events/${eventID}/host`);
+    // }
 
 
     handleKeyPress = (event) => {

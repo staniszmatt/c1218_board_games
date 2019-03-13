@@ -49,31 +49,10 @@ if(isset($_SESSION['userID'])){
       $output['success'] = false;
       $output['error'] = "User Doesn't Exist";
    } else {
+      $_SESSION['userID'] = $userID;
       $output['success'] = true;
       $output['logged-in'] = true;
-      $output['userID'] = $userID;
-      $_SESSION['userID'] = $userID;
    }
-}
-
-$query = "SELECT p.id AS userID
-            FROM profile AS p
-               WHERE p.password = '{$password}'
-                  AND p.email = '{$data['email']}'"; 
-unset($password);
-$result = $db->query($query);
-
-while($row = $result->fetch_assoc()){
-   $userID = $row;
-}
-
-if(!$userID){
-   $output['success'] = false;
-   $output['error'] = "User Doesn't Exist";
-} else {
-   $output['success'] = true;
-   $output['logged-in'] = true;
-   $_SESSION['userID'] = $userID['userID'];
 }
 
 $json_output = json_encode($output);
