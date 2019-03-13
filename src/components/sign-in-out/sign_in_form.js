@@ -14,11 +14,10 @@ const SignInForm = props => {
             <div className="row">
                 <Field name="password" component={Input} label="Enter your password" type="password"/>
             </div>
-            <div className="row">
+
                 <div className="col s12 center">
                     <button className="btn blue lighten-1">Sign In</button>
                 </div>
-            </div>
         </form>
     );
 }

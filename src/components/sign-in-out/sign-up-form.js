@@ -1,7 +1,8 @@
 import React from 'react';
-import {Field, reduxForm} from 'redux-form';
-import './sign-up.css';
+import { Field, reduxForm } from 'redux-form';
 import Input from '../general/forms/input';
+import './sign-up.css';
+
 
 const CreateSignUpForm = props => {
 

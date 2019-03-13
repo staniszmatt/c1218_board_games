@@ -1,35 +1,29 @@
 import React, { Component } from 'react';;
-import axios from 'axios';
 import CreateSignUpForm from './sign-up-form';
-
+import { signUp } from '../../actions';
+import { connect } from 'react-redux';
 
 class SignUp extends Component {
 
-    handleSubmit = async (event) => {
-        const formattedNewEvent = event;
+    // handleSubmit = async (event) => {
+    //     const formattedNewEvent = event;
 
-        const resp = await axios.post('/api/sign-up.php',  formattedNewEvent);
-        console.log("the data was posted", resp);
+    //     const resp = await axios.post('/api/sign-up.php',  formattedNewEvent);
+    //     console.log("the data was posted", resp);
 
-        this.props.history.push(`sign-up`);
-    }
-
-    // handleKeyPress = (event) => {
-    //     this.setState({
-    //         [event.target.name]: event.target.value
-    //     });
+    //     this.props.history.push(`sign-up`);
     // }
 
-    render(){
 
+    render(){
         return(
             <div className="create-sign-up-container">
                 <h1 className="center">Sign Up</h1>
-                <CreateSignUpForm onSubmit={this.handleSubmit} />
+                <CreateSignUpForm onSubmit={this.props.signUp} />
             </div>
         );
     }
 }
 
-export default SignUp;
+export default connect(null, { signUp })(SignUp);
 

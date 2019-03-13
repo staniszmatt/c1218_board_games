@@ -16,6 +16,7 @@ export const checkAuth = () => async dispatch => {
 }
 
 export const signIn = credentials => async dispatch => {
+    const error = 'Error signing in - invalid email and or password';
     try {
         const { data } = await axios.post('/api/sign-in.php', credentials);
 
@@ -29,13 +30,15 @@ export const signIn = credentials => async dispatch => {
         }
 
         dispatch({
-            type: types.SIGN_IN_ERROR
+            type: types.SIGN_IN_ERROR,
+            error
         });
     } catch(err){
         console.log('Error signing in:', err.message);
 
         dispatch({
-            type: types.SIGN_IN_ERROR
+            type: types.SIGN_IN_ERROR,
+            error
         });
     }
 }
@@ -53,6 +56,34 @@ export const signOut = () => async dispatch => {
     } catch(err){
         dispatch({
             type: types.SIGN_OUT_ERROR
+        });
+    }
+}
+
+export const signUp = credentials => async dispatch => {
+    const error = 'Error creating new account';
+    try {
+        const { data } = await axios.post('/api/sign-up.php', credentials);
+
+        if (data.success) {
+
+            localStorage.setItem('logged-in', true);
+
+            return dispatch({
+                type: types.SIGN_UP,
+                error
+            });
+        }
+
+        dispatch({
+            type: types.SIGN_UP_ERROR,
+            error
+        });
+    } catch (err) {
+        console.log('Error signing in:', err.message);
+
+        dispatch({
+            type: types.SIGN_UP_ERROR
         });
     }
 }

@@ -17,7 +17,7 @@ if (!isset($_SESSION['userID'])){
             FROM profile AS p
             JOIN location AS l
                ON p.location = l.id
-            WHERE p.id = '{$_SESSION['userID']['userID']}'";
+            WHERE p.id = '{$_SESSION['userID']}'";
    $result = $db->query($query);
    $data = [];
    
