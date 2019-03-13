@@ -12,7 +12,7 @@ body {
 
 
 .nav {
-  background-color: #757575;
+  background-color: #0F4434;
   list-style-type: none;
   text-align: center;
   width: 100%;
@@ -33,13 +33,15 @@ label{
   width: 33%;
 
 }
-.sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn{
-  box-shadow: 0px 0px 8px 8px rgb(229, 235, 235) inset;
+.sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn{
+  background-color: #0F4434;
+  box-shadow: 0px 0px 10px 10px #8AE8CB inset;
+  color: #8AE8CB;
   font-size: 10px;
   margin: 0 auto;
   margin-top: 3px;
   border-radius: 50px;
-  padding: 30px;
+  padding: 33px;
   text-align: center;
   line-height: 0px;
 }
