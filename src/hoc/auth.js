@@ -14,6 +14,8 @@ export default function(WrappedComponent, to = '/sign-in', requireAuth = true){
         checkAuth(){
             const { auth, history } = this.props;
 
+            console.log('AUTH:', auth);
+
             if(auth !== requireAuth){
                 history.push(to);
             }

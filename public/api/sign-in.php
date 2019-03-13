@@ -7,7 +7,7 @@ if(isset($_SESSION['userID'])){
    $output['success'] = true;
    $output['logged-in'] = true;
    $json_output = json_encode($output);
-   print("Upper Logged in".$json_output);
+   print($json_output);
 } else if (!isset($_SESSION['userID'])) {
    $data = json_decode( file_get_contents( 'php://input'),true);
 

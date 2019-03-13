@@ -8,7 +8,9 @@ class Profile extends Component {
         userProfile: null
     }
     componentDidMount(){
-        this.getUserProfile();
+        if(this.props.auth){
+            this.getUserProfile();
+        }
     }
 
     async getUserProfile(){

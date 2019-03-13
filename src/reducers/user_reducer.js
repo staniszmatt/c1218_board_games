@@ -11,6 +11,10 @@ export default (state = DEFAULT_STATE, action) => {
             return { auth: true, error: null };
         case types.SIGN_IN_ERROR:
             return { auth: false, error: 'Email and/or password incorrect' };
+        case types.SIGN_OUT:
+            return { auth: false, error: null };
+        case types.SIGN_OUT_ERROR:
+            return { auth: false, error: 'Error logging out' };
         default:
             return state;
     }

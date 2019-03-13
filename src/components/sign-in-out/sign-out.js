@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../../assets/css/sign-out.css';
-import axios from 'axios';
+import { signOut } from '../../actions';
 
 class SignOut extends Component {
-    constructor(props){
-        super(props);
-    }
-
-    signOut = async () => {
-
-        const resp = await axios.get('/api/sign-out.php');
-        console.log('resp ',resp)
-        // this.props.location.state.activeUser = resp.data['logged-in']
-
+    componentDidMount(){
+        this.props.signOut();
     }
 
     render() {
-        this.signOut();
+        
         return (
             <div>
                 <h3 className="header"> Board Gamers </h3>
@@ -24,20 +17,8 @@ class SignOut extends Component {
                 <div className="sign-out"> You have been signed out </div>
 
             </div>
-        )
+        );
     }
-
-
-
 }
 
-export default SignOut;
-
-// export default props => (
-//     <div>
-//         <h3 className="header"> Board Gamers </h3>
-
-//         <div className="sign-out"> You have been signed out </div>
-
-//     </div>
-// )
+export default connect(null, { signOut })(SignOut);

@@ -1,11 +1,28 @@
 import types from './types';
 import axios from 'axios';
 
+export const checkAuth = () => async dispatch => {
+    try {
+        const { data } = await axios.get('/api/is-logged-in.php');
+
+        dispatch({
+            type: types.SIGN_IN
+        });
+    } catch(err){
+        dispatch({
+            type: types.SIGN_OUT
+        });
+    }
+}
+
 export const signIn = credentials => async dispatch => {
     try {
         const { data } = await axios.post('/api/sign-in.php', credentials);
 
         if(data['logged-in'] && data.success){
+
+            localStorage.setItem('logged-in', true);
+
             return dispatch({
                 type: types.SIGN_IN
             });
@@ -19,6 +36,23 @@ export const signIn = credentials => async dispatch => {
 
         dispatch({
             type: types.SIGN_IN_ERROR
+        });
+    }
+}
+
+export const signOut = () => async dispatch => {
+    try {
+        const { data } = await axios.get('/api/sign-out.php');
+
+        localStorage.removeItem('logged-in');
+
+        dispatch({
+            type: types.SIGN_OUT
+        });
+
+    } catch(err){
+        dispatch({
+            type: types.SIGN_OUT_ERROR
         });
     }
 }
