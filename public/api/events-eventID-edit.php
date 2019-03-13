@@ -34,17 +34,12 @@ if (!isset($_SESSION['userID'])){
    unset($data['eventID']);
 
    foreach($data as $key=>$value){
-      
+      $checkValue = false;
       for ($index = 0; $index < sizeof($dataCheck); $index++ ){
          if ($key === $dataCheck[$index]){
             $checkValue = true; 
-            echo("work here!");
-            return; 
-         } else {
-            $checkValue = false; 
          }
       }
-      
       echo($checkValue);
       if (!$checkValue){
          $output['error'][] = "Can not edit {$key}!";
