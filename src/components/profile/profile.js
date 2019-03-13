@@ -19,11 +19,9 @@ class Profile extends Component {
         console.log(resp)
         this.setState({
             userProfile: resp.data.data[0] || []
-            
         });
     }
 render(){
-
 
     if (this.state.userProfile === null){
             return (
@@ -37,6 +35,7 @@ render(){
                 </div>
             );
         }
+
     const { playerName } = this.state.userProfile;
     const fullName = `${this.state.userProfile.firstName} ${this.state.userProfile.lastName}`;
         return (
@@ -68,7 +67,6 @@ render(){
                 </div>
             </div>
         );
-    // }
     }
 }
 export default Profile;

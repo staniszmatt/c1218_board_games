@@ -24,3 +24,4 @@ class SignOut extends Component {
 }
 
 export default connect(null, { signOut })(SignOut);
+

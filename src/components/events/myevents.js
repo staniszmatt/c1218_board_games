@@ -52,8 +52,4 @@ class MyEvents extends Component {
         );
     }
 }
-
-
-
-
 export default MyEvents;

@@ -1,6 +1,8 @@
 .header-events-container{
-    height: 10VH;
+    height: 13VH;
     text-align: center;
+    padding: 11px;
+    box-shadow: 0px 0px 8px 8px black inset;
 }
 
 
@@ -29,6 +31,11 @@
 vertical-align: middle;
 }
 
+.events-list-button{
+    background-color: black;
+    /*box-shadow: 0px 0px 2px 2px red inset;*/
+}
+
 .events-image {
     display: inline-block;
     width: 30%;
@@ -36,7 +43,7 @@ vertical-align: middle;
 background-position: center;
 background-size: 100%;
 background-repeat: no-repeat;
-box-shadow: 0px 0px 8px 8px darkslategray inset;
+box-shadow: 0px 0px 6px 6px dodgerblue inset;
 }
 
 /* .events-image > img{
