@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './nav.css';
-import axios from 'axios';
 
 class Nav extends Component {
     constructor(props) {
@@ -12,20 +12,9 @@ class Nav extends Component {
     }
 
 
-
-    // signOut = async () => {
-     
-    //     const resp = await axios.get('/api/sign-out.php');
-    //     console.log(resp);
-    //     console.log('logged in',resp.data['logged-in'])
-    //     this.render.userID = false;
-    // }
-
-
-
-
     render() {
-        const activeUser = false;
+        console.log('Nav Auth Info:', this.props.auth);
+        const activeUser = this.props.auth;
         // const userID = this.props.match.params.loggedIn;
         if (activeUser === false) {
         return ( 
@@ -70,7 +59,11 @@ class Nav extends Component {
     }
 }
 
-export default Nav;
+function mapStateToProps({user}){
+    return { auth: user.auth };
+}
+
+export default connect(mapStateToProps)(Nav);
 
 // export default props => {
 //     const userID = null;
