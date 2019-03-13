@@ -21,11 +21,11 @@ class Nav extends Component {
             <footer className="nav-wrapper">
                 <ul className="nav">
                     <li className="nav-item">
-                        <Link to="/" className="btn nav-btn-style nav-link black center profile-btn">Home</Link>
+                        <Link to="/" className="btn nav-btn-style nav-link black center home-btn">Home</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/sign-up" className="btn nav-link  center font-color: black event-btn">Sign Up</Link>
+                        <Link to="/sign-up" className="btn nav-link  center font-color: black sign-up-btn">Sign Up</Link>
                     </li>
 
                     <li className="nav-item">

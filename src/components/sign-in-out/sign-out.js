@@ -11,11 +11,13 @@ class SignOut extends Component {
     render() {
         
         return (
-            <div>
+            <div className="sign-out-page">
                 <h3 className="header"> Board Gamers </h3>
-
-                <div className="sign-out"> You have been signed out </div>
-
+                <div className="sign-out">
+                    <h1 className="sign-out-header">Signed Out</h1>
+                    <p className="paragraph">You have been signed out from your account!</p>
+                        <Link to="/" className="btn nav-link green">O K</Link>
+                </div>
             </div>
         );
     }

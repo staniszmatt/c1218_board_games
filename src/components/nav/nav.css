@@ -33,7 +33,8 @@ label{
   width: 33%;
 
 }
-.sign-out-btn, .profile-btn, .event-btn, .sign-in-btn{
+.sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn{
+  box-shadow: 0px 0px 8px 8px rgb(229, 235, 235) inset;
   font-size: 10px;
   margin: 0 auto;
   margin-top: 3px;
