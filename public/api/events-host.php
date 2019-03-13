@@ -21,7 +21,7 @@ if (!isset($_SESSION['userID'])){
                ON pl.eventID = e.id
             JOIN playerList as plu
                ON plu.eventID = e.id
-            WHERE pl.userID = '{$_SESSION['userID']['userID']}' AND e.hostID = pl.userID
+            WHERE pl.userID = '{$_SESSION['userID']}' AND e.hostID = pl.userID
             GROUP BY e.id";
    $result = $db->query($query);
    $userID = [];

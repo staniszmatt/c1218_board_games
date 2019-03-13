@@ -30,7 +30,7 @@ if (!isset($_SESSION['userID'])){
    
    $query = "INSERT INTO playerList 
                SET eventID='{$data['eventID']}', 
-                  userID='{$_SESSION['userID']['userID']}'";
+                  userID='{$_SESSION['userID']}'";
    
    $result =$db->query($query);
    if($result){
