@@ -72,7 +72,7 @@ class EditEvent extends Component{
         
         return (
 
-            <div className="center">
+            <div className="center create-form">
                 <h1 className="center">EDIT EVENT</h1>
 
                 <form onSubmit={this.handleSubmit}>

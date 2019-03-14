@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import Input from '../general/forms/input';
+import './create-form.css';
 
 const CreateEventForm = props => {
 
@@ -10,7 +11,7 @@ const CreateEventForm = props => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             
-            <div className="form-group">
+            <div className="form-group create-form">
                 <Field label="Game Name" component={Input} name="gameTitle" type="text" />
                 <Field label="Street Address" component={Input} name="streetAddress" type="text" />
                 <Field label="City" component={Input} name="city" type="text" />
