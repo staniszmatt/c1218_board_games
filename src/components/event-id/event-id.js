@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './event-id.css';
 import axios from 'axios';
-
+import BoardGamePic from '../../assets/images/boardgame_default.jpg';
 
 class EventSelected extends Component {
     state = {
@@ -20,15 +20,17 @@ class EventSelected extends Component {
     }
     sendUserData = async () => {
         const resp = await axios.post(`/api/events-id-join.php`, {
-            userID: 5,
+            // userID: 5,
             eventID: this.props.match.params.id
+           
         });
+        console.log("Event to player resp", resp);
 
         this.props.history.push("/events/" + this.props.match.params.id + "/player-list")
     }
     render() {
         const { eventId } = this.state;
-        console.log(eventId)
+
         if (eventId === null) {
             return (
                 <div className="center">
@@ -46,7 +48,7 @@ class EventSelected extends Component {
                     <div className="center">
                         <div className="main-container-event">
                             <div className="btn game-picture center">
-                                <img src={eventId.gameImages}></img>
+                                <img src={BoardGamePic}></img>
                             </div>
                             <div className="btn event-host">Game: {eventId.gameTitle}</div>
                             <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
@@ -80,7 +82,7 @@ class EventSelected extends Component {
                 <div className="center">
                     <div className="main-container-event">
                         <div className="btn game-picture center">
-                            <img src={eventId.gameImages}></img>
+                            <img src={BoardGamePic}></img>
                         </div>
                         <div className="btn event-host">Game: {eventId.gameTitle}</div>
                         <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>

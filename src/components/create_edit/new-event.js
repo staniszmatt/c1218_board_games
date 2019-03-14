@@ -11,7 +11,7 @@ class NewEvent extends Component {
         formattedNewEvent.gameImages = '3241234';
 
         const resp = await axios.post('/api/events-new-event.php', formattedNewEvent);
-        console.log("resp", resp)
+
         const eventID = resp.data.eventID;
 
 

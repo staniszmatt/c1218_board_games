@@ -39,7 +39,7 @@ function validate(values){
         errors.password= 'Please enter your password';
     }
 
-    console.log('Errors:', errors);
+
 
     return errors;
 }

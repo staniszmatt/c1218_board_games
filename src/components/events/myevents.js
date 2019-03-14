@@ -37,7 +37,7 @@ class MyEvents extends Component {
         }
         let eventRow = [];
         eventRow = myEventList.map((event) => {
-            console.log("My events",event);
+
             return <EventRowMyEvents key={event.eventID} event={event} eventId={event.eventID} />
         });
 
