@@ -15,6 +15,7 @@ body{
     height: 65vh;
     padding: 1px 20px;
     border: 5px solid #8AE8CB;
+    overflow: scroll;
 }
 
 .sign-btn-container{
