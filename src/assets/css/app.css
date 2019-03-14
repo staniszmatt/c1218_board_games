@@ -9,7 +9,12 @@
 
 body {
     margin: 0;
+    background-color: black;
 
+}
+
+#root{
+    background-color: black;
 }
 
 /*.btn{*/

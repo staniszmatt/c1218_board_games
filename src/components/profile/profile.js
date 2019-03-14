@@ -26,9 +26,6 @@ render(){
     if (this.state.userProfile === null){
             return (
                 <div className="center">
-                    <div className="center user-image">
-                        <div className="center profile-image"> User Profile Picture here</div>
-                    </div>
                     <div className="center user-info">
                         <div className="center">Loading...</div>
                     </div>
