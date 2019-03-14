@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './events.css';
 import EventRowMyEvents from './events-row-myevents';
 import axios from 'axios';
@@ -10,19 +9,17 @@ class MyEvents extends Component {
     }
 
     async componentDidMount() {
-        const userID = 1;
-        const resp = await axios.get(`/api/events-myevents.php?userID=${userID}`);
+        const resp = await axios.get(`/api/events-myevents.php`);
         console.log(resp)
-        if (resp.data.success === true && resp.data.userID.length === 0) {
+        if (resp.data.success === true && resp.data.userID.length <= 0) {
             this.setState({
                 myEventList: [null]
             });
-            console.log(this.state)
+
         } else {
             this.setState({
                 myEventList: resp.data.userID
             });
-            console.log(this.state)
         }
 
     }
@@ -38,9 +35,9 @@ class MyEvents extends Component {
                     <div className="header-container col s12">
                         <h1 className="">My Joined Events</h1>
                     </div>
-                    <div className="events-main-container available-events-loader">
+                    <div className="events-main-container ">
                         LOADING....
-                </div>
+                    </div>
                 </div>
             );
         } else if (myEventList[0] === null) {
@@ -49,7 +46,7 @@ class MyEvents extends Component {
                     <div className="header-container col s12">
                         <h1 className="">My Joined Events</h1>
                     </div>
-                    <div className="events-main-container available-events-loader">
+                    <div className="events-main-container ">
                         NO AVAILABLE EVENTS
                 </div>
                 </div>
