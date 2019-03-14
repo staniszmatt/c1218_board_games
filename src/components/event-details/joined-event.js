@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../event-id/event-id.css';
+import './joined-events.css';
 import axios from 'axios';
 
 
@@ -44,8 +45,8 @@ class JoinedEventDetails extends Component {
                         <div className="btn game-picture center">
                             <img src={eventId.gameImages}></img>
                         </div>
-                        <div className="btn event-host grey ">Game: {eventId.gameTitle}</div>
-                        <div className="btn event-host grey darken-1">Host Name: {eventId.playerList[0].playerName}</div>
+                        <div className="btn event-host">Game: {eventId.gameTitle}</div>
+                        <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
 
 
                         <div className="date grey">
@@ -55,7 +56,7 @@ class JoinedEventDetails extends Component {
                             </ul>
                         </div>
 
-                        <div className="btn address grey darken-1">
+                        <div className="btn address">
                             <ul>
                                 <li>Address: {eventId.location.streetAddress}</li>
                                 <li>City: {eventId.location.city}</li>
@@ -64,7 +65,7 @@ class JoinedEventDetails extends Component {
                             </ul>
                         </div>
 
-                        <div className=" numberOfPlayers grey">
+                        <div className="numberOfPlayers">
                             <div> Event is Full</div>
                         </div>
 
@@ -77,22 +78,20 @@ class JoinedEventDetails extends Component {
             );
         } return (
             <div className="center">
-                <div className="main-container">
+                <div className="main-container-event">
                     <div className="btn game-picture center">
                         <img src={eventId.gameImages}></img>
                     </div>
-                    <div className="btn event-host grey ">Game: {eventId.gameTitle}</div>
-                    <div className="btn event-host grey darken-1">Host Name: {eventId.playerList[0].playerName}</div>
-
-
-                    <div className="date grey">
+                    <div className="btn event-host">Game: {eventId.gameTitle}</div>
+                    <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
+                    <div className="date">
                         <ul>
                             <li>Date: {eventId.date}</li>
                             <li>Start: {eventId.startTime}</li>
                         </ul>
                     </div>
 
-                    <div className="btn address grey darken-1">
+                    <div className="btn address">
                         <ul>
                             <li>Address: {eventId.location.streetAddress}</li>
                             <li>City: {eventId.location.city}</li>
@@ -101,11 +100,11 @@ class JoinedEventDetails extends Component {
                         </ul>
                     </div>
 
-                    <div className=" numberOfPlayers grey">
+                    <div className="numberOfPlayers">
                         <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
                     </div>
 
-                    <div className="center joinButton green lighten-4">
+                    <div className="btn join-game-button green">
                         <button className="btn" onClick={this.sendUserData}>Leave Game</button>
                         {/* <Link onClick={this.sendUserData} to={"/events/" + eventId.eventID + "/player-list"} className="nav-link">Join Game</Link> */}
                     </div>
