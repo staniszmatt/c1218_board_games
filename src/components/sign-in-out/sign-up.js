@@ -5,16 +5,6 @@ import { connect } from 'react-redux';
 
 class SignUp extends Component {
 
-    // handleSubmit = async (event) => {
-    //     const formattedNewEvent = event;
-
-    //     const resp = await axios.post('/api/sign-up.php',  formattedNewEvent);
-    //     console.log("the data was posted", resp);
-    //
-    //     //     this.props.history.push(`sign-up`);
-    //     // }
-
-
     render(){
         return(
             <div className="create-sign-up-container">

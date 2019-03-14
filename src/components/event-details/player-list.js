@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import './player-list.css';
 
+
 class PlayerList extends Component {
     state = {
         eventId: null
@@ -34,7 +35,7 @@ class PlayerList extends Component {
                 <div className="generic-container">
                     <div className="page-header player-list-title center">
                         <h3 className="center">
-                            Checkers
+                            {data.gameTitle}
                     </h3>
                     </div>
                     <div className="center player-list-date">Date and Time
@@ -68,6 +69,7 @@ class PlayerList extends Component {
                                 </tr>))}
                             </tbody>
                         </table>
+                        <Link to={"/events/"+data.eventID+""} className="btn">Back To Game</Link>
                     </div>
                 </div>
             );

@@ -25,11 +25,18 @@ h2{
 .profile-image {
     background-color: #0F4434;
     box-shadow: 0px 0px 10px 10px black inset;
-    padding: 54px;
-    height: 18vh;
+    padding: 5%;
+    height: 20vh;
     border: 1px solid black;
     margin: 0px;
     color: #8AE8CB;
+}
+
+.profile-image > img{
+
+height: 100%;
+width: auto;
+border-radius: 50%;
 }
 
 .user-info {

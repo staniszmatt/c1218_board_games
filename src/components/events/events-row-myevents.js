@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import BoardGamePic from '../../assets/images/boardgame_default.jpg';
 
 const EventRowMyEvents = (props) => {
 
@@ -17,7 +17,7 @@ const EventRowMyEvents = (props) => {
 
                     <p className="events-date-time">{date} {startTime}</p>
                 </div>
-                <div style={{ backgroundImage: "url(" + gameImages + ")" }} className="events-image center"></div>
+                <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center"></div>
             </div>
         </Link>
     );
@@ -30,7 +30,7 @@ const EventRowMyEvents = (props) => {
                 <p className="events-player-count">EVENT IS FULL</p>
                 <p className="events-date-time">{date} {startTime}</p>
             </div>
-            <div style={{ backgroundImage: "url(" + gameImages + ")" }} className="events-image center">
+                <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center">
             </div >
         </div>
         </Link >

@@ -5,6 +5,7 @@ import axios from 'axios';
 
 class EditEvent extends Component{
     state = {
+        date: '',
         eventId: '',
         gameTitle: '',
         startTime: '',
@@ -31,22 +32,23 @@ class EditEvent extends Component{
         const eventId = this.state.eventId;
         const resp = await axios.get('/api/events-eventID-host.php?eventID='+eventId+"");
 
-        console.log('resp: ', resp);
-
         this.setState({
             ...resp.data.event
         });
-        console.log(this.state);
     }
 
     handleSubmit = async (event) => {
+        event.preventDefault();
 
-        const formattedNewEvent = this.state; //event is being pulled from the form - follow that formatting
+        const formattedNewEvent = this.state; 
+        const eventId = this.state.eventId//event is being pulled from the form - follow that formatting
         const resp = await axios.post('/api/events-eventID-edit.php?eventID=', formattedNewEvent);
-        const eventID = resp.data.eventID;
+        
+        console.log("Update submitted eventID", resp.data.eventID);
+        
 
 
-        this.props.history.push(`events/${eventID}/host`);
+        this.props.history.push('/events/'+eventId+'/host');
     }
 
 

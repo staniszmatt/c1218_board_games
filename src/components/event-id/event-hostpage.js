@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import BoardGamePic from '../../assets/images/boardgame_default.jpg';
 
 class EventHostPage extends Component {
     state = {
@@ -33,14 +33,13 @@ class EventHostPage extends Component {
                 </div>
             );
         } 
-        console.log(hostEventId)
             const numberOfPlayers = hostEventId.playerList.length;
             if(numberOfPlayers >= hostEventId.playerLimit){
                 return (
                     <div className="center">
                         <div className="main-container-event">
                             <div className="btn game-picture center">
-                                <img src={hostEventId.gameImages}></img>
+                                <img src={BoardGamePic}></img>
                             </div>
                             <div className="btn event-host grey ">Game: {hostEventId.gameTitle}</div>
                             <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerList[0].playerName}</div>
@@ -78,7 +77,7 @@ class EventHostPage extends Component {
                 <div className="center">
                     <div className="main-container-event">
                         <div className="btn game-picture center">
-                            <img src={hostEventId.gameImages}></img>
+                            <img src={BoardGamePic}></img>
                         </div>
                         <div className="btn event-host grey ">Game: {hostEventId.gameTitle}</div>
                         <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerList[0].playerName}</div>

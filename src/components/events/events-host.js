@@ -23,6 +23,7 @@ class EventsHost extends Component {
     }
 
     render(){
+        
         const { hostEventsList } = this.state;
 
         
