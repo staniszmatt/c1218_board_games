@@ -7,8 +7,8 @@ import { format } from 'util';
 class SignIn extends Component{
     render(){
         return (
-           <div>
-               <h1 className="center">Sign In</h1>
+           <div className="sign-in-main-container">
+               <h1 className="center sign-in-header">Sign In</h1>
                 <SignInForm onSubmit={this.props.signIn}/>
            </div>
         );
