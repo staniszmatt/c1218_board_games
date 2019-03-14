@@ -11,7 +11,7 @@ if (!isset($_SESSION['userID'])){
       'success'=> false
    ];
    
-   $userID = $_GET['userID'];
+
    $query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime, e.gameTitle, 
                e.gameImages, e.playerLimit, COUNT(pl.eventID) AS playerCount, e.location,
                l.city, l.state
