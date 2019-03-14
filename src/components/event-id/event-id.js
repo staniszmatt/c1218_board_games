@@ -48,18 +48,18 @@ class EventSelected extends Component {
                             <div className="btn game-picture center">
                                 <img src={eventId.gameImages}></img>
                             </div>
-                            <div className="btn event-host grey ">Game: {eventId.gameTitle}</div>
-                            <div className="btn event-host grey darken-1">Host Name: {eventId.playerList[0].playerName}</div>
+                            <div className="btn event-host">Game: {eventId.gameTitle}</div>
+                            <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
 
 
-                            <div className="date grey">
+                            <div className="date">
                                 <ul>
                                     <li>Date: {eventId.date}</li>
                                     <li>Start: {eventId.startTime}</li>
                                 </ul>
                             </div>
 
-                            <div className="btn address grey darken-1">
+                            <div className="btn address">
                                 <ul>
                                     <li>Address: {eventId.location.streetAddress}</li>
                                     <li>City: {eventId.location.city}</li>
@@ -68,8 +68,8 @@ class EventSelected extends Component {
                                 </ul>
                             </div>
 
-                            <div className=" numberOfPlayers grey">
-                                <div> Game Is Full!</div>
+                            <div className=" numberOfPlayers">
+                                <div className="full"> Game Is Full!</div>
                             </div>
 
                         </div>
@@ -82,18 +82,18 @@ class EventSelected extends Component {
                         <div className="btn game-picture center">
                             <img src={eventId.gameImages}></img>
                         </div>
-                        <div className="btn event-host grey ">Game: {eventId.gameTitle}</div>
-                        <div className="btn event-host grey darken-1">Host Name: {eventId.playerList[0].playerName}</div>
+                        <div className="btn event-host">Game: {eventId.gameTitle}</div>
+                        <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
 
 
-                        <div className="date grey">
+                        <div className="date">
                             <ul>
                                 <li>Date: {eventId.date}</li>
                                 <li>Start: {eventId.startTime}</li>
                             </ul>
                         </div>
 
-                        <div className="btn address grey darken-1">
+                        <div className="btn address">
                             <ul>
                                 <li>Address: {eventId.location.streetAddress}</li>
                                 <li>City: {eventId.location.city}</li>
@@ -102,14 +102,13 @@ class EventSelected extends Component {
                             </ul>
                         </div>
 
-                        <div className=" numberOfPlayers grey">
+                        <div className=" numberOfPlayers">
                             <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
                         </div>
 
-                        <div className="center joinButton green lighten-4">
-                            <Link className="btn join-game-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID + '/player-list'}>Join Game</Link>
 
-                        </div>
+                            <Link className="btn join-game-button green pulse" onClick={this.sendUserData} to={'/events/' + eventId.eventID+'/player-list'}>Join Game</Link>
+
                     </div>
                 </div>
             );
