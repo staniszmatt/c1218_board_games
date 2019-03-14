@@ -26,7 +26,9 @@ if(isset($_SESSION['userID'])){
       // print(json_encode($output));
       throw new Exception("Data was corrupt!");
    }
-
+   if(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+      throw new Exception("Enter a valid email address!");
+   }
    $password = $data["password"];
    unset($data["password"]);
    $location = null;  
