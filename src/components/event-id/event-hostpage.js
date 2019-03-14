@@ -33,7 +33,6 @@ class EventHostPage extends Component {
                 </div>
             );
         } 
-        console.log(hostEventId)
             const numberOfPlayers = hostEventId.playerList.length;
             if(numberOfPlayers >= hostEventId.playerLimit){
                 return (

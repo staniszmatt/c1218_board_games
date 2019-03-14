@@ -28,7 +28,7 @@ class EventSelected extends Component {
     }
     render() {
         const { eventId } = this.state;
-        console.log(eventId)
+
         if (eventId === null) {
             return (
                 <div className="center">
