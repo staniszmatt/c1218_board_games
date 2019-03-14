@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './profile.css';
 import axios from 'axios';
+import ProfilePic from '../../assets/images/profile-pic.jpg';
 
 class Profile extends Component {
     state = {
@@ -44,7 +45,9 @@ render(){
                     <h2> Profile </h2>
                 </div>
                 <div className="center user-image">
-                    <div className="center profile-image"> User Profile Picture here</div>
+                    <div className="center profile-image">
+                        <img src={ProfilePic}></img>
+                    </div>
                 </div>
                 <div className="center user-info">
                     <div className="center">Full Name: {fullName}</div>
