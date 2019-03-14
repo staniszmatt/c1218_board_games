@@ -18,8 +18,8 @@ class EventSelected extends Component {
         });
 
     }
-    sendUserData = async ()=> {
-        const resp = await axios.post(`/api/events-id-join.php`,{
+    sendUserData = async () => {
+        const resp = await axios.post(`/api/events-id-join.php`, {
             userID: 5,
             eventID: this.props.match.params.id
         });
@@ -28,7 +28,7 @@ class EventSelected extends Component {
     }
     render() {
         const { eventId } = this.state;
-console.log(eventId)
+        console.log(eventId)
         if (eventId === null) {
             return (
                 <div className="center">
@@ -41,7 +41,7 @@ console.log(eventId)
             );
         } else {
             const numberOfPlayers = eventId.playerList.length;
-            if(numberOfPlayers >= eventId.playerLimit){
+            if (numberOfPlayers >= eventId.playerLimit) {
                 return (
                     <div className="center">
                         <div className="main-container-event">
@@ -105,7 +105,10 @@ console.log(eventId)
                         <div className=" numberOfPlayers">
                             <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
                         </div>
+
+
                             <Link className="btn join-game-button green pulse" onClick={this.sendUserData} to={'/events/' + eventId.eventID+'/player-list'}>Join Game</Link>
+
                     </div>
                 </div>
             );
