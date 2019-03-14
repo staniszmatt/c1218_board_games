@@ -1,6 +1,7 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import Input from '../general/forms/input';
+import './sign-in.css';
 
 const SignInForm = props => {
 
@@ -14,10 +15,15 @@ const SignInForm = props => {
             <div className="row">
                 <Field name="password" component={Input} label="Enter your password" type="password"/>
             </div>
-
-                <div className="col s12 center">
-                    <button className="btn blue lighten-1">Sign In</button>
-                </div>
+           <div className="sign-btn-container">
+               <div className="col s12 center">
+                   <button className="btn green lighten-1">Sign In</button>
+               </div>
+               <div className="or"> OR </div>
+               <div className="col s12 center">
+                   <button className="btn blue lighten-1">Sign Up</button>
+               </div>
+           </div>
         </form>
     );
 }

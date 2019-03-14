@@ -2,64 +2,65 @@
 session_start();
 require_once('../../config/setup.php');
 require_once('../../config/mysql_connect.php');
-//TODO: Setup an array of data fields that is allowed to change and reject the rest 
-$dataCheck = [ "eventID", "date", "startTime", "endTime", "gameTitle", "gameImages"];
 
 if (!isset($_SESSION['userID'])){
    $output['success'] = true;
    $output['logged-in'] = false;
 } else {
-   print(!isset($_SESSION));
    $data = json_decode( file_get_contents( 'php://input'),true);
-
    if(!$data){
       $output['success']=false;
       exit();
    }
-   
    $output = [
       "success"=> false,
       "output"=> []
    ];
-   
    foreach($data as $key=>$value){
       $data[$key] = addslashes($value);
-   }
-   
-   if(!empty($output['error'])){
-      print(json_encode($output));
+   } 
+  
+   //Get location id from event to udpate address
+   $query = "SELECT location FROM event WHERE event.id = {$data['eventID']}";
+   $result = $db->query($query);
+  
+   if(!$result){
+      $output['success']=false;
+      $output['error']="Location not found for event!";
       exit();
    }
-   $eventID = $data['eventID'];
-   unset($data['eventID']);
+   while($row = $result->fetch_assoc()){
+      $locationID = $row['location'];
+   }
 
-   foreach($data as $key=>$value){
-      $checkValue = false;
-      for ($index = 0; $index < sizeof($dataCheck); $index++ ){
-         if ($key === $dataCheck[$index]){
-            $checkValue = true; 
-         }
-      }
-      echo($checkValue);
-      if (!$checkValue){
-         $output['error'][] = "Can not edit {$key}!";
-      } 
-      else {
-         $query = "UPDATE event SET {$key} = '{$value}' WHERE id = '{$eventID}'";
-         echo("<div>");
-         print_r($query."<br>");
-         echo("</div>");
-         $result = $db->query($query);
-         echo("<div>");
-         echo($result."<br>");
-         echo("</div>");
-         if (!$result){
-            $output['error'][] = $result;
-         } else {
-            $output['success'] = true;
-            $output['updated'][] = $result;
-         }
-      }
+   //Update Address information 
+   $query = "UPDATE location 
+      SET streetAddress = '{$data['streetAddress']}', 
+            city = '{$data['city']}',
+            state = '{$data['state']}',
+            zipcode = {$data['zipcode']}
+               WHERE id = {$locationID}";
+   $result = $db->query($query);
+   if (!$result){
+      $output['error'][] = $result;
+   } else {
+      $output['updated'] = $result;
+   }
+   //Upate event information 
+   $query = "UPDATE event 
+      SET startTime = '{$data['startTime']}',
+            endTime = '{$data['endTime']}', 
+            date = '{$data['date']}',
+            gameTitle = '{$data['gameTitle']}',
+            gameImages = '{$data['gameImages']}'
+               WHERE id = '{$data['eventID']}'";
+print_r($query);
+   $result = $db->query($query);
+   if (!$result){
+      $output['error'][] = $result;
+   } else {
+      $output['success'] = true;
+      $output['updated'][] = $result;
    }
 }
 
