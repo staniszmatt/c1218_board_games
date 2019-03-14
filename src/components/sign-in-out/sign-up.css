@@ -1,20 +1,17 @@
 body{
     background-color: black  ;
-    /*background-image: url("https://i.imgur.com/3QhNw7q.jpg?1");*/
-    /*background-position: center;*/
-
-
 }
 
 .create-sign-up-container{
     background-color: #0F4434;
     box-shadow: 0px 0px 10px 10px black inset;
-    margin: 30px;
+    margin: 30px 25px;
     opacity: .9;
     color: white;
-    height: 125vh;
+    height: 100%;
     padding: 1px 20px;
     border: 5px solid #8AE8CB;
+    overflow: scroll;
 }
 
 .sign-btn-container{
