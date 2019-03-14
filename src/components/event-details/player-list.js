@@ -3,17 +3,21 @@ import axios from 'axios';
 
 class PlayerList extends Component {
     state = {
+        eventId: null
     }
 
     componentDidMount() {
+        this.setState({
+            eventId: this.props.match.params.id
+        });
+        this.state.eventId = this.props.match.params.id;
         this.getPlayerListData();
     }
 
     async getPlayerListData() {
-        console.log(this.props.param)
-        const resp = await axios.get('/api/events-eventID.php');
-        console.log(this.props)
-        console.log('resp: ', resp)
+        const eventId = this.state.eventId;
+        const resp = await axios.get('/api/events-eventID.php?eventID='+eventId+'');
+
         this.setState({
             data: resp.data.event
         });
