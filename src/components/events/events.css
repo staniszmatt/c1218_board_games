@@ -61,6 +61,10 @@
     margin: 0;
 }
 
-.available-events-loader {
-    color: white;
+
+
+.no-available-events,
+.loading-events,
+.hosted-events-header {
+    color:white;
 }

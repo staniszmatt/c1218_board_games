@@ -34,9 +34,9 @@ class EventsHost extends Component {
             return(
             <div className='center'>
                 <div className="header-container col s12">
-                    <h1 className="">My Hosted Events</h1>
+                        <h1 className="hosted-events-header">My Hosted Events</h1>
                 </div>
-                <div className="events-main-container">
+                <div className="events-main-container loading-events">
                     LOADING....
                 </div>
             </div>
@@ -45,9 +45,9 @@ class EventsHost extends Component {
             return (
                 <div className='center'>
                     <div className="header-container col s12">
-                        <h1 className="">My Hosted Events</h1>
+                        <h1 className="hosted-events-header">My Hosted Events</h1>
                     </div>
-                    <div className="events-main-container ">
+                    <div className="events-main-container no-available-events">
                         NO AVAILABLE EVENTS
                 </div>
                 </div>
