@@ -17,8 +17,9 @@ body {
   text-align: center;
   width: 100%;
   margin: 0 auto;
-  margin-top: 15px;
   height: 13vh;
+  border: 1px solid black;
+  
 }
 
 

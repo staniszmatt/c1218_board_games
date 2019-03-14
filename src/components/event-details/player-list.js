@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import './player-list.css';
+
 
 class PlayerList extends Component {
     state = {
@@ -32,17 +33,17 @@ class PlayerList extends Component {
         } else {
             return (
                 <div className="generic-container">
-                    <div className="page-header center">
+                    <div className="page-header player-list-title center">
                         <h3 className="center">
                             {data.gameTitle}
                     </h3>
                     </div>
-                    <div className="center">Date and Time
+                    <div className="center player-list-date">Date and Time
                         <div>
                             {Date(data.date)} from {data.startTime} to {data.endTime}
                         </div>
                     </div>
-                    <div className="center">Location
+                    <div className="center player-list-address">Location
                         <div>
                             {data.location.streetAddress},<br/>
                             {data.location.city},<br/>
@@ -50,20 +51,14 @@ class PlayerList extends Component {
                             {data.location.zipCode}
                         </div>
                     </div>
-                    <div className="center">
+                    <div className="center player-list-limit">
                         <div> Player Limit
                             {data.playerLimit}
                         </div>
                     </div>
-                    <div>
+                    <div className="player-list">
                         <h5 className="center"> Players </h5>
                         <table>
-                            <thead>
-                                <tr className="center">
-                                    <th className="center">UserName</th>
-                                </tr>
-                            </thead>
-
                             <tbody>
                             {data.playerList.map((player) => (
                                 <tr key={player.playerName}>
