@@ -4,5 +4,5 @@ input{
 
 .create-event-container{
     height: 88vh;
-    overflow: scroll;
+    /*overflow: scroll;*/
 }

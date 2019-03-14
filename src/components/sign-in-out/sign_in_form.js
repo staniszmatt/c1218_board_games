@@ -17,11 +17,11 @@ const SignInForm = props => {
             </div>
            <div className="sign-btn-container">
                <div className="col s12 center">
-                   <button className="btn green lighten-1">Sign In</button>
+                   <button className="btn green lighten-1 sign-in">Sign In</button>
                </div>
                <div className="or"> OR </div>
                <div className="col s12 center">
-                   <button className="btn blue lighten-1">Sign Up</button>
+                   <button className="btn blue lighten-1 sign-up">Sign Up</button>
                </div>
            </div>
         </form>
