@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('../config/setup.php');
+require_once('../../config/check_date.php');
 require_once('../../config/setup.php');
 require_once('../../config/mysql_connect.php');
 
@@ -21,18 +21,21 @@ if (!isset($_SESSION['userID'])){
    foreach($data as $key=>$value){
       $data[$key] = addslashes($value);
    }
-   
    if(!empty($output['error'])){
       print(json_encode($output));
       exit();
    }
+
+   if(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+      throw new Exception("Enter a valid email address!");
+   };
    $password = $data["password"];
    unset($data["password"]);
    $location = null;  
    for($i = 0; $i < 2000; $i++){
       $password = hash("sha256", $password, false);
    }
-   
+
    $query = "INSERT INTO location 
                SET streetAddress='{$data['streetAddress']}', 
                   city='{$data['city']}',
@@ -47,6 +50,9 @@ if (!isset($_SESSION['userID'])){
       $output['error'] = mysqli_error($db);
    }
    $jointDate = date("y-m-d h:i:s");
+   if(checkmydate($data['dateOfBirth']) !== 1){
+      throw new Exception("Please enter correct date format.");
+   }
    $query = "INSERT INTO profile 
             SET playerName='{$data['playerName']}',
                firstName='{$data['firstName']}',
