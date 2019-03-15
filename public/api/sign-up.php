@@ -56,7 +56,6 @@ if (!isset($_SESSION['userID'])){
                   city='{$data['city']}',
                   state='{$data['state']}',
                   zipcode='{$data['zipcode']}'";
-                  
    $result = $db->query($query);
    
    if($result){
@@ -64,10 +63,8 @@ if (!isset($_SESSION['userID'])){
    } else {
       $output['error'] = mysqli_error($db);
    }
+
    $jointDate = date("y-m-d h:i:s");
-   
-
-
    $query = "INSERT INTO profile 
             SET playerName='{$data['playerName']}',
                firstName='{$data['firstName']}',
@@ -78,18 +75,10 @@ if (!isset($_SESSION['userID'])){
                email='{$data['email']}',
                phone='{$data['phone']}',
                location= '{$locationID}' ";
-   
    $result = $db->query($query);
-   
-   if($result){
-      $id = mysqli_insert_id($db);
-   } else {
-      $output['error'] = mysqli_error($db);
-   }
-   
+
    if($result){
       $output['success'] = true;
-
       $_SESSION['userID'] = $id;
    } else {
          $output['error'] = mysqli_error($db);
