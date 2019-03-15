@@ -16,10 +16,17 @@ if (!isset($_SESSION['userID'])){
       "success"=> false,
       "output"=> []
    ];
+
+   $data['streetAddress'] = $data['location']['streetAddress'];
+   $data['city'] = $data['location']['city'];
+   $data['state'] = $data['location']['state'];
+   $data['zipcode'] = $data['location']['zipcode'];
+   unset($data['location']);
+
    foreach($data as $key=>$value){
       $data[$key] = addslashes($value);
    } 
-  
+
    //Get location id from event to udpate address
    $query = "SELECT location FROM event WHERE event.id = {$data['eventID']}";
    $result = $db->query($query);
@@ -54,7 +61,7 @@ if (!isset($_SESSION['userID'])){
             gameTitle = '{$data['gameTitle']}',
             gameImages = '{$data['gameImages']}'
                WHERE id = '{$data['eventID']}'";
-print_r($query);
+
    $result = $db->query($query);
    if (!$result){
       $output['error'][] = $result;

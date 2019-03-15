@@ -80,7 +80,7 @@ if (!isset($_SESSION['userID'])){
    if($result){
       $output['success'] = true;
    } else {
-         $output['error'] = mysqli_error($db);
+         throw new Exception("Profile Load Failed");
    }
 } else {
    $output['success']=true;
