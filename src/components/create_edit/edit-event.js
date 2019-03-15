@@ -5,6 +5,7 @@ import axios from 'axios';
 
 class EditEvent extends Component{
     state = {
+        date: '',
         eventId: '',
         gameTitle: '',
         startTime: '',
@@ -13,32 +14,43 @@ class EditEvent extends Component{
             streetAddress: '',
             city: '',
             state: '',
-            zipcode: '',
+            zipcode: ''
+        },
          playerLimit: ''
-        }
+        
     }
     componentDidMount(){
         this.setState({
             eventId: this.props.match.params.id
         });
+        this.state.eventId = this.props.match.params.id;
 
         this.getEditEventData();
     }
 
-    async getEditEventData() {
-
-        const resp = await axios.get('/api/events-eventID-edit.php?eventID=1');
-
-        console.log('resp: ', resp.data.event);
+    async getEditEventData(){
+        const eventId = this.state.eventId;
+        const resp = await axios.get('/api/events-eventID-host.php?eventID='+eventId+"");
 
         this.setState({
             ...resp.data.event
         });
-        console.log(this.state);
     }
 
+    handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const formattedNewEvent = this.state; 
+        const eventId = this.state.eventId//event is being pulled from the form - follow that formatting
+        const resp = await axios.post('/api/events-eventID-edit.php?eventID=', formattedNewEvent);
+        
+
+
+        this.props.history.push('/events/'+eventId+'/host');
+    }
+
+
     handleKeyPress = (event) => {
-        console.log(event);
         if (['streetAddress'].includes(event.target.name)){
             this.setState({
                 location: {
@@ -54,16 +66,14 @@ class EditEvent extends Component{
 
     render(){
         const  {gameTitle, eventId, date, location, startTime, endTime, playerLimit} = this.state;
-        const  {streetAddress, city, state, zipcode} = this.state.location;
-        const eventLocation = location.streetAddress + ' ' +location.city+ ' ' +location.state+ ' ' +location.zipcode;
-        const eventTime = startTime+ ' to ' +endTime;
+
         
         return (
 
-            <div className="center">
+            <div className="center create-form">
                 <h1 className="center">EDIT EVENT</h1>
 
-                <form onSubmit={this.handleKeyPress}>
+                <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="gameTitle">Game Title</label>
                         <input onChange={this.handleKeyPress} name="gameTitle" type="text" id="gameTitle"  value={gameTitle} className="form-control"  />
@@ -100,9 +110,10 @@ class EditEvent extends Component{
                         <label htmlFor="">Player Limit</label>
                         <input onChange={this.handleKeyPress} name="numberOfPlayers" type="text"  id="numberOfPlayers" value={playerLimit} className="form-control" />
                     </div>
+                    <div>
+                        <button className="btn text-center nav-link">SUBMIT CHANGES</button>
+                    </div>
                 </form>
-
-                <Link to="/events/id/host" className="btn text-center nav-link">SUBMIT CHANGES</Link>
             </div>
     
         );

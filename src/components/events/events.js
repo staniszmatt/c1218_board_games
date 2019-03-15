@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './events.css';
 import EventRow from './events-row';
-// import EventData from '../../../dummy_data/event';
 import axios from 'axios';
 
 class Events extends Component {
@@ -16,7 +15,7 @@ class Events extends Component {
 
     async getEventList(){
         const resp = await axios.get(`/api/events.php`);
-        
+       
         this.setState({
             eventList: resp.data.event
         });
@@ -34,11 +33,8 @@ class Events extends Component {
         if(eventList.length <= 0){
             return (
                 <div className='center'>
-                    <div className="header-events-container col s12">
-                        <h1 className="">Available Events</h1>
-                    </div>
-                    <div className="main-events-container">
-                        Events Are Loading...
+                    <div className="main-events-container loading-text">
+                        Loading...
                     </div>
                 </div>
             )

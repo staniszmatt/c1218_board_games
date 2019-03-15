@@ -1,50 +1,19 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';;
+import CreateSignUpForm from './sign-up-form';
+import { signUp } from '../../actions';
+import { connect } from 'react-redux';
 
-export default props => (
-    <div>
-        <h3 className="center"> Please Provide the Following Information </h3>
-        <div className="center">
-            <form>
-                <div className="form-group">
-                    <label> First Name </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Last Name </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Email </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Phone Number </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Data of Birth </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Zip Code</label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Choose User Name </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="form-group">
-                    <label> Password </label>
-                    <input name="" type="text"/>
-                </div>
-                <div className="center">
-                    <Link to="/events/myevents" className="btn blue">Submit</Link>
-                </div>
-            </form>
-        </div>
-    </div>
+class SignUp extends Component {
 
+    render(){
+        return(
+            <div className="create-sign-up-container">
+                <h1 className="center">Sign Up</h1>
+                <CreateSignUpForm onSubmit={this.props.signUp} />
+            </div>
+        );
+    }
+}
 
+export default connect(null, { signUp })(SignUp);
 
-)

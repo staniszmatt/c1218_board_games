@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './events.css';
-import MyEventData from '../../../dummy_data/user-joined-list';
-import EventRowMyEvents from './events-row-host';
+import EventRowMyEvents from './events-row-myevents';
 import axios from 'axios';
 
 class MyEvents extends Component {
@@ -11,35 +9,54 @@ class MyEvents extends Component {
     }
 
     async componentDidMount() {
-        const userID = 1;
-        const resp = await axios.get(`/api/events-host.php?userID=${userID}`);
+        const resp = await axios.get(`/api/events-myevents.php`);
+        if (resp.data.success === true && resp.data.userID.length <= 0) {
+            this.setState({
+                myEventList: [null]
+            });
 
+        } else {
+            this.setState({
+                myEventList: resp.data.userID
+            });
+        }
 
-        this.setState({
-            myEventList: resp.data.userID
-        });
     }
 
     render() {
+
         const { myEventList } = this.state;
-        const eventId = this.state.myEventList;
-        if (myEventList.length <= 0) {
+
+        if ( myEventList.length <= 0) {
+            
             return (
                 <div className='center'>
                     <div className="header-container col s12">
                         <h1 className="">My Joined Events</h1>
                     </div>
-                    <div className="events-main-container">
+                    <div className="events-main-container loading-events">
                         LOADING....
+                    </div>
+                </div>
+            );
+        } else if (myEventList[0] === null) {
+            return (
+                <div className='center'>
+                    <div className="header-container col s12">
+                        <h1 className="">My Joined Events</h1>
+                    </div>
+                    <div className="events-main-container no-available-events">
+                        NO AVAILABLE EVENTS
                 </div>
                 </div>
             );
         }
         let eventRow = [];
         eventRow = myEventList.map((event) => {
+
             return <EventRowMyEvents key={event.eventID} event={event} eventId={event.eventID} />
         });
-        console.log
+
         return (
 
             <div className='center'>
@@ -53,8 +70,4 @@ class MyEvents extends Component {
         );
     }
 }
-
-
-
-
 export default MyEvents;

@@ -1,0 +1,67 @@
+ .generic-container > .player-list-title{
+      background-color: #0F4434;
+      box-shadow: 0px 0px 10px 10px black inset;
+      height: 15vh;
+      color: white;
+      padding: 1px;
+  }
+
+ .generic-container > .player-list-date{
+     background-color: #0F4434;
+     box-shadow: 0px 0px 10px 10px black inset;
+     height: 15vh;
+     color: white;
+     padding: 15px;
+ }
+
+ .generic-container > .player-list-address{
+     background-color: #0F4434;
+     box-shadow: 0px 0px 10px 10px black inset;
+     height: 20vh;
+     color: white;
+     padding: 30px;
+ }
+
+ .generic-container > .player-list-limit{
+     background-color: #0F4434;
+     box-shadow: 0px 0px 10px 10px black inset;
+     height: 10vh;
+     color: white;
+     padding: 20px;
+ }
+
+
+.player-list > h5 {
+     background-color: #0F4434;
+     box-shadow: 0px 0px 10px 10px black inset;
+     height: 12vh;
+     color: white;
+     padding: 25px;
+    margin: 0px;
+ }
+
+ /*.generic-container > .player-list{*/
+     /*background-color: #0F4434;*/
+     /*box-shadow: 0px 0px 10px 10px black inset;*/
+     /*height: 10vh;*/
+     /*color: white;*/
+     /*padding: 25px;*/
+ /*}*/
+
+
+ table > tbody > tr{
+     background-color: #0F4434;
+     box-shadow: 0px 0px 10px 10px black inset;
+     height: 10vh;
+     color: white;
+     padding: 25px;
+ }
+
+/* .generic-container{
+     overflow: hidden;
+ } */
+
+ .playerlist-container{
+     overflow: scroll;
+     height: 88vh;
+ }

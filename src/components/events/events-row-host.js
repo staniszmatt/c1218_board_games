@@ -1,27 +1,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import BoardGamePic from '../../assets/images/boardgame_default.jpg';
 
 const EventRowHost = (props) => {
 
-    const { startTime, date, gameTitle, eventID, gameImages, playerLimit } = props.event;
+    const { startTime, date, gameTitle, eventID, gameImages, playerLimit, playerCount } = props.event;
 
+    if (parseInt(playerCount) < parseInt(playerLimit)) {
     return (
         <Link to={'/events/' + eventID + '/host'} className="events-list-button nav-link btn center">
             <div className="events-container" key={eventID} >
                 <div className="events-info-container">
-                    <span className="events-title">{gameTitle}</span>
-                    <br />
-                    <span className="events-player-count">Player Limit: {playerLimit}</span>
-                    <br />
-                    <span className="events-date-time">{date} {startTime}</span>
+                    <p className="events-title">{gameTitle}</p>
+
+                    <p className="events-player-count">Players: {playerCount} out of {playerLimit}</p>
+
+                    <p className="events-date-time">{date} {startTime}</p>
                 </div>
-                <div className="events-image center">
-                    <img src={gameImages} alt={gameTitle}></img>
-                </div >
+                <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center"></div>
             </div>
         </Link>
     );
+    }
+    return(
+        <Link to={'/events/' + eventID + '/host'} className="events-list-button nav-link btn center">
+            <div className="events-container" key={eventID} data-event-id={eventID} >
+                <div className="events-info-container">
+                    <p className="events-title">{gameTitle}</p>
+                    <p className="events-player-count">EVENT IS FULL</p>
+                    <p className="events-date-time">{date} {startTime}</p>
+                </div>
+                <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center">
+                </div >
+            </div>
+        </Link >
+    )
 }
 
 export default EventRowHost;

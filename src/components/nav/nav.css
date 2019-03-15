@@ -1,29 +1,29 @@
-
-.nav {
-  background-color: darkslategrey;
-  position: fixed;
+footer {
+  margin-bottom: 0;
   bottom: 0;
+  position: fixed;
+  width: 100%;
+  height: 12vh;
+
+
+}
+
+body {
+  margin-bottom: 50px;
 }
 
 
 .nav {
-  background-color: darkslategrey;
+  background-color: #0F4434;
   list-style-type: none;
   text-align: center;
   width: 100%;
   margin: 0 auto;
-  padding: 0;
-  height: 12vh;
-  position: fixed;
-  bottom: 0;
+  height: 13vh;
+  border: 1px solid black; 
 }
 
-.nav-item {
-  display: inline-block;
-  width:33%;
 
-
-}
 
 label{
   font-size: 1.5rem;
@@ -35,11 +35,17 @@ label{
   width: 33%;
 
 }
-
-.sign-out-btn, .profile-btn, .event-btn {
-  font-size: 9px;
-  margin-top: 10px;
-  border-radius: 25px;
+.sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn{
+  background-color: #0F4434;
+  box-shadow: 0px 0px 10px 10px #8AE8CB inset;
+  color: #8AE8CB;
+  font-size: 10px;
+  margin: 0 auto;
+  margin-top: 3px;
+  border-radius: 50px;
+  padding: 33px;
+  text-align: center;
+  line-height: 0px;
 }
 
 

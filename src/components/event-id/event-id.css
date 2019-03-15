@@ -1,34 +1,59 @@
 .header-container{
     height: 10VH;
     text-align: center;
+    
 }
 
 
-.main-container{
+.main-container-event.center.main-div{
     height: 80vh;
     text-align: center;
+    overflow: scroll;
+}
+
+.joinButton {
+    margin-top: 5px;
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.center > .main-container-event > .joinButton {
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      display: flex;
 }
 
 
-
-.main-container > .game-picture {
+.main-container-event > .game-picture {
+    padding: 15px;
+    background-color: #0F4434;
+    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
     display: inline-block;
     width: 100%;
     height: 16vh;
-    background: blue;
 }
 
-.main-container > div {
+.main-container-event > div{
+    background-color: #0F4434;
+    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
     height: 10%;
     width: 100%;
     display: inline-block;
     border: black 1px solid;
-    margin-top: 2%;
+    margin: 10px 0;
+    padding: 11px;
+    color: white;
+    
 }
 
-.main-container > .address{
+.main-container-event > .address {
     height: 27%;
-    color: black;
+    color: white;
     padding:0;
 }
 
@@ -37,18 +62,38 @@
     width: 100%;
 }
 
+
 h1 {
     font-size: 3.5rem;
 }
 
-.joinButton{
-    margin-top: 5px;
-    font-size: 24px;
-    color: black;
-}
+
 
 .game-picture > img{
+    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
+    border: 2px solid black ;
     display: inline-block;
     width: 40%;
-    z-index: -1;
+    height: 100%;
 }
+
+.main-container-event{
+    background-color: black;
+    overflow: scroll;
+    height: 91vh;
+}
+
+.full{
+    padding: 12px;
+    box-shadow: 0px 0px 10px 10px red inset;
+}
+.joinButton{
+    background-color: #0F4434;
+}
+
+.main-container-event > .date {
+    padding: 0px;
+
+}
+
+

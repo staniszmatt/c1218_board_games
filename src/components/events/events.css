@@ -1,49 +1,73 @@
 .header-events-container{
-    height: 15VH;
+    height: 13VH;
     text-align: center;
+    padding: 11px;
+    background-color: #0F4434;
+    box-shadow: 0px 0px 8px 8px black  inset;
+    color:#8AE8CB
 }
 
 
 .main-events-container{
-    height: 70vh;
+    height: 78vh;
     text-align: center;
+    overflow: scroll;
 }
-
-
 .events-container{
+    box-shadow: 0px 0px 8px 8px #0F4434  inset;
+    background-color: white;
     height: 100%;
     width: 100%;
+    padding: 4px;
     display: inline-block;
-
+    color: black;
 }
-
 .events-info-container{
     display: inline-block;
-    width: 75%;
+    width: 70%;
     height: 100%;
-    
+    line-height:.7;
+    vertical-align: top;
+}
+.events-info-container > p {
+    vertical-align: middle;
+}
+
+.events-list-button{
+    background-color: black;
+    padding: 6px;
 }
 
 .events-image {
+    margin-top: 3px;
     display: inline-block;
-    width: 18vw;
-    height: 100%;
-}
-
-.events-image > img{
-    display: inline-block;
-    width: 100%;
-    align-content: center;
+    width: 30%;
+    height: 90%;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 6px 6px black inset;
 }
 
 .events-list-button {
     display: inline-block;
     height: 15vh;
     width: 100%;
-    margin-top: 4%;
+    margin: 2% 0 2% 0;
 }
 
 .header-events-container > h1 {
     font-size: 3.5rem;
     margin: 0;
+}
+
+.no-available-events,
+.loading-events,
+.hosted-events-header {
+    color:white;
+}
+
+.main-container-event{
+    margin: 0px;
+    padding: 30px;
 }

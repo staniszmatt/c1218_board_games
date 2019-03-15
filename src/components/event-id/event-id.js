@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './event-id.css';
-import EventData from '../../../dummy_data/event-eventID-edit';
 import axios from 'axios';
-
+import BoardGamePic from '../../assets/images/boardgame_default.jpg';
 
 class EventSelected extends Component {
     state = {
@@ -19,13 +18,21 @@ class EventSelected extends Component {
         });
 
     }
+    sendUserData = async () => {
+        const resp = await axios.post(`/api/events-id-join.php`, {
+            eventID: this.props.match.params.id
+           
+        });
+
+        this.props.history.push("/events/" + this.props.match.params.id + "/player-list")
+    }
     render() {
         const { eventId } = this.state;
 
         if (eventId === null) {
             return (
                 <div className="center">
-                    <div className="main-container">
+                    <div className="main-container-event">
                         <div className="btn game-picture center">
                             <p>Page is Loading...</p>
                         </div>
@@ -34,41 +41,74 @@ class EventSelected extends Component {
             );
         } else {
             const numberOfPlayers = eventId.playerList.length;
+            if (numberOfPlayers >= parseInt(eventId.playerLimit)) {
+                return (
+                    <div className="center">
+                        <div className="main-container-event">
+                            <div className="btn game-picture center">
+                                <img src={BoardGamePic}></img>
+                            </div>
+                            <div className="btn event-host">Game: {eventId.gameTitle}</div>
+                            <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
+
+
+                            <div className="date">
+                                <ul>
+                                    <li>Date: {eventId.date}</li>
+                                    <li>Start: {eventId.startTime}</li>
+                                </ul>
+                            </div>
+
+                            <div className="btn address">
+                                <ul>
+                                    <li>Address: {eventId.location.streetAddress}</li>
+                                    <li>City: {eventId.location.city}</li>
+                                    <li>State: {eventId.location.state}</li>
+                                    <li>Zip: {eventId.location.zipcode}</li>
+                                </ul>
+                            </div>
+
+                            <div className=" numberOfPlayers">
+                                <div className="full"> Game Is Full!</div>
+                            </div>
+
+                        </div>
+                    </div>
+                );
+            }
             return (
                 <div className="center">
-                    <div className="main-container">
+                    <div className="main-container-event">
                         <div className="btn game-picture center">
-                            <img src={eventId.gameImages}></img>
+                            <img src={BoardGamePic}></img>
                         </div>
-                        <div className="btn event-host grey ">Game: {eventId.gameTitle}</div>
-                        <div className="btn event-host grey darken-1">Host Name: {eventId.playerList[0].playerName}</div>
-    
-    
-                        <div className="date grey">
+                        <div className="btn event-host">Game: {eventId.gameTitle}</div>
+                        <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
+                        <div className="date">
                             <ul>
                                 <li>Date: {eventId.date}</li>
                                 <li>Start: {eventId.startTime}</li>
                             </ul>
                         </div>
-    
-                        <div className="btn address grey darken-1">
+                        
+
+                        <div className="btn address">
                             <ul>
                                 <li>Address: {eventId.location.streetAddress}</li>
                                 <li>City: {eventId.location.city}</li>
                                 <li>State: {eventId.location.state}</li>
-                                <li>Zip: {eventId.location.zipCode}</li>
+                                <li>Zip: {eventId.location.zipcode}</li>
                             </ul>
                         </div>
-    
-                        <div className=" numberOfPlayers grey">
+
+                        <div className="numberOfPlayers">
                             <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
                         </div>
-    
-                        <div className="center joinButton green lighten-4">
-                            <Link to={"/events/" + eventId.eventID + "/player-list"} className="nav-link">Join Game</Link>
-                        </div>
+
+
+                            <Link className="btn join-game-button green" onClick={this.sendUserData} to={'/events/' + eventId.eventID+'/player-list'}>Join Game</Link>
+
                     </div>
-    
                 </div>
             );
         }

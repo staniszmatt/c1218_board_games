@@ -1,67 +1,76 @@
 <?php
+session_start();
 require_once('../../config/setup.php');
 require_once('../../config/mysql_connect.php');
 
-$output = [
-   'success'=> false
-];
-
-$eventID = $_GET['eventID'];
-$query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime,e.gameTitle, e.gameImages, e.playerLimit, e.location,
-            l.streetAddress, l.city, l.state, l.zipcode, 
-            pn.playerName, 
-            pla.userID AS playerID
-         FROM event AS e
-         JOIN location AS l
-            ON e.location = l.id
-         JOIN playerList AS pl
-            ON e.id = pl.eventID
-         JOIN profile AS p
-            ON pl.userID = p.id
-         JOIN playerList AS pla
-            ON e.id = pla.eventID
-         JOIN profile AS pn
-            ON pla.userID = pn.id
-         WHERE e.id = $eventID AND p.id = $eventID";
-$result = $db->query($query);
-$event = [];
-
-if ($result){
+if (!isset($_SESSION['userID'])){
    $output['success'] = true;
+   $output['logged-in'] = false;
+} else {
+   $data = json_decode( file_get_contents( 'php://input'),true);
+   if(!$data){
+      $output['success']=false;
+      exit();
+   }
+   $output = [
+      "success"=> false,
+      "output"=> []
+   ];
 
+   $data['streetAddress'] = $data['location']['streetAddress'];
+   $data['city'] = $data['location']['city'];
+   $data['state'] = $data['location']['state'];
+   $data['zipcode'] = $data['location']['zipcode'];
+   unset($data['location']);
+
+   foreach($data as $key=>$value){
+      $data[$key] = addslashes($value);
+   } 
+
+   //Get location id from event to udpate address
+   $query = "SELECT location FROM event WHERE event.id = {$data['eventID']}";
+   $result = $db->query($query);
+  
+   if(!$result){
+      $output['success']=false;
+      $output['error']="Location not found for event!";
+      exit();
+   }
    while($row = $result->fetch_assoc()){
-      if ($event) {
-         $event['playerList'][] = [
-            "playerID"=> $row["playerID"],
-            "playerName"=> $row["playerName"]
-         ];
-      } else {
-         $event = [
-            "eventID"=> $row["eventID"],
-            "hostID"=> $row["hostID"],
-            "date"=> $row["date"],
-            "startTime"=> $row["startTime"],
-            "endTime"=> $row["endTime"],
-            "gameTitle"=> $row["gameTitle"],
-            "gameImages"=> $row["gameImages"],
-            "playerLimit"=> $row["playerLimit"],
-            "location"=> $row["location"], 
-         ];
-         $event['location'] = [
-            "streetAddress"=> $row["streetAddress"],
-            "city"=> $row["city"],
-            "state"=> $row["state"],
-            "zipcode"=> $row["zipcode"]
-         ];
-         $event['playerList'][] = [
-            "playerID"=> $row["playerID"],
-            "playerName"=> $row["playerName"]
-         ];
-      }
+      $locationID = $row['location'];
+   }
+
+   //Update Address information 
+   $query = "UPDATE location 
+      SET streetAddress = '{$data['streetAddress']}', 
+            city = '{$data['city']}',
+            state = '{$data['state']}',
+            zipcode = {$data['zipcode']}
+               WHERE id = {$locationID}";
+   $result = $db->query($query);
+   if (!$result){
+      $output['error'][] = $result;
+   } else {
+      $output['updated'] = $result;
+   }
+   //Upate event information 
+   $query = "UPDATE event 
+      SET startTime = '{$data['startTime']}',
+            endTime = '{$data['endTime']}', 
+            date = '{$data['date']}',
+            gameTitle = '{$data['gameTitle']}',
+            gameImages = '{$data['gameImages']}'
+               WHERE id = '{$data['eventID']}'";
+
+   $result = $db->query($query);
+   if (!$result){
+      $output['error'][] = $result;
+   } else {
+      $output['success'] = true;
+      $output['updated'][] = $result;
    }
 }
 
-$output['event'] = $event;
 $json_output = json_encode($output);
 print($json_output);
 ?>

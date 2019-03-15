@@ -3,9 +3,24 @@
     src: url(../fonts/quest.ttf);
 }
 
+.loading-text{
+    font-size: 4rem;
+}
+
 body {
     margin: 0;
+    background-color: black;
+
 }
+
+#root{
+    background-color: black;
+}
+
+/*.btn{*/
+    /*background-color: darkslategray;*/
+    /*display: flex;*/
+/*}*/
 
 .app {
     background-color: #000;
