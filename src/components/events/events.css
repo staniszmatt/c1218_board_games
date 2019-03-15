@@ -61,10 +61,13 @@
     margin: 0;
 }
 
-
-
 .no-available-events,
 .loading-events,
 .hosted-events-header {
     color:white;
+}
+ 
+.main-container-event{
+    margin: 0px;
+    padding: 30px;
 }
