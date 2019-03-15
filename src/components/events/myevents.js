@@ -35,7 +35,7 @@ class MyEvents extends Component {
                     <div className="header-container col s12">
                         <h1 className="">My Joined Events</h1>
                     </div>
-                    <div className="events-main-container ">
+                    <div className="events-main-container loading-events">
                         LOADING....
                     </div>
                 </div>
@@ -46,7 +46,7 @@ class MyEvents extends Component {
                     <div className="header-container col s12">
                         <h1 className="">My Joined Events</h1>
                     </div>
-                    <div className="events-main-container ">
+                    <div className="events-main-container no-available-events">
                         NO AVAILABLE EVENTS
                 </div>
                 </div>

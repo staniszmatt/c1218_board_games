@@ -1,6 +1,7 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import Input from '../general/forms/input';
+import {Link} from 'react-router-dom';
 import './sign-in.css';
 
 const SignInForm = props => {
@@ -21,7 +22,7 @@ const SignInForm = props => {
                </div>
                <div className="or"> OR </div>
                <div className="col s12 center">
-                   <button className="btn blue lighten-1 sign-up">Sign Up</button>
+                   <Link to='/sign-up' className="btn blue lighten-1 sign-up">Sign Up</Link>
                </div>
            </div>
         </form>

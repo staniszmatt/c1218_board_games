@@ -43,6 +43,9 @@ const CreateSignUpForm = props => {
             <div className="form-row">
                 <Field name="password" component={Input} label="Enter your password" type="password"/>
             </div>
+            {/* <div className="form-row">
+                <Field name="confirmPassword" component={Input} label="Confirm your password" type="password" />
+            </div> */}
             <div className="col s6 center">
                 <button className="btn green darken">Sign Up</button>
             </div>
@@ -51,7 +54,7 @@ const CreateSignUpForm = props => {
 }
 
 function validate(values) {
-    const { firstName, lastName, email, phone, dateOfBirth, streetAddress, city, zipcode, state, playerName, password } = values;
+    const { firstName, lastName, email, phone, dateOfBirth, streetAddress, city, zipcode, state, playerName, password} = values;
     const errors = {};
 
     if (!firstName) {
@@ -85,10 +88,15 @@ function validate(values) {
         errors.playerName = 'Please enter your email';
     }
     if (!password) {
-        errors.password = 'Please enter your pass word';
+        errors.password = 'Please enter your password';
     }
+    // if(password !== confirmPassword){
+    //     errors.confirmPassword = 'Please make sure both password fields match!';
+    // }
+
     return errors;
 }
+
 
 export default reduxForm({
     form: 'create-event-form',

@@ -18,7 +18,7 @@ class JoinedEventDetails extends Component {
         this.setState({
             eventId: resp.data.event
         });
-
+console.log(resp)
     }
 
 
@@ -105,8 +105,7 @@ class JoinedEventDetails extends Component {
                     </div>
 
                     <div className="btn join-game-button green">
-                        <button className="btn" onClick={this.sendUserData}>Leave Game</button>
-                        {/* <Link onClick={this.sendUserData} to={"/events/" + eventId.eventID + "/player-list"} className="nav-link">Join Game</Link> */}
+                        <Link className="btn" to={"/events"}>Leave Game</Link>
                     </div>
                 </div>
             </div>
