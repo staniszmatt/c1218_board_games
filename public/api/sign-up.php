@@ -80,7 +80,7 @@ if (!isset($_SESSION['userID'])){
    if($result){
       $output['success'] = true;
    } else {
-         throw new Exception("Sign-up Failed.");
+         $output['error'] = mysqli_error($db);
    }
 } else {
    $output['success']=true;
