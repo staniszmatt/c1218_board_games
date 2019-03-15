@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './events.css';
 import EventRow from './events-row';
-// import EventData from '../../../dummy_data/event';
 import axios from 'axios';
 
 class Events extends Component {
