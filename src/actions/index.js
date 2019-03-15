@@ -17,11 +17,11 @@ export const checkAuth = () => async dispatch => {
 
 export const signIn = credentials => async dispatch => {
     const error = 'Error signing in - invalid email and or password';
-    console.log("creds",credentials)
+
     try {
-        console.log()
+
         const { data } = await axios.post('/api/sign-in.php', credentials);
-        console.log(data)
+
 
         if(data['logged-in'] && data.success){
 
@@ -37,7 +37,7 @@ export const signIn = credentials => async dispatch => {
             error
         });
     } catch(err){
-        console.log('Error signing in:', err.message);
+   
 
         dispatch({
             type: types.SIGN_IN_ERROR,
@@ -83,7 +83,7 @@ export const signUp = credentials => async dispatch => {
             error
         });
     } catch (err) {
-        console.log('Error signing in:', err.message);
+    
 
         dispatch({
             type: types.SIGN_UP_ERROR

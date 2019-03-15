@@ -44,8 +44,6 @@ class EditEvent extends Component{
         const eventId = this.state.eventId//event is being pulled from the form - follow that formatting
         const resp = await axios.post('/api/events-eventID-edit.php?eventID=', formattedNewEvent);
         
-        console.log("Update submitted eventID", resp.data.eventID);
-        
 
 
         this.props.history.push('/events/'+eventId+'/host');

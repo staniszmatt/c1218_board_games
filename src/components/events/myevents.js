@@ -10,7 +10,6 @@ class MyEvents extends Component {
 
     async componentDidMount() {
         const resp = await axios.get(`/api/events-myevents.php`);
-        console.log(resp)
         if (resp.data.success === true && resp.data.userID.length <= 0) {
             this.setState({
                 myEventList: [null]

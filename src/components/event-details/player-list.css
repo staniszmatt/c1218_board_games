@@ -57,6 +57,11 @@
      padding: 25px;
  }
 
-.generic-container{
+/* .generic-container{
      overflow: hidden;
+ } */
+
+ .playerlist-container{
+     overflow: scroll;
+     height: 88vh;
  }
