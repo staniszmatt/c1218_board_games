@@ -79,13 +79,15 @@ if (!isset($_SESSION['userID'])){
 
    if($result){
       $output['success'] = true;
+      $_SESSION['userID'] = $id;
    } else {
-         throw new Exception("Profile Load Failed");
+         $output['error'] = mysqli_error($db);
    }
 } else {
    $output['success']=true;
    $output['logged-in']=true;
 }
+
 $json_output = json_encode($output);
 print($json_output);
 ?>
