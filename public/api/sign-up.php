@@ -79,9 +79,8 @@ if (!isset($_SESSION['userID'])){
 
    if($result){
       $output['success'] = true;
-      $_SESSION['userID'] = $id;
    } else {
-         $output['error'] = mysqli_error($db);
+         throw new Exception("Sign-up Failed.");
    }
 } else {
    $output['success']=true;
