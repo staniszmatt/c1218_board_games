@@ -9,9 +9,8 @@ if(isset($_SESSION['userID'])){
    $json_output = json_encode($output);
 } else {
    $data = json_decode( file_get_contents( 'php://input'),true);
-
    if(!$data){
-      $output['success']=false;
+      throw new Exception("Nothing was received!");
       exit();
    }
 
@@ -24,10 +23,12 @@ if(isset($_SESSION['userID'])){
    }
 
    if(!empty($output['error'])){
-      print(json_encode($output));
-      exit();
+      // print(json_encode($output));
+      throw new Exception("Data was corrupt!");
    }
-
+   if(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
+      throw new Exception("Enter a valid email address!");
+   }
    $password = $data["password"];
    unset($data["password"]);
    $location = null;  
@@ -46,8 +47,7 @@ if(isset($_SESSION['userID'])){
       $userID = $row;
    }
    if(!$userID){
-      $output['success'] = false;
-      $output['error'] = "User Doesn't Exist";
+      throw new Exception("Incorrect user email or password!");
    } else {
       $_SESSION['userID'] = $userID['userID'];
       $output['success'] = true;

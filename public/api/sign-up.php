@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once('../../config/error_check_functions.php');
 require_once('../../config/setup.php');
 require_once('../../config/mysql_connect.php');
 
@@ -20,11 +21,29 @@ if (!isset($_SESSION['userID'])){
    foreach($data as $key=>$value){
       $data[$key] = addslashes($value);
    }
-   
    if(!empty($output['error'])){
       print(json_encode($output));
       exit();
    }
+   if((!checkStrg20($data['playerName'])) || (!checkStrg20($data['firstName'])) || !checkStrg20($data['city']) || !checkStrg20($data['state'])){
+      throw new Exception("Player name, first name, city or state is to long!");
+   }
+   if((!checkStrg30($data['email'])) || (!checkStrg30($data['lastName'])) || !checkStrg30($data['password']) || !checkStrg30($data['streetAddress'])){
+      throw new Exception("Last name, email or password is to long!");
+   }
+   if((!checkEmail($data['email']))){
+      throw new Exception("Enter a valid email address!");
+   }
+   if ((!checkMyDate($data['dateOfBirth']))){
+      throw new Exception("Please enter the correct format for date of birth.");
+   }
+   if ((!checkPhoneNum($data['phone']))){
+      throw new Exception("Please enter a proper phone number");
+   }
+   if ((!checkZip($data['zipcode']))){
+      throw new Exception("Please enter a proper zip code");
+   }
+
    $password = $data["password"];
    unset($data["password"]);
    $location = null;  
@@ -37,7 +56,6 @@ if (!isset($_SESSION['userID'])){
                   city='{$data['city']}',
                   state='{$data['state']}',
                   zipcode='{$data['zipcode']}'";
-                  
    $result = $db->query($query);
    
    if($result){
@@ -45,6 +63,7 @@ if (!isset($_SESSION['userID'])){
    } else {
       $output['error'] = mysqli_error($db);
    }
+
    $jointDate = date("y-m-d h:i:s");
    $query = "INSERT INTO profile 
             SET playerName='{$data['playerName']}',
@@ -56,18 +75,10 @@ if (!isset($_SESSION['userID'])){
                email='{$data['email']}',
                phone='{$data['phone']}',
                location= '{$locationID}' ";
-   
    $result = $db->query($query);
-   
-   if($result){
-      $id = mysqli_insert_id($db);
-   } else {
-      $output['error'] = mysqli_error($db);
-   }
-   
+
    if($result){
       $output['success'] = true;
-
       $_SESSION['userID'] = $id;
    } else {
          $output['error'] = mysqli_error($db);
