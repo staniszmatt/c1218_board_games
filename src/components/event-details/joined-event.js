@@ -18,7 +18,6 @@ class JoinedEventDetails extends Component {
         this.setState({
             eventId: resp.data.event
         });
-console.log(resp)
     }
 
 

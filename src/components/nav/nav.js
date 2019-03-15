@@ -14,7 +14,6 @@ class Nav extends Component {
 
     render() {
         const activeUser = this.props.auth;
-        // const userID = this.props.match.params.loggedIn;
         if (activeUser === false) {
         return ( 
             <footer className="nav-wrapper">
@@ -63,52 +62,3 @@ function mapStateToProps({user}){
 }
 
 export default connect(mapStateToProps)(Nav);
-
-// export default props => {
-//     const userID = null;
-//     if (userID === null) {
-//         <footer className="nav-wrapper">
-//             <ul className="nav">
-//                 <li className="nav-item">
-//                     <Link to="/" className="btn nav-btn-style nav-link black center profile-btn">Home</Link>
-//                 </li>
-
-//                 {/*<li className="nav-item">*/}
-//                 {/*<Link to="/sign-out" className="btn nav-link  center font-color: red sign-out-btn">Sign Out</Link>*/}
-//                 {/*</li>*/}
-
-//                 <li className="nav-item">
-//                     <Link to="/sign-up" className="btn nav-link  center font-color: black event-btn">Sign Up</Link>
-//                 </li>
-
-//                 <li className="nav-item">
-//                     <Link to="/sign-in" className="btn nav-link  center font-color: black sign-in-btn">Sign In</Link>
-//                 </li>
-//             </ul>
-//         </footer>
-//     }
-
-//     <footer className="nav-wrapper">
-//         <ul className="nav">
-//             <li className="nav-item">
-//                 <Link to="/profile" className="btn nav-btn-style nav-link black center profile-btn">Profile</Link>
-//             </li>
-
-//             {/*<li className="nav-item">*/}
-//             {/*<Link to="/sign-out" className="btn nav-link  center font-color: red sign-out-btn">Sign Out</Link>*/}
-//             {/*</li>*/}
-
-//             <li className="nav-item">
-//                 <Link to="/events" className="btn nav-link  center font-color: black event-btn">Events</Link>
-//             </li>
-
-//             <li className="nav-item">
-//                 <Link to="/sign-in" className="btn nav-link  center font-color: black sign-in-btn">Sign In</Link>
-//             </li>
-//         </ul>
-//     </footer>
-
-
-
-// }
-

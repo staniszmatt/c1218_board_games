@@ -20,11 +20,9 @@ class EventSelected extends Component {
     }
     sendUserData = async () => {
         const resp = await axios.post(`/api/events-id-join.php`, {
-            // userID: 5,
             eventID: this.props.match.params.id
            
         });
-        console.log("Event to player resp", resp);
 
         this.props.history.push("/events/" + this.props.match.params.id + "/player-list")
     }
