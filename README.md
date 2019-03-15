@@ -27,3 +27,29 @@
 >    - `npm run bundle`
 > 
 > **NOTE:** *After bundling and placing on a web server. The `public` folder should be the web root*
+
+# Board Gamers
+
+This is an app for people who love playing board games to meet other people who have the same passion. 
+You can look through a list of events within your area. This app will allow you to join their game, meet new people, and have fun. 
+You can also host events so that people can try out games that they do not have yet.
+
+### App Functionality
+
+Data is passed back and forth through an Apache server using PHP, being displayed on the front end with React and Redux.
+
+### Getting Started 
+
+### Team MBC (Matt, Bill, Chris)
+
+-[Matthew Staniszewski](https://github.com/staniszmatt)
+-[Bill Darnall](https://github.com/beeeweee)
+-[Christopher Sulayao](https://github.com/christophersulayao)
+
+### Wireframe
+-[Original Figma Phase 1](https://www.figma.com/file/OMpV7MgZSaKdOPqa9T1tVGEw/Let's-Play-Board-Games!)
+-[Second Figma Phase 2](https://www.figma.com/file/0PAm7FBvKVeOuTVAHlL5FuG1/Let's-Play-Board-Games!-Phase-2)
+-[Third Figma MVP Phase 3](https://www.figma.com/file/0z0qTPVVoWZNZSVEDwBdp4QP/Let's-play-board-games-phase-3)
+
+### Task Management
+-[Meister Task](https://www.meistertask.com/app/project/2L4yOE5D/board-game-finder)
