@@ -5,7 +5,6 @@ require_once('../../config/setup.php');
 require_once('../../config/mysql_connect.php');
 
 if (!isset($_SESSION['userID'])){
-   print(!isset($_SESSION));
    $data = json_decode( file_get_contents( 'php://input'),true);
 
    if(!$data){
@@ -77,8 +76,11 @@ if (!isset($_SESSION['userID'])){
                location= '{$locationID}' ";
    $result = $db->query($query);
 
+   $id = mysqli_insert_id($db);
+
    if($result){
       $output['success'] = true;
+      
       $_SESSION['userID'] = $id;
    } else {
          $output['error'] = mysqli_error($db);
