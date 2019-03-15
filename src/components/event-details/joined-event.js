@@ -37,7 +37,7 @@ class JoinedEventDetails extends Component {
         }
 
         const numberOfPlayers = eventId.playerList.length;
-        if (numberOfPlayers >= eventId.playerLimit) {
+        if (numberOfPlayers >= parseInt(eventId.playerLimit)) {
             return (
                 <div className="center">
                     <div className="main-container">

@@ -6,7 +6,7 @@ const EventRowHost = (props) => {
 
     const { startTime, date, gameTitle, eventID, gameImages, playerLimit, playerCount } = props.event;
 
-    if (playerCount < playerLimit) {
+    if (parseInt(playerCount) < parseInt(playerLimit)) {
     return (
         <Link to={'/events/' + eventID + '/host'} className="events-list-button nav-link btn center">
             <div className="events-container" key={eventID} >

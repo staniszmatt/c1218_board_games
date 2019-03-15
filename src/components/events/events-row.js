@@ -6,7 +6,8 @@ import BoardGamePic from '../../assets/images/boardgame_default.jpg';
 const EventRow = (props) => {
 
     const { startTime, date, gameTitle, id, gameImages, playerLimit, playerCount } = props.event;
-    if (playerCount < playerLimit){
+
+    if (parseInt(playerCount) < parseInt(playerLimit)){
         return (
             <Link to={'/events/' + id} className="events-list-button nav-link btn center">
                 <div className="events-container" key={id} data-event-id={id} >

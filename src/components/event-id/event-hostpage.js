@@ -34,7 +34,7 @@ class EventHostPage extends Component {
             );
         } 
             const numberOfPlayers = hostEventId.playerList.length;
-            if(numberOfPlayers >= hostEventId.playerLimit){
+        if (numberOfPlayers >= parseInt(hostEventId.playerLimit)){
                 return (
                     <div className="center">
                         <div className="main-container-event">
@@ -103,9 +103,9 @@ class EventHostPage extends Component {
                             <div> {numberOfPlayers} Players out of {hostEventId.playerLimit} have joined </div>
                         </div>
 
-                        <div className="center joinButton green lighten-4">
+                        {/* <div className="center joinButton green lighten-4">
                             <Link to={'/events/' + hostEventId.eventID + '/edit'} className="nav-link">Edit Game</Link>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
