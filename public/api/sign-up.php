@@ -87,6 +87,7 @@ if (!isset($_SESSION['userID'])){
    $output['success']=true;
    $output['logged-in']=true;
 }
+
 $json_output = json_encode($output);
 print($json_output);
 ?>
