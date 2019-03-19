@@ -76,16 +76,18 @@ if (!isset($_SESSION['userID'])) {
                 phone='{$data['phone']}',
                 location= '{$locationID}' ";
   $result = $db->query($query);
+  $id = mysqli_insert_id($db);
 
-  if ($result) {
+  if($result){
     $output['success'] = true;
+    
     $_SESSION['userID'] = $id;
   } else {
     $output['error'] = mysqli_error($db);
   }
 } else {
-  $output['success'] = true;
-  $output['logged-in'] = true;
+  $output['success']=true;
+  $output['logged-in']=true;
 }
 
 $json_output = json_encode($output);
