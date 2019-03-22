@@ -27,7 +27,7 @@ if (!isset($_SESSION['userID'])) {
   }
 
   if (!empty($output['error'])) {
-    throw new Exception("Event ID is currupt.");
+    throw new Exception("Event ID is corrupt.");
   }
 
   $query = "INSERT INTO playerList 
