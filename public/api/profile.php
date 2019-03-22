@@ -20,23 +20,29 @@ if (!isset($_SESSION['userID'])) {
   $result = $db->query($query);
   $data = [];
 
-  while ($row = $result->fetch_assoc()) {
-    $output['success'] = true;
-    $row['location'] = [
-      'streetAddress' => $row['streetAddress'],
-      'city' => $row['city'],
-      'state' => $row['state'],
-      'zipcode' => $row['zipcode']
-    ];
-    unset($row['streetAddress'],
-    $row['city'],
-    $row['state'],
-    $row['zipcode']);
-    $data[] = $row;
+  if ($result){
+    while ($row = $result->fetch_assoc()) {
+      $output['success'] = true;
+      $row['location'] = [
+        'streetAddress' => $row['streetAddress'],
+        'city' => $row['city'],
+        'state' => $row['state'],
+        'zipcode' => $row['zipcode']
+      ];
+      unset($row['streetAddress'],
+      $row['city'],
+      $row['state'],
+      $row['zipcode']);
+      $data[] = $row;
+    }
+    $output['data'] = $data;
+  } else {
+    throw new Exception("Failed to get data");
   }
-  $output['data'] = $data;
+  
 }
 
 $json_output = json_encode($output);
 print($json_output);
- 
+
+?>
