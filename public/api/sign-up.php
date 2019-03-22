@@ -10,7 +10,7 @@ if (!isset($_SESSION['userID'])) {
 
   if (!$data) {
     $output['success'] = false;
-    exit();
+    throw new Exception("No data received.");
   }
 
   $output = [

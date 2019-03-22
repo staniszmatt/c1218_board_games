@@ -27,7 +27,7 @@ if (!isset($_SESSION['userID'])) {
     print(json_encode($output));
     exit();
   }
-// Error Handling
+  // Error Handling
   if ((!checkStrg2($data['playerLimit']))) {
     throw new Exception("Player limit to large!");
   }
