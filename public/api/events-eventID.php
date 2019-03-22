@@ -8,6 +8,9 @@ $output = [
 ];
 
 $eventID = $_GET['eventID'];
+if(empty($eventID)){
+  throw new Exception("Missing key name eventID");
+}
 $query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime,e.gameTitle, e.gameImages, e.playerLimit, e.location,
             l.streetAddress, l.city, l.state, l.zipcode, 
             p.playerName, 
@@ -60,12 +63,14 @@ if ($result) {
       ];
     }
   }
+  if (empty($event)) {
+    throw new Exception("No event for the requested ID");
+  } else {
+    $output['event'] = $event;
+  }
 }
-if (empty($event)) {
-  throw new Exception("No event for the requested ID");
-} else {
-  $output['event'] = $event;
-  $json_output = json_encode($output);
-  print($json_output);
-}
- 
+
+$json_output = json_encode($output);
+print($json_output);
+
+?>

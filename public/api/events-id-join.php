@@ -12,6 +12,9 @@ if (!isset($_SESSION['userID'])) {
   if (!is_numeric($data['eventID'])) {
     throw new Exception("Event ID requires to be a number!");
   }
+  if (empty($data['eventID'])){
+    throw new Exception("Missing key name eventID.");
+  }
   if (!$data) {
     $output['success'] = false;
     exit();
