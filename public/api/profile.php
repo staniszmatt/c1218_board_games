@@ -39,7 +39,6 @@ if (!isset($_SESSION['userID'])) {
   } else {
     throw new Exception("Failed to get data");
   }
-  
 }
 
 $json_output = json_encode($output);

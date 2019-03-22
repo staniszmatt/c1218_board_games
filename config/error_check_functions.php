@@ -1,33 +1,41 @@
 <?php
 
-function checkStrg20($string)
-{
+function checkStrg2($string){
+  return (strlen($string) > 2 || strlen($string) < 0) ? 0 : 1;
+}
+
+function checkStrg20($string){
   return (strlen($string) > 20) ? 0 : 1;
 }
 
-function checkStrg30($string)
-{
+function checkStrg30($string){
   return (strlen($string)) > 30 ? 0 : 1;
 }
 
-function checkEmail($string)
-{
+function checkStrg60($string){
+  return (strlen($string)) > 60 ? 0 : 1;
+}
+
+function checkEmail($string){
   return (!filter_var($string, FILTER_VALIDATE_EMAIL)) ? 0 : 1;
 }
 
-function checkMyDate($date)
-{
+function checkMyDate($date){
   $format = 'Y-m-d';
   $d = DateTime::createFromFormat($format, $date);
   return $d && $d->format($format) == $date;
 }
 
-function checkPhoneNum($phoneNum)
-{
+function checkTime($time){
+  $format = 'H:i:s';
+  $d = DateTime::createFromFormat($format, $time);
+  return $d && $d->format($format) == $time;
+}
+
+function checkPhoneNum($phoneNum){
   return (!is_numeric($phoneNum) || strlen($phoneNum) > 11) ? 0 : 1;
 }
 
-function checkZip($zipcode)
-{
-  return (!is_numeric($zipcode) || strlen($zipcode) > 5) ? 0 : 1;
+function checkZip($zipcode){
+  return (!is_numeric($zipcode) || strlen($zipcode) > 5 || strlen($zipcode) < 5) ? 0 : 1;
 }
