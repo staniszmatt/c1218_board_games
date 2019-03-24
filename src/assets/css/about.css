@@ -1,0 +1,26 @@
+h1{
+    color: white;
+}
+
+.about-author-container {
+    /*box-shadow: 0px 0px 10px 10px red inset;*/
+    margin: 0 auto;
+    text-align: center;
+    overflow: scroll;
+    height: 40vh;
+}
+
+.about-author-container > .about-name {
+    background-color: white;
+    opacity: .8;
+}
+
+.about-author-container > .about-image {
+    background-color: white;
+    opacity: .8;
+}
+
+.about-author-container > .about-url {
+    background-color: white;
+    opacity: .8;
+}
