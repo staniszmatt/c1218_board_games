@@ -6,6 +6,8 @@ import axios from 'axios';
 class NewEvent extends Component {
 
     handleSubmit = async (event) => {
+        event.endTime += ":00";
+        event.startTime += ":00";
         const formattedNewEvent = event; //event is being pulled from the form - follow that formatting
         console.log("Formatted Event: ",formattedNewEvent);
 
