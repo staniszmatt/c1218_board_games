@@ -72,6 +72,7 @@ class PlayerList extends Component {
                         </table>
                         <div className="center">
                             <Link to={"/events/" + data.eventID + ""} className="btn center">Back To Game</Link>
+                        
                         </div>
 
                     </div>

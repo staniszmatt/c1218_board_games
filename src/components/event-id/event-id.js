@@ -102,7 +102,9 @@ class EventSelected extends Component {
                         </div>
 
                         <div className="numberOfPlayers">
-                            <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
+                            <Link to={'/events/' + eventId.eventID + '/player-list'}>
+                                <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
+                                </Link>
                         </div>
 
 
