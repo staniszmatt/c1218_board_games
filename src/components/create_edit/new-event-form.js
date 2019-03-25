@@ -49,6 +49,9 @@ function validate(values) {
     if (!city) {
         errors.city = 'Please enter your city';
     }
+    if (!state) {
+        errors.state = 'Please enter your state';
+    }
     if (!date) {
         errors.date = 'Please enter the date';
     }

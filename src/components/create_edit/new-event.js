@@ -7,12 +7,14 @@ class NewEvent extends Component {
 
     handleSubmit = async (event) => {
         const formattedNewEvent = event; //event is being pulled from the form - follow that formatting
+        console.log("Formatted Event: ",formattedNewEvent);
 
         formattedNewEvent.gameImages = '3241234';
 
         const resp = await axios.post('/api/events-new-event.php', formattedNewEvent);
 
         const eventID = resp.data.eventID;
+        console.log("Resp: ",eventID);
 
 
         this.props.history.push(`events/${eventID}/host`);
