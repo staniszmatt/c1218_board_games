@@ -77,24 +77,24 @@ function validate(values) {
     if (!playerLimit) {
         errors.playerLimit = 'Please enter the number of players';
     }
-    // if (playerLimit > 99) {
-    //     errors.playerLimit = 'Player limit to large!';
-    // }
-    // if (streetAddress.length > 30) {
-    //     errors.streetAddress = 'Street address is to long!';
-    // }
-    // if (gameTitle.length > 60) {
-    //     errors.gameTitle = 'Game title is to long.';
-    // }
-    // if (zipcode.length <= 4 || zipcode.length >= 6) {
-    //     errors.zipcode = 'Please enter a proper zip code.';
-    // }
-    // if (state.length > 20) {
-    //     errors.state = 'City or state is to long!';
-    // }
-    // if (startTime > endTime) {
-    //     errors.startTime = 'Please enter the start time that is before the end time';
-    // }
+    if (playerLimit && playerLimit > 99) {
+        errors.playerLimit = 'Player limit to large!';
+    }
+    if (streetAddress && streetAddress.length > 30) {
+        errors.streetAddress = 'Street address is to long!';
+    }
+    if (gameTitle && gameTitle.length > 60) {
+        errors.gameTitle = 'Game title is to long.';
+    }
+    if (zipcode && (zipcode.length <= 4 || zipcode.length >= 6)) {
+        errors.zipcode = 'Please enter a proper zip code.';
+    }
+    if (state && state.length > 20) {
+        errors.state = 'City or state is to long!';
+    }
+    if (startTime && endTime && startTime > endTime) {
+        errors.startTime = 'Please enter the start time that is before the end time';
+    }
     return errors;
 }
 
