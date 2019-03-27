@@ -10,7 +10,7 @@ export default props => (
             <h1>BOARD GAMERS</h1>
         </div>
         <div className="landingpage-main-container center">
-            <Link to="/events" className="center play-button waves-effect waves-light btn z-depth-4">Play Games</Link>
+            <Link to="/events" className="center play-button">Play Games</Link>
         </div>
     </div>
 )
