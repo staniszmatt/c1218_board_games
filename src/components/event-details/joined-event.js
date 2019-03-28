@@ -103,7 +103,7 @@ class JoinedEventDetails extends Component {
                         <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
                     </div>
 
-                    <div className="btn join-game-button green">
+                    <div className="btn join-game-button">
                         <Link className="btn" to={"/events"}>Leave Game</Link>
                     </div>
                 </div>
