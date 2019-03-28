@@ -6,15 +6,23 @@ import { format } from 'util';
 
 class SignIn extends Component{
     render(){
+        console.log('Error:', this.props.error);
         return (
            <div className="sign-in-main-container">
                <h1 className="center sign-in-header">Sign In</h1>
                 <SignInForm onSubmit={this.props.signIn}/>
+                <p>{this.props.error}</p>
            </div>
         );
     }
 }
 
-export default connect(null, { signIn })(SignIn);
+function mapStateToProps(state){
+    return {
+        error: state.user.error
+    }
+}
+
+export default connect(mapStateToProps, { signIn })(SignIn);
 
 

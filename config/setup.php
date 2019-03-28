@@ -5,7 +5,7 @@ if (!function_exists(('handleError'))) {
       print(json_encode( 
          [
             'success'=> false,
-            'error'=> "message: {$errorObj->getMessage()}"
+            'error'=> "{$errorObj->getMessage()}"
          ]
       ));
    }

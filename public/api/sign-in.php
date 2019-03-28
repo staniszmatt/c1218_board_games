@@ -46,7 +46,7 @@ if (isset($_SESSION['userID'])) {
   while ($row = $result->fetch_assoc()) {
     $userID = $row;
   }
-  if (!$userID) {
+  if (!isset($userID)) {
     throw new Exception("Incorrect user email or password!");
   } else {
     $_SESSION['userID'] = $userID['userID'];

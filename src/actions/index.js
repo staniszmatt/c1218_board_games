@@ -34,7 +34,7 @@ export const signIn = credentials => async dispatch => {
 
         dispatch({
             type: types.SIGN_IN_ERROR,
-            error
+            error: data.error
         });
     } catch(err){
    
