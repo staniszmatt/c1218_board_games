@@ -4,8 +4,6 @@ footer {
   position: fixed;
   width: 100%;
   height: 12vh;
-
-
 }
 
 body {
@@ -14,16 +12,14 @@ body {
 
 
 .nav {
-  background-color: #0F4434;
+  background-color: beige;
   list-style-type: none;
   text-align: center;
   width: 100%;
   margin: 0 auto;
-  height: 13vh;
-  border: 1px solid black; 
+  height: 15vh;
+  border: 1px solid black;
 }
-
-
 
 label{
   font-size: 1.5rem;
@@ -31,21 +27,22 @@ label{
 
 .nav li {
   display: inline-block;
-  font-size: 15px;
   width: 33%;
-
 }
+
 .sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn{
-  background-color: #0F4434;
-  box-shadow: 0px 0px 10px 10px #8AE8CB inset;
-  color: #8AE8CB;
-  font-size: 10px;
+  background-image: linear-gradient(beige, forestgreen);
+  color: black;
+  font-size: 14px;
+  font-family: Comic Sans MS;
   margin: 0 auto;
-  margin-top: 3px;
-  border-radius: 50px;
-  padding: 33px;
+  margin-top: 16px;
+  padding: 28px;
   text-align: center;
   line-height: 0px;
+  border: 1px solid black;
+  box-shadow: 3px 7px #0F4434;
 }
+
 
 
