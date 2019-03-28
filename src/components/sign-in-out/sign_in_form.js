@@ -26,6 +26,7 @@ const SignInForm = props => {
 }
 
 function validate(values){
+
     const { email, password } = values;
     const errors = {};
 
@@ -35,7 +36,7 @@ function validate(values){
     if(!password){
         errors.password= 'Please enter your password';
     }
-
+   
 
     return errors;
 }

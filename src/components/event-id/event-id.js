@@ -45,9 +45,9 @@ class EventSelected extends Component {
                 return (
                     <div className="center">
                         <div className="main-container-event">
-                            <div className="btn game-picture center">
+                            {/* <div className="btn game-picture center">
                                 <img src={BoardGamePic}></img>
-                            </div>
+                            </div> */}
                             <div className="btn event-host">Game: {eventId.gameTitle}</div>
                             <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
 
@@ -79,9 +79,9 @@ class EventSelected extends Component {
             return (
                 <div className="center">
                     <div className="main-container-event">
-                        <div className="btn game-picture center">
+                        {/* <div className="btn game-picture center">
                             <img src={BoardGamePic}></img>
-                        </div>
+                        </div> */}
                         <div className="btn event-host">Game: {eventId.gameTitle}</div>
                         <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
                         <div className="date">

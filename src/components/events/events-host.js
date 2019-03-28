@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './events.css';
 import EventRowHost from './events-row-host';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 class EventsHost extends Component {
@@ -50,6 +51,9 @@ class EventsHost extends Component {
                     <div className="events-main-container no-available-events">
                         NO AVAILABLE EVENTS
                 </div>
+                    <div>
+                        <Link to="/new-event" className="btn nav-link green create-event-btn">Create Event</Link>
+                    </div>
                 </div>
             );
         }

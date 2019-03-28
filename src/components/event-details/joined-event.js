@@ -41,9 +41,9 @@ class JoinedEventDetails extends Component {
             return (
                 <div className="center">
                     <div className="main-container">
-                        <div className="btn game-picture center">
+                        {/* <div className="btn game-picture center">
                             <img src={eventId.gameImages}></img>
-                        </div>
+                        </div> */}
                         <div className="btn event-host">Game: {eventId.gameTitle}</div>
                         <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
 
@@ -78,9 +78,9 @@ class JoinedEventDetails extends Component {
         } return (
             <div className="center">
                 <div className="main-container-event">
-                    <div className="btn game-picture center">
+                    {/* <div className="btn game-picture center">
                         <img src={eventId.gameImages}></img>
-                    </div>
+                    </div> */}
                     <div className="btn event-host">Game: {eventId.gameTitle}</div>
                     <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
                     <div className="date">
