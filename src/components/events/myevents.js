@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './events.css';
 import EventRowMyEvents from './events-row-myevents';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 class MyEvents extends Component {
     state = {
@@ -27,8 +28,8 @@ class MyEvents extends Component {
 
         const { myEventList } = this.state;
 
-        if ( myEventList.length <= 0) {
-            
+        if (myEventList.length <= 0) {
+
             return (
                 <div className='center'>
                     <div className="header-container col s12">
@@ -48,6 +49,9 @@ class MyEvents extends Component {
                     <div className="events-main-container no-available-events">
                         NO AVAILABLE EVENTS
                 </div>
+                    <div>
+                        <Link to="/events" className="btn nav-link green available-events-btn">View Available Events</Link>
+                    </div>
                 </div>
             );
         }

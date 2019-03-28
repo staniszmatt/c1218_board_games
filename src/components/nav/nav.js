@@ -45,7 +45,7 @@ class Nav extends Component {
                     </li>
 
                     <li className="nav-item">
-                            <Link to="/sign-out" className="btn nav-link  center sign-in-btn">Sign Out</Link>
+                            <Link to="/sign-out" className="btn nav-link  center sign-out-btn">Sign Out</Link>
                     </li>
                 </ul>
             </footer>

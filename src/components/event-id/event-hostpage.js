@@ -38,9 +38,9 @@ class EventHostPage extends Component {
             return (
                 <div className="center">
                     <div className="main-container-event">
-                        <div className="btn game-picture center">
+                        {/* <div className="btn game-picture center">
                             <img src={BoardGamePic}></img>
-                        </div>
+                        </div> */}
                         <div className="btn event-host grey ">Game: {hostEventId.gameTitle}</div>
                         <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerList[0].playerName}</div>
 
@@ -76,9 +76,9 @@ class EventHostPage extends Component {
         return (
             <div className="center">
                 <div className="main-container-event">
-                    <div className="btn game-picture center">
+                    {/* <div className="btn game-picture center">
                         <img src={BoardGamePic}></img>
-                    </div>
+                    </div> */}
                     <div className="btn event-host grey ">Game: {hostEventId.gameTitle}</div>
                     <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerList[0].playerName}</div>
 

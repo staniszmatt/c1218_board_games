@@ -17,7 +17,7 @@ const EventRowHost = (props) => {
 
                     <p className="events-date-time">{date} {startTime}</p>
                 </div>
-                <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center"></div>
+                {/* <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center"></div> */}
             </div>
         </Link>
     );
@@ -30,8 +30,8 @@ const EventRowHost = (props) => {
                     <p className="events-player-count">EVENT IS FULL</p>
                     <p className="events-date-time">{date} {startTime}</p>
                 </div>
-                <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center">
-                </div >
+                {/* <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center">
+                </div > */}
             </div>
         </Link >
     )
