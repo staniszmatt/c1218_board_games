@@ -53,7 +53,7 @@ class PlayerList extends Component {
                         </div>
                     </div>
                     <div className="center player-list-limit">
-                        <div> Player Limit
+                        <div> Player Limit:
                             {data.playerLimit}
                         </div>
                     </div>
@@ -70,8 +70,8 @@ class PlayerList extends Component {
                                     </tr>))}
                             </tbody>
                         </table>
-                        <div className="center">
-                            <Link to={"/events/" + data.eventID + ""} className="btn center">Back To Game</Link>
+                        <div className="center back">
+                            <Link to={"/events/" + data.eventID + ""} className="btn center back-to-game">Back To Game</Link>
                         
                         </div>
 

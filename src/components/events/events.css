@@ -1,12 +1,12 @@
-.header-events-container{
-    height: 13VH;
+.header-events-container > h1{
+    height: auto;
     text-align: center;
     padding: 11px;
-    background-color: #0F4434;
-    box-shadow: 0px 0px 8px 8px black  inset;
-    color:#8AE8CB
+    background-image: linear-gradient(beige, forestgreen);
+    color: white;
+    -webkit-text-stroke: 1px black;
+    font-family: 'Permanent Marker', cursive;
 }
-
 
 .main-events-container{
     height: 78vh;
@@ -14,13 +14,14 @@
     overflow: scroll;
 }
 .events-container{
-    box-shadow: 0px 0px 8px 8px #0F4434  inset;
-    background-color: white;
+    background-color: beige;
     height: 100%;
     width: 100%;
     padding: 4px;
     display: inline-block;
     color: black;
+    font-weight: bold;
+    box-shadow: 3px 7px forestgreen;
 }
 .events-info-container{
     display: inline-block;
@@ -46,7 +47,7 @@
     background-position: center;
     background-size: 100%;
     background-repeat: no-repeat;
-    box-shadow: 0px 0px 6px 6px black inset;
+    box-shadow: 3px 7px black;
 }
 
 .events-list-button {
