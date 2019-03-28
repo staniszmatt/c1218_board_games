@@ -12,7 +12,7 @@ body {
 
 
 .nav {
-  background-color: beige;
+  background-image: linear-gradient(beige, forestgreen);
   list-style-type: none;
   text-align: center;
   width: 100%;
@@ -34,7 +34,7 @@ label{
   background-image: linear-gradient(beige, forestgreen);
   color: black;
   font-size: 14px;
-  font-family: Comic Sans MS;
+  font-family: 'Permanent Marker', cursive;
   margin: 0 auto;
   margin-top: 16px;
   padding: 28px;

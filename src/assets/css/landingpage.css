@@ -6,7 +6,8 @@
 }
 
 .landing-page-header > h1 {
-    font-family: Comic Sans MS;
+    font-family: 'Permanent Marker', cursive;
+    -webkit-text-stroke: 1px white;
     color: black;
 }
 
@@ -18,7 +19,7 @@
     background-image: url("https://i.imgur.com/3QhNw7q.jpg?1");
     background-position: center;
     background-size: cover;
-text-align: center;
+    text-align: center;
 }
 
 /*.landingpage-main-container > .btn{*/
@@ -36,15 +37,16 @@ text-align: center;
 
 .play-button{
     padding: 15px 25px;
+    -webkit-text-stroke: 1px white;
     font-size: 50px;
-    font-family: Comic Sans MS;
+    font-family: 'Permanent Marker', cursive;
     cursor: pointer;
     text-align: center;
-    color: #fff;
-    background-color: #4CAF50;
+    color: black;
+    background-image: linear-gradient(beige, forestgreen);
     border-radius: 5px;
-    box-shadow: 3px 7px beige;
-    width: 80%;
+    box-shadow: 3px 7px black;
+    width: 90%;
     height: 20%;
 }
 

@@ -1,7 +1,6 @@
 .header-container{
     height: 10VH;
     text-align: center;
-
 }
 
 
@@ -11,16 +10,6 @@
     overflow: scroll;
 }
 
-.joinButton {
-    margin-top: 5px;
-    font-size: 24px;
-    color: black;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .center > .main-container-event > .joinButton {
     align-items: center;
     justify-content: center;
@@ -28,18 +17,8 @@
     display: flex;
 }
 
-
-.main-container-event > .game-picture {
-    padding: 15px;
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
-    display: inline-block;
-    width: 100%;
-    height: 16vh;
-}
-
 .main-container-event > div{
-    background-color: #0F4434;
+    background-color: beige;
     box-shadow: 0px 0px 10px 10px #8AE8CB inset;
     height: 10%;
     width: 100%;

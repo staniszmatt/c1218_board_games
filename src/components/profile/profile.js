@@ -41,14 +41,14 @@ render(){
                 <div>
                     <h2> Profile </h2>
                 </div>
-                <div className="center user-image">
-                    <div className="center profile-image">
-                        <img src={ProfilePic}></img>
-                    </div>
-                </div>
+                {/*<div className="center user-image">*/}
+                    {/*<div className="center profile-image">*/}
+                        {/*<img src={ProfilePic}></img>*/}
+                    {/*</div>*/}
+                {/*</div>*/}
                 <div className="center user-info">
-                    <div className="center">Full Name: {fullName}</div>
-                    <div className="center">User Name: {playerName}</div>
+                    <div className="center full-name">Full Name: <br/> {fullName}</div>
+                    <div className="center user-name">User Name: <br/> {playerName}</div>
                 </div>
                 <div className="profile-button-container center">
                     <div className="buttons">
