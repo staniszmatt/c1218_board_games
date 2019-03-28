@@ -11,7 +11,7 @@ const CreateSignUpForm = props => {
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="form-row">
-                <Field name="firstName" component={Input} label="Enter your first name" type="text"/>
+                <Field className="input-field" name="firstName" component={Input} label="Enter your first name" type="text"/>
             </div>
             <div className="form-row">
                 <Field name="lastName" component={Input} label="Enter your last name" type="text"/>
@@ -43,9 +43,9 @@ const CreateSignUpForm = props => {
             <div className="form-row">
                 <Field name="password" component={Input} label="Enter your password" type="password"/>
             </div>
-            {/* <div className="form-row">
+            <div className="form-row">
                 <Field name="confirmPassword" component={Input} label="Confirm your password" type="password" />
-            </div> */}
+            </div>
             <div className="col s6 center">
                 <button className="btn green darken">Sign Up</button>
             </div>
@@ -54,7 +54,7 @@ const CreateSignUpForm = props => {
 }
 
 function validate(values) {
-    const { firstName, lastName, email, phone, dateOfBirth, streetAddress, city, zipcode, state, playerName, password} = values;
+    const { firstName, lastName, email, phone, dateOfBirth, streetAddress, city, zipcode, state, playerName, password, confirmPassword} = values;
     const errors = {};
 
     if (!firstName) {
@@ -90,9 +90,34 @@ function validate(values) {
     if (!password) {
         errors.password = 'Please enter your password';
     }
-    // if(password !== confirmPassword){
-    //     errors.confirmPassword = 'Please make sure both password fields match!';
-    // }
+    if (playerName && playerName.length>20) {
+        errors.playerName = 'Player name must be less than 20 characters';
+    }
+    if (firstName && firstName.length > 20) {
+        errors.firstName = 'First name must be less than 20 characters';
+    }
+    if (lastName && lastName.length > 20) {
+        errors.lastName = 'Last name must be less than 20 characters';
+    }
+    if (email && email.length > 20) {
+        errors.email = 'Email must be less than 30 characters';
+    }
+    if (password && password.length > 20) {
+        errors.password = 'Password must be less than 30 characters';
+    }
+    if(password !== confirmPassword){
+        errors.confirmPassword = 'Please make sure both password fields match!';
+    }
+    if (zipcode && (zipcode.length <= 4 || zipcode.length >= 6)) {
+        errors.zipcode = 'Please enter a proper zip code.';
+    }
+    if (state && state.length > 20) {
+        errors.state = 'City or state is to long!';
+    }
+    if (city && city.length > 20) {
+        errors.city = 'City or state is to long!';
+    }
+
 
     return errors;
 }

@@ -19,3 +19,7 @@ body{
     margin: 0 60px;
 }
 
+.input-field > #input-label {
+    position: static;
+
+}

@@ -92,6 +92,9 @@ function validate(values) {
     if (state && state.length > 20) {
         errors.state = 'City or state is to long!';
     }
+    if (city && city.length > 20) {
+        errors.city = 'City or state is to long!';
+    }
     if (startTime && endTime && startTime > endTime) {
         errors.startTime = 'Please enter the start time that is before the end time';
     }
