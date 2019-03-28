@@ -33,8 +33,8 @@ if (!isset($_SESSION['userID'])) {
   if ((!checkStrg30($data['streetAddress']))) {
     throw new Exception("Street address is to long!");
   }
-  if ((!checkMyDate($data['date']))) {
-    throw new Exception("Please enter the correct format for the date.");
+  if ((!checkCurrentDate($data['date']))) {
+    throw new Exception("Date must be today or later.");
   }
   if ((!checkZip($data['zipcode']))) {
     throw new Exception("Please enter a proper zip code.");

@@ -37,9 +37,6 @@ if (!isset($_SESSION['userID'])) {
   if ((!checkStrg30($data['streetAddress']))) {
     throw new Exception("Street address is to long!");
   }
-  if ((!checkMyDate($data['date']))) {
-    throw new Exception("Please enter the correct format for the date.");
-  }
   if ((!checkZip($data['zipcode']))) {
     throw new Exception("Please enter a proper zip code.");
   }
@@ -48,6 +45,9 @@ if (!isset($_SESSION['userID'])) {
   }
   if ((!checkTime($data['startTime'])) || (!checkTime($data['endTime']))) {
     throw new Exception("Start or end time was entered incorrectly.");
+  }
+  if ((!checkCurrentDate($data['date']))) {
+    throw new Exception("Date must be today or later.");
   }
 
   $query = "INSERT INTO location 

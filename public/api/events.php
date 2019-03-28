@@ -14,7 +14,7 @@ if (!isset($_SESSION['userID'])) {
                   ON pl.eventID
                     JOIN location AS l
                       ON e.location = l.id
-                        WHERE e.id = pl.eventID 
+                        WHERE e.id = pl.eventID AND e.date > CAST( NOW() AS DATE)
                           GROUP BY e.id";
 } else {
   $query = "SELECT 
@@ -24,7 +24,7 @@ if (!isset($_SESSION['userID'])) {
             ON pl.eventID
               JOIN location AS l
                 ON e.location = l.id
-                  WHERE e.id = pl.eventID AND NOT e.hostID = '{$_SESSION['userID']}'
+                  WHERE e.id = pl.eventID AND NOT e.hostID = '{$_SESSION['userID']}' AND e.date > CAST( NOW() AS DATE)
                     GROUP BY e.id";
 }
 

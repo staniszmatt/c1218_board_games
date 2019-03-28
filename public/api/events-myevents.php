@@ -21,7 +21,7 @@ if (!isset($_SESSION['userID'])) {
                         ON pl.eventID = e.id
                           JOIN playerList as plu
                             ON plu.eventID = e.id
-                              WHERE pl.userID = '{$_SESSION['userID']}' AND NOT pl.userID = e.hostID
+                              WHERE pl.userID = '{$_SESSION['userID']}' AND NOT pl.userID = e.hostID AND e.date > CAST( NOW() AS DATE)
                                 GROUP BY e.id";
   $result = $db->query($query);
   $userEvents = [];
