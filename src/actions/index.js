@@ -66,6 +66,7 @@ export const signOut = () => async dispatch => {
 export const signUp = credentials => async dispatch => {
     const error = 'Error creating new account';
     try {
+        
         const { data } = await axios.post('/api/sign-up.php', credentials);
 
         if (data.success) {
