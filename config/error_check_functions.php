@@ -21,9 +21,14 @@ function checkEmail($string){
 }
 
 function checkMyDate($date){
-  $format = 'Y-m-d';
+  $format = 'Y-M-D';
   $d = DateTime::createFromFormat($format, $date);
   return $d && $d->format($format) == $date;
+}
+
+function checkCurrentDate($date){
+  $today = date('Y-m-d');
+  return ($date>=$today) ? 1 : 0; 
 }
 
 function checkTime($time){
