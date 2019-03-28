@@ -1,5 +1,5 @@
 .header-container{
-    height: 10VH;
+    height: 20vh;
     text-align: center;
 }
 
@@ -19,20 +19,19 @@
 
 .main-container-event > div{
     background-color: beige;
-    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
     height: 10%;
     width: 100%;
     display: inline-block;
     border: black 1px solid;
     margin: 10px 0;
     padding: 11px;
-    color: white;
+    color: black;
 
 }
 
 .main-container-event > .address {
-    height: 27%;
-    color: white;
+    color: black;
+    height: auto;
     padding:0;
 }
 
@@ -46,10 +45,7 @@ h1 {
     font-size: 3.5rem;
 }
 
-
-
 .game-picture > img{
-    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
     border: 2px solid black ;
     display: inline-block;
     width: 40%;
@@ -57,7 +53,7 @@ h1 {
 }
 
 .main-container-event{
-    background-color: black;
+    background-image: linear-gradient(beige, forestgreen);
     overflow: scroll;
     height: 91vh;
 }
@@ -73,6 +69,10 @@ h1 {
 .main-container-event > .date {
     padding: 0px;
 
+}
+
+.join-game-button {
+    width: 100%;
 }
 
 
