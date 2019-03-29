@@ -32,7 +32,7 @@ const CreateEventForm = props => {
 }
 
 function validate(values) {
-    console.log(values);
+
     const { streetAddress,
         city,
         state,
