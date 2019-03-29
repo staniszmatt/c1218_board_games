@@ -103,6 +103,9 @@ class EventHostPage extends Component {
                             {numberOfPlayers} Players out of {hostEventId.playerLimit} have joined
                     </Link>
                     </div>
+                    <div className="center joinButton green lighten-4">
+                        <Link to={'/events/' + hostEventId.eventID + '/edit'} className="nav-link">Edit Game</Link>
+                    </div>
                 </div>
             </div>
         );
