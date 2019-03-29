@@ -19,7 +19,7 @@ class PlayerList extends Component {
 
     async getPlayerListData() {
         const eventId = this.state.eventId;
-        const resp = await axios.get('/api/events-eventID.php?eventID=' + eventId + '');
+        const resp = await axios.get('/api/events-eventID-player-list.php?eventID=' + eventId + '');
 
         this.setState({
             data: resp.data.event

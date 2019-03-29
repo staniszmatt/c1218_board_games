@@ -66,7 +66,7 @@ if (!isset($_SESSION['userID'])) {
   if(empty($event['playerList'])){
     throw new Exception("No player data found.");
   } else {
-    $output['playerList'] = $event;
+    $output['event'] = $event;
   }
 }
 
