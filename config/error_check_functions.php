@@ -21,7 +21,7 @@ function checkEmail($string){
 }
 
 function checkMyDate($date){
-  $format = 'Y-M-D';
+  $format = 'Y-m-d';
   $d = DateTime::createFromFormat($format, $date);
   return $d && $d->format($format) == $date;
 }
