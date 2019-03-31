@@ -7,10 +7,9 @@ h1{
     text-align: center;
 }
 
-
-.about-image{
+.about-image > img{
     width: 50%;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
 .about-name{

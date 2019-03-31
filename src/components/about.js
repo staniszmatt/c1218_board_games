@@ -15,7 +15,7 @@ export default props => (
                 Matt Staniszewski
             </div>
             <div className="about-image">
-                <img src="https://media.licdn.com/dms/image/C4D03AQHfYfGDEiQ6ig/profile-displayphoto-shrink_800_800/0?e=1559779200&v=beta&t=jAfcr68iaip1iVnWKm_pTQy_nrfts8nzVN9198gXtgM" alt=""/>
+                <img src="https://files.slack.com/files-pri/T1EHQUJ8J-FH7V0MJ0Z/me.png" alt=""/>
             </div>
             <div className="about-url">
                 <a href="https://www.linkedin.com/in/matt-staniszewski-57157820/">LinkedIn</a>

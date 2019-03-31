@@ -17,7 +17,6 @@ h2{
     font-size: 14px;
     font-weight: bold;
     padding: 1px;
-    overflow: scroll;
     height: 100%;
  }
 
@@ -41,7 +40,7 @@ h2{
     margin-top: 45px;
     border-radius: 2px;
     padding: 33px;
-    width: 80%;
+    width: 100%;
     text-align: center;
     line-height: 0px;
     color: black;

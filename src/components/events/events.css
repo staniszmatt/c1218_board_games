@@ -9,19 +9,18 @@
 }
 
 .main-events-container{
-    height: 78vh;
+    /*height: 78vh;*/
     text-align: center;
-    overflow: scroll;
+    /*overflow: scroll;*/
 }
 .events-container{
     background-color: beige;
-    height: 100%;
     width: 100%;
-    padding: 4px;
+    margin: auto;
+    padding: 23px;
     display: inline-block;
     color: black;
     font-weight: bold;
-    box-shadow: 3px 7px forestgreen;
 }
 .events-info-container{
     display: inline-block;
@@ -54,7 +53,6 @@
     display: inline-block;
     height: 15vh;
     width: 100%;
-    margin: 2% 0 2% 0;
 }
 
 .header-events-container > h1 {

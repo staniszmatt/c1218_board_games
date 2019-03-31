@@ -31,7 +31,7 @@ label{
 }
 
 .sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn{
-  background-image: linear-gradient(beige, forestgreen);
+  background-color: forestgreen;
   color: black;
   font-size: 14px;
   font-family: 'Permanent Marker', cursive;
