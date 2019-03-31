@@ -22,20 +22,18 @@ body {
 }
 
 label{
-  font-size: 1.5rem;
+  font-size: 10%;
 }
 
 .nav li {
   display: inline-block;
-  width: 33%;
+  width: 23%;
 }
 
-.sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn{
+.sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn, .about-btn{
   background-color: forestgreen;
   color: black;
   font-size: 14px;
-  font-family: 'Permanent Marker', cursive;
-  margin: 0 auto;
   margin-top: 16px;
   padding: 28px;
   text-align: center;

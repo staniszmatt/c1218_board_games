@@ -9,7 +9,7 @@
 }
 
 .main-events-container{
-    /*height: 78vh;*/
+    height: 78vh;
     text-align: center;
     /*overflow: scroll;*/
 }
@@ -17,7 +17,6 @@
     background-color: beige;
     width: 100%;
     margin: auto;
-    padding: 23px;
     display: inline-block;
     color: black;
     font-weight: bold;
