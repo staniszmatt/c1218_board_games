@@ -14,7 +14,8 @@ export default props => (
             <div className="about-name">
                 Matt Staniszewski
             </div>
-            <div className="about-image"> Pic of Matt
+            <div className="about-image">
+                <img src="https://media.licdn.com/dms/image/C4D03AQHfYfGDEiQ6ig/profile-displayphoto-shrink_800_800/0?e=1559779200&v=beta&t=jAfcr68iaip1iVnWKm_pTQy_nrfts8nzVN9198gXtgM" alt=""/>
             </div>
             <div className="about-url">
                 <a href="https://www.linkedin.com/in/matt-staniszewski-57157820/">LinkedIn</a>
@@ -38,7 +39,7 @@ export default props => (
                 Christopher Sulayao
             </div>
             <div className="about-image">
-                <img src="https://media.licdn.com/dms/image/C5603AQFOTUN_qgSzJQ/profile-displayphoto-shrink_200_200/0?e=1559174400&v=beta&t=hrctYAFVfDM_3IQNCBXbwbssHjh-QowWpDlQPcQNBN8" alt=""/>
+                <img src="https://media.licdn.com/dms/image/C5603AQGKxBPNnowI2Q/profile-displayphoto-shrink_200_200/0?e=1559779200&v=beta&t=3zVF2jwfKeSsqO1L2lULGY4HYlD5ktuYOiNLlAX1VVo" alt=""/>
             </div>
             <div className="about-url">
                 <a href="https://www.linkedin.com/in/christopher-s-07a09b171/">LinkedIn</a>
