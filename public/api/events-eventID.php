@@ -11,18 +11,18 @@ $eventID = $_GET['eventID'];
 if(empty($eventID)){
   throw new Exception("Missing key name eventID");
 }
-$query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime,e.gameTitle, e.gameImages, e.playerLimit, e.location,
-            l.streetAddress, l.city, l.state, l.zipcode, 
-            p.playerName, 
-            pl.userID AS playerID
-              FROM event AS e
-                JOIN location AS l
-                  ON e.location = l.id
-                    JOIN playerList AS pl
-                      ON e.id = pl.eventID
-                        JOIN profile AS p
-                          ON pl.userID = p.id
-                            WHERE e.id = $eventID";
+$query = "SELECT e.id 
+          AS eventID, e.hostID, e.date, e.startTime, e.endTime,e.gameTitle, e.playerLimit, e.location,
+          COUNT(pl.eventID) AS playerCount,
+          l.streetAddress, l.city, l.state, l.zipcode
+            FROM event AS e
+              JOIN location AS l
+                ON e.location = l.id
+                  JOIN playerList AS pl
+                    ON pl.eventID = e.id
+                      JOIN profile AS p
+                        ON pl.userID = p.id
+                          WHERE e.id = $eventID AND NOT e.hostID = '{$_SESSION['userID']}'";
 $result = $db->query($query);
 $event = [];
 
@@ -34,12 +34,6 @@ if ($result) {
     $output['logged-in'] = true;
   }
   while ($row = $result->fetch_assoc()) {
-    if ($event) {
-      $event['playerList'][] = [
-        "playerID" => $row["playerID"],
-        "playerName" => $row["playerName"]
-      ];
-    } else {
       $event = [
         "eventID" => $row["eventID"],
         "hostID" => $row["hostID"],
@@ -47,9 +41,9 @@ if ($result) {
         "startTime" => $row["startTime"],
         "endTime" => $row["endTime"],
         "gameTitle" => $row["gameTitle"],
-        "gameImages" => $row["gameImages"],
         "playerLimit" => $row["playerLimit"],
         "location" => $row["location"],
+        "playerCount"=> $row["playerCount"]
       ];
       $event['location'] = [
         "streetAddress" => $row["streetAddress"],
@@ -57,13 +51,9 @@ if ($result) {
         "state" => $row["state"],
         "zipcode" => $row["zipcode"]
       ];
-      $event['playerList'][] = [
-        "playerID" => $row["playerID"],
-        "playerName" => $row["playerName"]
-      ];
-    }
+
   }
-  if (empty($event)) {
+  if (empty($event) || $event['eventID'] === null) {
     throw new Exception("No event for the requested ID");
   } else {
     $output['event'] = $event;

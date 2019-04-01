@@ -45,25 +45,43 @@ if (!isset($_SESSION['userID'])) {
   if ((!checkTime($data['startTime'])) || (!checkTime($data['endTime']))) {
     throw new Exception("Start or end time was entered incorrectly.");
   }
-  if (!is_numeric($data['eventID']) || !is_numeric($data['hostID'])) {
-    throw new Exception("Event and host ID must be a number.");
+  if (!is_numeric($data['eventID'])) {
+    throw new Exception("Event ID must be a number.");
   }
 
   foreach ($data as $key => $value) {
     $data[$key] = addslashes($value);
   }
   //Get location id from event to update address
-  $query = "SELECT location FROM event WHERE event.id = {$data['eventID']}";
+  $query = "SELECT location FROM event WHERE event.id = '{$data['eventID']}' AND event.hostID = '{$_SESSION['userID']}' ";
   $result = $db->query($query);
+  print_r($result);
   if (!$result) {
     $output['success'] = false;
-    $output['error'] = "Location not found for event!";
+    $output['error'] = "Location not found or wrong user for event!";
   }
   while ($row = $result->fetch_assoc()) {
     $locationID = $row['location'];
   }
   if (empty($locationID)) {
-    throw new Exception("No address ID found!");
+    throw new Exception("Location not found or wrong user for event!");
+  }
+   //Update event information 
+  $query = "UPDATE event 
+              SET startTime = '{$data['startTime']}',
+                  endTime = '{$data['endTime']}', 
+                  date = '{$data['date']}',
+                  gameTitle = '{$data['gameTitle']}',
+                  playerLimit = '{$data['playerLimit']}'
+                    WHERE id = '{$data['eventID']}' AND event.hostID = '{$_SESSION['userID']}'";
+  $result = $db->query($query);
+
+  if (!$result) {
+  $output['error'][] = $result;
+  throw new Exception("Failed to update event.");
+  } else {
+  $output['success'] = true;
+  $output['updated'][] = $result;
   }
   //Update Address information 
   $query = "UPDATE location 
@@ -78,23 +96,6 @@ if (!isset($_SESSION['userID'])) {
     throw new Exception("Failed to update location.");
   } else {
     $output['updated'] = $result;
-  }
-  //Update event information 
-  $query = "UPDATE event 
-              SET startTime = '{$data['startTime']}',
-                endTime = '{$data['endTime']}', 
-                date = '{$data['date']}',
-                gameTitle = '{$data['gameTitle']}',
-                gameImages = '{$data['gameImages']}'
-                  WHERE id = '{$data['eventID']}'";
-  $result = $db->query($query);
-  
-  if (!$result) {
-    $output['error'][] = $result;
-    throw new Exception("Failed to update event.");
-  } else {
-    $output['success'] = true;
-    $output['updated'][] = $result;
   }
 }
 
