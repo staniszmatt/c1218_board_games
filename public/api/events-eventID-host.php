@@ -16,7 +16,7 @@ if (!isset($_SESSION['userID'])) {
     throw new Exception("Missing key name eventID");
   }
   $query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime,e.gameTitle, e.playerLimit, e.location,
-            l.streetAddress, l.city, l.state, l.zipcode, 
+            l.streetAddress, l.city, l.state, l.zipcode, p.playerName,
             COUNT(pl.eventID) AS playerCount
               FROM event AS e
                 JOIN location AS l
@@ -24,12 +24,8 @@ if (!isset($_SESSION['userID'])) {
                     JOIN playerList AS pl
                       ON pl.eventID = e.id
                         JOIN profile AS p
-                          ON pl.userID = p.id
-                            JOIN playerList AS pla
-                              ON e.id = pla.eventID
-                                JOIN profile AS pn
-                                  ON pla.userID = pn.id
-                                      WHERE e.id = $eventID AND e.hostID = '{$_SESSION['userID']}'";
+                          ON e.hostID = p.id
+                            WHERE e.id = $eventID AND e.hostID = '{$_SESSION['userID']}'";
   $result = $db->query($query);
   $event = [];
 
@@ -48,6 +44,7 @@ if (!isset($_SESSION['userID'])) {
         "gameTitle" => $row["gameTitle"],
         "playerCount" => $row["playerCount"],
         "playerLimit" => $row["playerLimit"],
+        "playerName" => $row['playerName'],
         "location" => $row["location"],
       ];
       $event['location'] = [
