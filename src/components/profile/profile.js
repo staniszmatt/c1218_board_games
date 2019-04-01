@@ -47,8 +47,8 @@ render(){
                     {/*</div>*/}
                 {/*</div>*/}
                 <div className="center user-info">
-                    <div className="center full-name">Full Name: <br/> {fullName}</div>
-                    <div className="center user-name">User Name: <br/> {playerName}</div>
+                    {/*<div className="center full-name">Full Name: <br/> {fullName}</div>*/}
+                    <div className="center user-name">Welcome, <br/> {playerName}!</div>
                 </div>
                 <div className="profile-button-container center">
                     <div className="buttons">
