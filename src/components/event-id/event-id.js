@@ -40,7 +40,7 @@ class EventSelected extends Component {
                 </div>
             );
         } else {
-            const numberOfPlayers = eventId.playerList.length;
+            const numberOfPlayers = eventId.playerCount;
             if (numberOfPlayers >= parseInt(eventId.playerLimit)) {
                 return (
                     <div className="center">
@@ -49,7 +49,7 @@ class EventSelected extends Component {
                                 <img src={BoardGamePic}></img>
                             </div> */}
                             <div className="btn event-host">Game: {eventId.gameTitle}</div>
-                            <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
+                            <div className="btn event-host">Host Name: {eventId.playerName}</div>
 
 
                             <div className="date">
@@ -83,7 +83,7 @@ class EventSelected extends Component {
                             <img src={BoardGamePic}></img>
                         </div> */}
                         <div className="btn event-host">Game: {eventId.gameTitle}</div>
-                        <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
+                        <div className="btn event-host">Host Name: {eventId.playerName}</div>
                         <div className="date">
                             <ul>
                                 <li>Date: {eventId.date}</li>

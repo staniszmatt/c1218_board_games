@@ -69,7 +69,6 @@ if (!isset($_SESSION['userID'])) {
                 startTime='{$data['startTime']}',
                 endTime='{$data['endTime']}',
                 gameTitle='{$data['gameTitle']}',
-                gameImages='{$data['gameImages']}',
                 playerLimit='{$data['playerLimit']}',
                 location= '{$locationID}'";
   $result = $db->query($query);

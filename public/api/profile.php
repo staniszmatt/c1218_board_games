@@ -11,7 +11,7 @@ if (!isset($_SESSION['userID'])) {
     'success' => false
   ];
 
-  $query = "SELECT p.*, 
+  $query = "SELECT p.playerName, p.firstName, p.lastName,
               l.streetAddress, l.city, l.state, l.zipcode 
                 FROM profile AS p
                   JOIN location AS l

@@ -12,7 +12,7 @@ if (!isset($_SESSION['userID'])) {
   ];
 
   $query = "SELECT e.id AS eventID, e.hostID, e.date, e.startTime, e.endTime, e.gameTitle, 
-              e.gameImages, e.playerLimit, COUNT(pl.eventID) AS playerCount, e.location,
+              e.playerLimit, COUNT(pl.eventID) AS playerCount, e.location,
               l.city, l.state
                 FROM event AS e
                   JOIN location AS l
@@ -37,7 +37,6 @@ if (!isset($_SESSION['userID'])) {
         "startTime" => $row["startTime"],
         "endTime" => $row["endTime"],
         "gameTitle" => $row["gameTitle"],
-        "gameImages" => $row["gameImages"],
         "playerLimit" => $row["playerLimit"],
         "playerCount" => $row["playerCount"],
         "location" => $row["location"]

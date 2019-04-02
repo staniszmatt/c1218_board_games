@@ -33,7 +33,7 @@ class EventHostPage extends Component {
                 </div>
             );
         }
-        const numberOfPlayers = hostEventId.playerList.length;
+        const numberOfPlayers = hostEventId.playerCount;
         if (numberOfPlayers >= parseInt(hostEventId.playerLimit)) {
             return (
                 <div className="center">
@@ -42,7 +42,7 @@ class EventHostPage extends Component {
                             <img src={BoardGamePic}></img>
                         </div> */}
                         <div className="btn event-host grey ">Game: {hostEventId.gameTitle}</div>
-                        <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerList[0].playerName}</div>
+                        <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerName}</div>
 
 
                         <div className="date grey">
@@ -76,11 +76,8 @@ class EventHostPage extends Component {
         return (
             <div className="center">
                 <div className="main-container-event">
-                    {/* <div className="btn game-picture center">
-                        <img src={BoardGamePic}></img>
-                    </div> */}
                     <div className="btn event-host grey ">Game: {hostEventId.gameTitle}</div>
-                    <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerList[0].playerName}</div>
+                    <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerName}</div>
 
 
                     <div className="date grey">
