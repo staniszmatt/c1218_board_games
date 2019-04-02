@@ -12,7 +12,7 @@ body {
 
 
 .nav {
-  background-image: linear-gradient(beige, forestgreen);
+  background-color: beige;
   list-style-type: none;
   text-align: center;
   width: 100%;
@@ -27,19 +27,19 @@ label{
 
 .nav li {
   display: inline-block;
-  width: 23%;
+  width: 33%;
 }
 
 .sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn, .about-btn{
-  background-color: forestgreen;
-  color: black;
-  font-size: 14px;
-  margin-top: 16px;
+  background-color: rgb(13, 86, 55);
+  color: white;
+  font-size: 100%;
+  margin-top: 10%;
   padding: 28px;
   text-align: center;
   line-height: 0px;
   border: 1px solid black;
-  box-shadow: 3px 7px #0F4434;
+  box-shadow: 3px 7px black;
 }
 
 
