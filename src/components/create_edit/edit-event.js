@@ -35,6 +35,7 @@ class EditEvent extends Component {
   }
 
   handleSubmit = async (event) => {
+    console.log("Submit state ", this.state);
     event.preventDefault();
     const formattedNewEvent = this.state;
     const eventID = this.state.eventID//event is being pulled from the form - follow that formatting
@@ -44,10 +45,10 @@ class EditEvent extends Component {
 
 
   handleKeyPress = (event) => {
-    console.log("Event", event);
-    if (["streetAddress", "city", "state", "zipcode"].includes(event.target.name)) {
+    if ("streetAddress" === event.target.name || "city" === event.target.name || "state" === event.target.name || "zipcode" === event.target.name ) {
       this.setState({
         location: {
+          ...this.state.location,
           [event.target.name]: event.target.value
         }
       });
@@ -59,7 +60,7 @@ class EditEvent extends Component {
   }
 
   render() {
-    const { gameTitle, date, location, startTime, endTime, playerLimit } = this.state;
+    const { gameTitle, date, city, state, streetAddress, zipcode, startTime, endTime, playerLimit } = this.state;
 
     return (
       <div className="center create-form">
@@ -71,19 +72,19 @@ class EditEvent extends Component {
           </div>
           <div className="form-group">
             <label htmlFor="streetAddress">Street Address</label>
-            <input onChange={this.handleKeyPress} name="streetAddress" type="text" id="streetAddress" value={location.streetAddress} className="form-control" />
+            <input onChange={this.handleKeyPress} name="streetAddress" type="text" id="streetAddress" value={streetAddress} className="form-control" />
           </div>
           <div className="form-group">
             <label htmlFor="city">City</label>
-            <input onChange={this.handleKeyPress} name="city" type="text" id="city" value={location.city} className="form-control" />
+            <input onChange={this.handleKeyPress} name="city" type="text" id="city" value={city} className="form-control" />
           </div>
           <div className="form-group">
             <label htmlFor="state">State</label>
-            <input onChange={this.handleKeyPress} name="state" type="text" id="state" value={location.state} className="form-control" />
+            <input onChange={this.handleKeyPress} name="state" type="text" id="state" value={state} className="form-control" />
           </div>
           <div className="form-group">
             <label htmlFor="zipcode">Zip Code</label>
-            <input onChange={this.handleKeyPress} name="zipcode" type="text" id="zipcode" value={location.zipcode} className="form-control" />
+            <input onChange={this.handleKeyPress} name="zipcode" type="text" id="zipcode" value={zipcode} className="form-control" />
           </div>
           <div className="form-group">
             <label htmlFor="date">Date</label>

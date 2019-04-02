@@ -61,6 +61,11 @@ if (!isset($_SESSION['userID'])) {
           "playerName" => $row["playerName"]
         ];
       }
+      if ($row["hostID"] === $_SESSION["userID"]){
+        $event['hosting'] = true;
+      } else {
+        $event['hosting'] = false;
+      }
     }
   }
   if(empty($event['playerList'])){
