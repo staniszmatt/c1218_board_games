@@ -5,7 +5,7 @@ import BoardGamePic from '../../assets/images/boardgame_default.jpg';
 
 const EventRow = (props) => {
 
-    const { startTime, date, gameTitle, id, gameImages, playerLimit, playerCount } = props.event;
+    const { startTime, date, gameTitle, id, playerLimit, playerCount } = props.event;
 
     if (parseInt(playerCount) < parseInt(playerLimit)){
         return (
@@ -16,8 +16,6 @@ const EventRow = (props) => {
                         <p className="events-player-count">Players: {playerCount} out of {playerLimit}</p>
                         <p className="events-date-time">{date} {startTime}</p>
                     </div>
-                    {/* <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center">
-                    </div > */}
                 </div>
             </Link>
         );
@@ -29,8 +27,6 @@ const EventRow = (props) => {
                     <p className="events-player-count">EVENT IS FULL</p>
                     <p className="events-date-time">{date} {startTime}</p>
                 </div>
-                {/* <div style={{ backgroundImage: "url(" + BoardGamePic + ")" }} className="events-image center">
-                </div > */}
             </div>
         </Link>
     );

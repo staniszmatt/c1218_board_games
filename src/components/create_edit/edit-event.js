@@ -91,15 +91,15 @@ class EditEvent extends Component {
           </div>
           <div className="form-group">
             <label htmlFor="startTime">Start Time</label>
-            <input onChange={this.handleKeyPress} name="startTime" type="text" id="startTime" value={startTime} className="form-control" />
+            <input onChange={this.handleKeyPress} name="startTime" type="time" id="startTime" value={startTime} className="form-control" />
           </div>
           <div className="form-group">
             <label htmlFor="endTime">End Time</label>
-            <input onChange={this.handleKeyPress} name="endTime" type="text" id="endTime" value={endTime} className="form-control" />
+            <input onChange={this.handleKeyPress} name="endTime" type="time" id="endTime" value={endTime} className="form-control" />
           </div>
           <div className="form-group">
             <label htmlFor="">Player Limit</label>
-            <input onChange={this.handleKeyPress} name="playerLimit" type="text" id="playerLimit" value={playerLimit} className="form-control" />
+            <input onChange={this.handleKeyPress} name="playerLimit" type="number" id="playerLimit" value={playerLimit} className="form-control" />
           </div>
           <div>
             <button className="btn text-center nav-link">SUBMIT CHANGES</button>
