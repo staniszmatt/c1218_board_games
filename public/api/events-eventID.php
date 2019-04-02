@@ -13,7 +13,7 @@ if(empty($eventID)){
 }
 $query = "SELECT e.id 
           AS eventID, e.hostID, e.date, e.startTime, e.endTime,e.gameTitle, e.playerLimit, e.location,
-          COUNT(pl.eventID) AS playerCount,
+          COUNT(pl.eventID) AS playerCount, p.playerName,
           l.streetAddress, l.city, l.state, l.zipcode
             FROM event AS e
               JOIN location AS l
@@ -21,7 +21,7 @@ $query = "SELECT e.id
                   JOIN playerList AS pl
                     ON pl.eventID = e.id
                       JOIN profile AS p
-                        ON pl.userID = p.id
+                        ON e.hostID = p.id
                           WHERE e.id = $eventID AND NOT e.hostID = '{$_SESSION['userID']}'";
 $result = $db->query($query);
 $event = [];
@@ -42,6 +42,7 @@ if ($result) {
         "endTime" => $row["endTime"],
         "gameTitle" => $row["gameTitle"],
         "playerLimit" => $row["playerLimit"],
+        "playerName" => $row["playerName"],
         "location" => $row["location"],
         "playerCount"=> $row["playerCount"]
       ];
