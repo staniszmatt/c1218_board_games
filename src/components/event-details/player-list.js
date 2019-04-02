@@ -34,7 +34,6 @@ class PlayerList extends Component {
         if (data === undefined) {
             return <h3>Page is Loading...</h3>;
         } else {
-            console.log(data);
             if (data.hosting){
                 var backPage = `/events/${data.eventID}/host`;
             } else {

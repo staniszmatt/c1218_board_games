@@ -3,7 +3,6 @@ import React from 'react';
 export default props => {
 
     const { input, label, type='text', meta: {error, touched}} = props;
-    console.log(label);
     return(
         <div>
             <input {...input} type={type ? type : 'text'} autoComplete="off"  />
