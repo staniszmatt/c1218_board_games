@@ -42,7 +42,6 @@ if ($result) {
       "startTime" => $row["startTime"],
       "endTime" => $row["endTime"],
       "gameTitle" => $row["gameTitle"],
-      "gameImages" => $row["gameImages"],
       "playerLimit" => $row["playerLimit"],
       "playerCount" => $row["playerCount"],
       "location" => $row["location"]
