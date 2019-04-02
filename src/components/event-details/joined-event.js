@@ -36,7 +36,7 @@ class JoinedEventDetails extends Component {
             );
         }
 
-        const numberOfPlayers = eventId.playerList.length;
+        const numberOfPlayers = eventId.playerCount;
         if (numberOfPlayers >= parseInt(eventId.playerLimit)) {
             return (
                 <div className="center">
@@ -45,7 +45,7 @@ class JoinedEventDetails extends Component {
                             <img src={eventId.gameImages}></img>
                         </div> */}
                         <div className="btn event-host">Game: {eventId.gameTitle}</div>
-                        <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
+                        <div className="btn event-host">Host Name: {eventId.playerName}</div>
 
 
                         <div className="date grey">
@@ -82,7 +82,7 @@ class JoinedEventDetails extends Component {
                         <img src={eventId.gameImages}></img>
                     </div> */}
                     <div className="btn event-host">Game: {eventId.gameTitle}</div>
-                    <div className="btn event-host">Host Name: {eventId.playerList[0].playerName}</div>
+                    <div className="btn event-host">Host Name: {eventId.playerName}</div>
                     <div className="date">
                         <ul>
                             <li>Date: {eventId.date}</li>
