@@ -35,7 +35,6 @@ class EditEvent extends Component {
   }
 
   handleSubmit = async (event) => {
-    console.log("Submit state ", this.state);
     event.preventDefault();
     const formattedNewEvent = this.state;
     const eventID = this.state.eventID//event is being pulled from the form - follow that formatting
