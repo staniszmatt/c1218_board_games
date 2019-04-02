@@ -5,6 +5,8 @@ import './player-list.css';
 
 
 class PlayerList extends Component {
+    
+
     state = {
         eventId: null
     }
@@ -28,10 +30,16 @@ class PlayerList extends Component {
 
     render() {
         const { data } = this.state;
-
+ 
         if (data === undefined) {
             return <h3>Page is Loading...</h3>;
         } else {
+            console.log(data);
+            if (data.hosting){
+                var backPage = `/events/${data.eventID}/host`;
+            } else {
+                var backPage = `/events/${data.eventID}`;
+            }
             return (
                 <div className="generic-container playerlist-container">
                     <div className="page-header player-list-title center">
@@ -71,8 +79,7 @@ class PlayerList extends Component {
                             </tbody>
                         </table>
                         <div className="center back">
-                            <Link to={"/events/" + data.eventID + ""} className="btn center back-to-game">Back To Game</Link>
-                        
+                            <Link to={backPage} className="btn center back-to-game">Back To Game</Link>
                         </div>
 
                     </div>
