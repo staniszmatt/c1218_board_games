@@ -2,7 +2,7 @@
     background-color: #282C37;
     height: 10vh;
     width: 100%;
-    display: felx;
+    display: flex;
     vertical-align: middle;
     justify-content: center;
     
@@ -26,17 +26,9 @@
     margin-top: 5vh;
 }
 
-/*.landingpage-main-container > .btn{*/
-    /*text-align: center;*/
-/*}*/
-
 .main-div > .back{
     height: 89vh;
 }
-
-/*.mainNav {*/
-    /*height: 20vh;*/
-/*}*/
 
 .play-button{
     padding: 12px 20px;
@@ -69,16 +61,10 @@
 
 @media only screen and (min-width: 1020px) {
     .landing-page-header {
-        background-image: linear-gradient(black, forestgreen);
+        background-color: #2B90D9;
         height: 100px;
     }
     .play-button{
         font-size: 50px;
     }
 }
-
-/* @media only screen and (min-width: 1020px){
-    .play-button{gi
-        font-size: 50px;
-    }
-} */
