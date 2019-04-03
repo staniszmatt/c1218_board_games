@@ -12,7 +12,7 @@ body {
 
 
 .nav {
-  background-image: linear-gradient(beige, forestgreen);
+  background-image: linear-gradient( forestgreen, black);
   list-style-type: none;
   text-align: center;
   width: 100%;
@@ -40,7 +40,6 @@ label{
 }
 
 .nav li {
-  width: 23%;
   margin: auto;
 }
 
@@ -52,11 +51,25 @@ label{
   text-align: center;
 
   border: 1px solid black;
-  box-shadow: 3px 7px #0F4434;
+  box-shadow: 3px 3px #0F4434;
 }
 
 @media only screen and (min-width: 1020px) {
   footer {
-    height: 80px;
+    height: 100px;
+  }
+  .nav-button{
+    font-size: 40px;
+    width: 25vw;
+    height: 90%;
+    align-self: center;
+  }
+  .nav li {
+    height: 90%;
+    display: flex;
+    align-content: center;
+  }
+  .btn {
+    line-height: 200%;
   }
 }
