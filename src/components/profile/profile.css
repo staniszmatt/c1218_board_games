@@ -49,5 +49,9 @@ h2{
 }
 
 @media only screen and (min-width: 1020px){
-    
+    .profile-btn {
+        width: 25vw;
+        height: 90%;
+        align-self: center;
+    }
 }
