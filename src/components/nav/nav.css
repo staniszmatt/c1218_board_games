@@ -34,6 +34,14 @@ ul>li>a {
   box-shadow: 3px 3px black;
   width: 30vw; 
 }
+ul>li>a:hover{
+  color: red;
+}
+ul>li>a:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 label{
   font-size: 10%;
