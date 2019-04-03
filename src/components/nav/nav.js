@@ -48,9 +48,9 @@ class Nav extends Component {
                         <Link to="/sign-out" className="btn nav-link  center sign-out-btn">Sign Out</Link>
                     </li>
 
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link to="/about" className="btn nav-link  center about-btn">About</Link>
-                    </li>
+                    </li> */}
                 </ul>
             </footer>
 

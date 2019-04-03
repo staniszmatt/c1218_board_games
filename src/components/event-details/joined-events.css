@@ -42,7 +42,8 @@
 
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 45px;
+    margin: auto;
 }
 
 .game-picture > img{
@@ -75,54 +76,8 @@ h1 {
     width: 100%;
 }
 
-
-
-
-/*.main-container >.game-picture{*/
-    /*background-color: #0F4434;*/
-    /*box-shadow: 0px 0px 10px 10px black inset;*/
-    /*height: 15vh;*/
-    /*width: 100%;*/
-    /*margin: 0px;*/
-/*}*/
-/*.main-container >.event-host {*/
-    /*background-color: #0F4434;*/
-    /*box-shadow: 0px 0px 10px 10px black inset;*/
-    /*height: 15vh;*/
-    /*color: white;*/
-    /*padding: 24px;*/
-    /*margin: 0px;*/
-/*}*/
-
-/*.numberOfPlayers {*/
-    /*background-color: #0F4434;*/
-    /*box-shadow: 0px 0px 10px 10px black inset;*/
-    /*height: 10vh;*/
-    /*color: white;*/
-    /*padding: 20px;*/
-    /*margin: 0px;*/
-/*}*/
-
-/*.main-container >.address {*/
-    /*background-color: #0F4434;*/
-    /*box-shadow: 0px 0px 10px 10px black inset;*/
-    /*height: 23vh;*/
-    /*width: 100%;*/
-    /*margin: -14px*/
-/*}*/
-
-/*.date > ul > li {*/
-    /*background-color: #0F4434;*/
-    /*box-shadow: 0px 0px 10px 10px black inset;*/
-    /*color: white;*/
-    /*height: 10vh;*/
-    /*padding: 26px;*/
-/*}*/
-
-/*.main-container{*/
-    /*overflow: scroll;*/
-/*}*/
-
-/*ul{*/
-    /*margin: 0px;*/
-/*}*/
+@media only screen and (min-width: 1020px) {
+    h1 {
+        font-size: 85px;
+    }
+}
