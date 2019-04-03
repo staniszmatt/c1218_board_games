@@ -22,7 +22,7 @@ body {
   height: 100%;
 }
 
-.nav-button{
+ul>li>a {
   -webkit-text-stroke: 1px white;
   font-size: 18px;
   font-family: 'Permanent Marker', cursive;
@@ -58,8 +58,7 @@ label{
   footer {
     height: 100px;
   }
-  .nav-button{
-    font-size: 40px;
+  div>ul>li>a {
     width: 25vw;
     height: 90%;
     align-self: center;
