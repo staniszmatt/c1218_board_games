@@ -11,7 +11,7 @@
 .main-events-container{
     height: 78vh;
     text-align: center;
-    /*overflow: scroll;*/
+    overflow: scroll;
 }
 .events-container{
     background-color: beige;
