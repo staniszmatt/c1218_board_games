@@ -22,12 +22,25 @@ body {
   height: 100%;
 }
 
+.nav-button{
+  -webkit-text-stroke: 1px white;
+  font-size: 18px;
+  font-family: 'Permanent Marker', cursive;
+  cursor: pointer;
+  text-align: center;
+  color: black;
+  background-image: linear-gradient(black, forestgreen);
+  border-radius: 5px;
+  box-shadow: 3px 3px black;
+  width: 30vw; 
+}
+
 label{
   font-size: 10%;
 }
 
 .nav li {
-  width: 20%;
+  width: 23%;
   margin: auto;
 }
 
