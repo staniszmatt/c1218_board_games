@@ -1,13 +1,17 @@
 .landing-page-header {
-    background-image: linear-gradient(black, forestgreen);
-    height: 60px;
-    display: flex;
+    background-color: #282C37;
+    height: 10vh;
+    width: 100%;
+    display: felx;
+    vertical-align: middle;
+    justify-content: center;
+    
 }
 
 .landing-page-header > h1 {
-    font-family: 'Permanent Marker', cursive;
-    -webkit-text-stroke: 1px white;
-    color: black;
+    color: white;
+        font-family: -apple-system,
+        sans-serif;
 }
 
 .landingpage-main-container {
@@ -19,7 +23,7 @@
     background-position: center;
     background-size: cover;
     text-align: center;
-    margin-top: 6vh;
+    margin-top: 5vh;
 }
 
 /*.landingpage-main-container > .btn{*/
@@ -36,15 +40,20 @@
 
 .play-button{
     padding: 12px 20px;
-    -webkit-text-stroke: 1px white;
+    color: white;
     font-size: 25px;
-    font-family: 'Permanent Marker', cursive;
+     font-family: -apple-system,
+     sans-serif;
     cursor: pointer;
-    text-align: center;
     color: black;
-    background-image: linear-gradient(black, forestgreen);
     border-radius: 5px;
     box-shadow: 3px 3px black;
+
+      background-color: #2B90D9;
+      color: white;
+      text-align: center;
+      border: 1px solid black;
+      box-shadow: 3px 3px #0F4434;
 }
 
 

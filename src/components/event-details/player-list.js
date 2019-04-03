@@ -32,7 +32,21 @@ class PlayerList extends Component {
         const { data } = this.state;
  
         if (data === undefined) {
-            return <h3>Page is Loading...</h3>;
+            return (<div className="loading-screen-container">
+                <div className='center loading-screen-text'>Page Is Loading...</div>
+                <div className="loading-screen-container preloader-wrapper big active test">
+                    <div className="spinner-layer spinner-blue-only">
+                        <div className="circle-clipper left">
+                            <div className="circle"></div>
+                        </div><div className="gap-patch">
+                            <div className="circle"></div>
+                        </div><div className="circle-clipper right">
+                            <div className="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            );
         } else {
             if (data.hosting){
                 var backPage = `/events/${data.eventID}/host`;
