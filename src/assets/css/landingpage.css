@@ -48,7 +48,9 @@
 }
 
 
-.play-button:hover {background-color: #3e8e41}
+.play-button:hover {
+    color: red;
+}
 
 .play-button:active {
     background-color: #3e8e41;
@@ -61,7 +63,13 @@
         background-image: linear-gradient(black, forestgreen);
         height: 100px;
     }
-    .play-button{gi
+    .play-button{
         font-size: 50px;
     }
 }
+
+/* @media only screen and (min-width: 1020px){
+    .play-button{gi
+        font-size: 50px;
+    }
+} */

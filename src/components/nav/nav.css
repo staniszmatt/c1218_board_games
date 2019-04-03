@@ -34,6 +34,14 @@ ul>li>a {
   box-shadow: 3px 3px black;
   width: 30vw; 
 }
+ul>li>a:hover{
+  color: red;
+}
+ul>li>a:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 label{
   font-size: 10%;
@@ -46,10 +54,7 @@ label{
 .sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn, .about-btn{
   background-color: forestgreen;
   color: black;
-
-
   text-align: center;
-
   border: 1px solid black;
   box-shadow: 3px 3px #0F4434;
 }
@@ -70,5 +75,7 @@ label{
   }
   .btn {
     line-height: 200%;
+    font-size: 40px;
+    height: 90%;
   }
-}
+} 
