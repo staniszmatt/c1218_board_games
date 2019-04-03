@@ -37,15 +37,15 @@ class Nav extends Component {
             <footer className="nav-wrapper">
                 <ul className="nav">
                     <li className="nav-item">
-                        <Link to="/profile" className="btn nav-btn-style nav-link center profile-btn">Profile</Link>
+                        <Link to="/profile" className="btn nav-link center profile-btn">Profile</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/events" className="nav-button btn nav-link  center event-btn profile-btn">Events</Link>
+                        <Link to="/events" className="btn nav-link  center event-btn profile-btn">Events</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/sign-out" className="nav-button btn nav-link  center sign-out-btn profile-btn">Sign Out</Link>
+                        <Link to="/sign-out" className="btn nav-link  center sign-out-btn profile-btn">Sign Out</Link>
                     </li>
 
                     {/* <li className="nav-item">
