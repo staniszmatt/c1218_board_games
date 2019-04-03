@@ -44,7 +44,7 @@ ul>li>a:active {
 }
 
 label{
-  font-size: 10%;
+  font-size: 16px;
 }
 
 .nav li {
@@ -77,5 +77,14 @@ label{
     line-height: 200%;
     font-size: 40px;
     height: 90%;
+  }
+  label{
+    font-size: 30px;
+  }
+  p.red-text {
+    font-size: 30px;
+  }
+  div.input-field {
+    font-size: 30px; 
   }
 } 
