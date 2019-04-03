@@ -1,15 +1,13 @@
 .landing-page-header {
-    background-color: #00a980;
-    /*height: 20vh;*/
-    padding: 6px 0 0 0;
+    background-image: linear-gradient(black, forestgreen);
+    height: 60px;
+    display: flex;
 }
 
-.header-name {
-    font-family: Arial;
-    font-weight: bold;
+.landing-page-header > h1 {
+    font-family: 'Permanent Marker', cursive;
+    -webkit-text-stroke: 1px white;
     color: black;
-    font-size: 4em;
-   padding: 6.5% 0;
 }
 
 .landingpage-main-container {
@@ -24,9 +22,17 @@
     margin-top: 6vh;
 }
 
+/*.landingpage-main-container > .btn{*/
+    /*text-align: center;*/
+/*}*/
+
 .main-div > .back{
     height: 89vh;
 }
+
+/*.mainNav {*/
+    /*height: 20vh;*/
+/*}*/
 
 .play-button{
     padding: 12px 20px;
@@ -42,7 +48,7 @@
 }
 
 
-.play-button:hover {background-color: dodgerblue}
+.play-button:hover {background-color: #3e8e41}
 
 .play-button:active {
     background-color: #3e8e41;
