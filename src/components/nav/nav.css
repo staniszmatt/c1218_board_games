@@ -12,7 +12,7 @@ body {
 
 
 .nav {
-  background-color: beige;
+  background-image: linear-gradient( forestgreen, black);
   list-style-type: none;
   text-align: center;
   width: 100%;
@@ -22,19 +22,25 @@ body {
   height: 100%;
 }
 
+.nav-button{
+  -webkit-text-stroke: 1px white;
+  font-size: 18px;
+  font-family: 'Permanent Marker', cursive;
+  cursor: pointer;
+  text-align: center;
+  color: black;
+  background-image: linear-gradient(black, forestgreen);
+  border-radius: 5px;
+  box-shadow: 3px 3px black;
+  width: 30vw; 
+}
+
 label{
   font-size: 10%;
 }
 
 .nav li {
-  display: inline-block;
-  width: 33%;
-}
- 
-.nav .nav-item .nav-link {
-  width: 100%;
-  display: inline-block;
-  padding: 0%;
+  margin: auto;
 }
 .sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn, .about-btn{
   background-color: rgb(13, 86, 55);
@@ -44,11 +50,25 @@ label{
   padding: 28px;
   text-align: center;
   border: 1px solid black;
-  box-shadow: 3px 7px black;
+  box-shadow: 3px 3px #0F4434;
 }
 
 @media only screen and (min-width: 1020px) {
   footer {
-    height: 80px;
+    height: 100px;
+  }
+  .nav-button{
+    font-size: 40px;
+    width: 25vw;
+    height: 90%;
+    align-self: center;
+  }
+  .nav li {
+    height: 90%;
+    display: flex;
+    align-content: center;
+  }
+  .btn {
+    line-height: 200%;
   }
 }

@@ -21,6 +21,7 @@
     background-position: center;
     background-size: cover;
     text-align: center;
+    margin-top: 6vh;
 }
 
 .main-div > .back{
@@ -54,7 +55,7 @@
         background-image: linear-gradient(black, forestgreen);
         height: 100px;
     }
-    .play-button{
+    .play-button{gi
         font-size: 50px;
     }
 }
