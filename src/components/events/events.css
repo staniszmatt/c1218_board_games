@@ -1,20 +1,26 @@
+.header-events-container {
+    background-color: #282C37;
+    height: 10vh;
+    width: 100%;
+    display: felx;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+
 .header-events-container > h1{
-    height: auto;
-    text-align: center;
-    padding: 11px;
-    background-image: linear-gradient(beige, forestgreen);
-    color: white;
-    -webkit-text-stroke: 1px black;
-    font-family: 'Permanent Marker', cursive;
+       color: white;
+       font-family: -apple-system,
+       sans-serif;
 }
 
 .main-events-container{
     height: 78vh;
     text-align: center;
-    /*overflow: scroll;*/
+    overflow: scroll;
 }
 .events-container{
-    background-color: beige;
+
     width: 100%;
     margin: auto;
     display: inline-block;
@@ -33,7 +39,7 @@
 }
 
 .events-list-button{
-    background-color: black;
+    background-color: #D9E1E8;
     padding: 6px;
 }
 
@@ -70,3 +76,6 @@
     padding: 30px;
 }
 
+.loading-screen-text{
+    font-size: 3em;
+}

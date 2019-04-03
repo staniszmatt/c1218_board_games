@@ -12,7 +12,7 @@ body {
 
 
 .nav {
-  background-image: linear-gradient( forestgreen, black);
+  background-color: #282C37;
   list-style-type: none;
   text-align: center;
   width: 100%;
@@ -25,13 +25,14 @@ body {
 ul>li>a {
   -webkit-text-stroke: 1px white;
   font-size: 18px;
-  font-family: 'Permanent Marker', cursive;
+        font-family: -apple-system,
+        sans-serif;
   cursor: pointer;
   text-align: center;
   color: black;
-  background-image: linear-gradient(black, forestgreen);
+  background-color: #9BAEC8;
   border-radius: 5px;
-  box-shadow: 3px 3px black;
+  box-shadow: 3px 3px #D9E1E8;
   width: 30vw; 
 }
 ul>li>a:hover{
@@ -52,8 +53,8 @@ label{
 }
 
 .sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn, .about-btn{
-  background-color: forestgreen;
-  color: black;
+  background-color: #2B90D9;
+  color: white;
   text-align: center;
   border: 1px solid black;
   box-shadow: 3px 3px #0F4434;

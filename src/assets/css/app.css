@@ -9,12 +9,12 @@
 
 body {
     margin: 0;
-    background-color: black;
+    background-color: #D9E1E8;
 
 }
 
 #root{
-    background-color: black;
+    background-color: #D9E1E8;
 }
 
 /*.btn{*/
@@ -23,7 +23,7 @@ body {
 /*}*/
 
 .app {
-    background-color: #000;
+     background-color: #D9E1E8;
     color: #FFF;
     font-family: quest;
     font-size: 30px;
@@ -59,4 +59,13 @@ body {
 
 .input-field {
     text-align: left;
+}
+
+.loading-screen-container {
+position: absolute;
+top :0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
 }
