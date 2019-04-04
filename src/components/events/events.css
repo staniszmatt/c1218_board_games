@@ -11,11 +11,10 @@
 
 
 .header-events-container > h1{
-       color: white;
-       font-family: -apple-system,
-       sans-serif;
-       margin: auto;
-       font-size: 38px;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto;
+    font-size: 38px;
 }
 
 .main-events-container{
@@ -35,7 +34,7 @@
 }
 .events-info-container{
     display: inline-block;
-    width: 70%;
+    width: 100%;
     height: 100%;
     line-height:.7;
     vertical-align: top;
@@ -49,6 +48,15 @@
     padding: 6px;
     height: 100px;
     display: flex;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .5px;
+    cursor: pointer;
+    transition: background-color .2s ease-out;
+    border: 1px solid #fff;
+    border-radius: 1px;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .events-image {
@@ -63,7 +71,7 @@
 }
 
 .header-events-container > h1 {
-    font-size: 3.5rem;
+    font-size: 45px;
     margin: 0;
 }
 
@@ -80,4 +88,20 @@
 
 .loading-screen-text{
     font-size: 3em;
+}
+
+
+@media only screen and (min-width: 1400px){
+    .header-events-container {
+        height: 100px;
+    }
+    .header-events-container > h1 {
+        margin: auto;
+    }
+    .main-events-container{
+        margin-top: 160px;
+    }
+    .events-list-button{
+        /* width: 30vw; */
+    }
 }

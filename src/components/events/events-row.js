@@ -9,8 +9,8 @@ const EventRow = (props) => {
 
     if (parseInt(playerCount) < parseInt(playerLimit)){
         return (
-            <Link to={'/events/' + id} className="events-list-button nav-link btn center">
-                <div className="events-container" key={id} data-event-id={id} >
+            <Link to={'/events/' + id} className="col s12 l6 events-list-button nav-link center ">
+                <div className="events-container " key={id} data-event-id={id} >
                     <div className="events-info-container">
                         <p className="events-title">{gameTitle}</p>
                         <p className="events-player-count">Players: {playerCount} out of {playerLimit}</p>
@@ -20,7 +20,7 @@ const EventRow = (props) => {
             </Link>
         );
     } return(
-        <Link to={'/events/' + id} className="events-list-button nav-link btn center">
+        <Link to={'/events/' + id} className="col s12 l6 events-list-button nav-link center">
             <div className="events-container" key={id} data-event-id={id} >
                 <div className="events-info-container">
                     <p className="events-title">{gameTitle}</p>
