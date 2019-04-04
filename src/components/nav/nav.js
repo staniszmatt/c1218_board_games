@@ -49,7 +49,7 @@ class Nav extends Component {
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/about" className="btn nav-link  center about-btn">About</Link>
+                        <Link to="/about" className="btn nav-link  center profile-btn">About</Link>
                     </li>
                 </ul>
             </footer>

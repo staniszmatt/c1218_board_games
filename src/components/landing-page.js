@@ -5,7 +5,7 @@ import '../assets/css/landingpage.css';
 
 
 export default props => (
-    <div className="main-div">
+    <div className="main-div-wrapper">
         <div className="landing-page-header center col s12">
             <h1>BOARD GAMERS</h1>
         </div>
