@@ -1,10 +1,12 @@
 .header-events-container {
     background-color: #282C37;
-    height: 10vh;
+    height: 50px;
     width: 100%;
-    display: felx;
+    display: flex;
     vertical-align: middle;
     justify-content: center;
+    position: fixed;
+    top: 0;
 }
 
 
@@ -12,20 +14,24 @@
        color: white;
        font-family: -apple-system,
        sans-serif;
+       margin: auto;
+       font-size: 38px;
 }
 
 .main-events-container{
-    height: 78vh;
+    height: 100vh;
     text-align: center;
     overflow: scroll;
+    margin-top: 50px;
+    margin-bottom: 60px;
 }
 .events-container{
-
     width: 100%;
     margin: auto;
     display: inline-block;
     color: black;
     font-weight: bold;
+    height: 100%;
 }
 .events-info-container{
     display: inline-block;
@@ -41,6 +47,8 @@
 .events-list-button{
     background-color: #D9E1E8;
     padding: 6px;
+    height: 100px;
+    display: flex;
 }
 
 .events-image {
@@ -52,12 +60,6 @@
     background-size: 100%;
     background-repeat: no-repeat;
     box-shadow: 3px 7px black;
-}
-
-.events-list-button {
-    display: inline-block;
-    height: 15vh;
-    width: 100%;
 }
 
 .header-events-container > h1 {
