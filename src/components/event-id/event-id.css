@@ -27,6 +27,10 @@ div.main-container-event>div.event-host>h6{
     margin: auto;
 }
 
+div.main-container-event>div.event-host>h6>ul{
+    margin: 0;
+}
+
 div.main-container-event {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -36,8 +40,23 @@ div.main-container-event {
     padding-bottom: 0px;
 } 
 
+div.main-container-event>div.event-host>h6>a:hover{
+    color: #2bbbad;
+}
+
 @media only screen and (min-width: 1020px){
     div.event-details {
         height: 100px;
+    }
+    div.main-container-event>div.event-host>h3{
+        font-size: 60px;
+    }
+    
+    div.main-container-event>div.event-host>h6{
+        font-size: 40px;
+    }
+    div.main-container-event {
+        padding-left: 200px;
+        padding-right: 200px;
     }
 }

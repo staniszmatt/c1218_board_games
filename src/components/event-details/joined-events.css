@@ -18,7 +18,6 @@
 }
 
 .main-container-event > div{
-    background-color: beige;
     height: 10%;
     width: 100%;
     display: inline-block;
@@ -54,7 +53,6 @@ h1 {
 }
 
 .main-container-event{
-    background-image: linear-gradient(beige, forestgreen);
     overflow: scroll;
     height: 91vh;
 }
@@ -63,19 +61,21 @@ h1 {
     padding: 12px;
     box-shadow: 0px 0px 10px 10px red inset;
 }
-.joinButton{
-    background-color: #0F4434;
-}
 
 .main-container-event > .date {
     padding: 0px;
-
 }
 
 a.join-game-button {
+    background-color: #2B90D9;
     height: 35px;
     margin: 10px;
 }
+
+a.join-game-button:active {
+    box-shadow: 0 5px #666;
+    transform: translateY(3px);
+  }
 
 @media only screen and (min-width: 1020px) {
     h1 {
