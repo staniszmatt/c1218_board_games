@@ -72,12 +72,33 @@ h1 {
 
 }
 
-.join-game-button {
-    width: 100%;
+a.join-game-button {
+    height: 35px;
+    margin: 10px;
 }
 
 @media only screen and (min-width: 1020px) {
     h1 {
         font-size: 85px;
+    }
+    a.join-game-button {
+        height: 75px;
+        margin: 10px;
+    }
+    div.main-container-event {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        scroll-behavior: unset;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    div.main-container-event {
+        margin-top: 160px;
+        margin-bottom: 0;
+    }
+    a.join-game-button {
+        height: 50px;
+        margin: 10px;
     }
 }
