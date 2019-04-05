@@ -23,31 +23,24 @@
     overflow: scroll;
     margin-top: 50px;
     margin-bottom: 60px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 .events-container{
-    width: 100%;
-    margin: auto;
-    display: inline-block;
     color: black;
     font-weight: bold;
-    height: 100%;
+    margin-bottom: 5px;
 }
-.events-info-container{
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    line-height:.7;
-    vertical-align: top;
-}
+
 .events-info-container > p {
     vertical-align: middle;
+    display: block;
 }
 
 .events-list-button{
+    display: block;
     background-color: #D9E1E8;
     padding: 6px;
-    height: 100px;
-    display: flex;
     text-decoration: none;
     text-align: center;
     letter-spacing: .5px;
@@ -55,8 +48,10 @@
     transition: background-color .2s ease-out;
     border: 1px solid #fff;
     border-radius: 1px;
-    vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
+}
+.events-list-button:hover{
+    background-color: #2bbbad;
 }
 
 .events-image {
@@ -90,7 +85,27 @@
     font-size: 3em;
 }
 
+@media only screen and (min-width: 1020px){
+    .header-events-container > h1{
+        font-size: 75px;
+        margin: auto;
+    }
+    .header-events-container {
+        height: 100px;
+    }
+    .main-events-container{
+        margin: 100px auto;
+        height: 100vh;
+        max-width: 80%;
+    }
+    .events-list-button{
+        font-size: 26px;
+    }
+    .events-title, .events-player-count, .events-date-time{
+        margin: 0;
 
+    }
+}
 @media only screen and (min-width: 1400px){
     .header-events-container {
         height: 100px;
@@ -100,8 +115,11 @@
     }
     .main-events-container{
         margin-top: 160px;
+        margin-left: 10%;
+        margin-right: 10%;   
+        margin-bottom: 0; 
     }
     .events-list-button{
-        /* width: 30vw; */
+        font-size: 30px;
     }
 }

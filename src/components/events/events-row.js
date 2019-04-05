@@ -9,26 +9,25 @@ const EventRow = (props) => {
 
     if (parseInt(playerCount) < parseInt(playerLimit)){
         return (
-            <Link to={'/events/' + id} className="col s12 l6 events-list-button nav-link center ">
-                <div className="events-container " key={id} data-event-id={id} >
-                    <div className="events-info-container">
+            
+                <div className="events-container col s12 l6 nav-link center" key={id} data-event-id={id} >
+                    
+                    <Link to={'/events/' + id} className="events-list-button" >
                         <p className="events-title">{gameTitle}</p>
                         <p className="events-player-count">Players: {playerCount} out of {playerLimit}</p>
                         <p className="events-date-time">{date} {startTime}</p>
-                    </div>
-                </div>
-            </Link>
+                    </Link>
+                </div>      
         );
     } return(
-        <Link to={'/events/' + id} className="col s12 l6 events-list-button nav-link center">
-            <div className="events-container" key={id} data-event-id={id} >
-                <div className="events-info-container">
+            <div className="events-container col s12 l6 nav-link center" key={id} data-event-id={id} >
+                
+                <Link to={'/events/' + id} className="events-list-button">
                     <p className="events-title">{gameTitle}</p>
                     <p className="events-player-count">EVENT IS FULL</p>
                     <p className="events-date-time">{date} {startTime}</p>
-                </div>
+                </Link>
             </div>
-        </Link>
     );
 
 }
