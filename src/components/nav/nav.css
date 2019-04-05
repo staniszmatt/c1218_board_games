@@ -6,11 +6,6 @@ footer {
   height: 60px;
 }
 
-body {
-  margin-bottom: 50px;
-}
-
-
 .nav {
   background-color: #282C37;
   list-style-type: none;
@@ -35,11 +30,8 @@ ul>li>a {
   box-shadow: 3px 3px #D9E1E8;
   width: 23vw; 
 }
-ul>li>a:hover{
-  color: red;
-}
+
 ul>li>a:active {
-  background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }

@@ -1,99 +1,62 @@
-/*.header-container{*/
-    /*height: 10VH;*/
-    /*text-align: center;*/
+div.event-details {
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    top: 0; 
+    color: white;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+div.event-details > h1 {
+    margin: auto;
+}
 
-/*}*/
+div.main-container-event>div.event-host {
+    padding: 5px;
+    margin: 5px;
+    display: flex; 
+    height: fit-content;
+}
 
+div.main-container-event>div.event-host>h3{
+    margin: auto;
+}
 
-/*.main-container-event.center.main-div{*/
-    /*height: 80vh;*/
-    /*text-align: center;*/
-    /*overflow: scroll;*/
-/*}*/
+div.main-container-event>div.event-host>h6{
+    margin: auto;
+}
 
-/*.joinButton {*/
-    /*margin-top: 5px;*/
-    /*font-size: 24px;*/
-    /*color: black;*/
-    /*text-align: center;*/
-    /*display: flex;*/
-        /*align-items: center;*/
-        /*justify-content: center;*/
-/*}*/
+div.main-container-event>div.event-host>h6>ul{
+    margin: 0;
+}
 
-/*.center > .main-container-event > .joinButton {*/
-      /*align-items: center;*/
-      /*justify-content: center;*/
-      /*vertical-align: middle;*/
-      /*display: flex;*/
-/*}*/
+div.main-container-event {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+} 
 
+div.main-container-event>div.event-host>h6>a:hover{
+    color: #2bbbad;
+}
 
-/*.main-container-event > .game-picture {*/
-    /*padding: 15px;*/
-    /*background-color: #0F4434;*/
-    /*box-shadow: 0px 0px 10px 10px #8AE8CB inset;*/
-    /*display: inline-block;*/
-    /*width: 100%;*/
-    /*height: 16vh;*/
-/*}*/
-
-/*.main-container-event > div{*/
-    /*background-color: #0F4434;*/
-    /*box-shadow: 0px 0px 10px 10px #8AE8CB inset;*/
-    /*height: 10%;*/
-    /*width: 100%;*/
-    /*display: inline-block;*/
-    /*border: black 1px solid;*/
-    /*margin: 10px 0;*/
-    /*padding: 11px;*/
-    /*color: white;*/
-
-/*}*/
-
-/*.main-container-event > .address {*/
-    /*height: 27%;*/
-    /*color: white;*/
-    /*padding:0;*/
-/*}*/
-
-/*.event-list-button {*/
-    /*height: 15vh;*/
-    /*width: 100%;*/
-/*}*/
-
-
-/*h1 {*/
-    /*font-size: 3.5rem;*/
-/*}*/
-
-
-
-/*.game-picture > img{*/
-    /*box-shadow: 0px 0px 10px 10px #8AE8CB inset;*/
-    /*border: 2px solid black ;*/
-    /*display: inline-block;*/
-    /*width: 40%;*/
-    /*height: 100%;*/
-/*}*/
-
-/*.main-container-event{*/
-    /*background-color: black;*/
-    /*overflow: scroll;*/
-    /*height: 91vh;*/
-/*}*/
-
-/*.full{*/
-    /*padding: 12px;*/
-    /*box-shadow: 0px 0px 10px 10px red inset;*/
-/*}*/
-/*.joinButton{*/
-    /*background-color: #0F4434;*/
-/*}*/
-
-/*.main-container-event > .date {*/
-    /*padding: 0px;*/
-
-/*}*/
-
-
+@media only screen and (min-width: 1020px){
+    div.event-details {
+        height: 100px;
+    }
+    div.main-container-event>div.event-host>h3{
+        font-size: 60px;
+    }
+    
+    div.main-container-event>div.event-host>h6{
+        font-size: 40px;
+    }
+    div.main-container-event {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+}
