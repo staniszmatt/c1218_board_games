@@ -76,6 +76,9 @@ class EventSelected extends Component {
             }
             return (
                 <div className="center">
+                    <div className="event-details">
+                        <h1>Event Details</h1>
+                    </div>
                     <div className="main-container-event">
                         <div className="btn event-host">Game: {eventId.gameTitle}</div>
                         <div className="btn event-host">Host Name: {eventId.playerName}</div>
