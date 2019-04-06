@@ -56,7 +56,7 @@ class MyEvents extends Component {
                         NO AVAILABLE EVENTS
                 </div>
                     <div>
-                        <Link to="/events" className="btn nav-link green available-events-btn">View Available Events</Link>
+                        <Link to="/events" className="btn nav-link available-events-btn">View Available Events</Link>
                     </div>
                 </div>
             );
