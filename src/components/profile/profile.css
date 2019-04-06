@@ -3,17 +3,17 @@
 }
 
 h2{
-    background-color: beige;
+    background-color: #282C37;
     /*font-family: 'Permanent Marker', cursive;*/
     padding: 18px;
     height: 15vh;
-    color: forestgreen;
+    color: WHITE;
     font-size: 5em;
     margin: 0;
 }
 
 .profile-button-container{
-    background-color: beige;
+    background-color: #D9E1E8;
     font-size: 14px;
     font-weight: bold;
     padding: 1px;
@@ -21,7 +21,7 @@ h2{
  }
 
 .user-info {
-    background-color: beige;
+    background-color: #D9E1E8;
     margin: 0;
     padding: 12px;
     color: black;
@@ -34,7 +34,7 @@ h2{
 }
 .create-event-btn, .available-events-btn, .my-hosted-events-btn, .my-joined-events-btn{
     /*background-image: linear-gradient(green, white);*/
-    background-color: forestgreen;
+    background-color: #2B90D9;
     /*font-family: 'Permanent Marker', cursive;*/
     font-size: 1em;
     margin-top: 45px;
@@ -43,9 +43,14 @@ h2{
     width: 100%;
     text-align: center;
     line-height: 0px;
-    color: black;
+    color: white;
     box-shadow: 3px 7px #0F4434;
     font-weight: bold;
+}
+
+.profile > div {
+    border-bottom: 1px solid black;
+    
 }
 
 @media only screen and (min-width: 1020px){
