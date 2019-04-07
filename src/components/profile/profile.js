@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './profile.css';
 import axios from 'axios';
-import ProfilePic from '../../assets/images/profile-pic.jpg';
 
 class Profile extends Component {
     state = {
@@ -53,19 +52,19 @@ render(){
                 <div className="profile-button-container center">
                     <div className="buttons">
                         <div>
-                            <Link to="/new-event" className="btn nav-link green create-event-btn">Create Event</Link>
+                            <Link to="/new-event" className="btn nav-link create-event-btn">Create Event</Link>
                         </div>
 
                         <div>
-                            <Link to="/events" className="btn nav-link green available-events-btn">View Available Events</Link>
+                            <Link to="/events" className="btn nav-link available-events-btn">View Available Events</Link>
                         </div>
 
                         <div>
-                            <Link to="/events/host" className="btn nav-link green my-hosted-events-btn">My Hosted Events</Link>
+                            <Link to="/events/host" className="btn nav-link my-hosted-events-btn">My Hosted Events</Link>
                         </div>
 
                         <div>
-                            <Link to="/events/myevents" className="btn nav-link green my-joined-events-btn">My Joined Events</Link>
+                            <Link to="/events/myevents" className="btn nav-link my-joined-events-btn">My Joined Events</Link>
                         </div>
                     </div>
                 </div>
