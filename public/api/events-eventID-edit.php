@@ -55,7 +55,7 @@ if (!isset($_SESSION['userID'])) {
   //Get location id from event to update address
   $query = "SELECT location FROM event WHERE event.id = '{$data['eventID']}' AND event.hostID = '{$_SESSION['userID']}' ";
   $result = $db->query($query);
-  print_r($result);
+
   if (!$result) {
     $output['success'] = false;
     $output['error'] = "Location not found or wrong user for event!";
