@@ -17,7 +17,6 @@ if (!isset($_SESSION['userID'])) {
     "success" => false,
     "output" => []
   ];
-
   // Error Handling
   if (!is_numeric($data['eventID'])) {
     throw new Exception("Event ID must be a number.");
@@ -27,8 +26,6 @@ if (!isset($_SESSION['userID'])) {
     $data[$key] = addslashes($value);
   }
   //Update event information 
-  print_r("userID  ".$_SESSION['userID']."<br>");
-  print_r("eventID ".$data['eventID']."<br>");
   $query = "DELETE FROM playerList 
               WHERE userID='{$_SESSION['userID']}' AND eventID='{$data['eventID']}'";
   $result = $db->query($query);
@@ -40,8 +37,6 @@ if (!isset($_SESSION['userID'])) {
   $output['updated'][] = $result;
   }
 }
-
 $json_output = json_encode($output);
 print($json_output);
-
 ?>
