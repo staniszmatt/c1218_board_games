@@ -50,16 +50,23 @@ class EventSelected extends Component {
             if (numberOfPlayers >= parseInt(eventId.playerLimit)) {
                 return (
                     <div className="center">
+                        <div className="event-details center">
+                            <h1>Event Details</h1>
+                        </div>
                         <div className="main-container-event">
-                            <div className="btn event-host">Game: {eventId.gameTitle}</div>
+                            <div className="event-host">
+                                <h3>
+                                    Game: {eventId.gameTitle}
+                                </h3>
+                            </div>
                             <div className="btn event-host">Host Name: {eventId.playerName}</div>
-                            <div className="date">
+                            <div className="date event-host">
                                 <ul>
                                     <li>Date: {eventId.date}</li>
                                     <li>Start: {eventId.startTime}</li>
                                 </ul>
                             </div>
-                            <div className="btn address">
+                            <div className="address event-host">
                                 <ul>
                                     <li>Address: {eventId.location.streetAddress}</li>
                                     <li>City: {eventId.location.city}</li>
@@ -67,7 +74,7 @@ class EventSelected extends Component {
                                     <li>Zip: {eventId.location.zipcode}</li>
                                 </ul>
                             </div>
-                            <div className=" numberOfPlayers">
+                            <div className="numberOfPlayers event-host">
                                 <div className="full"> Game Is Full!</div>
                             </div>
                         </div>

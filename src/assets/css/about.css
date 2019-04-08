@@ -1,6 +1,7 @@
 h1{
     color: white;
     margin: 0 0 5% 0;
+    background-color: #0F4434;
 }
 
 .about-author-container {
@@ -11,7 +12,6 @@ h1{
 .about-image > img{
     border-radius: 50%;
     width: 50%;
-    box-shadow: 3px 7px white;
 }
 
 .about-name{
@@ -20,8 +20,15 @@ h1{
 }
 
 .main-div > .about-main-container {
-    background-image: linear-gradient(black, forestgreen);
+    background-color: #D9E1E8;
     margin-bottom: 21%;
+    color: black;
+}
+
+.about-name{
+    color: black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .about-url {

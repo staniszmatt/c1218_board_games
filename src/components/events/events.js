@@ -54,7 +54,7 @@ class Events extends Component {
                 <div className="header-events-container">
                     <h1>Available Events</h1>
                 </div>
-                <div className="row main-events-container">
+                <div className="main-events-container">
                     {eventRow}
                 </div>
             </div>

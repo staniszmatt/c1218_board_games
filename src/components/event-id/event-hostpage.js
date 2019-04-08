@@ -44,22 +44,26 @@ class EventHostPage extends Component {
         if (numberOfPlayers >= parseInt(hostEventId.playerLimit)) {
             return (
                 <div className="center">
-                    <div className="main-container-event">
-                        {/* <div className="btn game-picture center">
-                            <img src={BoardGamePic}></img>
-                        </div> */}
-                        <div className="btn event-host grey ">Game: {hostEventId.gameTitle}</div>
-                        <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerName}</div>
+                    <div className="event-details center">
+                        <h1>Host Event Details</h1>
+                    </div>
+                    <div className="main-container-event center">
+                        <div className="event-host">
+                            <h3>
+                                Game: {hostEventId.gameTitle}
+                            </h3>
+                        </div>
+                        <div className="event-host center">Host Name: {hostEventId.playerName}</div>
 
 
-                        <div className="date grey">
+                        <div className="date event-host center">
                             <ul>
                                 <li>Date: {hostEventId.date}</li>
                                 <li>Start: {hostEventId.startTime}</li>
                             </ul>
                         </div>
 
-                        <div className="btn address grey darken-1">
+                        <div className="address event-host">
                             <ul>
                                 <li>Address: {hostEventId.location.streetAddress}</li>
                                 <li>City: {hostEventId.location.city}</li>
@@ -82,19 +86,26 @@ class EventHostPage extends Component {
         }
         return (
             <div className="center">
+                <div className="event-details center">
+                    <h1>Host Event Details</h1>
+                </div>
                 <div className="main-container-event">
-                    <div className="btn event-host grey ">Game: {hostEventId.gameTitle}</div>
-                    <div className="btn event-host grey darken-1">Host Name: {hostEventId.playerName}</div>
+                    <div className="event-host">
+                        <h3>
+                            Game: {hostEventId.gameTitle}
+                        </h3>
+                    </div>
+                    <div className="event-host event-border center">Host Name: {hostEventId.playerName}</div>
 
 
-                    <div className="date grey">
+                    <div className="date event-host center">
                         <ul>
                             <li>Date: {hostEventId.date}</li>
                             <li>Start: {hostEventId.startTime}</li>
                         </ul>
                     </div>
 
-                    <div className="btn address grey darken-1">
+                    <div className="event-border address">
                         <ul>
                             <li>Address: {hostEventId.location.streetAddress}</li>
                             <li>City: {hostEventId.location.city}</li>
@@ -107,7 +118,7 @@ class EventHostPage extends Component {
                             {numberOfPlayers} Players out of {hostEventId.playerLimit} have joined
                     </Link>
                     </div>
-                    <div className="center joinButton green lighten-4">
+                    <div className="center joinButton event-border">
                         <Link to={'/events/' + hostEventId.eventID + '/edit'} className="nav-link">Edit Game</Link>
                     </div>
                 </div>

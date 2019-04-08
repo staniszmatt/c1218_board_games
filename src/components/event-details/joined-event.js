@@ -46,23 +46,18 @@ class JoinedEventDetails extends Component {
         const numberOfPlayers = eventId.playerCount;
         if (numberOfPlayers >= parseInt(eventId.playerLimit)) {
             return (
-                <div className="center">
-                    <div className="main-container">
-                        {/* <div className="btn game-picture center">
-                            <img src={eventId.gameImages}></img>
-                        </div> */}
-                        <div className="btn event-host">Game: {eventId.gameTitle}</div>
-                        <div className="btn event-host">Host Name: {eventId.playerName}</div>
-
-
-                        <div className="date grey">
+                <div className="playerlist-container">
+                    <div className="page-header player-list-title center">
+                        <div className="event-host header-container">Game: {eventId.gameTitle}</div>
+                        <div className="event-border event-host player-list-address">Host Name: {eventId.playerName}</div>
+                        <div className="event-border center player-list-address">
                             <ul>
                                 <li>Date: {eventId.date}</li>
                                 <li>Start: {eventId.startTime}</li>
                             </ul>
                         </div>
 
-                        <div className="btn address">
+                        <div className="event-border center player-list-address">
                             <ul>
                                 <li>Address: {eventId.location.streetAddress}</li>
                                 <li>City: {eventId.location.city}</li>
@@ -71,33 +66,30 @@ class JoinedEventDetails extends Component {
                             </ul>
                         </div>
 
-                        <div className="numberOfPlayers">
+                        <div className="event-border center player-list-limit">
                             <div> Event is Full</div>
                         </div>
 
-                        <div className="center joinButton green lighten-4">
-                            <button className="btn" onClick={this.sendUserData}>Leave Game</button>
+                        <div className="center back">
+                            <button className="btn center back-to-game" onClick={this.sendUserData}>Leave Game</button>
 
                         </div>
                     </div>
                 </div>
             );
         } return (
-            <div className="center">
-                <div className="main-container-event">
-                    {/* <div className="btn game-picture center">
-                        <img src={eventId.gameImages}></img>
-                    </div> */}
-                    <div className="btn event-host">Game: {eventId.gameTitle}</div>
-                    <div className="btn event-host">Host Name: {eventId.playerName}</div>
-                    <div className="date">
+            <div className="playerlist-container">
+                <div className="page-header player-list-title center">
+                    <div className="event-host header-container">Game: {eventId.gameTitle}</div>
+                    <div className="event-border event-host player-list-address">Host Name: {eventId.playerName}</div>
+                    <div className="event-border center player-list-address">
                         <ul>
                             <li>Date: {eventId.date}</li>
                             <li>Start: {eventId.startTime}</li>
                         </ul>
                     </div>
 
-                    <div className="btn address">
+                    <div className="event-border center player-list-address">
                         <ul>
                             <li>Address: {eventId.location.streetAddress}</li>
                             <li>City: {eventId.location.city}</li>
@@ -106,12 +98,12 @@ class JoinedEventDetails extends Component {
                         </ul>
                     </div>
 
-                    <div className="numberOfPlayers">
+                    <div className="event-border center player-list-limit">
                         <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
                     </div>
 
-                    <div className="btn join-game-button">
-                        <Link className="btn" to={"/events"}>Leave Game</Link>
+                    <div className="center back">
+                        <Link className="btn center back-to-game" to={"/events"}>Leave Game</Link>
                     </div>
                 </div>
             </div>

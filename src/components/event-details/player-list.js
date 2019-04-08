@@ -5,7 +5,7 @@ import './player-list.css';
 
 
 class PlayerList extends Component {
-    
+
 
     state = {
         eventId: null
@@ -30,7 +30,7 @@ class PlayerList extends Component {
 
     render() {
         const { data } = this.state;
- 
+
         if (data === undefined) {
             return (<div className="loading-screen-container">
                 <div className='center loading-screen-text'>Page Is Loading...</div>
@@ -48,7 +48,7 @@ class PlayerList extends Component {
             </div>
             );
         } else {
-            if (data.hosting){
+            if (data.hosting) {
                 var backPage = `/events/${data.eventID}/host`;
             } else {
                 var backPage = `/events/${data.eventID}`;

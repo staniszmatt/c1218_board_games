@@ -24,7 +24,7 @@ const CreateEventForm = props => {
             </div>
 
             <div className="col s6 center">
-                <button className="btn green darken">Create Event</button>
+                <button className="btn green darken sign-in">Create Event</button>
             </div>
 
         </form>

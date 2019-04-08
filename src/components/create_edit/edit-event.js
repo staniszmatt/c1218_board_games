@@ -102,7 +102,7 @@ class EditEvent extends Component {
             <input onChange={this.handleKeyPress} name="playerLimit" type="number" id="playerLimit" value={playerLimit} className="form-control" />
           </div>
           <div>
-            <button className="btn text-center nav-link">SUBMIT CHANGES</button>
+            <button className="btn text-center nav-link sign-in">SUBMIT CHANGES</button>
           </div>
         </form>
       </div>
