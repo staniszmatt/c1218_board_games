@@ -10,7 +10,7 @@
 body {
     margin: 0;
     background-color: #D9E1E8;
-
+    overflow: hidden;
 }
 
 .main-div{
@@ -25,6 +25,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100%;
+    overflow-y: scroll;
 }
 
 /*.btn{*/

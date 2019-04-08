@@ -13,7 +13,7 @@
 .main-container-event.center.main-div {
     height: 100vh;
     text-align: center;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .center>.main-container-event>.joinButton {
