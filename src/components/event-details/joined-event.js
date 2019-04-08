@@ -13,13 +13,18 @@ class JoinedEventDetails extends Component {
 
     async componentDidMount() {
         const ID = this.props.match.params.id;
-
         const resp = await axios.get(`/api/events-eventID.php?eventID=${ID}`);
         this.setState({
             eventId: resp.data.event
         });
     }
 
+    sendUserData = async () => {
+        // console.log("Made it to send user data", this.state);
+        const resp = await axios.post('/api/events-eventID-myEvents-leaveGame.php', this.state.eventId);
+        // console.log("resp ", resp);
+        this.props.history.push("/events/myevents");
+    }
 
     render() {
         const { eventId } = this.state;
@@ -103,7 +108,7 @@ class JoinedEventDetails extends Component {
                     </div>
 
                     <div className="center back">
-                        <Link className="btn center back-to-game" to={"/events"}>Leave Game</Link>
+                        <Link className="btn center back-to-game" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
                     </div>
                 </div>
             </div>
