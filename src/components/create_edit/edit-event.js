@@ -28,7 +28,7 @@ class EditEvent extends Component {
   async getEditEventData() {
     const eventID = this.props.match.params.id;
     const resp = await axios.get('/api/events-eventID-host.php?eventID=' + eventID + "");
-
+console.log(resp);
     this.setState({
       ...resp.data.event
     });
@@ -59,11 +59,15 @@ class EditEvent extends Component {
   }
 
   render() {
-    const { gameTitle, date, city, state, streetAddress, zipcode, startTime, endTime, playerLimit } = this.state;
+    const { gameTitle, date,  startTime, endTime, playerLimit } = this.state;
+    const { city, state, streetAddress, zipcode } = this.state.location;
+    console.log(streetAddress)
 
     return (
-      <div className="center create-form">
-        <h1 className="center">EDIT EVENT</h1>
+      <div className="center edit-form">
+        <div className="header-events-container col s12 ">
+          <h1 className="center create-event-name">Edit Event</h1>
+        </div>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="gameTitle">Game Title</label>

@@ -38,7 +38,7 @@ render(){
             
             <div className="center profile">
                 <div>
-                    <h2> Profile </h2>
+                    <h1> Profile </h1>
                 </div>
                 {/*<div className="center user-image">*/}
                     {/*<div className="center profile-image">*/}

@@ -122,7 +122,7 @@ class EventSelected extends Component {
                                 </Link>
                             </h6>
                         </div>
-                            <Link className="btn join-game-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID+'/player-list'}>Join Game</Link>
+                            <Link className="btn red join-game-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID+'/player-list'}>Join Game</Link>
                     </div>
                 </div>
             );

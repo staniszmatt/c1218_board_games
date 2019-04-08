@@ -56,9 +56,9 @@ class PlayerList extends Component {
             return (
                 <div className="generic-container playerlist-container">
                     <div className="page-header player-list-title center">
-                        <h3 className="center">
+                        <h1 className="center">
                             {data.gameTitle}
-                        </h3>
+                        </h1>
                     </div>
                     <div className="center player-list-date">Date and Time
                         <div>

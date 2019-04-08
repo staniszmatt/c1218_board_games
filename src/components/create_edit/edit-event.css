@@ -2,3 +2,13 @@ input{
     text-align: center;
 }
 
+.edit-form {
+    background-color: #D9E1E8;
+    color: black;
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+.form-group>input {
+    color: black;
+}
