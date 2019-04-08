@@ -1,6 +1,6 @@
 div.event-details {
-    height: 60px;
-    background-color: black;
+    height: 10%;
+    background-color: #0F4434;
     position: fixed;
     display: flex;
     top: 0; 
@@ -13,10 +13,10 @@ div.event-details > h1 {
 }
 
 div.main-container-event>div.event-host {
-    padding: 5px;
-    margin: 5px;
+    /* padding: 5px;
+    margin: 5px; */
     display: flex; 
-    height: fit-content;
+    /* height: fit-content; */
 }
 
 div.main-container-event>div.event-host>h3{
@@ -33,11 +33,11 @@ div.main-container-event>div.event-host>h6>ul{
 
 div.main-container-event {
     margin-top: 60px;
-    margin-bottom: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
+    /* margin-bottom: 60px; */
+    /* padding-left: 30px;
+    padding-right: 30px; */
     padding-top: 0px;
-    padding-bottom: 0px;
+    /* padding-bottom: 0px; */
 } 
 
 div.main-container-event>div.event-host>h6>a:hover{

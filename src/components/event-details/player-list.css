@@ -1,58 +1,62 @@
- .generic-container > .player-list-title{
-      background-image: linear-gradient(beige, forestgreen);
-      height: 15vh;
-      font-family: 'Permanent Marker', cursive;
-      color: black;
-      padding: 1px;
-  }
+ .generic-container>.player-list-title {
+     background-color: #0F4434;
+     height: 15vh;
+     font-family: 'Permanent Marker', cursive;
+     color: white;
+     padding: 1px;
+ }
 
- .generic-container > .player-list-date{
-     background-image: linear-gradient(beige, white);
+ .generic-container>.player-list-date {
+     background-color: #D9E1E8;
+     border: 1px solid black;
      font-size: 1.5em;
      color: black;
      padding: 15px;
  }
 
- .generic-container > .player-list-address{
-     background-image: linear-gradient(beige, white);
+ .generic-container>.player-list-address {
+     background-color: #D9E1E8;
+     border: 1px solid black;
      font-size: 1.5em;
      color: black;
      padding: 30px;
  }
 
- .generic-container > .player-list-limit{
-     background-image: linear-gradient(beige, white);
+ .generic-container>.player-list-limit {
+     background-color: #D9E1E8;
+     border: 1px solid black;
      font-size: 1.5em;
      color: black;
      padding: 20px;
  }
 
 
-.player-list > h5 {
-    background-image: linear-gradient(beige, forestgreen);
-    font-weight: bold;
-     color: black;
+ .player-list>h5 {
+     background-color: #0F4434;
+     font-weight: bold;
+     color: white;
      padding: 25px;
-    margin: 0px;
+     margin: 0px;
  }
 
- table > tbody > tr{
-     background-image: linear-gradient(beige, white);
+ table>tbody>tr {
+     background-color: #D9E1E8;
+     border: 1px solid black;
      font-size: 1.5em;
      color: black;
      padding: 25px;
  }
 
- .playerlist-container{
+ .playerlist-container {
      overflow: scroll;
      height: 88vh;
  }
 
-.back{
+ .back {
      background-image: linear-gradient(beige, white);
  }
 
-.back-to-game{
-    background-color: forestgreen;
-    width: 100%;
-}
+ .back-to-game {
+     background-color: forestgreen;
+     width: 100%;
+ }

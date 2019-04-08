@@ -1,37 +1,41 @@
-.header-container{
-    height: 20vh;
+.header-container {
+    height: 10vh;
     text-align: center;
+    background-color: #0F4434;
+    font-size: 1.5em;
+    color: white;
 }
 
+.event-border {
+    border: 1px black solid;
+}
 
-.main-container-event.center.main-div{
+.main-container-event.center.main-div {
     height: 100vh;
     text-align: center;
     overflow: scroll;
 }
 
-.center > .main-container-event > .joinButton {
+.center>.main-container-event>.joinButton {
     align-items: center;
     justify-content: center;
     vertical-align: middle;
     display: flex;
 }
 
-.main-container-event > div{
+.main-container-event>div {
     height: 10%;
     width: 100%;
     display: inline-block;
     border: black 1px solid;
-    margin: 10px 0;
-    padding: 11px;
     color: black;
 
 }
 
-.main-container-event > .address {
+.main-container-event>.address {
     color: black;
     height: auto;
-    padding:0;
+    padding: 0;
 }
 
 .event-list-button {
@@ -45,24 +49,24 @@ h1 {
     margin: auto;
 }
 
-.game-picture > img{
-    border: 2px solid black ;
+.game-picture>img {
+    border: 2px solid black;
     display: inline-block;
     width: 40%;
     height: 100%;
 }
 
-.main-container-event{
+.main-container-event {
     overflow: scroll;
-    height: 91vh;
+    height: 80vh;
 }
 
-.full{
+.full {
     padding: 12px;
     box-shadow: 0px 0px 10px 10px red inset;
 }
 
-.main-container-event > .date {
+.main-container-event>.date {
     padding: 0px;
 }
 
@@ -75,16 +79,18 @@ a.join-game-button {
 a.join-game-button:active {
     box-shadow: 0 5px #666;
     transform: translateY(3px);
-  }
+}
 
 @media only screen and (min-width: 1020px) {
     h1 {
         font-size: 85px;
     }
+
     a.join-game-button {
         height: 75px;
         margin: 10px;
     }
+
     div.main-container-event {
         margin-top: 100px;
         margin-bottom: 100px;
@@ -92,11 +98,12 @@ a.join-game-button:active {
     }
 }
 
-@media only screen and (min-width: 1400px){
+@media only screen and (min-width: 1400px) {
     div.main-container-event {
         margin-top: 160px;
         margin-bottom: 0;
     }
+
     a.join-game-button {
         height: 50px;
         margin: 10px;
