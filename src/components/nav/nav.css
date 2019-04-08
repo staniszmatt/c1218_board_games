@@ -44,7 +44,7 @@ label{
   margin: auto;
 }
 
-.sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn {
+.sign-out-btn, .about-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn {
   background-color: #2B90D9;
   color: white;
   text-align: center;

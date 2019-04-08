@@ -1,5 +1,5 @@
 h1{
-    color: white;
+    color: black;
     margin: 0 0 5% 0;
 }
 
@@ -11,21 +11,22 @@ h1{
 .about-image > img{
     border-radius: 50%;
     width: 50%;
-    box-shadow: 3px 7px white;
+    box-shadow: 3px 7px #2B90D9;
+;
 }
 
 .about-name{
-    color: white;
+    color: black;
     font-size: 1.5em;
 }
 
 .main-div > .about-main-container {
-    background-image: linear-gradient(black, forestgreen);
+    background: #D9E1E8;
     margin-bottom: 21%;
 }
 
-.about-url {
+.about-url > a {
     font-size: 1.5em;
-    /*margin-bottom: 10%;*/
+    color: black;
 }
 

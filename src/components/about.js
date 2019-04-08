@@ -8,6 +8,10 @@ export default props => (
     <div className="about-main-container">
         <div className="about-header center col s12">
             <h1>ABOUT US</h1>
+            <p> Board Gamers is an application intended for people who love board games
+                and are interested in meeting other
+                people who share the same passion about board games.
+            </p>
         </div>
 
         <div className="about-author-container">
