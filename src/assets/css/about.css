@@ -11,8 +11,14 @@ h1{
 .about-image > img{
     border-radius: 50%;
     width: 50%;
-    box-shadow: 3px 7px #2B90D9;
-;
+}
+
+.about-image > img{
+    transition: transform .2s;
+}
+
+.about-image > img:hover {
+    transform: scale(1.5);
 }
 
 .about-name{
@@ -25,8 +31,7 @@ h1{
     margin-bottom: 21%;
 }
 
-.about-url > a {
+.about-url {
     font-size: 1.5em;
-    color: black;
 }
 

@@ -17,9 +17,7 @@ const SignInForm = props => {
                 <Field name="password" component={Input} label="Enter your password" type="password"/>
             </div>
            <div className="sign-btn-container">
-               <div className="col s12 center">
-                   <button className="btn green lighten-1 sign-in">Sign In</button>
-               </div>
+               <button className="btn green lighten-1 sign-in">Sign In</button>
            </div>
         </form>
     );

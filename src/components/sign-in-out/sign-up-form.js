@@ -46,9 +46,7 @@ const CreateSignUpForm = props => {
             <div className="form-row">
                 <Field name="confirmPassword" component={Input} label="Confirm your password" type="password" />
             </div>
-            <div className="col s6 center">
-                <button className="btn green darken">Sign Up</button>
-            </div>
+                <button className="btn green darken sign-up">Sign Up</button>
         </form>
     );
 }
