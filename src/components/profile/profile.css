@@ -1,12 +1,27 @@
-.profile {
+.profile-name-container{
+    border-bottom: 1px solid black;
+}
+
+.profile-button-container>div {
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+
+}
+
+.profile-button-container>div>a {
+    width: 100%;
+      background-color: #2B90D9;
+
+}
+/* .profile {
     height: 80vh;
 }
 
 h2{
     background-color: #282C37;
-    /*font-family: 'Permanent Marker', cursive;*/
+    font-family: 'Permanent Marker', cursive;
     padding: 18px;
-    /* height: 10vh; */
+    height: 10vh;
     color: WHITE;
     font-size: 5em;
     margin: 0;
@@ -33,9 +48,9 @@ h2{
     height: 55vh;
 }
 .create-event-btn, .available-events-btn, .my-hosted-events-btn, .my-joined-events-btn{
-    /*background-image: linear-gradient(green, white);*/
+    background-image: linear-gradient(green, white);
     background-color: #2B90D9;
-    /*font-family: 'Permanent Marker', cursive;*/
+    font-family: 'Permanent Marker', cursive;
     font-size: 1em;
     margin-top: 45px;
     border-radius: 2px;
@@ -60,4 +75,4 @@ h2{
         align-self: center;
         font-size: 40px;
     }
-}
+} */

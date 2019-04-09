@@ -24,7 +24,7 @@ class EventSelected extends Component {
 
         this.props.history.push("/events/" + this.props.match.params.id + "/player-list")
     }
-    
+
     render() {
         const { eventId } = this.state;
 
@@ -49,80 +49,94 @@ class EventSelected extends Component {
             const numberOfPlayers = eventId.playerCount;
             if (numberOfPlayers >= parseInt(eventId.playerLimit)) {
                 return (
-                    <div className="center">
-                        <div className="event-details center">
+                    <div className="main-container">
+                        <div className="header-container">
                             <h1>Event Details</h1>
                         </div>
-                        <div className="main-container-event">
-                            <div className="event-host">
-                                <h3>
+                        <div className="content-container">
+                            <div className="event-game-container">
+                                <h4>
                                     Game: {eventId.gameTitle}
-                                </h3>
+                                </h4>
                             </div>
-                            <div className="btn event-host">Host Name: {eventId.playerName}</div>
-                            <div className="date event-host">
-                                <ul>
-                                    <li>Date: {eventId.date}</li>
-                                    <li>Start: {eventId.startTime}</li>
-                                </ul>
+                            <div className="event-host-container">
+                                <h5>
+                                    Host Name: {eventId.playerName}
+                                </h5>
                             </div>
-                            <div className="address event-host">
-                                <ul>
-                                    <li>Address: {eventId.location.streetAddress}</li>
-                                    <li>City: {eventId.location.city}</li>
-                                    <li>State: {eventId.location.state}</li>
-                                    <li>Zip: {eventId.location.zipcode}</li>
-                                </ul>
+                            <div className="date event-date-address-container row">
+                                <div className="event-date-time-container col s6">
+                                    <h6>
+                                        <ul>
+                                            <li>Date: {eventId.date}</li>
+                                            <li>Start: {eventId.startTime}</li>
+                                        </ul>
+                                    </h6>
+                                </div>
+                                <div className="event-address-container col s6">
+                                    <h6>
+                                        <ul>
+                                            <li>Address: {eventId.location.streetAddress}</li>
+                                            <li>City: {eventId.location.city}</li>
+                                            <li>State: {eventId.location.state}</li>
+                                            <li>Zip: {eventId.location.zipcode}</li>
+                                        </ul>
+                                    </h6>
+                                </div>
                             </div>
                             <div className="numberOfPlayers event-host">
-                                <div className="full"> Game Is Full!</div>
+                                <div className="full-game-container red"> 
+                                    <h4>Game Is Full!</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
                 );
             }
             return (
-                <div className="center">
-                    <div className="event-details">
+                <div className="main-container">
+                    <div className="header-container">
                         <h1>Event Details</h1>
                     </div>
-                    <div className="main-container-event">
-                        <div className="event-host">
-                            <h3>
+                    <div className="content-container">
+                        <div className="event-game-container">
+                            <h4>
                                 Game: {eventId.gameTitle}
-                            </h3>
+                            </h4>
                         </div>
-                        <div className="event-host">
-                            <h6>
+                        <div className="event-host-container">
+                            <h5>
                                 Host Name: {eventId.playerName}
-                            </h6>
+                            </h5>
                         </div>
-                        <div className="date event-host">
-                            <h6>
-                                <ul>
-                                    <li>Date: {eventId.date}</li>
-                                    <li>Start: {eventId.startTime}</li>
-                                </ul>
-                            </h6>
+                        <div className="date event-date-address-container row">
+                            <div className="event-date-time-container col s6">
+                                <h6>
+                                    <ul>
+                                        <li>Date: {eventId.date}</li>
+                                        <li>Start: {eventId.startTime}</li>
+                                    </ul>
+                                </h6></div>
+                            <div className="event-address-container col s6">
+                                <h6>
+                                    <ul>
+                                        <li>Address: {eventId.location.streetAddress}</li>
+                                        <li>City: {eventId.location.city}</li>
+                                        <li>State: {eventId.location.state}</li>
+                                        <li>Zip: {eventId.location.zipcode}</li>
+                                    </ul>
+                                </h6>
+                            </div>
                         </div>
-                        <div className="address event-host">
-                            <h6>
-                                <ul>
-                                    <li>Address: {eventId.location.streetAddress}</li>
-                                    <li>City: {eventId.location.city}</li>
-                                    <li>State: {eventId.location.state}</li>
-                                    <li>Zip: {eventId.location.zipcode}</li>
-                                </ul>
-                            </h6>
-                        </div>
-                        <div className="numberOfPlayers event-host">
+
+                        <div className="event-players-joined-container">
                             <h6>
                                 <Link to={'/events/' + eventId.eventID + '/player-list'}>
                                     <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
                                 </Link>
                             </h6>
                         </div>
-                            <Link className="btn red join-game-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID+'/player-list'}>Join Game</Link>
+                        <Link className="btn blue a event-bottom-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID + '/player-list'}>Join Game</Link>
                     </div>
                 </div>
             );

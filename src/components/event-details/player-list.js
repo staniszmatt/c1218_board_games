@@ -32,7 +32,8 @@ class PlayerList extends Component {
         const { data } = this.state;
 
         if (data === undefined) {
-            return (<div className="loading-screen-container">
+            return (
+            <div className="loading-screen-container">
                 <div className='center loading-screen-text'>Page Is Loading...</div>
                 <div className="loading-screen-container preloader-wrapper big active test">
                     <div className="spinner-layer spinner-blue-only">
@@ -54,29 +55,41 @@ class PlayerList extends Component {
                 var backPage = `/events/${data.eventID}`;
             }
             return (
-                <div className="generic-container playerlist-container">
-                    <div className="page-header player-list-title center">
-                        <h1 className="center">
+                <div className="main-container">
+                    <div className="header-container">
+                        <h1>
                             {data.gameTitle}
                         </h1>
                     </div>
-                    <div className="center player-list-date">Date and Time
-                        <div>
-                            {Date(data.date)} from {data.startTime} to {data.endTime}
+                    <div className="row playerlist-date-address-container">
+                        <div className="event-date-time-container col s6">
+                            <h4>Time</h4>
+                            <h6>
+                                <ul>
+                                    <li> {Date(data.date)}</li>
+                                    <li>{data.startTime}</li>
+                                    <li> {data.endTime}</li>
+                                </ul>
+                            </h6>
                         </div>
-                    </div>
-                    <div className="center player-list-address">Location
-                        <div>
-                            {data.location.streetAddress},<br />
-                            {data.location.city},<br />
-                            {data.location.state},<br />
-                            {data.location.zipCode}
+                        <div className="event-address-container col s6">
+                            <h4>Location</h4>
+                            <h6>
+                                <ul>
+                                    <li>{data.location.streetAddress}</li>
+                                    <li> {data.location.city}</li>
+                                    <li> {data.location.state}</li>
+                                    <li> {data.location.zipCode}</li>
+                                </ul>
+                            </h6>
                         </div>
+
                     </div>
+
                     <div className="center player-list-limit">
-                        <div> Player Limit:
+                        <h5> Player Limit:
                             {data.playerLimit}
-                        </div>
+                        </h5>
                     </div>
                     <div className="player-list">
                         <h5 className="center"> Players </h5>
@@ -91,10 +104,7 @@ class PlayerList extends Component {
                                     </tr>))}
                             </tbody>
                         </table>
-                        <div className="center back">
-                            <Link to={backPage} className="btn center back-to-game">Back To Game</Link>
-                        </div>
-
+                        <Link to={backPage} className="btn blue a event-bottom-button">Back To Game</Link>
                     </div>
                 </div>
             );

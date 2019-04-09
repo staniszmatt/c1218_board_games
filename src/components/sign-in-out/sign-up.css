@@ -1,9 +1,13 @@
-.create-sign-up-container{
+.sign-up-button{
+    WIDTH: 100%;
+}
+
+/* .create-sign-up-container{
     background-color: #D9E1E8;
-    /* box-shadow: 0px 0px 10px 10px black inset; */
+    box-shadow: 0px 0px 10px 10px black inset;
     opacity: .9;
     color: white;
-    /* border: 5px solid #8AE8CB; */
+    border: 5px solid #8AE8CB;
     overflow: scroll;
 }
 
@@ -27,4 +31,4 @@
 
 .sign-up {
     width: 100%;
-}
+} */

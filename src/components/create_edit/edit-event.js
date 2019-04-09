@@ -64,10 +64,11 @@ console.log(resp);
     console.log(streetAddress)
 
     return (
-      <div className="center edit-form">
-        <div className="header-events-container col s12 ">
-          <h1 className="center create-event-name">Edit Event</h1>
+      <div className="main-container">
+        <div className="header-container">
+          <h1> EDIT EVENT</h1>
         </div>
+        <div className="content-container ">
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="gameTitle">Game Title</label>
@@ -106,9 +107,10 @@ console.log(resp);
             <input onChange={this.handleKeyPress} name="playerLimit" type="number" id="playerLimit" value={playerLimit} className="form-control" />
           </div>
           <div>
-            <button className="btn text-center nav-link sign-in">SUBMIT CHANGES</button>
+            <button className="btn blue text-center edit-event-button">SUBMIT CHANGES</button>
           </div>
         </form>
+      </div>
       </div>
     );
   }

@@ -1,9 +1,13 @@
-.sign-in-main-container{
+.sign-in-button {
+    WIDTH: 100%;
+}
+
+/* .sign-in-main-container{
     background-color: #D9E1E8;
-    /* box-shadow: 0px 0px 10px 10px black inset; */
+    box-shadow: 0px 0px 10px 10px black inset;
     opacity: .9;
     color: white;
-    /* border: 5px solid #8AE8CB; */
+    border: 5px solid #8AE8CB;
     overflow: scroll;
 }
 
@@ -30,4 +34,4 @@ input{
 
 .or{
     padding:5px;
-}
+} */

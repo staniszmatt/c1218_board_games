@@ -7,9 +7,13 @@ class SignUp extends Component {
 
     render(){
         return(
-            <div className="create-sign-up-container">
-                <h1 className="center sign-up-header">Sign Up</h1>
+            <div className="main-container">
+                    <div className="header-container">
+                        <h1> SIGN UP </h1>
+                    </div>
+                <div className="content-container">
                 <CreateSignUpForm onSubmit={this.props.signUp} />
+                </div>
             </div>
         );
     }
