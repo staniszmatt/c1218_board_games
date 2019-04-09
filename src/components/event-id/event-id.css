@@ -1,22 +1,18 @@
-div.event-details {
-    height: 10%;
-    background-color: #0F4434;
-    position: fixed;
-    display: flex;
-    top: 0; 
-    color: white;
-    width: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+
 div.event-details > h1 {
-    margin: auto;
+
+        height: 10vh;
 }
 
 div.main-container-event>div.event-host {
     /* padding: 5px;
     margin: 5px; */
     display: flex; 
-    /* height: fit-content; */
+    height: fit-content;
+    margin-top:1%;
+    margin-bottom: 1%;
+
+    justify-content: center;
 }
 
 div.main-container-event>div.event-host>h3{
@@ -31,14 +27,9 @@ div.main-container-event>div.event-host>h6>ul{
     margin: 0;
 }
 
-div.main-container-event {
-    margin-top: 60px;
-    /* margin-bottom: 60px; */
-    /* padding-left: 30px;
-    padding-right: 30px; */
-    padding-top: 0px;
-    /* padding-bottom: 0px; */
-} 
+.joinButton > a{
+    color: black;
+}
 
 div.main-container-event>div.event-host>h6>a:hover{
     color: #2bbbad;

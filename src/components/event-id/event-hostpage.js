@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import BoardGamePic from '../../assets/images/boardgame_default.jpg';
+import './event-id.css';
 
 class EventHostPage extends Component {
     state = {
@@ -86,7 +86,7 @@ class EventHostPage extends Component {
         }
         return (
             <div className="center">
-                <div className="event-details center">
+                <div className="event-details">
                     <h1>Host Event Details</h1>
                 </div>
                 <div className="main-container-event">
@@ -95,10 +95,10 @@ class EventHostPage extends Component {
                             Game: {hostEventId.gameTitle}
                         </h3>
                     </div>
-                    <div className="event-host event-border center">Host Name: {hostEventId.playerName}</div>
+                    <div className="event-host">Host Name: {hostEventId.playerName}</div>
 
 
-                    <div className="date event-host center">
+                    <div className="date event-host">
                         <ul>
                             <li>Date: {hostEventId.date}</li>
                             <li>Start: {hostEventId.startTime}</li>
@@ -118,7 +118,7 @@ class EventHostPage extends Component {
                             {numberOfPlayers} Players out of {hostEventId.playerLimit} have joined
                     </Link>
                     </div>
-                    <div className="center joinButton event-border">
+                    <div className="btn red center joinButton event-border">
                         <Link to={'/events/' + hostEventId.eventID + '/edit'} className="nav-link">Edit Game</Link>
                     </div>
                 </div>

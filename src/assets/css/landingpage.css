@@ -1,6 +1,6 @@
 .landing-page-header {
     background-color: #282C37;
-    height: 55px;
+    height: 10%;
     width: 100%;
     display: flex;
     vertical-align: middle;
@@ -15,6 +15,7 @@
 }
 
 .landingpage-main-container {
+        background-image: url(https://i.imgur.com/3QhNw7q.jpg?1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,6 +30,7 @@
 }
 
 .main-div-wrapper{
+        background-image: url(https://i.imgur.com/3QhNw7q.jpg?1);
     position: fixed;
     background-color: #D9E1E8;
     background-size: cover;

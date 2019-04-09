@@ -2,15 +2,19 @@
 .create-form{
     background-color: #D9E1E8;
     color: black;
-    height: 100%;
-    overflow: scroll;
+    height: 75vh;
+    overflow-y: scroll;
 }
 
 
-.create-event-name{
+.create-event > h1{
     color: white;
+    margin-bottom: 5%;
 }
 
 .sign-in, .sign-up{
     width: 100%;
+}
+div>input {
+    color: black;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CreateEventForm from './new-event-form';
 import axios from 'axios';
+import './create-form.css';
 
 
 class NewEvent extends Component {
@@ -18,7 +19,9 @@ class NewEvent extends Component {
 
         return (
             <div className="create-event-container create-event-container-btn">
-                <h1 className="center create-event-name">Create Event</h1>
+                <div className="header-events-container col s12 ">
+                    <h1 className="center create-event-name">Create Event</h1>
+                    </div>
                 <CreateEventForm onSubmit={this.handleSubmit} />
             </div>
         );
