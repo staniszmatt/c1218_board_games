@@ -50,11 +50,11 @@ class Events extends Component {
             )
         }
         return (
-            <div className='center'>
-                <div className="header-events-container">
+            <div className='main-container'>
+                <div className="header-container">
                     <h1>Available Events</h1>
                 </div>
-                <div className="main-events-container">
+                <div className="content-container">
                     {eventRow}
                 </div>
             </div>
