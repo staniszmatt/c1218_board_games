@@ -1,4 +1,8 @@
-input{
+.edit-event-button {
+    WIDTH: 100%;
+}
+
+/* input{
     text-align: center;
 }
 
@@ -11,4 +15,4 @@ input{
 
 .form-group>input {
     color: black;
-}
+} */

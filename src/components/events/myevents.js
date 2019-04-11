@@ -48,11 +48,11 @@ class MyEvents extends Component {
             );
         } else if (myEventList[0] === null) {
             return (
-                <div className='center'>
+                <div className='main-container'>
                     <div className="header-container col s12">
                         <h1 className="">My Joined Events</h1>
                     </div>
-                    <div className="events-main-container no-available-events">
+                    <div className="content-container no-available-events">
                         NO AVAILABLE EVENTS
                 </div>
                     <div>
@@ -70,10 +70,10 @@ class MyEvents extends Component {
         return (
 
             <div className='center'>
-                <div className="header-events-container col s12">
+                <div className="header-container col s12">
                     <h1 className="">My Joined Events</h1>
                 </div>
-                <div className="main-events-container">
+                <div className="content-container">
                     {eventRow}
                 </div>
             </div>

@@ -5,12 +5,11 @@ import '../assets/css/about.css';
 
 
 export default props => (
-    <div className="about-main-container">
-        <div className="about-header center col s12">
-            <h1>ABOUT US</h1>
+    <div className="main-container">
+        <div className="header-container">
+            <h1> ABOUT US</h1>
         </div>
-
-        <div className="about-author-container">
+        <div className="content-container ">
             <div className="about-name">
                 Matt Staniszewski
             </div>
@@ -20,7 +19,6 @@ export default props => (
             <div className="about-url">
                 <a href="https://www.linkedin.com/in/matt-staniszewski-57157820/">LinkedIn</a>
             </div>
-        </div>
         <br/>
         <div className="about-author-container">
             <div className="about-name">
@@ -45,6 +43,6 @@ export default props => (
                 <a href="https://www.linkedin.com/in/christopher-s-07a09b171/">LinkedIn</a>
             </div>
         </div>
-
+        </div>
     </div>
 )

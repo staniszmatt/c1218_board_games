@@ -18,7 +18,7 @@ const SignInForm = props => {
             </div>
            <div className="sign-btn-container">
                 <div className="col s12 center sign-btn-container">
-                   <button className="btn red lighten-1 sign-in">Sign In</button>
+                   <button className="btn blue lighten-1 sign-in-button">Sign In</button>
                </div>
            </div>
         </form>

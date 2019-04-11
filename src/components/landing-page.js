@@ -5,11 +5,11 @@ import '../assets/css/landingpage.css';
 
 
 export default props => (
-    <div className="main-div-wrapper">
-        <div className="landing-page-header col s12">
+    <div className="main-container">
+        <div className="header-container col s12">
             <h1>BOARD GAMERS</h1>
         </div>
-        <div className="landingpage-main-container center">
+        <div className="landing-page-main-container content-container center">
             <Link to="/events" className="center play-button">Play Games</Link>
         </div>
     </div>

@@ -1,41 +1,15 @@
-.landing-page-header {
-    background-color: #282C37;
-    height: 10%;
-    width: 100%;
-    display: flex;
-    vertical-align: middle;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-}
-
-.landing-page-header > h1 {
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.landingpage-main-container {
+.landing-page-main-container {
         background-image: url(https://i.imgur.com/3QhNw7q.jpg?1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 85vh;
     background-size: cover;
-    text-align: center;
-    scroll-behavior:  unset;
-}
 
-.main-div > .back{
-    height: 89vh;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding-bottom: 34%;
+        background-color: #D9E1E8;
+        overflow-y: scroll;
 
-.main-div-wrapper{
-        background-image: url(https://i.imgur.com/3QhNw7q.jpg?1);
-    position: fixed;
-    background-color: #D9E1E8;
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
 }
 
 .play-button{
@@ -47,13 +21,15 @@
     cursor: pointer;
     color: black;
     border-radius: 5px;
-    box-shadow: 3px 3px black;
-
+   vertical-align: middle;
       background-color: #2B90D9;
       color: white;
       text-align: center;
       border: 1px solid black;
       box-shadow: 3px 3px #0F4434;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 }
 
 
@@ -67,6 +43,7 @@
     transform: translateY(4px);
 }
 
+/* 
 @media only screen and (min-width: 1020px) {
     .landing-page-header {
         background-color: #282C37;
@@ -88,4 +65,4 @@
         position: fixed;
         margin-top: 0;
     }
-}
+} */

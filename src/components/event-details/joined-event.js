@@ -51,18 +51,71 @@ class JoinedEventDetails extends Component {
         const numberOfPlayers = eventId.playerCount;
         if (numberOfPlayers >= parseInt(eventId.playerLimit)) {
             return (
-                <div className="playerlist-container">
-                    <div className="page-header player-list-title center">
-                        <div className="event-host header-container">Game: {eventId.gameTitle}</div>
-                        <div className="event-border event-host player-list-address">Host Name: {eventId.playerName}</div>
-                        <div className="event-border center player-list-address">
+                <div className="main-container">
+                    <div className="header-container">
+                        <h1>Game: {eventId.gameTitle}</h1>
+                    </div>
+                    <div className="content-container">
+                        <div className="event-game-container">
+                            <h4>
+                                Host Name: {eventId.playerName}
+                            </h4>
+                        </div>
+
+                        <div className="date event-date-address-container row">
+                            <div className="event-date-time-container col s6">
+                                <ul>
+                                    <li>Date: {eventId.date}</li>
+                                    <li>Start: {eventId.startTime}</li>
+                                </ul>
+                            </div>
+
+                            <div className="event-address-container col s6">
+                                <ul>
+                                    <li>Address: {eventId.location.streetAddress}</li>
+                                    <li>City: {eventId.location.city}</li>
+                                    <li>State: {eventId.location.state}</li>
+                                    <li>Zip: {eventId.location.zipCode}</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+
+                        <div className="numberOfPlayers event-host">
+                                <div className="full-game-container red">
+                            <h4>Game Is Full!</h4>
+                            </div>
+                        </div>
+
+
+                        <div className="center back">
+                            <button className="btn blue a event-bottom-button" onClick={this.sendUserData}>Leave Game</button>
+                        </div>
+                    </div>
+                </div>
+            );
+        } return (
+            <div className="main-container">
+                <div className="header-container">
+                    <h1>Game: {eventId.gameTitle}</h1>
+                </div>
+                <div className="content-container">
+                    <div className="event-game-container">
+                        <h4>
+                            Host Name: {eventId.playerName}
+                        </h4>
+                    </div>
+
+                    <div className="date event-date-address-container row">
+                        <div className="event-date-time-container col s6">
                             <ul>
                                 <li>Date: {eventId.date}</li>
                                 <li>Start: {eventId.startTime}</li>
                             </ul>
                         </div>
 
-                        <div className="event-border center player-list-address">
+                        <div className="event-address-container col s6">
                             <ul>
                                 <li>Address: {eventId.location.streetAddress}</li>
                                 <li>City: {eventId.location.city}</li>
@@ -70,45 +123,20 @@ class JoinedEventDetails extends Component {
                                 <li>Zip: {eventId.location.zipCode}</li>
                             </ul>
                         </div>
-
-                        <div className="event-border center player-list-limit">
-                            <div> Event is Full</div>
-                        </div>
-
-                        <div className="center back">
-                            <button className="btn center back-to-game" onClick={this.sendUserData}>Leave Game</button>
-
-                        </div>
-                    </div>
-                </div>
-            );
-        } return (
-            <div className="playerlist-container">
-                <div className="page-header player-list-title center">
-                    <div className="event-host header-container">Game: {eventId.gameTitle}</div>
-                    <div className="event-border event-host player-list-address">Host Name: {eventId.playerName}</div>
-                    <div className="event-border center player-list-address">
-                        <ul>
-                            <li>Date: {eventId.date}</li>
-                            <li>Start: {eventId.startTime}</li>
-                        </ul>
                     </div>
 
-                    <div className="event-border center player-list-address">
-                        <ul>
-                            <li>Address: {eventId.location.streetAddress}</li>
-                            <li>City: {eventId.location.city}</li>
-                            <li>State: {eventId.location.state}</li>
-                            <li>Zip: {eventId.location.zipCode}</li>
-                        </ul>
-                    </div>
 
-                    <div className="event-border center player-list-limit">
-                        <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
+
+                    <div className="event-players-joined-container">
+                        <h6>
+                            <Link to={'/events/' + eventId.eventID + '/player-list'}>
+                                <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
+                            </Link>
+                        </h6>
                     </div>
 
                     <div className="center back">
-                        <Link className="btn center back-to-game" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
+                        <Link className="btn blue a event-bottom-button" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
                     </div>
                 </div>
             </div>

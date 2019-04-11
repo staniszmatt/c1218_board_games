@@ -18,11 +18,13 @@ class NewEvent extends Component {
     render() {
 
         return (
-            <div className="create-event-container create-event-container-btn">
-                <div className="header-events-container col s12 ">
-                    <h1 className="center create-event-name">Create Event</h1>
-                    </div>
+            <div className="main-container">
+                <div className="header-container">
+                    <h1> CREATE EVENT</h1>
+                </div>
+                <div className="content-container ">
                 <CreateEventForm onSubmit={this.handleSubmit} />
+                </div>
             </div>
         );
     }
