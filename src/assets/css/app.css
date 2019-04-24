@@ -14,12 +14,6 @@ body {
 
 
 #root {
-    /* background-image: url("../images/dice.jpg"); */
-    background-color: #D9E1E8;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     width: 100%;
     overflow: hidden;
 }
