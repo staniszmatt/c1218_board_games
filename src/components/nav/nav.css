@@ -6,6 +6,11 @@ footer {
   height: 60px;
 }
 
+a.nav-link {
+  font-size: 12px;
+  padding: unset;
+}
+
 .nav {
   background-color: #282C37;
   list-style-type: none;
@@ -15,6 +20,7 @@ footer {
   border: 1px solid black;
   display: inline-flex;
   height: 100%;
+  padding: 1px;
 }
 
 ul>li>a {
@@ -54,18 +60,22 @@ label{
 
 @media only screen and (min-width: 1020px) {
   footer {
-    height: 100px;
+    height: 60px;
   }
+
   div>ul>li>a {
     width: 25vw;
     height: 90%;
     align-self: center;
   }
-  .nav li {
+  a.nav-link {
+    font-size: 22px;
+  }
+  /* .nav li {
     height: 90%;
     display: flex;
     align-content: center;
-  }
+  } */
   .btn {
     line-height: 200%;
     font-size: 40px;
@@ -84,18 +94,13 @@ label{
 
 @media only screen and (min-width: 1400px){
   footer {
-    margin-top: 0;
-    top: 100px;
-    position: fixed;
-    width: 100%;
-    height: 60px;
+    top: 40px;
   }
-  .btn {
-    line-height: 200%;
+  a.nav-link {
     font-size: 25px;
-    height: 90%;
+    width: 8vw;
   }
   .nav li {
-    height: 100%;
+    margin: 0px 2px;
   }
 }

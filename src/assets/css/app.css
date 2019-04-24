@@ -38,7 +38,7 @@ body {
 
 .header-container {
     background-color: #282C37;
-    height: 10vh;
+    height: 40px;
     width: 100%;
     display: flex;
     vertical-align: middle;
@@ -64,10 +64,12 @@ body {
 }
 
 .content-container {
-
     height: 100vh;
-    padding-bottom: 20vh;
-    background-color: #D9E1E8;
+    padding-bottom: 101px;
+    background-image: url("../images/dice.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
     overflow-y: scroll;
 }
 

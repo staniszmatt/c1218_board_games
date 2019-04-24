@@ -10,7 +10,7 @@ const EventRowHost = (props) => {
         return (
 
             <div className="events-container col s12 l6 nav-link center" key={eventID}>
-                <Link to={'/events/' + eventID + '/host'} className="events-list-buton ">
+                <Link to={'/events/' + eventID + '/host'} className="events-list-button ">
                     <p className="events-title">{gameTitle}</p>
                     <p className="events-player-count">Players: {playerCount} out of {playerLimit}</p>
                     <p className="events-date-time">{date} {startTime}</p>
