@@ -97,8 +97,8 @@ class PlayerList extends Component {
                                     </tr>))}
                             </tbody>
                         </table>
-                        <Link to={backPage} className="btn blue a event-bottom-button">Back To Game</Link>
                     </div>
+                    <Link to={backPage} className="blue event-bottom-button">Back To Game</Link>
                 </div>
             );
         }

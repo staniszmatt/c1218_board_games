@@ -23,6 +23,6 @@
 @media only screen and (min-width: 1400px) {
     .profile-name-container,
     .profile-button-container>div {
-        margin: 15px 600px;
+        margin: 15px 400px;
     }
 }

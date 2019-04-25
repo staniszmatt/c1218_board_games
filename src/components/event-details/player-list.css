@@ -1,18 +1,6 @@
 .playerlist-date-address-container{
-    border-bottom: 1px black solid;
     vertical-align: middle;
     justify-content: center;
-}
-
-.player-list>h5 {
-    background-color: #282C37;
-    font-weight: bold;
-    color: white;
-    padding: 25px;
-    margin: 0px;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    margin-top:2vh;
 }
 
 .main-container {
@@ -21,9 +9,27 @@
     padding-bottom: 110px;
 }
 
-.playerlist-date-address-container {
+.playerlist-date-address-container,
+.player-list-limit,
+.player-list {
     margin: unset;
     background-color: rgba(217, 225, 232, 0.750);
     margin: 10px 10px;
     border-radius: 5px;
+}
+
+@media only screen and (min-width: 1020px) {
+    .playerlist-date-address-container,
+    .player-list-limit,
+    .player-list {
+        margin: 15px 200px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .playerlist-date-address-container,
+    .player-list-limit,
+    .player-list {
+        margin: 15px 400px;
+    }
 }

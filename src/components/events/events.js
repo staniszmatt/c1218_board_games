@@ -23,15 +23,12 @@ class Events extends Component {
 
     render() {
         const { eventList } = this.state;
-
         let eventRow = [];
-
         eventRow = eventList.map((event) => {
             return <EventRow key={event.id} event={event} eventId={event.id}/>
         });
         if(eventList.length <= 0){
             return (
-            
                 <div className="loading-screen-container">
                     <div className='center loading-screen-text'>Page Is Loading...</div>
                     <div className="loading-screen-container preloader-wrapper big active test">
@@ -46,7 +43,6 @@ class Events extends Component {
                         </div>
                     </div>
                 </div>
-
             )
         }
         return (
