@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './events.css';
 import EventRowHost from './events-row-host';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 
 class EventsHost extends Component {
@@ -32,24 +33,33 @@ class EventsHost extends Component {
 
         if (hostEventsList.length <= 0){
             return(
-            <div className='center'>
-                <div className="header-container col s12">
-                        <h1 className="hosted-events-header">My Hosted Events</h1>
+                <div className="loading-screen-container">
+                    <div className='center loading-screen-text'>Page Is Loading...</div>
+                    <div className="loading-screen-container preloader-wrapper big active test">
+                        <div className="spinner-layer spinner-blue-only">
+                            <div className="circle-clipper left">
+                                <div className="circle"></div>
+                            </div><div className="gap-patch">
+                                <div className="circle"></div>
+                            </div><div className="circle-clipper right">
+                                <div className="circle"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="events-main-container loading-events">
-                    LOADING....
-                </div>
-            </div>
             );
         } else if (hostEventsList[0] === null) {
             return (
-                <div className='center'>
+                <div className='main-container'>
                     <div className="header-container col s12">
                         <h1 className="hosted-events-header">My Hosted Events</h1>
                     </div>
-                    <div className="events-main-container no-available-events">
+                    <div className="content-container no-available-events">
                         NO AVAILABLE EVENTS
                 </div>
+                    <div>
+                        <Link to="/new-event" className="btn nav-link green create-event-btn">Create Event</Link>
+                    </div>
                 </div>
             );
         }
@@ -61,11 +71,11 @@ class EventsHost extends Component {
 
         return (
             
-            <div className='center'>
-                <div className="header-events-container col s12">
+            <div className='main-container'>
+                <div className="header-container col s12">
                     <h1 className="">Hosted Events</h1>
                 </div>
-                <div className="main-events-container">
+                <div className="content-container">
                     {eventRow}
                 </div>
             </div>

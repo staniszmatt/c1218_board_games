@@ -3,27 +3,65 @@
     src: url(../fonts/quest.ttf);
 }
 
-.loading-text{
+.loading-text {
     font-size: 4rem;
 }
 
 body {
     margin: 0;
-    background-color: black;
-
 }
 
-#root{
-    background-color: black;
+
+#root {
+    width: 100%;
 }
 
-/*.btn{*/
-    /*background-color: darkslategray;*/
-    /*display: flex;*/
-/*}*/
+.main-div {
+    height: 100vh;
+    background-image: url("../images/dice.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.main-container {
+    height: 100vh;
+    text-align: center;
+    
+}
+
+.header-container {
+    position: fixed;
+    top: 0;
+    background-color: #282C37;
+    height: 41px;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    justify-content: center;
+    font-family: -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+}
+
+
+.header-container>h1 {
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: auto;
+    font-size: 38px;
+}
 
 .app {
-    background-color: #000;
+    background-color: #D9E1E8;
     color: #FFF;
     font-family: quest;
     font-size: 30px;
@@ -52,7 +90,21 @@ body {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
+}
+
+.input-field {
+    text-align: left;
+}
+
+.loading-screen-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }

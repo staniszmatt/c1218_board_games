@@ -1,8 +1,18 @@
-input{
+.edit-event-button {
+    WIDTH: 100%;
+}
+
+/* input{
     text-align: center;
 }
 
-.create-event-container{
-    height: 88vh;
-    /*overflow: scroll;*/
+.edit-form {
+    background-color: #D9E1E8;
+    color: black;
+    height: 90vh;
+    overflow-y: scroll;
 }
+
+.form-group>input {
+    color: black;
+} */

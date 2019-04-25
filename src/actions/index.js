@@ -34,7 +34,7 @@ export const signIn = credentials => async dispatch => {
 
         dispatch({
             type: types.SIGN_IN_ERROR,
-            error
+            error: data.error
         });
     } catch(err){
    
@@ -66,6 +66,7 @@ export const signOut = () => async dispatch => {
 export const signUp = credentials => async dispatch => {
     const error = 'Error creating new account';
     try {
+        
         const { data } = await axios.post('/api/sign-up.php', credentials);
 
         if (data.success) {

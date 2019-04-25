@@ -9,44 +9,34 @@ if (!isset($_SESSION['userID'])) {
   $output['logged-in'] = false;
 } else {
   $data = json_decode(file_get_contents('php://input'), true);
-  if (!is_numeric($data['eventID'])) {
-    throw new Exception("Event ID requires to be a number!");
-  }
-  if (empty($data['eventID'])){
-    throw new Exception("Missing key name eventID.");
-  }
   if (!$data) {
     $output['success'] = false;
-    exit();
+    throw new Exception("No data received.");
   }
-
   $output = [
     "success" => false,
     "output" => []
   ];
-
+  // Error Handling
+  if (!is_numeric($data['eventID'])) {
+    throw new Exception("Event ID must be a number.");
+  }
+  //Sanitize with backslashes 
   foreach ($data as $key => $value) {
     $data[$key] = addslashes($value);
   }
-
-  if (!empty($output['error'])) {
-    throw new Exception("Event ID is corrupt.");
-  }
-
-  $query = "INSERT INTO playerList 
-              SET eventID='{$data['eventID']}', 
-                userID='{$_SESSION['userID']}'";
-
+  //Update event information 
+  $query = "DELETE FROM playerList 
+              WHERE userID='{$_SESSION['userID']}' AND eventID='{$data['eventID']}'";
   $result = $db->query($query);
-  if ($result) {
-    $output['success'] = true;
-    $output['playerListID'] = mysqli_insert_id($db);
+  if (!$result) {
+  $output['error'][] = $result;
+  throw new Exception("Failed to leave event.");
   } else {
-    throw new Exception("Error joining game.");
+  $output['success'] = true;
+  $output['updated'][] = $result;
   }
 }
-
 $json_output = json_encode($output);
 print($json_output);
-
 ?>

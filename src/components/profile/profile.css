@@ -1,72 +1,28 @@
-.profile {
-    background-color: #4EA68B ;
-    height: 100vh;
+.profile-name-container{
+    margin: 10px 10px;
+    background-color: rgba(217, 225, 232, 0.750);
 }
 
-h2{
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px black inset;
-    padding: 18px;
-    height: 15h;
-    color: #8AE8CB;
-    margin: 0;
+.profile-button-container>div {
+    margin: 10px 10px;
 }
 
-.profile-button-container{
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px black inset;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 1px;
-    overflow: scroll;
-    height: 100%;
- }
-
-.profile-image {
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px black inset;
-    padding: 5%;
-    height: 20vh;
-    border: 1px solid black;
-    margin: 0px;
-    color: #8AE8CB;
-}
-
-.profile-image > img{
-
-height: 100%;
-width: auto;
-border-radius: 50%;
-}
-
-.user-info {
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px black inset;
-    margin: 0;
-    height: 10vh;
-    border: 1px solid black;
-    padding: 12px;
-    color: #8AE8CB;
-}
-
-.center.profile{
-    height: 100vh;
-}
-
-.buttons > link {
-    height: 55vh;
-}
-.create-event-btn, .available-events-btn, .my-hosted-events-btn, .my-joined-events-btn{
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
-    color: #8AE8CB;
-    font-size: 10px;
-    margin-top: 90px;
-    border-radius: 50px;
-    padding: 33px;
-    text-align: center;
-    line-height: 0px;
-    color: black;
+.profile-button-container>div>a {
+    width: 100%;
+    background-color: #2B90D9;
 }
 
 
+@media only screen and (min-width: 1020px) {
+    .profile-name-container,
+    .profile-button-container>div {
+        margin: 15px 200px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .profile-name-container,
+    .profile-button-container>div {
+        margin: 15px 400px;
+    }
+}

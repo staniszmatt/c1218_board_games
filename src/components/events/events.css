@@ -1,63 +1,44 @@
-.header-events-container{
-    height: 13VH;
-    text-align: center;
-    padding: 11px;
-    background-color: #0F4434;
-    box-shadow: 0px 0px 8px 8px black  inset;
-    color:#8AE8CB
-}
-
-
-.main-events-container{
-    height: 78vh;
-    text-align: center;
-    overflow: scroll;
-}
-.events-container{
-    box-shadow: 0px 0px 8px 8px #0F4434  inset;
-    background-color: white;
-    height: 100%;
-    width: 100%;
-    padding: 4px;
-    display: inline-block;
+.events-container {
     color: black;
+    font-weight: bold;
+    border: 1px black solid;
+    margin: 10px 20px;
 }
-.events-info-container{
-    display: inline-block;
-    width: 70%;
-    height: 100%;
-    line-height:.7;
-    vertical-align: top;
+.header-events-container {
+    height: 40px;
 }
+p.events-title, 
+p.events-player-count, 
+p.events-date-time{
+    margin: 0;
+}
+
+.events-list-button,
+.events-container {
+    display: block;
+    background-color: rgba(217, 225, 232, 0.750);
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: .5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.events-list-button:hover {
+    background-color: #2bbbad;
+}
+
+
 .events-info-container > p {
-    vertical-align: middle;
+    display: block;
 }
 
-.events-list-button{
-    background-color: black;
-    padding: 6px;
-}
 
-.events-image {
-    margin-top: 3px;
-    display: inline-block;
-    width: 30%;
-    height: 90%;
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    box-shadow: 0px 0px 6px 6px black inset;
-}
-
-.events-list-button {
-    display: inline-block;
-    height: 15vh;
-    width: 100%;
-    margin: 2% 0 2% 0;
+.events-list-button:hover{
+    background-color: #2bbbad;
 }
 
 .header-events-container > h1 {
-    font-size: 3.5rem;
+    font-size: 45px;
     margin: 0;
 }
 
@@ -70,4 +51,28 @@
 .main-container-event{
     margin: 0px;
     padding: 30px;
+}
+
+.loading-screen-text{
+    font-size: 3em;
+}
+
+@media only screen and (min-width: 1020px){
+    .events-container {
+        margin: 15px 200px;
+    }
+}
+@media only screen and (min-width: 1400px){
+    .content-container {
+        padding-bottom: unset;
+        padding-top: 60px;
+    }
+    .events-container {
+        margin: 15px 200px;
+    }
+    p.events-title, 
+    p.events-player-count, 
+    p.events-date-time{
+        font-size: 24px;
+    }
 }

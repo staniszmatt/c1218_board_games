@@ -1,51 +1,104 @@
 footer {
   margin-bottom: 0;
+  background-color: #282C37;
   bottom: 0;
   position: fixed;
   width: 100%;
-  height: 12vh;
-
-
+  height: 60px;
 }
 
-body {
-  margin-bottom: 50px;
+a.nav-link {
+  font-size: 12px;
+  padding: unset;
 }
-
 
 .nav {
-  background-color: #0F4434;
   list-style-type: none;
   text-align: center;
   width: 100%;
-  margin: 0 auto;
-  height: 13vh;
-  border: 1px solid black; 
+  margin: 0;
+  display: inline-flex;
+  height: 100%;
+  padding: 1px;
 }
 
+ul>li>a {
+  -webkit-text-stroke: 1px white;
+  font-size: 18px;
+        font-family: -apple-system,
+        sans-serif;
+  cursor: pointer;
+  text-align: center;
+  color: black;
+  background-color: #9BAEC8;
+  border-radius: 5px;
+  box-shadow: 3px 3px #D9E1E8;
+  width: 23vw; 
+}
 
+ul>li>a:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 
 label{
-  font-size: 1.5rem;
+  font-size: 16px;
 }
 
 .nav li {
-  display: inline-block;
-  font-size: 15px;
-  width: 33%;
-
+  margin: auto;
 }
-.sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn{
-  background-color: #0F4434;
-  box-shadow: 0px 0px 10px 10px #8AE8CB inset;
-  color: #8AE8CB;
-  font-size: 10px;
-  margin: 0 auto;
-  margin-top: 3px;
-  border-radius: 50px;
-  padding: 33px;
+
+.sign-out-btn, .home-btn, .sign-up-btn, .sign-in-btn, .profile-btn, .event-btn {
+  background-color: #2B90D9;
+  color: white;
   text-align: center;
-  line-height: 0px;
+  border: 1px solid black;
+  box-shadow: 3px 3px rgb(204, 204, 204);
 }
 
+@media only screen and (min-width: 1020px) {
+  footer {
+    height: 60px;
+  }
 
+  div>ul>li>a {
+    width: 25vw;
+    height: 90%;
+    align-self: center;
+  }
+  a.nav-link {
+    font-size: 22px;
+  }
+
+  .btn {
+    line-height: 200%;
+    font-size: 40px;
+    height: 90%;
+  }
+  label{
+    font-size: 30px;
+  }
+  p.red-text {
+    font-size: 30px;
+  }
+  div.input-field {
+    font-size: 30px; 
+  }
+} 
+
+@media only screen and (min-width: 1400px){
+  footer {
+    top: 40px;
+  }
+  a.nav-link {
+    font-size: 20px;
+    width: 8vw;
+  }
+  .nav li {
+    margin: auto;
+  }
+  .nav {
+    width: 35%;
+  }
+}

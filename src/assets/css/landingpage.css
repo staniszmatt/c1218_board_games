@@ -1,49 +1,68 @@
-
-.landing-page-header {
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px black inset;
-    color: #8AE8CB;
-    height: 20vh;
-    padding: 14px 0 0 0;
-}
-
-.landingpage-main-container {
-    height: 72vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url("https://i.imgur.com/3QhNw7q.jpg?1");
-    background-position: center;
+.landing-page-main-container {
+        background-image: url(https://i.imgur.com/3QhNw7q.jpg?1);
     background-size: cover;
-text-align: center;
-}
 
-.landingpage-main-container > .btn{
-    text-align: center;
-}
-
-.main-div > .back{
-    height: 89vh;
-    overflow: hidden;
-}
-
-.mainNav {
-    height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding-bottom: 34%;
+        background-color: #D9E1E8;
+        overflow-y: scroll;
 
 }
 
 .play-button{
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px black inset;
-    height: 25%;
-    width: 75%;
-    font-size: 3.5rem;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-    padding-top: 20px;
-    color: #8AE8CB;
+    padding: 12px 20px;
+    color: white;
+    font-size: 25px;
+     font-family: -apple-system,
+     sans-serif;
+    cursor: pointer;
+    color: black;
+    border-radius: 5px;
+   vertical-align: middle;
+      background-color: #2B90D9;
+      color: white;
+      text-align: center;
+      border: 1px solid black;
+      box-shadow: 3px 3px #0F4434;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 }
 
 
+.play-button:hover {
+    background-color: #2bbbad;
+}
 
+.play-button:active {
+    background-color: #2bbbad;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/* 
+@media only screen and (min-width: 1020px) {
+    .landing-page-header {
+        background-color: #282C37;
+        height: 100px;
+    }
+    .play-button{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .landingpage-main-container {
+        margin-top: 60px;
+        height: 100vh;
+        scroll-behavior: unset;
+        width: 100%;
+    }
+    .landingpage-main-container {
+        position: fixed;
+        margin-top: 0;
+    }
+} */

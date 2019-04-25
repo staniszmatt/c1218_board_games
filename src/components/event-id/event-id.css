@@ -1,99 +1,68 @@
-.header-container{
-    height: 10VH;
-    text-align: center;
-    
+h4 {
+    width: unset;
 }
 
-
-.main-container-event.center.main-div{
-    height: 80vh;
-    text-align: center;
-    overflow: scroll;
+.event-game-container,
+.event-host-container,
+.event-date-address-container,
+.event-players-joined-container {
+    margin: 10px;
+    background-color: rgba(217, 225, 232, 0.750);
+    border-radius: 5px;
+    font-size: 22px;
 }
 
-.joinButton {
-    margin-top: 5px;
-    font-size: 24px;
-    color: black;
-    text-align: center;
-    display: flex;
-        align-items: center;
-        justify-content: center;
+div.back {
+    margin: 10px;
 }
 
-.center > .main-container-event > .joinButton {
-      align-items: center;
-      justify-content: center;
-      vertical-align: middle;
-      display: flex;
-}
-
-
-.main-container-event > .game-picture {
-    padding: 15px;
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
-    display: inline-block;
-    width: 100%;
-    height: 16vh;
-}
-
-.main-container-event > div{
-    background-color: #0F4434;
-    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
-    height: 10%;
-    width: 100%;
-    display: inline-block;
-    border: black 1px solid;
-    margin: 10px 0;
-    padding: 11px;
+button.event-bottom-button,
+a.event-bottom-button {
     color: white;
-    
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
-.main-container-event > .address {
-    height: 27%;
-    color: white;
-    padding:0;
+.full-game-container{
+    width: fit-content;
+    padding: 0px 5px;
+    border-radius: 5px;
+    margin: auto;
 }
 
-.event-list-button {
-    height: 15vh;
-    width: 100%;
+@media only screen and (min-width: 1020px){
+    .event-players-joined-container {
+        font-size: 20px;
+    }
+    .event-game-container,
+    .event-host-container,
+    .event-date-address-container,
+    .event-players-joined-container {
+        margin: 15px 200px;
+        font-size: 24px;
+    }
+
+    button.event-bottom-button,
+    a.event-bottom-button {
+        color: white;
+        font-size: 40px;
+        padding: 5px;
+        border-radius: 5px;
+    }
 }
-
-
-h1 {
-    font-size: 3.5rem;
+@media only screen and (min-width: 1400px){
+    .event-players-joined-container {
+        font-size: 30px;
+    }
+    .event-game-container,
+    .event-host-container,
+    .event-date-address-container,
+    .event-players-joined-container {
+        margin: 15px 600px;
+    }
+    div.event-address-container>ul>li,
+    div.event-date-time-container>ul>li {
+        font-size: 30px;
+    }
 }
-
-
-
-.game-picture > img{
-    box-shadow: 0px 0px 10px 10px #8AE8CB inset;
-    border: 2px solid black ;
-    display: inline-block;
-    width: 40%;
-    height: 100%;
-}
-
-.main-container-event{
-    background-color: black;
-    overflow: scroll;
-    height: 91vh;
-}
-
-.full{
-    padding: 12px;
-    box-shadow: 0px 0px 10px 10px red inset;
-}
-.joinButton{
-    background-color: #0F4434;
-}
-
-.main-container-event > .date {
-    padding: 0px;
-
-}
-
-

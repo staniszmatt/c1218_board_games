@@ -6,6 +6,7 @@ import 'materialize-css/dist/js//materialize.min';
 import { Route, Switch } from 'react-router-dom';
 import '../assets/css/app.css';
 import LandingPage from './landing-page';
+import About from './about';
 import Events from './events/events';
 import EventSelected from './event-id/event-id';
 import PlayerList from './event-details/player-list';
@@ -27,6 +28,7 @@ const App = () => (
     <div className="main-div">
         <Switch>
             <Route exact path="/" component={LandingPage} />
+            <Route exact path="/about" component={About} />
             <Route path="/profile" component={auth(Profile)} />
             <Route path="/new-event" component={auth(CreateNewEvent)} />
             <Route path="/events/host" component={auth(EventsHost)} />

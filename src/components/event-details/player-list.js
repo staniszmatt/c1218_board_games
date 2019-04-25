@@ -5,6 +5,7 @@ import './player-list.css';
 
 
 class PlayerList extends Component {
+
     state = {
         eventId: null
     }
@@ -19,7 +20,7 @@ class PlayerList extends Component {
 
     async getPlayerListData() {
         const eventId = this.state.eventId;
-        const resp = await axios.get('/api/events-eventID.php?eventID=' + eventId + '');
+        const resp = await axios.get('/api/events-eventID-player-list.php?eventID=' + eventId + '');
 
         this.setState({
             data: resp.data.event
@@ -30,32 +31,58 @@ class PlayerList extends Component {
         const { data } = this.state;
 
         if (data === undefined) {
-            return <h3>Page is Loading...</h3>;
-        } else {
             return (
-                <div className="generic-container playerlist-container">
-                    <div className="page-header player-list-title center">
-                        <h3 className="center">
-                            {data.gameTitle}
-                        </h3>
-                    </div>
-                    <div className="center player-list-date">Date and Time
-                        <div>
-                            {Date(data.date)} from {data.startTime} to {data.endTime}
+            <div className="loading-screen-container">
+                <div className='center loading-screen-text'>Page Is Loading...</div>
+                <div className="loading-screen-container preloader-wrapper big active test">
+                    <div className="spinner-layer spinner-blue-only">
+                        <div className="circle-clipper left">
+                            <div className="circle"></div>
+                        </div><div className="gap-patch">
+                            <div className="circle"></div>
+                        </div><div className="circle-clipper right">
+                            <div className="circle"></div>
                         </div>
                     </div>
-                    <div className="center player-list-address">Location
-                        <div>
-                            {data.location.streetAddress},<br />
-                            {data.location.city},<br />
-                            {data.location.state},<br />
-                            {data.location.zipCode}
+                </div>
+            </div>
+            );
+        } else {
+            if (data.hosting) {
+                var backPage = `/events/${data.eventID}/host`;
+            } else {
+                var backPage = `/events/${data.eventID}`;
+            }
+            return (
+                <div className="main-container">
+                    <div className="header-container">
+                        <h1>
+                            {data.gameTitle}
+                        </h1>
+                    </div>
+                    <div className="row playerlist-date-address-container">
+                        <div className="event-date-time-container">
+                            <h6>Time</h6>
+                            <ul>
+                                <li> {Date(data.date)}</li>
+                                <li>{data.startTime}</li>
+                                <li> {data.endTime}</li>
+                            </ul>
+                        </div>
+                        <div className="event-address-container">
+                            <h6>Location</h6>
+                            <ul>
+                                <li>{data.location.streetAddress}</li>
+                                <li> {data.location.city}</li>
+                                <li> {data.location.state}</li>
+                                <li> {data.location.zipCode}</li>
+                            </ul>
                         </div>
                     </div>
                     <div className="center player-list-limit">
-                        <div> Player Limit
+                        <h5> Player Limit:
                             {data.playerLimit}
-                        </div>
+                        </h5>
                     </div>
                     <div className="player-list">
                         <h5 className="center"> Players </h5>
@@ -70,11 +97,8 @@ class PlayerList extends Component {
                                     </tr>))}
                             </tbody>
                         </table>
-                        <div className="center">
-                            <Link to={"/events/" + data.eventID + ""} className="btn center">Back To Game</Link>
-                        </div>
-
                     </div>
+                    <Link to={backPage} className="blue event-bottom-button">Back To Game</Link>
                 </div>
             );
         }

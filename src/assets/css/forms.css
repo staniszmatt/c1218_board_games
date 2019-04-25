@@ -1,0 +1,48 @@
+form {
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=time]:not(.browser-default),
+input[type=number]:not(.browser-default) {
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(217, 225, 232, 0.750);
+}
+
+.form-container {
+  text-align: center;
+}
+
+label.form-label {
+  color: rgb(43, 110, 217);
+  font: bolder;
+  font-size: 20px;
+  background-color: rgba(217, 225, 232);
+  border-radius: 5px;
+  padding: 4px;
+}
+button.sign-in-button,
+button.edit-event-button {
+  width: unset;
+}
+
+@media only screen and (min-width: 1020px){
+  input[type=text]:not(.browser-default),
+  input[type=password]:not(.browser-default),
+  input[type=date]:not(.browser-default),
+  input[type=time]:not(.browser-default),
+  input[type=number]:not(.browser-default) {
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  button.sign-in-button,
+  button.edit-event-button {
+    font-size: 24px;
+  }
+}

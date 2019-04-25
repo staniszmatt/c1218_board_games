@@ -19,15 +19,15 @@ class Nav extends Component {
             <footer className="nav-wrapper">
                 <ul className="nav">
                     <li className="nav-item">
-                        <Link to="/" className="btn nav-btn-style nav-link black center home-btn">Home</Link>
+                        <Link to="/" className="btn nav-btn-style nav-link  center home-btn">Home</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/sign-up" className="btn nav-link  center font-color: black sign-up-btn">Sign Up</Link>
+                        <Link to="/sign-up" className="btn nav-link  center sign-up-btn">Sign Up</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/sign-in" className="btn nav-link  center font-color: black sign-in-btn">Sign In</Link>
+                        <Link to="/sign-in" className="btn nav-link  center sign-in-btn">Sign In</Link>
                     </li>
                 </ul>
             </footer>
@@ -37,15 +37,19 @@ class Nav extends Component {
             <footer className="nav-wrapper">
                 <ul className="nav">
                     <li className="nav-item">
-                        <Link to="/profile" className="btn nav-btn-style nav-link black center profile-btn">Profile</Link>
+                        <Link to="/profile" className="btn nav-link center profile-btn">Profile</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link to="/events" className="btn nav-link  center font-color: black event-btn">Events</Link>
+                        <Link to="/events" className="btn nav-link  center event-btn profile-btn">Events</Link>
                     </li>
 
                     <li className="nav-item">
-                            <Link to="/sign-out" className="btn nav-link  center font-color: black sign-in-btn">Sign Out</Link>
+                        <Link to="/sign-out" className="btn nav-link  center sign-out-btn profile-btn">Sign Out</Link>
+                    </li>
+
+                    <li className="nav-item">
+                        <Link to="/about" className="btn nav-link  center profile-btn">About</Link>
                     </li>
                 </ul>
             </footer>
