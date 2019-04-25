@@ -29,3 +29,20 @@ button.sign-in-button,
 button.edit-event-button {
   width: unset;
 }
+
+@media only screen and (min-width: 1020px){
+  input[type=text]:not(.browser-default),
+  input[type=password]:not(.browser-default),
+  input[type=date]:not(.browser-default),
+  input[type=time]:not(.browser-default),
+  input[type=number]:not(.browser-default) {
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+  button.sign-in-button,
+  button.edit-event-button {
+    font-size: 24px;
+  }
+}

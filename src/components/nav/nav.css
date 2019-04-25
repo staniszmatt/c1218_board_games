@@ -1,5 +1,6 @@
 footer {
   margin-bottom: 0;
+  background-color: #282C37;
   bottom: 0;
   position: fixed;
   width: 100%;
@@ -12,12 +13,10 @@ a.nav-link {
 }
 
 .nav {
-  background-color: #282C37;
   list-style-type: none;
   text-align: center;
   width: 100%;
   margin: 0;
-  border: 1px solid black;
   display: inline-flex;
   height: 100%;
   padding: 1px;
@@ -55,7 +54,7 @@ label{
   color: white;
   text-align: center;
   border: 1px solid black;
-  box-shadow: 3px 3px #0F4434;
+  box-shadow: 3px 3px rgb(204, 204, 204);
 }
 
 @media only screen and (min-width: 1020px) {
@@ -97,6 +96,9 @@ label{
     width: 8vw;
   }
   .nav li {
-    margin: 0px 2px;
+    margin: auto;
+  }
+  .nav {
+    width: 35%;
   }
 }
