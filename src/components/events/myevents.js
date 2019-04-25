@@ -69,7 +69,7 @@ class MyEvents extends Component {
 
         return (
 
-            <div className='main-containergit'>
+            <div className='main-container'>
                 <div className="header-container col s12">
                     <h1 className="">My Joined Events</h1>
                 </div>
