@@ -14,3 +14,16 @@
     margin-bottom: 1%;
     margin-top:2vh;
 }
+
+.main-container {
+    overflow: auto;
+    margin-top: 41px;
+    padding-bottom: 110px;
+}
+
+.playerlist-date-address-container {
+    margin: unset;
+    background-color: rgba(217, 225, 232, 0.750);
+    margin: 10px 10px;
+    border-radius: 5px;
+}
