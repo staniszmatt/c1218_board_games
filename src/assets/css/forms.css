@@ -1,9 +1,12 @@
 form {
-  padding-top: 20vh;
+  padding-top: 20px;
+  margin-bottom: 10px;
 }
 
 input[type=text]:not(.browser-default),
-input[type=password]:not(.browser-default) {
+input[type=password]:not(.browser-default),
+input[type=date]:not(.browser-default),
+input[type=time]:not(.browser-default) {
   font-size: 20px;
   text-align: center;
   background-color: rgba(217, 225, 232, 0.750);
@@ -21,6 +24,7 @@ label.form-label {
   border-radius: 5px;
   padding: 4px;
 }
-button.sign-in-button {
+button.sign-in-button,
+button.edit-event-button {
   width: unset;
 }

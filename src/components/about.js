@@ -9,7 +9,7 @@ export default props => (
         <div className="header-container">
             <h1> ABOUT US</h1>
         </div>
-        <div className="content-container ">
+        <div className="about-content-container ">
             <div className="about-author-container">
                 <div className="about-name">
                     Matt Staniszewski

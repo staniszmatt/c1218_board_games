@@ -11,3 +11,18 @@
     width: 100%;
     background-color: #2B90D9;
 }
+
+
+@media only screen and (min-width: 1020px) {
+    .profile-name-container,
+    .profile-button-container>div {
+        margin: 15px 200px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .profile-name-container,
+    .profile-button-container>div {
+        margin: 15px 600px;
+    }
+}

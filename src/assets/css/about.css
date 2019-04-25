@@ -49,8 +49,9 @@ h1{
         font-size: 25px;
         height: 50px;
     }
-    .content-container {
+    .about-content-container {
         display: flex;
+        margin-top: 5vh;
     }
     .about-author-container{
         margin: auto;
@@ -66,5 +67,8 @@ h1{
     }
     .about-name {
         font-size: 1.7vw;
+    }
+    .about-content-container {
+        margin-top: 10vh;
     }
 }

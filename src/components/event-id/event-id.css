@@ -1,92 +1,68 @@
-.event-game-container{
-    height: 10vh;
-    border-bottom: 1px black solid;
+h4 {
+    width: unset;
 }
 
-.event-host-container{
-    height: 5vh;
-    border-bottom: 1px black solid;
-        margin: 0;
+.event-game-container,
+.event-host-container,
+.event-date-address-container,
+.event-players-joined-container {
+    margin: 5px;
+    background-color: rgba(217, 225, 232, 0.750);
+    border-radius: 5px;
+    font-size: 22px;
 }
 
-.event-date-address-container{
-    height: 15vh;
-    border-bottom: 1px black solid;
-        display: flex;
-        vertical-align: middle;
-        justify-content: center;
+div.back {
+    margin: 10px;
 }
 
-.event-players-joined-container{
-    height: 10vh;
-    border-bottom: 1px black solid;
-    display: flex;
-    vertical-align: middle;
-    justify-content: center;
+button.event-bottom-button,
+a.event-bottom-button {
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
 }
-
-
-.event-bottom-button{
-    width: 100%;
-}
-
 
 .full-game-container{
-    height: 10vh;
-            display: flex;
-        vertical-align: middle;
-        justify-content: center;
-}
-/* 
-div.event-details > h1 {
-
-        height: 10vh;
-}
-
-div.main-container-event>div.event-host {
-    padding: 5px;
-    margin: 5px;
-    display: flex; 
-    height: fit-content;
-    margin-top:1%;
-    margin-bottom: 1%;
-
-    justify-content: center;
-}
-
-div.main-container-event>div.event-host>h3{
+    width: fit-content;
+    padding: 0px 5px;
+    border-radius: 5px;
     margin: auto;
-}
-
-div.main-container-event>div.event-host>h6{
-    margin: auto;
-}
-
-div.main-container-event>div.event-host>h6>ul{
-    margin: 0;
-}
-
-.joinButton > a{
-    color: black;
-}
-
-div.main-container-event>div.event-host>h6>a:hover{
-    color: #2bbbad;
 }
 
 @media only screen and (min-width: 1020px){
-    div.event-details {
-        height: 100px;
+    .event-players-joined-container {
+        font-size: 20px;
     }
-    div.main-container-event>div.event-host>h3{
-        font-size: 60px;
+    .event-game-container,
+    .event-host-container,
+    .event-date-address-container,
+    .event-players-joined-container {
+        margin: 15px 200px;
+        font-size: 24px;
     }
-    
-    div.main-container-event>div.event-host>h6{
+
+    button.event-bottom-button,
+    a.event-bottom-button {
+        color: white;
         font-size: 40px;
+        padding: 5px;
+        border-radius: 5px;
     }
-    div.main-container-event {
-        padding-left: 200px;
-        padding-right: 200px;
+}
+@media only screen and (min-width: 1400px){
+    .event-players-joined-container {
+        font-size: 30px;
     }
-} */
+    .event-game-container,
+    .event-host-container,
+    .event-date-address-container,
+    .event-players-joined-container {
+        margin: 15px 600px;
+    }
+    div.event-address-container>ul>li,
+    div.event-date-time-container>ul>li {
+        font-size: 30px;
+    }
+}

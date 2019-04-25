@@ -28,7 +28,6 @@ p.events-date-time{
 
 
 .events-info-container > p {
-    vertical-align: middle;
     display: block;
 }
 
@@ -75,5 +74,4 @@ p.events-date-time{
     p.events-date-time{
         font-size: 24px;
     }
-
 }
