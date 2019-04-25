@@ -6,7 +6,6 @@ import './player-list.css';
 
 class PlayerList extends Component {
 
-
     state = {
         eventId: null
     }
@@ -62,30 +61,24 @@ class PlayerList extends Component {
                         </h1>
                     </div>
                     <div className="row playerlist-date-address-container">
-                        <div className="event-date-time-container col s6">
-                            <h4>Time</h4>
-                            <h6>
-                                <ul>
-                                    <li> {Date(data.date)}</li>
-                                    <li>{data.startTime}</li>
-                                    <li> {data.endTime}</li>
-                                </ul>
-                            </h6>
+                        <div className="event-date-time-container">
+                            <h6>Time</h6>
+                            <ul>
+                                <li> {Date(data.date)}</li>
+                                <li>{data.startTime}</li>
+                                <li> {data.endTime}</li>
+                            </ul>
                         </div>
-                        <div className="event-address-container col s6">
-                            <h4>Location</h4>
-                            <h6>
-                                <ul>
-                                    <li>{data.location.streetAddress}</li>
-                                    <li> {data.location.city}</li>
-                                    <li> {data.location.state}</li>
-                                    <li> {data.location.zipCode}</li>
-                                </ul>
-                            </h6>
+                        <div className="event-address-container">
+                            <h6>Location</h6>
+                            <ul>
+                                <li>{data.location.streetAddress}</li>
+                                <li> {data.location.city}</li>
+                                <li> {data.location.state}</li>
+                                <li> {data.location.zipCode}</li>
+                            </ul>
                         </div>
-
                     </div>
-
                     <div className="center player-list-limit">
                         <h5> Player Limit:
                             {data.playerLimit}
@@ -104,8 +97,8 @@ class PlayerList extends Component {
                                     </tr>))}
                             </tbody>
                         </table>
-                        <Link to={backPage} className="btn blue a event-bottom-button">Back To Game</Link>
                     </div>
+                    <Link to={backPage} className="blue event-bottom-button">Back To Game</Link>
                 </div>
             );
         }

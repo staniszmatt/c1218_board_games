@@ -65,23 +65,19 @@ class EventSelected extends Component {
                                 </h5>
                             </div>
                             <div className="date event-date-address-container row">
-                                <div className="event-date-time-container col s6">
-                                    <h6>
-                                        <ul>
-                                            <li>Date: {eventId.date}</li>
-                                            <li>Start: {eventId.startTime}</li>
-                                        </ul>
-                                    </h6>
+                                <div className="event-date-time-container col s12">
+                                    <ul>
+                                        <li>Date: {eventId.date}</li>
+                                        <li>Start: {eventId.startTime}</li>
+                                    </ul>
                                 </div>
-                                <div className="event-address-container col s6">
-                                    <h6>
-                                        <ul>
-                                            <li>Address: {eventId.location.streetAddress}</li>
-                                            <li>City: {eventId.location.city}</li>
-                                            <li>State: {eventId.location.state}</li>
-                                            <li>Zip: {eventId.location.zipcode}</li>
-                                        </ul>
-                                    </h6>
+                                <div className="event-address-container col s12">
+                                    <ul>
+                                        <li>Address: {eventId.location.streetAddress}</li>
+                                        <li>City: {eventId.location.city}</li>
+                                        <li>State: {eventId.location.state}</li>
+                                        <li>Zip: {eventId.location.zipcode}</li>
+                                    </ul>
                                 </div>
                             </div>
                             <div className="numberOfPlayers event-host">
@@ -110,33 +106,27 @@ class EventSelected extends Component {
                             </h5>
                         </div>
                         <div className="date event-date-address-container row">
-                            <div className="event-date-time-container col s6">
-                                <h6>
-                                    <ul>
-                                        <li>Date: {eventId.date}</li>
-                                        <li>Start: {eventId.startTime}</li>
-                                    </ul>
-                                </h6></div>
-                            <div className="event-address-container col s6">
-                                <h6>
-                                    <ul>
-                                        <li>Address: {eventId.location.streetAddress}</li>
-                                        <li>City: {eventId.location.city}</li>
-                                        <li>State: {eventId.location.state}</li>
-                                        <li>Zip: {eventId.location.zipcode}</li>
-                                    </ul>
-                                </h6>
+                            <div className="event-date-time-container col s12">
+                                <ul>
+                                    <li>Date: {eventId.date}</li>
+                                    <li>Start: {eventId.startTime}</li>
+                                </ul>
+                            </div>
+                            <div className="event-address-container col s12">
+                                <ul>
+                                    <li>Address: {eventId.location.streetAddress}</li>
+                                    <li>City: {eventId.location.city}</li>
+                                    <li>State: {eventId.location.state}</li>
+                                    <li>Zip: {eventId.location.zipcode}</li>
+                                </ul>
                             </div>
                         </div>
-
                         <div className="event-players-joined-container">
-                            <h6>
-                                <Link to={'/events/' + eventId.eventID + '/player-list'}>
-                                    <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
-                                </Link>
-                            </h6>
+                            <Link to={'/events/' + eventId.eventID + '/player-list'}>
+                                <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
+                            </Link>                           
                         </div>
-                        <Link className="btn blue a event-bottom-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID + '/player-list'}>Join Game</Link>
+                        <Link className="blue event-bottom-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID + '/player-list'}>Join Game</Link>
                     </div>
                 </div>
             );

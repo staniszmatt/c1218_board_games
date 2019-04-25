@@ -1,4 +1,4 @@
-/* h1{
+h1{
     color: white;
     margin: 0 0 5% 0;
     background-color: #282C37;
@@ -11,12 +11,16 @@
 
 .about-image > img{
     border-radius: 50%;
-    width: 50%;
+    width: 175px;
+    height: 175px;
+    margin: 5px;
 }
 
-.about-name{
-    color: white;
-    font-size: 1.5em;
+.about-name {
+    color: black;
+    background-color: #D9E1E8;
+    opacity: 0.7;
+    font-size: 20px;
 }
 
 .main-div > .about-main-container {
@@ -25,13 +29,46 @@
     color: black;
 }
 
-.about-name{
-    color: black;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+.about-url {
+    font-size: 25px;
+    margin-bottom: 10%;
 }
 
-.about-url {
-    font-size: 1.5em;
-    margin-bottom: 10%;
-} */
+@media only screen and (min-width: 560px){
+    .about-name {
+        width: 175px;
+        margin: auto;
+    }
+    .about-url {
+        margin-bottom: 30px;
+    }
+}
+@media only screen and (min-width: 1020px){
+    a.about-linkedin {
+        line-height: 200%;
+        font-size: 25px;
+        height: 50px;
+    }
+    .about-content-container {
+        display: flex;
+        margin-top: 5vh;
+    }
+    .about-author-container{
+        margin: auto;
+    }
+    .about-name {
+        width: unset;
+    }
+}
+@media only screen and (min-width: 1400px){
+    .about-image > img {
+        width: 20vw;
+        height: 20vw;
+    }
+    .about-name {
+        font-size: 1.7vw;
+    }
+    .about-content-container {
+        margin-top: 10vh;
+    }
+}

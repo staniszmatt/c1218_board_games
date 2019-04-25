@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../event-id/event-id.css';
-import './joined-events.css';
 import axios from 'axios';
 
 
@@ -63,14 +62,14 @@ class JoinedEventDetails extends Component {
                         </div>
 
                         <div className="date event-date-address-container row">
-                            <div className="event-date-time-container col s6">
+                            <div className="event-date-time-container col s12">
                                 <ul>
                                     <li>Date: {eventId.date}</li>
                                     <li>Start: {eventId.startTime}</li>
                                 </ul>
                             </div>
 
-                            <div className="event-address-container col s6">
+                            <div className="event-address-container col s12">
                                 <ul>
                                     <li>Address: {eventId.location.streetAddress}</li>
                                     <li>City: {eventId.location.city}</li>
@@ -79,18 +78,13 @@ class JoinedEventDetails extends Component {
                                 </ul>
                             </div>
                         </div>
-
-                        
-
                         <div className="numberOfPlayers event-host">
                                 <div className="full-game-container red">
                             <h4>Game Is Full!</h4>
                             </div>
                         </div>
-
-
                         <div className="center back">
-                            <button className="btn blue a event-bottom-button" onClick={this.sendUserData}>Leave Game</button>
+                            <button className="blue event-bottom-button" onClick={this.sendUserData}>Leave Game</button>
                         </div>
                     </div>
                 </div>
@@ -106,16 +100,14 @@ class JoinedEventDetails extends Component {
                             Host Name: {eventId.playerName}
                         </h4>
                     </div>
-
                     <div className="date event-date-address-container row">
-                        <div className="event-date-time-container col s6">
+                        <div className="event-date-time-container col s12">
                             <ul>
                                 <li>Date: {eventId.date}</li>
                                 <li>Start: {eventId.startTime}</li>
                             </ul>
                         </div>
-
-                        <div className="event-address-container col s6">
+                        <div className="event-address-container col s12">
                             <ul>
                                 <li>Address: {eventId.location.streetAddress}</li>
                                 <li>City: {eventId.location.city}</li>
@@ -124,25 +116,18 @@ class JoinedEventDetails extends Component {
                             </ul>
                         </div>
                     </div>
-
-
-
                     <div className="event-players-joined-container">
-                        <h6>
-                            <Link to={'/events/' + eventId.eventID + '/player-list'}>
-                                <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
-                            </Link>
-                        </h6>
+                        <Link to={'/events/' + eventId.eventID + '/player-list'}>
+                            <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
+                        </Link>
                     </div>
-
                     <div className="center back">
-                        <Link className="btn blue a event-bottom-button" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
+                        <Link className="blue event-bottom-button" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
                     </div>
                 </div>
             </div>
         );
     }
-
 }
 
 
