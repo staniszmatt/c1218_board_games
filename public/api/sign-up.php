@@ -5,7 +5,6 @@ require_once('../../config/setup.php');
 require_once('../../config/mysql_connect.php');
 
 if (!isset($_SESSION['userID'])) {
-  print(!isset($_SESSION));
   $data = json_decode(file_get_contents('php://input'), true);
 
   if (!$data) {
