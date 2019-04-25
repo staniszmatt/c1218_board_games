@@ -1,0 +1,26 @@
+form {
+  padding-top: 20vh;
+}
+
+input[type=text]:not(.browser-default),
+input[type=password]:not(.browser-default) {
+  font-size: 20px;
+  text-align: center;
+  background-color: rgba(217, 225, 232, 0.750);
+}
+
+.form-container {
+  text-align: center;
+}
+
+label.form-label {
+  color: rgb(43, 110, 217);
+  font: bolder;
+  font-size: 20px;
+  background-color: rgba(217, 225, 232);
+  border-radius: 5px;
+  padding: 4px;
+}
+button.sign-in-button {
+  width: unset;
+}
