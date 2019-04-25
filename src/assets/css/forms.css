@@ -6,7 +6,8 @@ form {
 input[type=text]:not(.browser-default),
 input[type=password]:not(.browser-default),
 input[type=date]:not(.browser-default),
-input[type=time]:not(.browser-default) {
+input[type=time]:not(.browser-default),
+input[type=number]:not(.browser-default) {
   font-size: 20px;
   text-align: center;
   background-color: rgba(217, 225, 232, 0.750);
