@@ -42,7 +42,6 @@ if (!isset($_SESSION['userID'])) {
   if ((!checkZip($data['zipcode']))) {
     throw new Exception("Please enter a proper zip code");
   }
-
   $password = $data["password"];
   unset($data["password"]);
   $location = null;
