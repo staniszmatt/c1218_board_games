@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import timeTo12Hours from '../../helper/timeTo12Hours';
 import { Link } from 'react-router-dom';
 import './event-id.css';
 import axios from 'axios';
-import BoardGamePic from '../../assets/images/boardgame_default.jpg';
+
 
 class EventSelected extends Component {
     state = {
@@ -27,7 +28,14 @@ class EventSelected extends Component {
 
     render() {
         const { eventId } = this.state;
+        let startTime = null;
+        let endTime = null; 
 
+        if (eventId){
+            startTime = timeTo12Hours(eventId.startTime);
+            endTime = timeTo12Hours(eventId.endTime);
+        }
+        
         if (eventId === null) {
             return (
                 <div className="loading-screen-container">
@@ -68,7 +76,8 @@ class EventSelected extends Component {
                                 <div className="event-date-time-container col s12">
                                     <ul>
                                         <li>Date: {eventId.date}</li>
-                                        <li>Start: {eventId.startTime}</li>
+                                        <li>Start: {startTime}</li>
+                                        <li>End: {endTime}</li>
                                     </ul>
                                 </div>
                                 <div className="event-address-container col s12">
@@ -109,7 +118,8 @@ class EventSelected extends Component {
                             <div className="event-date-time-container col s12">
                                 <ul>
                                     <li>Date: {eventId.date}</li>
-                                    <li>Start: {eventId.startTime}</li>
+                                    <li>Start: {startTime}</li>
+                                    <li>End: {endTime}</li>
                                 </ul>
                             </div>
                             <div className="event-address-container col s12">
