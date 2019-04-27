@@ -3,8 +3,14 @@
     src: url(../fonts/quest.ttf);
 }
 
-.loading-text {
-    font-size: 4rem;
+.loading-screen-container {
+    display: block;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-size: 55px;
+    margin-top: 20vh;
+    text-align: center;
 }
 
 body {
@@ -100,11 +106,3 @@ body {
     text-align: left;
 }
 
-.loading-screen-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-}

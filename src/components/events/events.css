@@ -53,10 +53,6 @@ p.events-date-time{
     padding: 30px;
 }
 
-.loading-screen-text{
-    font-size: 3em;
-}
-
 @media only screen and (min-width: 1020px){
     .events-container {
         margin: 15px 200px;
