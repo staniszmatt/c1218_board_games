@@ -60,51 +60,54 @@ class PlayerList extends Component {
                 const endTime12H = timeTo12Hours(data.endTime);
 
                 return (
-                    <div className="player-list-main-container">
+                    <div className="main-container">
                         <div className="header-container">
                             <h1>
                                 {data.gameTitle}
                             </h1>
                         </div>
-                        <div className="row playerlist-date-address-container">
-                            <div className="event-date-time-container">
-                                <h6>Time</h6>
-                                <ul>
-                                    <li> {Date(data.date)}</li>
-                                    <li>{startTime12H}</li>
-                                    <li> {endTime12H}</li>
-                                </ul>
+
+                        <div className="content-container" >
+                            <div className="row playerlist-date-address-container">
+                                <div className="event-date-time-container">
+                                    <h6>Time</h6>
+                                    <ul>
+                                        <li> {Date(data.date)}</li>
+                                        <li>{startTime12H}</li>
+                                        <li> {endTime12H}</li>
+                                    </ul>
+                                </div>
+                                <div className="event-address-container">
+                                    <h6>Location</h6>
+                                    <ul>
+                                        <li>{data.location.streetAddress}</li>
+                                        <li> {data.location.city}</li>
+                                        <li> {data.location.state}</li>
+                                        <li> {data.location.zipCode}</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div className="event-address-container">
-                                <h6>Location</h6>
-                                <ul>
-                                    <li>{data.location.streetAddress}</li>
-                                    <li> {data.location.city}</li>
-                                    <li> {data.location.state}</li>
-                                    <li> {data.location.zipCode}</li>
-                                </ul>
+                            <div className="center player-list-limit">
+                                <h6> Player Limit:
+                                    {data.playerLimit}
+                                </h6>
                             </div>
+                            <div className="player-list">
+                                <h6 className="center"> Players </h6>
+                                <table>
+                                    <tbody>
+                                        {data.playerList.map((player) => (
+                                            <tr key={player.playerName}>
+                                                <td className="center" colSpan="2">
+                                                    {player.playerID}<br />
+                                                    {player.playerName}
+                                                </td>
+                                            </tr>))}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <Link to={backPage} className="blue event-bottom-button">Back To Game</Link>
                         </div>
-                        <div className="center player-list-limit">
-                            <h6> Player Limit:
-                                {data.playerLimit}
-                            </h6>
-                        </div>
-                        <div className="player-list">
-                            <h6 className="center"> Players </h6>
-                            <table>
-                                <tbody>
-                                    {data.playerList.map((player) => (
-                                        <tr key={player.playerName}>
-                                            <td className="center" colSpan="2">
-                                                {player.playerID}<br />
-                                                {player.playerName}
-                                            </td>
-                                        </tr>))}
-                                </tbody>
-                            </table>
-                        </div>
-                        <Link to={backPage} className="blue event-bottom-button">Back To Game</Link>
                     </div>
                 );
             }

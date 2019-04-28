@@ -34,6 +34,7 @@ body {
 .main-container {
     height: 100vh;
     text-align: center;
+    overflow: auto;
 }
 
 .header-container {
