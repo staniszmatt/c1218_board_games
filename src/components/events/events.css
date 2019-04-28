@@ -61,7 +61,7 @@ p.events-date-time{
 @media only screen and (min-width: 1400px){
     .content-container {
         padding-bottom: unset;
-        padding-top: 60px;
+        padding-top: 100px;
     }
     .events-container {
         margin: 15px 200px;
