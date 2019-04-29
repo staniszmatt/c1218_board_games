@@ -27,7 +27,7 @@ if (!isset($_SESSION['userID'])) {
   if ((!checkStrg20($data['playerName'])) || (!checkStrg20($data['firstName'])) || !checkStrg20($data['city']) || !checkStrg20($data['state'])) {
     throw new Exception("Player name, first name, city or state is to long!");
   }
-  if ((!checkStrg30($data['email'])) || (!checkStrg30($data['lastName'])) || !checkStrg30($data['password']) || !checkStrg30($data['streetAddress'])) {
+  if ((!checkStrg60($data['email'])) || (!checkStrg30($data['lastName'])) || !checkStrg30($data['password']) || !checkStrg30($data['streetAddress'])) {
     throw new Exception("Last name, email, street address or password is to long!");
   }
   if ((!checkEmail($data['email']))) {
