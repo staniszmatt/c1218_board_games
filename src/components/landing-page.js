@@ -9,7 +9,7 @@ export default props => (
         <div className="header-container col s12">
             <h1>BOARD GAMERS</h1>
         </div>
-        <div className="landing-page-main-container content-container center">
+        <div className="landing-page-main-container center">
             <Link to="/events" className="center play-button">Play Games</Link>
         </div>
     </div>

@@ -33,7 +33,7 @@ class MyEvents extends Component {
             return (
                 <div className="loading-screen-container">
                     <div className='center loading-screen-text'>Page Is Loading...</div>
-                    <div className="loading-screen-container preloader-wrapper big active test">
+                    <div className="preloader-wrapper big active test">
                         <div className="spinner-layer spinner-blue-only">
                             <div className="circle-clipper left">
                                 <div className="circle"></div>

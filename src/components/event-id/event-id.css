@@ -59,7 +59,7 @@ a.event-bottom-button {
     .event-host-container,
     .event-date-address-container,
     .event-players-joined-container {
-        margin: 15px 600px;
+        margin: 15px 300px;
     }
     div.event-address-container>ul>li,
     div.event-date-time-container>ul>li {

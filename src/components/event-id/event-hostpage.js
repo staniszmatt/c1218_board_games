@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './event-id.css';
+import timeTo12Hours from '../../helper/timeTo12Hours';
 
 class EventHostPage extends Component {
     state = {
@@ -21,12 +22,19 @@ class EventHostPage extends Component {
 
     render() {
         const { hostEventId } = this.state;
+        let startTime = null; 
+        let endTime = null; 
+
+        if (hostEventId){
+            startTime = timeTo12Hours(hostEventId.startTime);
+            endTime = timeTo12Hours(hostEventId.endTime);
+        }
 
         if (hostEventId === null) {
             return (
                 <div className="loading-screen-container">
                     <div className='center loading-screen-text'>Page Is Loading...</div>
-                    <div className="loading-screen-container preloader-wrapper big active test">
+                    <div className="preloader-wrapper big active test">
                         <div className="spinner-layer spinner-blue-only">
                             <div className="circle-clipper left">
                                 <div className="circle"></div>
@@ -60,7 +68,8 @@ class EventHostPage extends Component {
                             <div className="event-date-time-container col s12">
                                 <ul>
                                     <li>Date: {hostEventId.date}</li>
-                                    <li>Start: {hostEventId.startTime}</li>
+                                    <li>Start: {startTime}</li>
+                                    <li>End: {endTime}</li>
                                 </ul>
                             </div>
                             <div className="event-address-container col s12">
@@ -102,7 +111,8 @@ class EventHostPage extends Component {
                         <div className="event-date-time-container col s12">
                             <ul>
                                 <li>Date: {hostEventId.date}</li>
-                                <li>Start: {hostEventId.startTime}</li>
+                                <li>Start: {startTime}</li>
+                                <li>End: {endTime}</li>
                             </ul>
                         </div>
                         <div className="event-address-container col s12">
