@@ -9,24 +9,22 @@ class Events extends Component {
         eventList: []
     }
 
-    componentDidMount() {
-        this.getEventList();
-    }
-
-    async getEventList(){
+    async componentDidMount() {
         const resp = await axios.get(`/api/events.php`);
-        this.setState({
-            eventList: resp.data.event
-        });
-        
+        if (resp.data.success === true && resp.data.event.length <= 0){
+            this.setState({
+                eventList: [null]
+            });
+        }else {
+            this.setState({
+                eventList: [resp.data.event]
+            });
+        }
     }
 
     render() {
         const { eventList } = this.state;
-        let eventRow = [];
-        eventRow = eventList.map((event) => {
-            return <EventRow key={event.id} event={event} eventId={event.id}/>
-        });
+
         if(eventList.length <= 0){
             return (
                 <div className="loading-screen-container">
@@ -44,7 +42,27 @@ class Events extends Component {
                     </div>
                 </div>
             )
-        }
+        } else if (eventList[0] === null) {
+            return (
+                <div className='main-container'>
+                    <div className="header-container col s12">
+                        <h1 className="">Available Events</h1>
+                    </div>
+                    <div className="content-container no-available-events">
+                        NO AVAILABLE EVENTS
+                </div>
+                    <div>
+                        <Link to="/profile" className="btn nav-link available-events-btn">Profile</Link>
+                    </div>
+                </div>
+            );
+        } 
+
+        let eventRow = [];
+        eventRow = eventList.map((event) => {
+            return <EventRow key={event.id} event={event} eventId={event.id}/>
+        });
+
         return (
             <div className='main-container'>
                 <div className="header-container">
@@ -54,10 +72,8 @@ class Events extends Component {
                     {eventRow}
                 </div>
             </div>
-        )
+        );
     }
 }
-
-
 
 export default Events;

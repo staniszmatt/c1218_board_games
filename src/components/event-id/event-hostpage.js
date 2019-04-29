@@ -12,12 +12,15 @@ class EventHostPage extends Component {
     async componentDidMount() {
         const eventId = this.props.match.params.id
         const resp = await axios.get('/api/events-eventID-host.php?eventID=' + eventId + '');
-
-        this.setState({
-            hostEventId: resp.data.event
-        });
-
-
+        if (resp.data.success === true && resp.data.event.length <= 0){
+            this.setState({
+                hostEventId: [null]
+            });
+        } else {
+            this.setState({
+                hostEventId: resp.data.event
+            });
+        }
     }
 
     render() {
