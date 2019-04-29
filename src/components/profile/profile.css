@@ -12,6 +12,12 @@
     background-color: #2B90D9;
 }
 
+.content-container {
+    margin-top: 50px;
+    overflow: auto;
+    margin-bottom: 70px;
+}
+
 
 @media only screen and (min-width: 1020px) {
     .profile-name-container,

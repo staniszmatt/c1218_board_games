@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import CreateEventForm from './new-event-form';
 import axios from 'axios';
-import './create-form.css';
 
 
 class NewEvent extends Component {

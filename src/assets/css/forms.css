@@ -11,8 +11,15 @@ input[type=number]:not(.browser-default) {
   font-size: 20px;
   text-align: center;
   background-color: rgba(217, 225, 232, 0.750);
+  margin: 5px;
 }
-
+label {
+  background-color: rgba(217, 225, 232, 0.750);
+  padding: 5px;
+  border-radius: 5px;
+  color: #2196F3;
+  border: 1px solid black;
+}
 .form-container {
   text-align: center;
 }
@@ -40,6 +47,7 @@ button.edit-event-button {
     display: block;
     margin: auto;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
   button.sign-in-button,
   button.edit-event-button {

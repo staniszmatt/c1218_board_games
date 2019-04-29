@@ -1,7 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import Input from '../general/forms/input';
-import './create-form.css';
 
 const CreateEventForm = props => {
 

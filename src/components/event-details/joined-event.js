@@ -19,9 +19,7 @@ class JoinedEventDetails extends Component {
     }
 
     sendUserData = async () => {
-        // console.log("Made it to send user data", this.state);
         const resp = await axios.post('/api/events-eventID-myEvents-leaveGame.php', this.state.eventId);
-        // console.log("resp ", resp);
         this.props.history.push("/events/myevents");
     }
 
@@ -32,7 +30,7 @@ class JoinedEventDetails extends Component {
             return (
                 <div className="loading-screen-container">
                     <div className='center loading-screen-text'>Page Is Loading...</div>
-                    <div className="loading-screen-container preloader-wrapper big active test">
+                    <div className="preloader-wrapper big active test">
                         <div className="spinner-layer spinner-blue-only">
                             <div className="circle-clipper left">
                                 <div className="circle"></div>

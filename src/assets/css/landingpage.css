@@ -42,27 +42,3 @@
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-
-/* 
-@media only screen and (min-width: 1020px) {
-    .landing-page-header {
-        background-color: #282C37;
-        height: 100px;
-    }
-    .play-button{
-        font-size: 50px;
-    }
-}
-
-@media only screen and (min-width: 1400px){
-    .landingpage-main-container {
-        margin-top: 60px;
-        height: 100vh;
-        scroll-behavior: unset;
-        width: 100%;
-    }
-    .landingpage-main-container {
-        position: fixed;
-        margin-top: 0;
-    }
-} */
