@@ -99,8 +99,8 @@ function validate(values) {
     if (lastName && lastName.length > 20) {
         errors.lastName = 'Last name must be less than 20 characters';
     }
-    if (email && email.length > 20) {
-        errors.email = 'Email must be less than 30 characters';
+    if (email && email.length > 60) {
+        errors.email = 'Email must be less than 60 characters';
     }
     if (password && password.length > 20) {
         errors.password = 'Password must be less than 30 characters';
