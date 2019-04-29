@@ -6,7 +6,6 @@ import timeTo12Hours from '../../helper/timeTo12Hours';
 const EventRowMyEvents = (props) => {
 
     const { startTime, endTime, date, gameTitle, eventID, playerLimit, playerCount } = props.event;
-console.log("events-row-myevents.js ", props);
     if (parseInt(playerCount) < parseInt(playerLimit)) {
         if (props.event){
             const startTime12H = timeTo12Hours(startTime);

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import timeTo12Hours from '../../helper/timeTo12Hours';
 
 const EventRowHost = (props) => {
-console.log("events-row-host ", props);
     const { startTime, endTime, date, gameTitle, eventID, playerLimit, playerCount } = props.event;
 
     if (parseInt(playerCount) < parseInt(playerLimit) && props.event) {

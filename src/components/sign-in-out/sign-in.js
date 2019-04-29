@@ -6,7 +6,6 @@ import { format } from 'util';
 
 class SignIn extends Component{
     render(){
-        console.log('Error:', this.props.error);
         return (
             <div className="main-container">
                 <div className="header-container">

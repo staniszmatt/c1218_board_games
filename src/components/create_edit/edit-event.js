@@ -28,7 +28,6 @@ class EditEvent extends Component {
   async getEditEventData() {
     const eventID = this.props.match.params.id;
     const resp = await axios.get('/api/events-eventID-host.php?eventID=' + eventID + "");
-console.log(resp);
     this.setState({
       ...resp.data.event
     });
@@ -37,10 +36,8 @@ console.log(resp);
   handleSubmit = async (event) => {
     event.preventDefault();
     const formattedNewEvent = this.state;
-    console.log("post event ", formattedNewEvent);
     formattedNewEvent.startTime = formattedNewEvent.startTime+":00";
     formattedNewEvent.endTime = formattedNewEvent.endTime+":00";
-    console.log("post event ", formattedNewEvent);
     const eventID = this.state.eventID//event is being pulled from the form - follow that formatting
     const resp = await axios.post('/api/events-eventID-edit.php?eventID=' + eventID, formattedNewEvent);
     this.props.history.push('/events/' + eventID + '/host');
@@ -65,7 +62,6 @@ console.log(resp);
   render() {
     const { gameTitle, date,  startTime, endTime, playerLimit } = this.state;
     const { city, state, streetAddress, zipcode } = this.state.location;
-    console.log(streetAddress)
 
     return (
       <div className="main-container">

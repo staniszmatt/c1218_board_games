@@ -19,9 +19,7 @@ class JoinedEventDetails extends Component {
     }
 
     sendUserData = async () => {
-        // console.log("Made it to send user data", this.state);
         const resp = await axios.post('/api/events-eventID-myEvents-leaveGame.php', this.state.eventId);
-        // console.log("resp ", resp);
         this.props.history.push("/events/myevents");
     }
 
