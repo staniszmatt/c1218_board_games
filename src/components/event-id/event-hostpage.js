@@ -14,7 +14,7 @@ class EventHostPage extends Component {
         const resp = await axios.get('/api/events-eventID-host.php?eventID=' + eventId + '');
         if (resp.data.success === true && resp.data.event.length <= 0){
             this.setState({
-                hostEventId: [null]
+                hostEventId: null
             });
         } else {
             this.setState({
@@ -90,7 +90,7 @@ class EventHostPage extends Component {
                             </div>
                         </div>
                         <div className="center joinButton green lighten-4">
-                            <Link to={'/events/' + hostEventId.eventID + '/edit'} className="nav-link">Edit Game</Link>
+                            <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="nav-link">Edit Game</Link>
                         </div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@ class EventHostPage extends Component {
                             {numberOfPlayers} Players out of {hostEventId.playerLimit} have joined
                         </Link>
                     </div>
-                    <Link to={'/events/' + hostEventId.eventID + '/edit'} className="blue event-bottom-button">Edit Game</Link>
+                    <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="blue event-bottom-button">Edit Game</Link>
                 </div>
             </div>
         );
