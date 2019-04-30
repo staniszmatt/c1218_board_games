@@ -133,6 +133,7 @@ class EventSelected extends Component {
               </Link>
             </div>
             <Link className="blue event-bottom-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID + '/player-list'}>Join Game</Link>
+            <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
           </div>
         </div>
       );

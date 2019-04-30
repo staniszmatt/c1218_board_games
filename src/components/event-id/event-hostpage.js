@@ -89,6 +89,7 @@ class EventHostPage extends Component {
             </div>
             <div className="center joinButton green lighten-4">
               <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="nav-link">Edit Game</Link>
+              <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
             </div>
           </div>
         </div>
@@ -131,6 +132,7 @@ class EventHostPage extends Component {
             </Link>
           </div>
           <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="blue event-bottom-button">Edit Game</Link>
+          <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
         </div>
       </div>
     );

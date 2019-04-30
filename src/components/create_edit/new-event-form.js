@@ -1,9 +1,16 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { Link } from 'react-router-dom';
+import { browserHistory } from 'react-router';
 import Input from '../general/forms/input';
 
 const CreateEventForm = props => {
   const { handleSubmit, onSubmit } = props;
+
+  let onBackButtonEvent = () => {
+    console.log("Browser", history);
+    history.back();
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -20,6 +27,7 @@ const CreateEventForm = props => {
       </div>
       <div className="col s6 center">
         <button className="btn blue darken edit-event-button">Create Event</button>
+        <button onClick={onBackButtonEvent} className="btn blue darken edit-event-button">Back</button>
       </div>
     </form>
   );
