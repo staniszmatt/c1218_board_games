@@ -1,34 +1,36 @@
-.profile-name-container{
-    margin: 10px 10px;
-    background-color: rgba(217, 225, 232, 0.750);
+.profile-name-container {
+  margin: 10px 10px;
+  background-color: rgba(217, 225, 232, 0.750);
 }
 
 .profile-button-container>div {
-    margin: 10px 10px;
+  margin: 10px 10px;
 }
 
 .profile-button-container>div>a {
-    width: 100%;
-    background-color: #2B90D9;
+  width: 100%;
+  background-color: #2B90D9;
 }
 
 .content-container {
-    margin-top: 50px;
-    overflow: auto;
-    margin-bottom: 70px;
+  margin-top: 50px;
+  overflow: auto;
+  margin-bottom: 70px;
 }
 
 
 @media only screen and (min-width: 1020px) {
-    .profile-name-container,
-    .profile-button-container>div {
-        margin: 15px 200px;
-    }
+
+  .profile-name-container,
+  .profile-button-container>div {
+    margin: 15px 200px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
-    .profile-name-container,
-    .profile-button-container>div {
-        margin: 15px 400px;
-    }
+
+  .profile-name-container,
+  .profile-button-container>div {
+    margin: 15px 400px;
+  }
 }
