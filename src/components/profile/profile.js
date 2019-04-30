@@ -62,6 +62,9 @@ class Profile extends Component {
             <div>
               <Link to="/events/myevents" className="btn nav-link my-joined-events-btn">My Joined Events</Link>
             </div>
+            <div>
+              <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+            </div>
           </div>
         </div>
       </div>

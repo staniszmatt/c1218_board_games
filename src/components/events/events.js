@@ -71,6 +71,7 @@ class Events extends Component {
         </div>
         <div className="content-container">
           {eventRow}
+          <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
         </div>
       </div>
     );

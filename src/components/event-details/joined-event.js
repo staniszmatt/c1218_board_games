@@ -117,6 +117,7 @@ class JoinedEventDetails extends Component {
           </div>
           <div className="center back">
             <Link className="blue event-bottom-button" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
+            <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
           </div>
         </div>
       </div>

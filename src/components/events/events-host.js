@@ -9,6 +9,11 @@ class EventsHost extends Component {
     hostEventsList: []
   }
 
+  onBackButtonEvent = () => {
+    console.log("Browser", history);
+    history.back();
+  }
+
   async componentDidMount() {
     const resp = await axios.get(`/api/events-host.php`);
     if (resp.data.success === true && resp.data.userID.length === 0) {
@@ -67,6 +72,7 @@ class EventsHost extends Component {
         </div>
         <div className="content-container">
           {eventRow}
+          <button onClick={this.onBackButtonEvent} className="btn blue darken edit-event-button">Back</button>
         </div>
       </div>
     );
