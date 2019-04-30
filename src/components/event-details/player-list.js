@@ -15,13 +15,12 @@ class PlayerList extends Component {
         this.setState({
             eventId: this.props.match.params.id
         });
-        this.state.eventId = this.props.match.params.id;
         this.getPlayerListData();
     }
 
     async getPlayerListData() {
-        const eventId = this.state.eventId;
-        const resp = await axios.get('/api/events-eventID-player-list.php?eventID=' + eventId + '');
+        const eventId = this.props.match.params.id;
+        const resp = await axios.get('/api/events-eventID-player-list.php?eventID=' + eventId);
 
         this.setState({
             data: resp.data.event
@@ -30,7 +29,6 @@ class PlayerList extends Component {
 
     render() {
         const { data } = this.state;
-
         if (data === undefined) {
             return (
                 <div className="loading-screen-container">
@@ -49,11 +47,6 @@ class PlayerList extends Component {
                 </div>
             );
         } else {
-            if (data.hosting) {
-                var backPage = `/events/${data.eventID}/host`;
-            } else {
-                var backPage = `/events/${data.eventID}`;
-            }
 
             if (data){
                 const startTime12H = timeTo12Hours(data.startTime);
@@ -106,7 +99,7 @@ class PlayerList extends Component {
                                     </tbody>
                                 </table>
                             </div>
-                            <Link to={backPage} className="blue event-bottom-button">Back To Game</Link>
+                            <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back To Game</a>
                         </div>
                     </div>
                 );
