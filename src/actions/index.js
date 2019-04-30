@@ -4,6 +4,10 @@ import axios from 'axios';
 export const checkAuth = () => async dispatch => {
   try {
     const { data } = await axios.get('/api/is-logged-in.php');
+    if(!data["logged-in"]){
+      throw new Error('Not logged in');
+    }
+
     dispatch({
       type: types.SIGN_IN
     });
