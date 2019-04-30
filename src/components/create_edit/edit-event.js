@@ -36,8 +36,6 @@ class EditEvent extends Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const formattedNewEvent = this.state;
-    formattedNewEvent.startTime = formattedNewEvent.startTime+":00";
-    formattedNewEvent.endTime = formattedNewEvent.endTime+":00";
     const eventID = this.state.eventID//event is being pulled from the form - follow that formatting
     const resp = await axios.post('/api/events-eventID-edit.php?eventID=' + eventID, formattedNewEvent);
     this.props.history.push('/events/' + eventID + '/host');

@@ -19,6 +19,10 @@
     border-radius: 5px;
 }
 
+a.player-list-back-btn{
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 1020px) {
     div.event-date-time-container>h6,
     div.event-address-container>h6,

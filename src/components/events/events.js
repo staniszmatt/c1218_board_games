@@ -3,29 +3,33 @@ import { Link } from 'react-router-dom';
 import './events.css';
 import EventRow from './events-row';
 import axios from 'axios';
+import { debug } from 'util';
 
 class Events extends Component {
     state = {
-        eventList: []
+        eventList: [],
+        isLoading: true
     }
 
     async componentDidMount() {
         const resp = await axios.get(`/api/events.php`);
         if (resp.data.success === true && resp.data.event.length <= 0){
             this.setState({
-                eventList: [null]
+                eventList: [],
+                isLoading: false
             });
         }else {
             this.setState({
-                eventList: [resp.data.event]
+                eventList: resp.data.event,
+                isLoading: false
             });
         }
     }
 
     render() {
-        const { eventList } = this.state;
+        const { eventList, isLoading } = this.state;
 
-        if(eventList.length <= 0){
+        if(isLoading){
             return (
                 <div className="loading-screen-container">
                     <div className='center loading-screen-text'>Page Is Loading...</div>
@@ -42,7 +46,7 @@ class Events extends Component {
                     </div>
                 </div>
             )
-        } else if (eventList[0] === null) {
+        } else if (eventList.length <= 0) {
             return (
                 <div className='main-container'>
                     <div className="header-container col s12">
