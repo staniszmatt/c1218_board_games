@@ -27,6 +27,7 @@ class EventSelected extends Component {
     }
 
     render() {
+
         const { eventId } = this.state;
         let startTime = null;
         let endTime = null; 
