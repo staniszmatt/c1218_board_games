@@ -1,44 +1,42 @@
 .landing-page-main-container {
-        background-image: url(https://i.imgur.com/3QhNw7q.jpg?1);
-    background-size: cover;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        padding-bottom: 34%;
-        background-color: #D9E1E8;
-        overflow-y: scroll;
+	background-image: url(https://i.imgur.com/3QhNw7q.jpg?1);
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #D9E1E8;
+	overflow-y: scroll;
 
 }
 
-.play-button{
-    padding: 12px 20px;
-    color: white;
-    font-size: 25px;
-     font-family: -apple-system,
-     sans-serif;
-    cursor: pointer;
-    color: black;
-    border-radius: 5px;
-   vertical-align: middle;
-      background-color: #2B90D9;
-      color: white;
-      text-align: center;
-      border: 1px solid black;
-      box-shadow: 3px 3px #0F4434;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+.play-button {
+	padding: 12px 20px;
+	color: white;
+	font-size: 25px;
+	font-family: -apple-system,
+		sans-serif;
+	cursor: pointer;
+	color: black;
+	border-radius: 5px;
+	vertical-align: middle;
+	background-color: #2B90D9;
+	color: white;
+	text-align: center;
+	border: 1px solid black;
+	box-shadow: 3px 3px #0F4434;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 
 .play-button:hover {
-    background-color: #2bbbad;
+	background-color: #2bbbad;
 }
 
 .play-button:active {
-    background-color: #2bbbad;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+	background-color: #2bbbad;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }

@@ -48,5 +48,4 @@ if (!isset($_SESSION['userID'])) {
 
 $json_output = json_encode($output);
 print($json_output);
-
 ?>

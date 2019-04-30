@@ -1,68 +1,72 @@
 h4 {
-    width: unset;
+  width: unset;
 }
 
 .event-game-container,
 .event-host-container,
 .event-date-address-container,
 .event-players-joined-container {
-    margin: 10px;
-    background-color: rgba(217, 225, 232, 0.750);
-    border-radius: 5px;
-    font-size: 22px;
+  margin: 10px;
+  background-color: rgba(217, 225, 232, 0.750);
+  border-radius: 5px;
+  font-size: 22px;
 }
 
 div.back {
-    margin: 10px;
+  margin: 10px;
 }
 
 button.event-bottom-button,
 a.event-bottom-button {
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.full-game-container {
+  width: fit-content;
+  padding: 0px 5px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 1020px) {
+  .event-players-joined-container {
+    font-size: 20px;
+  }
+
+  .event-game-container,
+  .event-host-container,
+  .event-date-address-container,
+  .event-players-joined-container {
+    margin: 15px 200px;
+    font-size: 24px;
+  }
+
+  button.event-bottom-button,
+  a.event-bottom-button {
     color: white;
-    font-size: 18px;
+    font-size: 40px;
     padding: 5px;
     border-radius: 5px;
+  }
 }
 
-.full-game-container{
-    width: fit-content;
-    padding: 0px 5px;
-    border-radius: 5px;
-    margin: auto;
-}
+@media only screen and (min-width: 1400px) {
+  .event-players-joined-container {
+    font-size: 30px;
+  }
 
-@media only screen and (min-width: 1020px){
-    .event-players-joined-container {
-        font-size: 20px;
-    }
-    .event-game-container,
-    .event-host-container,
-    .event-date-address-container,
-    .event-players-joined-container {
-        margin: 15px 200px;
-        font-size: 24px;
-    }
+  .event-game-container,
+  .event-host-container,
+  .event-date-address-container,
+  .event-players-joined-container {
+    margin: 15px 300px;
+  }
 
-    button.event-bottom-button,
-    a.event-bottom-button {
-        color: white;
-        font-size: 40px;
-        padding: 5px;
-        border-radius: 5px;
-    }
-}
-@media only screen and (min-width: 1400px){
-    .event-players-joined-container {
-        font-size: 30px;
-    }
-    .event-game-container,
-    .event-host-container,
-    .event-date-address-container,
-    .event-players-joined-container {
-        margin: 15px 300px;
-    }
-    div.event-address-container>ul>li,
-    div.event-date-time-container>ul>li {
-        font-size: 30px;
-    }
+  div.event-address-container>ul>li,
+  div.event-date-time-container>ul>li {
+    font-size: 30px;
+  }
 }

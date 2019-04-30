@@ -1,289 +1,299 @@
+<script src="https://pitt.edu/webtrends/webtrends.load.js" type="text/javascript"></script>
 
-
-       <script src="https://pitt.edu/webtrends/webtrends.load.js" type="text/javascript"></script>
-           
-                <script type="text/javascript">
-    $(document).ready(function(){
-searchField = $('#block-search-0 .form-text');
-function makeSearch(text, color){searchField.val(text).css("color", color)};
-if (searchField.val() == "" || searchField.val() == "Search") {
-makeSearch("Search", "#0066CC");
-}
-searchField.focus(function(){
-if(searchField.val() == "Search") {
-makeSearch('', '#000');
-};
-}),
-searchField.blur(function(){
-if(searchField.val() == "") {
-makeSearch('Search', '#0066CC');
-};
-});
-});
+<script type="text/javascript">
+	$(document).ready(function () {
+		searchField = $('#block-search-0 .form-text');
+		function makeSearch(text, color) { searchField.val(text).css("color", color) };
+		if (searchField.val() == "" || searchField.val() == "Search") {
+			makeSearch("Search", "#0066CC");
+		}
+		searchField.focus(function () {
+			if (searchField.val() == "Search") {
+				makeSearch('', '#000');
+			};
+		}),
+			searchField.blur(function () {
+				if (searchField.val() == "") {
+					makeSearch('Search', '#0066CC');
+				};
+			});
+	});
 </script>
-               
-			
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>The Logo Board Game | Gender, Sexuality, and Women's Studies</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="shortcut icon" href="/sites/all/themes/womensstudies/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/sites/all/themes/womensstudies/favicon.ico" type="image/x-icon" />
 	<link type="text/css" rel="stylesheet" media="all" href="/modules/aggregator/aggregator.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/modules/book/book.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/cck/theme/content-module.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date_popup/themes/datepicker.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/filefield/filefield.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/google_cse/google_cse.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/tableofcontents/tableofcontents.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/misc/farbtastic/farbtastic.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/calendar/calendar.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/views/css/views.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/womensstudies/html-elements.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/tabs.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/messages.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/block-editing.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/wireframes.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/zen.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/womensstudies/layout.css?i" />
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/womensstudies/womensstudies.css?i" />
-<link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/womensstudies/print.css?i" />
-<!--[if IE]>
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/ie.css?k" />
-<![endif]-->
-<!--[if lte IE 6]>
-<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/womensstudies/ie6.css?k" />
-<![endif]-->
+	<link type="text/css" rel="stylesheet" media="all" href="/modules/book/book.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/cck/theme/content-module.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date.css?i" />
+	<link type="text/css" rel="stylesheet" media="all"
+		href="/sites/all/modules/date/date_popup/themes/datepicker.css?i" />
+	<link type="text/css" rel="stylesheet" media="all"
+		href="/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/filefield/filefield.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/google_cse/google_cse.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/tableofcontents/tableofcontents.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/misc/farbtastic/farbtastic.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/calendar/calendar.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/views/css/views.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/womensstudies/html-elements.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/tabs.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/messages.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/block-editing.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/wireframes.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/zen.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/womensstudies/layout.css?i" />
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/womensstudies/womensstudies.css?i" />
+	<link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/womensstudies/print.css?i" />
+	<!--[if IE]>
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/ie.css?k" />
+	<![endif]-->
+	<!--[if lte IE 6]>
+	<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/womensstudies/ie6.css?k" />
+	<![endif]-->
 	<script type="text/javascript" src="/sites/default/files/js/js_f6b9a458ad93aaddf7eb72916a89b50d.js"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutbound": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" }, "custom_search": { "form_target": "_self", "solr": 0 }, "beautytips": { "bt_drupal_events": { "area": ".calendar a", "ajaxPath": [ "$(this).attr(\'href\')", "h1.title, .date-display-single, .field-field-location, .field-field-summary, .field-field-speaker, .field-field-sponsor" ], "trigger": [ "mouseover", "click" ], "width": "250px", "closeWhenOthersOpen": true, "killTitle": true, "fill": "rgb(151,132,76)", "padding": "10px 10px 10px 20px", "strokeWidth": "0", "cornerRadius": "0", "list": [ "area", "ajaxPath", "trigger", "width", "closeWhenOthersOpen", "killTitle", "fill", "padding", "strokeWidth", "cornerRadius" ] } } });
-//--><!]]>
-</script>
+	<script type="text/javascript">
+		jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutbound": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" }, "custom_search": { "form_target": "_self", "solr": 0 }, "beautytips": { "bt_drupal_events": { "area": ".calendar a", "ajaxPath": ["$(this).attr(\'href\')", "h1.title, .date-display-single, .field-field-location, .field-field-summary, .field-field-speaker, .field-field-sponsor"], "trigger": ["mouseover", "click"], "width": "250px", "closeWhenOthersOpen": true, "killTitle": true, "fill": "rgb(151,132,76)", "padding": "10px 10px 10px 20px", "strokeWidth": "0", "cornerRadius": "0", "list": ["area", "ajaxPath", "trigger", "width", "closeWhenOthersOpen", "killTitle", "fill", "padding", "strokeWidth", "cornerRadius"] } } });
+	</script>
 	<script src="/sites/all/themes/womensstudies/js/search.js"></script>
 </head>
-<body class="not-front not-logged-in node-type-blog one-sidebar sidebar-right page-blogs-ndc14-logo-board-game section-blogs">
 
+<body
+	class="not-front not-logged-in node-type-blog one-sidebar sidebar-right page-blogs-ndc14-logo-board-game section-blogs">
 	<!-- pitt header on every page.  See main.css for notes -->
 	<div id="pitt-header" class="white">
 		<a href="http://www.pitt.edu/" title="University of Pittsburgh" id="p-link">University of Pittsburgh</a>
-		
+
 		<div class="pitt-header-right">
 			<ul id="pitt-links" class="blue pitt-links">
 				<li id="p-home">
-						<a href="http://www.pitt.edu/" title="University of Pittsburgh">Pitt Home</a> | 
-						 <a href="http://www.as.pitt.edu/"  title="Dietrich School">Dietrich School</a> | 
-						<a href="http://www.pitt.edu/findpeople.html" title="University of Pittsburgh Directory">Find People</a>
-					</li>
-				</ul>
-
-				<div class="header__search-block">
-					<form action="/blogs/ndc14/logo-board-game"  accept-charset="UTF-8" method="post" id="custom-search-blocks-form-1" class="search-form">
-<div><div class="form-item" id="edit-custom-search-blocks-form-1-1-wrapper">
- <label for="edit-custom-search-blocks-form-1-1">Search this site: </label>
- <input type="text" maxlength="128" name="custom_search_blocks_form_1" id="edit-custom-search-blocks-form-1-1" size="15" value="Search" title="Enter the terms you wish to search for." class="form-text  custom-search-default-value custom-search-box" />
-</div>
-<fieldset class="custom_search-popup"></fieldset>
-<input type="hidden" name="delta" id="edit-delta" value="1"  />
-<input type="hidden" name="form_build_id" id="form-BIJQc7MBaJIpv8yQkxSIxaL0zDN8c8fu1Dk3wccYIy0" value="form-BIJQc7MBaJIpv8yQkxSIxaL0zDN8c8fu1Dk3wccYIy0"  />
-<input type="hidden" name="form_id" id="edit-custom-search-blocks-form-1" value="custom_search_blocks_form_1"  />
-<input type="hidden" name="default_text" id="edit-default-text" value="Search"  class="default-text" />
-<input type="submit" name="op" id="edit-submit" value="Search"  class="form-submit" />
-
-</div></form>
-			 </div>
-		 </div>
-
+					<a href="http://www.pitt.edu/" title="University of Pittsburgh">Pitt Home</a> |
+					<a href="http://www.as.pitt.edu/" title="Dietrich School">Dietrich School</a> |
+					<a href="http://www.pitt.edu/findpeople.html" title="University of Pittsburgh Directory">Find People</a>
+				</li>
+			</ul>
+			<div class="header__search-block">
+				<form action="/blogs/ndc14/logo-board-game" accept-charset="UTF-8" method="post"
+					id="custom-search-blocks-form-1" class="search-form">
+					<div>
+						<div class="form-item" id="edit-custom-search-blocks-form-1-1-wrapper">
+							<label for="edit-custom-search-blocks-form-1-1">Search this site: </label>
+							<input type="text" maxlength="128" name="custom_search_blocks_form_1"
+								id="edit-custom-search-blocks-form-1-1" size="15" value="Search"
+								title="Enter the terms you wish to search for."
+								class="form-text  custom-search-default-value custom-search-box" />
+						</div>
+						<fieldset class="custom_search-popup"></fieldset>
+						<input type="hidden" name="delta" id="edit-delta" value="1" />
+						<input type="hidden" name="form_build_id" id="form-BIJQc7MBaJIpv8yQkxSIxaL0zDN8c8fu1Dk3wccYIy0"
+							value="form-BIJQc7MBaJIpv8yQkxSIxaL0zDN8c8fu1Dk3wccYIy0" />
+						<input type="hidden" name="form_id" id="edit-custom-search-blocks-form-1"
+							value="custom_search_blocks_form_1" />
+						<input type="hidden" name="default_text" id="edit-default-text" value="Search" class="default-text" />
+						<input type="submit" name="op" id="edit-submit" value="Search" class="form-submit" />
+					</div>
+				</form>
+			</div>
+		</div>
 	</div><!-- pitt-header -->
-	
-	<div id="page"><div id="page-inner">
-
-		<a name="top" id="navigation-top"></a>
-					<div id="skip-to-nav"><a href="#navigation">Skip to Navigation</a></div>
-				
-	 
-		<div id="header"><div id="header-inner" class="clear-block">
-
-							<div id="logo-title">
-
-											<div id="logo"><a href="/" title="Home" rel="home"><img src="/sites/default/files/womensstudies_logo.png" alt="Home" id="logo-image" /></a></div>
-					
-																		<div id="site-name"><strong>
+	<div id="page">
+		<div id="page-inner">
+			<a name="top" id="navigation-top"></a>
+			<div id="skip-to-nav"><a href="#navigation">Skip to Navigation</a></div>
+			<div id="header">
+				<div id="header-inner" class="clear-block">
+					<div id="logo-title">
+						<div id="logo"><a href="/" title="Home" rel="home"><img src="/sites/default/files/womensstudies_logo.png"
+									alt="Home" id="logo-image" /></a></div>
+						<div id="site-name"><strong>
 								<a href="/" title="Home" rel="home">
-								Gender, Sexuality, and Women's Studies								</a>
+									Gender, Sexuality, and Women's Studies </a>
 							</strong></div>
-											
-				</div> <!-- /#logo-title -->
-			
-							<div id="header-blocks" class="region region-header">
-					<div id="block-block-10" class="block block-block region-odd odd region-count-1 count-3"><div class="block-inner">
-
-  
-  <div class="content">
-    <p><img src="/sites/default/files/header.jpg" alt="" height="256" width="960" /></p>
-  </div>
-
-  
-</div></div> <!-- /block-inner, /block -->
-				</div> <!-- /#header-blocks -->
-			
-		</div></div> <!-- /#header-inner, /#header -->
-
-		<div id="main"><div id="main-inner" class="clear-block with-navbar">
-							<div id="content"><div id="content-inner">
-
-									<div id="content-header">
-													<strong class="section-title">Blog</strong>
-																			<h1 class="title">The Logo Board Game</h1>
-																													</div> <!-- /#content-header -->
-				
-				<div id="content-area">
-																<div id="node-1031" class="node node-type-blog"><div class="node-inner">
-
-  
-  
-  
-      <div class="meta">
-      
-              <div class="terms terms-inline"> in <ul class="links inline"><li class="taxonomy_term_42 first"><a href="/category/blog-categories/advertising" rel="tag" title="">advertising</a></li>
-<li class="taxonomy_term_364"><a href="/category/blog-categories/board-games" rel="tag" title="">Board Games</a></li>
-<li class="taxonomy_term_366"><a href="/category/blog-categories/consumer-culture" rel="tag" title="">Consumer Culture</a></li>
-<li class="taxonomy_term_367"><a href="/category/blog-categories/logos" rel="tag" title="">Logos</a></li>
-<li class="taxonomy_term_365 last"><a href="/category/blog-categories/toys" rel="tag" title="">Toys</a></li>
-</ul></div>
-          </div>
-  
-  <div class="content">
-    <p>I'm sure that many of my classmates can attest to the fact that participating in this class has made even the most socially aware of us even more keen observers of the pervasiveness of advertising in our popular culture.  Last week while I was out running errands, I noticed a rather interesting board game in the children's section of one of the stores.</p>
-<p><img src="/sites/default/files/LogoBoardGame.jpg" alt="" width="600" height="600" /></p>
-<p>&nbsp;</p>
-<p><a href="http://www.youtube.com/watch?v=qnkwHoNwkC8" title="http://www.youtube.com/watch?v=qnkwHoNwkC8">http://www.youtube.com/watch?v=qnkwHoNwkC8</a></p>
-<p>The reviewer in this video claims, "The fun is as much about the social interaction it creates as playing the game itself.  You may be surprised to discover how many memories and experiences you have around brands and advertising and how fun sharing those can be."  This is a telling (and depressing) statement, considering the themes of rampant consumer culture expressed in much of the readings we've discussed, as well as the documentary <em>The Persuaders</em>.  As Juliet Schor explains in our current reading, <em>Born To Buy</em>, "Kids can recognize logos by eighteen months, and before their second birthday they're asking for products by brand name... The typical first grader can evoke 200 brands" &nbsp;(Schor 19). &nbsp;It is no wonder, then, that board games which used to revolve around historical knowledge (Trivial Pursuit), strategy (Chess), language skills (Scrabble) or just plain old fun (Candyland, Chutes and Ladders) are giving way to games that incorporate not only popular culture (such as the recent incarnations of Trivial Pursuit and the various editions of Scene It) but even the advertising itself.</p>
-<p>Proving that we Americans are certainly not the only ones immersed in consumer culture, there are even special versions of this game marketed to individuals in other countries, such as the U.K. - <a href="http://www.youtube.com/watch?v=FmZWk5sQn9w" title="http://www.youtube.com/watch?v=FmZWk5sQn9w">http://www.youtube.com/watch?v=FmZWk5sQn9w</a> - and Australia - <a href="http://www.youtube.com/watch?feature=endscreen&amp;v=eLFi6-mwcqE&amp;NR=1" title="http://www.youtube.com/watch?feature=endscreen&amp;v=eLFi6-mwcqE&amp;NR=1">http://www.youtube.com/watch?feature=endscreen&amp;v=eLFi6-mwcqE&amp;NR=1</a>.  And here's an amusing American ad, for good measure - <a href="http://www.youtube.com/watch?v=Bm7fvwkVMCg" title="http://www.youtube.com/watch?v=Bm7fvwkVMCg">http://www.youtube.com/watch?v=Bm7fvwkVMCg</a>.</p>
-<p>-Nicole</p>
-  </div>
-
-  <ul class="links inline"><li class="blog_usernames_blog first"><a href="/blog/ndc14" title="Read ndc14&#039;s latest blog entries.">ndc14&#039;s blog</a></li>
-<li class="comment_forbidden last"><span><a href="/user/login?destination=node%2F1031%23comment-form">Login</a> to post comments</span></li>
-</ul>
-</div></div> <!-- /node-inner, /node -->
-														</div>
-
-				
-				
-			</div></div> <!-- /#content-inner, /#content -->
-
-							<div id="navbar"><div id="navbar-inner" class="clear-block region region-navbar">
-
-					<a name="navigation" id="navigation"></a>
-
-					
-											<div id="primary">
-							<ul class="links"><li class="menu-282 first"><a href="/about" title="About">About</a></li>
-<li class="menu-286"><a href="/research" title="Research Opportunities">Research</a></li>
-<li class="menu-390"><a href="/students" title="Students">Students</a></li>
-<li class="menu-1089"><a href="/faculty" title="Faculty">Faculty</a></li>
-<li class="menu-1090"><a href="/alumniae-friends" title="Alumni &amp; Friends">Alumni/ae &amp; Friends</a></li>
-<li class="menu-489"><a href="/events">Events</a></li>
-<li class="menu-3880"><a href="/News" title="News">News</a></li>
-<li class="menu-316 last"><a href="/resources" title="Resources">Resources</a></li>
-</ul>						</div> <!-- /#primary -->
-					
-					
-
-				</div></div> <!-- /#navbar-inner, /#navbar -->
-
-			
-			
-							<div id="sidebar-right"><div id="sidebar-right-inner" class="region region-right">
-					<div id="block-block-16" class="block block-block region-odd odd region-count-1 count-1"><div class="block-inner">
-
-  
-  <div class="content">
-    <p><a class="sidebar-btn" href="/prospective-students">Prospective Students &gt;</a></p>
-  </div>
-
-  
-</div></div> <!-- /block-inner, /block -->
-<div id="block-block-2" class="block block-block region-even even region-count-2 count-2"><div class="block-inner">
-
-  
-  <div class="content">
-    <p><a href="alumni-friends/support-womens-studies" target="_self">Support<br />GSWS &gt;</a></p>
-  </div>
-
-  
-</div></div> <!-- /block-inner, /block -->
-				</div></div> <!-- /#sidebar-right-inner, /#sidebar-right -->
-					
-		</div></div> <!-- /#main-inner, /#main -->
-
-					<div id="footer"><div id="footer-inner" class="region region-footer">
-
-				
-				<div id="block-block-12" class="block block-block region-odd even region-count-1 count-4"><div class="block-inner">
-
-  
-  <div class="content">
-    <p><img src="/sites/default/files/footerlogo.jpg" alt="" height="93" width="427" /></p>
-  </div>
-
-  
-</div></div> <!-- /block-inner, /block -->
-<div id="block-block-13" class="block block-block region-even odd region-count-2 count-5"><div class="block-inner">
-
-  
-  <div class="content">
-    <p>University of Pittsburgh<br />Kenneth P. Dietrich School of <br />Arts and Sciences<br />Gender, Sexuality, and<br />Women's Studies Program<br />401 Cathedral of Learning<br />Pittsburgh, PA 15260</p>
-  </div>
-
-  
-</div></div> <!-- /block-inner, /block -->
-<div id="block-block-14" class="block block-block region-odd even region-count-3 count-6"><div class="block-inner">
-
-  
-  <div class="content">
-    <p>412-624-7232<br /><a href="mailto:gsws@pitt.edu" target="_self">gsws@pitt.edu</a></p>
-<ul>
-<li><a href="https://www.facebook.com/gswspitt"><img src="/sites/default/files/facebook.jpg" alt="" width="33" height="32" /></a></li>
-<li><a href="https://twitter.com/GSWSatPitt"><img src="/sites/default/files/twitter.jpg" alt="" width="33" height="32" /></a></li>
-<li><img src="/sites/default/files/rss.jpg" alt="" width="33" height="32" /></li>
-</ul>
-  </div>
-
-  
-</div></div> <!-- /block-inner, /block -->
-
-			</div></div> <!-- /#footer-inner, /#footer -->
-		
-	</div></div> <!-- /#page-inner, /#page -->
-	
+					</div> <!-- /#logo-title -->
+					<div id="header-blocks" class="region region-header">
+						<div id="block-block-10" class="block block-block region-odd odd region-count-1 count-3">
+							<div class="block-inner">
+								<div class="content">
+									<p><img src="/sites/default/files/header.jpg" alt="" height="256" width="960" /></p>
+								</div>
+							</div>
+						</div> <!-- /block-inner, /block -->
+					</div> <!-- /#header-blocks -->
+				</div>
+			</div> <!-- /#header-inner, /#header -->
+			<div id="main">
+				<div id="main-inner" class="clear-block with-navbar">
+					<div id="content">
+						<div id="content-inner">
+							<div id="content-header">
+								<strong class="section-title">Blog</strong>
+								<h1 class="title">The Logo Board Game</h1>
+							</div> <!-- /#content-header -->
+							<div id="content-area">
+								<div id="node-1031" class="node node-type-blog">
+									<div class="node-inner">
+										<div class="meta">
+											<div class="terms terms-inline"> in <ul class="links inline">
+													<li class="taxonomy_term_42 first"><a href="/category/blog-categories/advertising" rel="tag"
+															title="">advertising</a></li>
+													<li class="taxonomy_term_364"><a href="/category/blog-categories/board-games" rel="tag"
+															title="">Board Games</a></li>
+													<li class="taxonomy_term_366"><a href="/category/blog-categories/consumer-culture" rel="tag"
+															title="">Consumer Culture</a></li>
+													<li class="taxonomy_term_367"><a href="/category/blog-categories/logos" rel="tag"
+															title="">Logos</a></li>
+													<li class="taxonomy_term_365 last"><a href="/category/blog-categories/toys" rel="tag"
+															title="">Toys</a></li>
+												</ul>
+											</div>
+										</div>
+										<div class="content">
+											<p>I'm sure that many of my classmates can attest to the fact that participating in this class has
+												made even the most socially aware of us even more keen observers of the pervasiveness of
+												advertising in our popular culture. Last week while I was out running errands, I noticed a
+												rather interesting board game in the children's section of one of the stores.</p>
+											<p><img src="/sites/default/files/LogoBoardGame.jpg" alt="" width="600" height="600" /></p>
+											<p>&nbsp;</p>
+											<p><a href="http://www.youtube.com/watch?v=qnkwHoNwkC8"
+													title="http://www.youtube.com/watch?v=qnkwHoNwkC8">http://www.youtube.com/watch?v=qnkwHoNwkC8</a>
+											</p>
+											<p>The reviewer in this video claims, "The fun is as much about the social interaction it creates
+												as playing the game itself. You may be surprised to discover how many memories and experiences
+												you have around brands and advertising and how fun sharing those can be." This is a telling (and
+												depressing) statement, considering the themes of rampant consumer culture expressed in much of
+												the readings we've discussed, as well as the documentary <em>The Persuaders</em>. As Juliet
+												Schor explains in our current reading, <em>Born To Buy</em>, "Kids can recognize logos by
+												eighteen months, and before their second birthday they're asking for products by brand name...
+												The typical first grader can evoke 200 brands" &nbsp;(Schor 19). &nbsp;It is no wonder, then,
+												that board games which used to revolve around historical knowledge (Trivial Pursuit), strategy
+												(Chess), language skills (Scrabble) or just plain old fun (Candyland, Chutes and Ladders) are
+												giving way to games that incorporate not only popular culture (such as the recent incarnations
+												of Trivial Pursuit and the various editions of Scene It) but even the advertising itself.</p>
+											<p>Proving that we Americans are certainly not the only ones immersed in consumer culture, there
+												are even special versions of this game marketed to individuals in other countries, such as the
+												U.K. - <a href="http://www.youtube.com/watch?v=FmZWk5sQn9w"
+													title="http://www.youtube.com/watch?v=FmZWk5sQn9w">http://www.youtube.com/watch?v=FmZWk5sQn9w</a>
+												- and Australia - <a
+													href="http://www.youtube.com/watch?feature=endscreen&amp;v=eLFi6-mwcqE&amp;NR=1"
+													title="http://www.youtube.com/watch?feature=endscreen&amp;v=eLFi6-mwcqE&amp;NR=1">http://www.youtube.com/watch?feature=endscreen&amp;v=eLFi6-mwcqE&amp;NR=1</a>.
+												And here's an amusing American ad, for good measure - <a
+													href="http://www.youtube.com/watch?v=Bm7fvwkVMCg"
+													title="http://www.youtube.com/watch?v=Bm7fvwkVMCg">http://www.youtube.com/watch?v=Bm7fvwkVMCg</a>.
+											</p>
+											<p>-Nicole</p>
+										</div>
+										<ul class="links inline">
+											<li class="blog_usernames_blog first"><a href="/blog/ndc14"
+													title="Read ndc14&#039;s latest blog entries.">ndc14&#039;s blog</a></li>
+											<li class="comment_forbidden last"><span><a
+														href="/user/login?destination=node%2F1031%23comment-form">Login</a> to post comments</span>
+											</li>
+										</ul>
+									</div>
+								</div> <!-- /node-inner, /node -->
+							</div>
+						</div>
+					</div> <!-- /#content-inner, /#content -->
+					<div id="navbar">
+						<div id="navbar-inner" class="clear-block region region-navbar">
+							<a name="navigation" id="navigation"></a>
+							<div id="primary">
+								<ul class="links">
+									<li class="menu-282 first"><a href="/about" title="About">About</a></li>
+									<li class="menu-286"><a href="/research" title="Research Opportunities">Research</a></li>
+									<li class="menu-390"><a href="/students" title="Students">Students</a></li>
+									<li class="menu-1089"><a href="/faculty" title="Faculty">Faculty</a></li>
+									<li class="menu-1090"><a href="/alumniae-friends" title="Alumni &amp; Friends">Alumni/ae &amp;
+											Friends</a></li>
+									<li class="menu-489"><a href="/events">Events</a></li>
+									<li class="menu-3880"><a href="/News" title="News">News</a></li>
+									<li class="menu-316 last"><a href="/resources" title="Resources">Resources</a></li>
+								</ul>
+							</div> <!-- /#primary -->
+						</div>
+					</div> <!-- /#navbar-inner, /#navbar -->
+					<div id="sidebar-right">
+						<div id="sidebar-right-inner" class="region region-right">
+							<div id="block-block-16" class="block block-block region-odd odd region-count-1 count-1">
+								<div class="block-inner">
+									<div class="content">
+										<p><a class="sidebar-btn" href="/prospective-students">Prospective Students &gt;</a></p>
+									</div>
+								</div>
+							</div> <!-- /block-inner, /block -->
+							<div id="block-block-2" class="block block-block region-even even region-count-2 count-2">
+								<div class="block-inner">
+									<div class="content">
+										<p><a href="alumni-friends/support-womens-studies" target="_self">Support<br />GSWS &gt;</a></p>
+									</div>
+								</div>
+							</div> <!-- /block-inner, /block -->
+						</div>
+					</div> <!-- /#sidebar-right-inner, /#sidebar-right -->
+				</div>
+			</div> <!-- /#main-inner, /#main -->
+			<div id="footer">
+				<div id="footer-inner" class="region region-footer">
+					<div id="block-block-12" class="block block-block region-odd even region-count-1 count-4">
+						<div class="block-inner">
+							<div class="content">
+								<p><img src="/sites/default/files/footerlogo.jpg" alt="" height="93" width="427" /></p>
+							</div>
+						</div>
+					</div> <!-- /block-inner, /block -->
+					<div id="block-block-13" class="block block-block region-even odd region-count-2 count-5">
+						<div class="block-inner">
+							<div class="content">
+								<p>University of Pittsburgh<br />Kenneth P. Dietrich School of <br />Arts and Sciences<br />Gender,
+									Sexuality, and<br />Women's Studies Program<br />401 Cathedral of Learning<br />Pittsburgh, PA 15260
+								</p>
+							</div>
+						</div>
+					</div> <!-- /block-inner, /block -->
+					<div id="block-block-14" class="block block-block region-odd even region-count-3 count-6">
+						<div class="block-inner">
+							<div class="content">
+								<p>412-624-7232<br /><a href="mailto:gsws@pitt.edu" target="_self">gsws@pitt.edu</a></p>
+								<ul>
+									<li><a href="https://www.facebook.com/gswspitt"><img src="/sites/default/files/facebook.jpg" alt=""
+												width="33" height="32" /></a></li>
+									<li><a href="https://twitter.com/GSWSatPitt"><img src="/sites/default/files/twitter.jpg" alt=""
+												width="33" height="32" /></a></li>
+									<li><img src="/sites/default/files/rss.jpg" alt="" width="33" height="32" /></li>
+								</ul>
+							</div>
+						</div>
+					</div> <!-- /block-inner, /block -->
+				</div>
+			</div> <!-- /#footer-inner, /#footer -->
+		</div>
+	</div> <!-- /#page-inner, /#page -->
 	<div id="closure">
-			<p class="left">Copyright 2014 | Site by <a href="http://www.umc.pitt.edu/web" id="umcwt"><abbr title="University Marketing Communications">Communications Services</abbr></a></p>
+		<p class="left">Copyright 2014 | Site by <a href="http://www.umc.pitt.edu/web" id="umcwt"><abbr
+					title="University Marketing Communications">Communications Services</abbr></a></p>
 	</div>
-	
 	<script type="text/javascript" src="/sites/default/files/js/js_69a63f204e89720431bd8689c3a1e65b.js"></script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-jQuery.extend(Drupal.settings, { "googleCSE": { "language": "en" } });
+	<script type="text/javascript">
+< !--//--><![CDATA[//><!--
+			jQuery.extend(Drupal.settings, { "googleCSE": { "language": "en" } });
 //--><!]]>
-</script>
-<script type="text/javascript">
-<!--//--><![CDATA[//><!--
-var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-15584083-1"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+	</script>
+	<script type="text/javascript">
+< !--//--><![CDATA[//><!--
+var _gaq = _gaq || []; _gaq.push(["_setAccount", "UA-15584083-1"]); _gaq.push(["_trackPageview"]); (function () { var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true; ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s); })();
 //--><!]]>
-</script>
-	
-
-
+	</script>
 </body>
+
 </html>

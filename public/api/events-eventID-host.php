@@ -45,8 +45,7 @@ if (!isset($_SESSION['userID'])) {
         "playerCount" => $row["playerCount"],
         "playerLimit" => $row["playerLimit"],
         "playerName" => $row['playerName'],
-        "location" => $row["location"],
-        "hosting" => true
+        "location" => $row["location"]
       ];
       $event['location'] = [
         "streetAddress" => $row["streetAddress"],
