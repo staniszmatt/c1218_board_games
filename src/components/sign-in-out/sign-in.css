@@ -1,3 +1,9 @@
 .sign-in-button {
   WIDTH: 100%;
 }
+
+p.red-text {
+  font-size: 20px;
+  background-color: rgba(217, 225, 232, 0.750);
+  margin: 5px;
+}

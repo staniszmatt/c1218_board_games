@@ -1,6 +1,10 @@
 form {
   padding-top: 20px;
   margin-bottom: 10px;
+  margin: 10px 10px;
+}
+input.form-field {
+  margin: auto;
 }
 
 input[type=text]:not(.browser-default),
@@ -11,7 +15,6 @@ input[type=number]:not(.browser-default) {
   font-size: 20px;
   text-align: center;
   background-color: rgba(217, 225, 232, 0.750);
-  margin: 5px;
 }
 label {
   background-color: rgba(217, 225, 232, 0.750);

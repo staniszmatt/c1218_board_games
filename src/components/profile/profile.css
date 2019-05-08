@@ -12,6 +12,19 @@
   background-color: #2B90D9;
 }
 
+div>a.nav-link {
+  padding: unset;
+}
+
+div>a.btn:hover {
+  background-color: rgb(22, 134, 214);
+}
+
+div>a.btn:active {
+  background-color: rgb(22, 134, 214);
+  transform: scale(0.98);
+}
+
 .content-container {
   margin-top: 50px;
   overflow: auto;

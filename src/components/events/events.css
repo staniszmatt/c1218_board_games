@@ -27,17 +27,12 @@ p.events-date-time {
 }
 
 .events-list-button:hover {
-  background-color: #2bbbad;
+  background-color: rgba(217, 225, 232);
 }
 
 
 .events-info-container>p {
   display: block;
-}
-
-
-.events-list-button:hover {
-  background-color: #2bbbad;
 }
 
 .header-events-container>h1 {
