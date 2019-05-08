@@ -73,7 +73,7 @@ class JoinedEventDetails extends Component {
               </div>
             </div>
             <div className="numberOfPlayers event-host">
-              <div className="full-game-container red">
+              <div className="full-game-container">
                 <h4>Game Is Full!</h4>
               </div>
             </div>

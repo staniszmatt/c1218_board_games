@@ -3,7 +3,7 @@ p.red-text {
   background-color: rgba(217, 225, 232, 0.750);
   margin: auto;
   margin-bottom: 5px;
-  width: 90%;
+  width: 90vw;
 }
 
 @media only screen and (min-width: 1020px) {

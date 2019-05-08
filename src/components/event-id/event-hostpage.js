@@ -84,9 +84,10 @@ class EventHostPage extends Component {
               </div>
             </div>
             <div className="numberOfPlayers event-host">
-              <div className="full-game-container red">
+              <div className="full-game-container">
                 <h4>Game Is Full!</h4>
               </div>
+              <a onClick={this.props.history.goBack} className="back-btn">Back</a>
             </div>
             <div className="center">
               <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="back-btn">Edit Game</Link>
