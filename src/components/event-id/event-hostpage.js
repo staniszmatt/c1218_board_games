@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './event-id.css';
+import '../../assets/css/back-button.css';
+import '../../assets/css/back-button.css';
 import timeTo12Hours from '../../helper/timeTo12Hours';
 
 class EventHostPage extends Component {
@@ -89,7 +91,7 @@ class EventHostPage extends Component {
             </div>
             <div className="center joinButton green lighten-4">
               <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="nav-link">Edit Game</Link>
-              <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+              <a onClick={this.props.history.goBack} className="back-btn blue">Back</a>
             </div>
           </div>
         </div>
@@ -131,8 +133,8 @@ class EventHostPage extends Component {
               {numberOfPlayers} Players out of {hostEventId.playerLimit} have joined
             </Link>
           </div>
-          <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="blue event-bottom-button">Edit Game</Link>
-          <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+          <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="blue back-btn">Edit Game</Link>
+          <a onClick={this.props.history.goBack} className="back-btn blue">Back</a>
         </div>
       </div>
     );

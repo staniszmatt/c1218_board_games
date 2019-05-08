@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './player-list.css';
+import '../../assets/css/back-button.css';
 import timeTo12Hours from '../../helper/timeTo12Hours';
 
 class PlayerList extends Component {
@@ -93,7 +94,7 @@ class PlayerList extends Component {
                   </tbody>
                 </table>
               </div>
-              <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+              <a onClick={this.props.history.goBack} className="back-btn blue">Back</a>
             </div>
           </div>
         );

@@ -55,9 +55,6 @@ label{
   box-shadow: 2px 2px rgba(255, 255, 255, 0.2);
 }
 
-.sign-out-btn:hover, .home-btn:hover, .sign-up-btn:hover, .sign-in-btn:hover, .profile-btn:hover, .event-btn:hover {
-  transform: scale(0.5);
-}
 @media only screen and (min-width: 1020px) {
   footer {
     height: 60px;

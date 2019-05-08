@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './events.css';
+import '../../assets/css/back-button.css';
 import EventRowMyEvents from './events-row-myevents';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -72,7 +73,7 @@ class MyEvents extends Component {
         </div>
         <div className="content-container">
           {eventRow}
-          <button onClick={this.onBackButtonEvent} className="btn blue darken edit-event-button">Back</button>
+          <button onClick={this.onBackButtonEvent} className="back-btn blue">Back</button>
         </div>
       </div>
     );

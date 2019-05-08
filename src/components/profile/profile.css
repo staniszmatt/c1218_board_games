@@ -7,7 +7,7 @@
   margin: 10px 10px;
 }
 
-.profile-button-container>div>a {
+.profile-button-container>div>a.profile-btn {
   width: 100%;
   background-color: #2B90D9;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import timeTo12Hours from '../../helper/timeTo12Hours';
 import { Link } from 'react-router-dom';
 import './event-id.css';
+import '../../assets/css/back-button.css';
 import axios from 'axios';
 
 class EventSelected extends Component {
@@ -132,8 +133,8 @@ class EventSelected extends Component {
                 <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
               </Link>
             </div>
-            <Link className="blue event-bottom-button" onClick={this.sendUserData} to={'/events/' + eventId.eventID + '/player-list'}>Join Game</Link>
-            <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+            <Link className="blue back-btn" onClick={this.sendUserData} to={'/events/' + eventId.eventID + '/player-list'}>Join Game</Link>
+            <a onClick={this.props.history.goBack} className="back-btn blue">Back</a>
           </div>
         </div>
       );

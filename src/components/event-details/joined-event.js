@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../event-id/event-id.css';
+import '../../assets/css/back-button.css';
 import axios from 'axios';
 
 class JoinedEventDetails extends Component {
@@ -77,7 +78,7 @@ class JoinedEventDetails extends Component {
               </div>
             </div>
             <div className="center back">
-              <button className="blue event-bottom-button" onClick={this.sendUserData}>Leave Game</button>
+              <button className="back-btn blue" onClick={this.sendUserData}>Leave Game</button>
             </div>
           </div>
         </div>
@@ -116,8 +117,8 @@ class JoinedEventDetails extends Component {
             </Link>
           </div>
           <div className="center back">
-            <Link className="blue event-bottom-button" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
-            <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+            <Link className="back-btn blue" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
+            <a onClick={this.props.history.goBack} className="back-btn blue">Back</a>
           </div>
         </div>
       </div>

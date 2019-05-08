@@ -12,6 +12,14 @@ h4 {
   font-size: 22px;
 }
 
+.event-players-joined-container:hover {
+  background-color: rgba(217, 225, 232, 1);
+}
+
+.event-players-joined-container:active {
+  transform: scale(0.95);
+}
+
 div.back {
   margin: 10px;
 }
