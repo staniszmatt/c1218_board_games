@@ -4,6 +4,10 @@ h1 {
   background-color: #282C37;
 }
 
+div.about-content-container {
+  margin-top: 50px;
+}
+
 .about-author-container {
   margin-bottom: 1%;
   text-align: center;
@@ -54,7 +58,7 @@ h1 {
 
   .about-content-container {
     display: flex;
-    margin-top: 5vh;
+    margin-top: 50px;
   }
 
   .about-author-container {
