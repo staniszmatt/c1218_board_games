@@ -8,8 +8,9 @@ footer {
 }
 
 a.nav-link {
-  font-size: 12px;
+  font-size: 15px;
   padding: unset;
+  padding: 10px 15px;
 }
 
 .nav {
@@ -23,22 +24,18 @@ a.nav-link {
 }
 
 ul>li>a {
-  -webkit-text-stroke: 1px white;
-  font-size: 18px;
-        font-family: -apple-system,
-        sans-serif;
   cursor: pointer;
   text-align: center;
   color: black;
-  background-color: #9BAEC8;
-  border-radius: 5px;
-  box-shadow: 3px 3px #D9E1E8;
-  width: 23vw; 
 }
 
 ul>li>a:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+  box-shadow: 1px 1px rgba(255, 255, 255, 0.2);
+  padding: 9px 13px;
+  margin: 1px 2px;
+}
+ul>li>a:hover {
+  background-color: rgb(22, 134, 214);
 }
 
 label{
@@ -54,7 +51,8 @@ label{
   color: white;
   text-align: center;
   border: 1px solid black;
-  box-shadow: 3px 3px rgb(204, 204, 204);
+  border-radius: 5px;
+  box-shadow: 2px 2px rgba(255, 255, 255, 0.2);
 }
 
 @media only screen and (min-width: 1020px) {

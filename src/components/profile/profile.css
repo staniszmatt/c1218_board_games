@@ -7,9 +7,22 @@
   margin: 10px 10px;
 }
 
-.profile-button-container>div>a {
+.profile-button-container>div>a.profile-btn {
   width: 100%;
   background-color: #2B90D9;
+}
+
+div>a.nav-link {
+  padding: unset;
+}
+
+div>a.btn:hover {
+  background-color: rgb(22, 134, 214);
+}
+
+div>a.btn:active {
+  background-color: rgb(22, 134, 214);
+  transform: scale(0.98);
 }
 
 .content-container {

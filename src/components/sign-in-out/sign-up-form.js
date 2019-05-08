@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import Input from '../general/forms/input';
-import './sign-up.css';
+import '../../assets/css/forms.css';
 
 const CreateSignUpForm = props => {
   const { handleSubmit, onSubmit } = props;
@@ -44,7 +44,7 @@ const CreateSignUpForm = props => {
         <Field name="confirmPassword" component={Input} label="Confirm your password" type="password" />
       </div>
       <div className="col s6 center">
-        <button className="btn blue darken sign-up-button">Sign Up</button>
+        <button className="back-btn">Sign Up</button>
       </div>
     </form>
   );

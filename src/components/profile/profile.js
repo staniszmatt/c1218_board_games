@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './profile.css';
+import '../../assets/css/back-button.css';
 import axios from 'axios';
 
 class Profile extends Component {
@@ -24,7 +25,7 @@ class Profile extends Component {
     if (this.state.userProfile === null) {
       return (
         <div className="loading-screen-container">
-          <div className='center loading-screen-text'>Page Is Loading...</div>
+          <div className='center loading-screen-text'></div>
           <div className="preloader-wrapper big active test">
             <div className="spinner-layer spinner-blue-only">
               <div className="circle-clipper left">
@@ -51,19 +52,19 @@ class Profile extends Component {
           </div>
           <div className="profile-button-container center">
             <div>
-              <Link to="/new-event" className="btn nav-link create-event-btn">Create Event</Link>
+              <Link to="/new-event" className="btn nav-link profile-btn">Create Event</Link>
             </div>
             <div>
-              <Link to="/events" className="btn nav-link available-events-btn">View Available Events</Link>
+              <Link to="/events" className="btn nav-link profile-btn">View Available Events</Link>
             </div>
             <div>
-              <Link to="/events/host" className="btn nav-link my-hosted-events-btn">My Hosted Events</Link>
+              <Link to="/events/host" className="btn nav-link profile-btn">My Hosted Events</Link>
             </div>
             <div>
-              <Link to="/events/myevents" className="btn nav-link my-joined-events-btn">My Joined Events</Link>
+              <Link to="/events/myevents" className="btn nav-link profile-btn">My Joined Events</Link>
             </div>
             <div>
-              <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+              <a onClick={this.props.history.goBack} className="back-btn">Back</a>
             </div>
           </div>
         </div>
