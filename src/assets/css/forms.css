@@ -30,6 +30,7 @@ input[type=date]:not(.browser-default),
 input[type=time]:not(.browser-default),
 input[type=number]:not(.browser-default) {
   font-size: 20px;
+  width: 90vw;
   text-align: center;
   background-color: rgba(217, 225, 232, 0.750);
 }
@@ -50,6 +51,7 @@ label.form-label {
   font-size: 20px;
   background-color: rgba(217, 225, 232);
   border-radius: 5px;
+  border: none;
   padding: 4px;
 }
 button.sign-in-button,

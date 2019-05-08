@@ -1,5 +1,7 @@
 p.red-text {
   font-size: 20px;
   background-color: rgba(217, 225, 232, 0.750);
-  margin: 5px;
+  margin: auto;
+  margin-bottom: 5px;
+  width: 90%;
 }
