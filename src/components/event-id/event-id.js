@@ -36,7 +36,7 @@ class EventSelected extends Component {
     if (eventId === null) {
       return (
         <div className="loading-screen-container">
-          <div className='center loading-screen-text'>Page Is Loading...</div>
+          <div className='center loading-screen-text'></div>
           <div className="preloader-wrapper big active test">
             <div className="spinner-layer spinner-blue-only">
               <div className="circle-clipper left">
@@ -133,8 +133,8 @@ class EventSelected extends Component {
                 <div> {numberOfPlayers} Players out of {eventId.playerLimit} have joined </div>
               </Link>
             </div>
-            <Link className="blue back-btn" onClick={this.sendUserData} to={'/events/' + eventId.eventID + '/player-list'}>Join Game</Link>
-            <a onClick={this.props.history.goBack} className="back-btn blue">Back</a>
+            <Link className="back-btn" onClick={this.sendUserData} to={'/events/' + eventId.eventID + '/player-list'}>Join Game</Link>
+            <a onClick={this.props.history.goBack} className="back-btn">Back</a>
           </div>
         </div>
       );

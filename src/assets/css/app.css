@@ -105,3 +105,7 @@ body {
 .input-field {
   text-align: left;
 }
+
+.circle-clipper .circle {
+  border-width: 8px;
+}

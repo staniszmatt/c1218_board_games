@@ -27,8 +27,8 @@ const CreateEventForm = props => {
         <Field label="Player Limit " component={Input} name="playerLimit" type="text" />
       </div>
       <div className="col s6 center">
-        <button className="btn blue darken edit-event-button">Create Event</button>
-        <button onClick={onBackButtonEvent} className="back-btn blue">Back</button>
+        <button className="back-btn">Create Event</button>
+        <button onClick={onBackButtonEvent} className="back-btn">Back</button>
       </div>
     </form>
   );

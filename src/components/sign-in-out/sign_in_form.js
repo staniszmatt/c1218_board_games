@@ -1,8 +1,9 @@
 import React from 'react';
+import './sign-in.css';
+import '../../assets/css/back-button.css';
 import { Field, reduxForm } from 'redux-form';
 import Input from '../general/forms/input';
 import { Link } from 'react-router-dom';
-import './sign-in.css';
 
 const SignInForm = props => {
   const { handleSubmit, onSubmit } = props;
@@ -16,7 +17,7 @@ const SignInForm = props => {
       </div>
       <div className="sign-btn-container">
         <div className="col s12 center sign-btn-container">
-          <button className="btn blue lighten-1 sign-in-button">Sign In</button>
+          <button className="back-btn">Sign In</button>
         </div>
       </div>
     </form>

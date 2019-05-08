@@ -27,7 +27,7 @@ class JoinedEventDetails extends Component {
     if (eventId === null) {
       return (
         <div className="loading-screen-container">
-          <div className='center loading-screen-text'>Page Is Loading...</div>
+          <div className='center loading-screen-text'></div>
           <div className="preloader-wrapper big active test">
             <div className="spinner-layer spinner-blue-only">
               <div className="circle-clipper left">
@@ -78,7 +78,7 @@ class JoinedEventDetails extends Component {
               </div>
             </div>
             <div className="center back">
-              <button className="back-btn blue" onClick={this.sendUserData}>Leave Game</button>
+              <button className="back-btn" onClick={this.sendUserData}>Leave Game</button>
             </div>
           </div>
         </div>
@@ -117,8 +117,8 @@ class JoinedEventDetails extends Component {
             </Link>
           </div>
           <div className="center back">
-            <Link className="back-btn blue" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
-            <a onClick={this.props.history.goBack} className="back-btn blue">Back</a>
+            <Link className="back-btn" onClick={this.sendUserData} to={"profile"}>Leave Game</Link>
+            <a onClick={this.props.history.goBack} className="back-btn">Back</a>
           </div>
         </div>
       </div>
