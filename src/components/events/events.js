@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './events.css';
+import '../../assets/css/back-button.css';
 import EventRow from './events-row';
 import axios from 'axios';
 import { debug } from 'util';
@@ -31,7 +32,7 @@ class Events extends Component {
     if (isLoading) {
       return (
         <div className="loading-screen-container">
-          <div className='center loading-screen-text'>Page Is Loading...</div>
+          <div className='center loading-screen-text'></div>
           <div className="preloader-wrapper big active test">
             <div className="spinner-layer spinner-blue-only">
               <div className="circle-clipper left">
@@ -71,7 +72,7 @@ class Events extends Component {
         </div>
         <div className="content-container">
           {eventRow}
-          <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+          <a onClick={this.props.history.goBack} className="back-btn">Back</a>
         </div>
       </div>
     );

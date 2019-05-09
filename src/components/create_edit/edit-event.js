@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './edit-event.css';
+import '../../assets/css/back-button.css';
+import '../../assets/css/forms.css';
 import axios from 'axios';
 
 class EditEvent extends Component {
@@ -69,43 +70,44 @@ class EditEvent extends Component {
         <div className="content-container ">
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label htmlFor="gameTitle">Game Title</label>
+            <label className="form-label" htmlFor="gameTitle">Game Title</label>
             <input onChange={this.handleKeyPress} name="gameTitle" type="text" id="gameTitle" value={gameTitle} className="form-control" />
           </div>
           <div className="form-group">
-            <label htmlFor="streetAddress">Street Address</label>
+            <label className="form-label" htmlFor="streetAddress">Street Address</label>
             <input onChange={this.handleKeyPress} name="streetAddress" type="text" id="streetAddress" value={streetAddress} className="form-control" />
           </div>
           <div className="form-group">
-            <label htmlFor="city">City</label>
+            <label className="form-label"  htmlFor="city">City</label>
             <input onChange={this.handleKeyPress} name="city" type="text" id="city" value={city} className="form-control" />
           </div>
           <div className="form-group">
-            <label htmlFor="state">State</label>
+            <label className="form-label" htmlFor="state">State</label>
             <input onChange={this.handleKeyPress} name="state" type="text" id="state" value={state} className="form-control" />
           </div>
           <div className="form-group">
-            <label htmlFor="zipcode">Zip Code</label>
+            <label className="form-label" htmlFor="zipcode">Zip Code</label>
             <input onChange={this.handleKeyPress} name="zipcode" type="text" id="zipcode" value={zipcode} className="form-control" />
           </div>
           <div className="form-group">
-            <label htmlFor="date">Date</label>
+            <label className="form-label" htmlFor="date">Date</label>
             <input onChange={this.handleKeyPress} name="date" type="date" id="text" value={date} className="form-control" />
           </div>
           <div className="form-group">
-            <label htmlFor="startTime">Start Time</label>
+            <label className="form-label" htmlFor="startTime">Start Time</label>
             <input onChange={this.handleKeyPress} name="startTime" type="time" id="startTime" value={startTime} className="form-control" />
           </div>
           <div className="form-group">
-            <label htmlFor="endTime">End Time</label>
+            <label className="form-label" htmlFor="endTime">End Time</label>
             <input onChange={this.handleKeyPress} name="endTime" type="time" id="endTime" value={endTime} className="form-control" />
           </div>
           <div className="form-group">
-            <label htmlFor="">Player Limit</label>
+            <label className="form-label" htmlFor="">Player Limit</label>
             <input onChange={this.handleKeyPress} name="playerLimit" type="number" id="playerLimit" value={playerLimit} className="form-control" />
           </div>
           <div>
-            <button className="btn blue text-center edit-event-button">SUBMIT CHANGES</button>
+            <button className="back-btn">SUBMIT CHANGES</button>
+            <button onClick={this.onBackButtonEvent} className="back-btn">Back</button>
           </div>
         </form>
       </div>

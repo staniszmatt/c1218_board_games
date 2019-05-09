@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './event-id.css';
+import '../../assets/css/back-button.css';
 import timeTo12Hours from '../../helper/timeTo12Hours';
 
 class EventHostPage extends Component {
@@ -34,7 +35,7 @@ class EventHostPage extends Component {
     if (hostEventId === null) {
       return (
         <div className="loading-screen-container">
-          <div className='center loading-screen-text'>Page Is Loading...</div>
+          <div className='center loading-screen-text'></div>
           <div className="preloader-wrapper big active test">
             <div className="spinner-layer spinner-blue-only">
               <div className="circle-clipper left">
@@ -83,13 +84,14 @@ class EventHostPage extends Component {
               </div>
             </div>
             <div className="numberOfPlayers event-host">
-              <div className="full-game-container red">
+              <div className="full-game-container">
                 <h4>Game Is Full!</h4>
               </div>
+              <a onClick={this.props.history.goBack} className="back-btn">Back</a>
             </div>
-            <div className="center joinButton green lighten-4">
-              <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="nav-link">Edit Game</Link>
-              <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+            <div className="center">
+              <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="back-btn">Edit Game</Link>
+              <a onClick={this.props.history.goBack} className="back-btn">Back</a>
             </div>
           </div>
         </div>
@@ -131,8 +133,8 @@ class EventHostPage extends Component {
               {numberOfPlayers} Players out of {hostEventId.playerLimit} have joined
             </Link>
           </div>
-          <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="blue event-bottom-button">Edit Game</Link>
-          <a onClick={this.props.history.goBack} className="blue event-bottom-button player-list-back-btn">Back</a>
+          <Link to={'/events/' + hostEventId.eventID + '/edit'} params={{ hosting: true }} className="back-btn">Edit Game</Link>
+          <a onClick={this.props.history.goBack} className="back-btn">Back</a>
         </div>
       </div>
     );

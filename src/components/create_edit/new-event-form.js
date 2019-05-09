@@ -2,6 +2,7 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { Link } from 'react-router-dom';
 import { browserHistory } from 'react-router';
+import '../../assets/css/back-button.css';
 import Input from '../general/forms/input';
 
 const CreateEventForm = props => {
@@ -26,8 +27,8 @@ const CreateEventForm = props => {
         <Field label="Player Limit " component={Input} name="playerLimit" type="text" />
       </div>
       <div className="col s6 center">
-        <button className="btn blue darken edit-event-button">Create Event</button>
-        <button onClick={onBackButtonEvent} className="btn blue darken edit-event-button">Back</button>
+        <button className="back-btn">Create Event</button>
+        <button onClick={onBackButtonEvent} className="back-btn">Back</button>
       </div>
     </form>
   );

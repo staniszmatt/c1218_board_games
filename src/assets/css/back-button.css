@@ -1,0 +1,40 @@
+a.back-btn,
+button.back-btn {
+  display: inline-flex;
+  margin: 5px;
+  color: white; 
+  font-size: 18px; 
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 15px;
+  box-shadow: 2px 2px rgba(1, 2, 58, 0.746);
+  background-color: #2196F3;
+  border-color: #2196F3;
+}
+
+a.back-btn:hover,
+button.back-btn:hover {
+  background-color: rgb(22, 134, 214);
+}
+
+a.back-btn:active,
+button.back-btn:active {
+  padding: 4px 14px;
+  background-color: rgb(14, 124, 202);
+  box-shadow: 1px 1px rgba(1, 2, 58, 0.746);
+  margin: 6px;
+}
+
+@media only screen and (min-width: 1020px){
+  a.back-btn,
+  button.back-btn {
+    font-size: 22px; 
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  a.back-btn,
+  button.back-btn {
+    font-size: 25px;
+  }
+}

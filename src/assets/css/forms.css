@@ -1,6 +1,27 @@
 form {
   padding-top: 20px;
   margin-bottom: 10px;
+  margin: 10px 10px;
+}
+input.form-field {
+  margin: auto;
+}
+
+input:not([type]), 
+input[type=text]:not(.browser-default), 
+input[type=password]:not(.browser-default), 
+input[type=email]:not(.browser-default), 
+input[type=url]:not(.browser-default), 
+input[type=time]:not(.browser-default), 
+input[type=date]:not(.browser-default), 
+input[type=datetime]:not(.browser-default), 
+input[type=datetime-local]:not(.browser-default), 
+input[type=tel]:not(.browser-default), 
+input[type=number]:not(.browser-default), 
+input[type=search]:not(.browser-default), 
+textarea.materialize-textarea {
+  margin: 5px;
+  background-color: rgba(217, 225, 232, 0.750);
 }
 
 input[type=text]:not(.browser-default),
@@ -9,9 +30,9 @@ input[type=date]:not(.browser-default),
 input[type=time]:not(.browser-default),
 input[type=number]:not(.browser-default) {
   font-size: 20px;
+  width: 90vw;
   text-align: center;
   background-color: rgba(217, 225, 232, 0.750);
-  margin: 5px;
 }
 label {
   background-color: rgba(217, 225, 232, 0.750);
@@ -30,12 +51,20 @@ label.form-label {
   font-size: 20px;
   background-color: rgba(217, 225, 232);
   border-radius: 5px;
+  border: none;
   padding: 4px;
 }
 button.sign-in-button,
 button.edit-event-button {
   width: unset;
   margin: 5px;
+}
+
+@media only screen and (min-width: 700px) {
+  .form-group {
+    width: 95vw;
+    margin: auto;
+  }
 }
 
 @media only screen and (min-width: 1020px){

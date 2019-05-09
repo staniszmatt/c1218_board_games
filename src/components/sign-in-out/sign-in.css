@@ -1,3 +1,13 @@
-.sign-in-button {
-  WIDTH: 100%;
+p.red-text {
+  font-size: 20px;
+  background-color: rgba(217, 225, 232, 0.750);
+  margin: auto;
+  margin-bottom: 5px;
+  width: 90vw;
+}
+
+@media only screen and (min-width: 1020px) {
+  p.red-text {
+    width: 50%;
+  }
 }
