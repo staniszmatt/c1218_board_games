@@ -63,9 +63,4 @@ div>a.btn:active {
     width: unset;
     font-size: 30px;
   }
-
-  .content-container {
-    font-size: 40px;
-    margin: 20vh 30vw;
-  }
 }

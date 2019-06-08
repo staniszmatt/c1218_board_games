@@ -56,18 +56,15 @@ p.events-date-time {
 }
 
 @media only screen and (min-width: 1020px) {
-  .events-container {
+  .no-available-events {
     margin: 15px 200px;
   }
 }
 
 @media only screen and (min-width: 1400px) {
-  .content-container {
+  .no-available-events {
     padding-bottom: unset;
     padding-top: 100px;
-  }
-
-  .events-container {
     margin: 15px 200px;
   }
 

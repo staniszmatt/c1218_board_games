@@ -87,7 +87,9 @@ label{
 
 @media only screen and (min-width: 1400px){
   footer {
-    top: 40px;
+    top: 0;
+    width: 425px;
+    height: 80px;
   }
   a.nav-link {
     font-size: 20px;
@@ -98,5 +100,9 @@ label{
   }
   .nav {
     width: 35%;
+  }
+  ul:not(.browser-default) {
+    width: 425px;
+    height: 80px;
   }
 }
