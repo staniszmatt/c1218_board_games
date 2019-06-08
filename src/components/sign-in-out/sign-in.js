@@ -13,7 +13,7 @@ class SignIn extends Component {
         </div>
         <div className="content-container ">
           <SignInForm onSubmit={this.props.signIn} />
-          <p>{this.props.error}</p>
+          <p className="sign-in-error" >{this.props.error}</p>
         </div>
       </div>
     );

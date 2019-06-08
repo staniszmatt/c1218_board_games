@@ -6,8 +6,21 @@ p.red-text {
   width: 90vw;
 }
 
+p.sign-in-error {
+  font-size: 25px;
+  background-color: rgba(217, 225, 232, 0.750);
+  color: red;
+  margin: 0 5%;
+}
+
 @media only screen and (min-width: 1020px) {
   p.red-text {
     width: 50%;
+  }
+
+  .content-container p {
+    font-size: 30px;
+    width: 50%;
+    margin: auto;
   }
 }
