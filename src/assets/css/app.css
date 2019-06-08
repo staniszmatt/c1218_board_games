@@ -109,3 +109,23 @@ body {
 .circle-clipper .circle {
   border-width: 8px;
 }
+
+@media only screen and (min-width: 760px) and (min-height: 1024px){
+  .header-container {
+    height: 80px;
+  }
+
+  .header-container>h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 1020px) {
+  .header-container {
+    height: 80px;
+  }
+
+  .header-container>h1 {
+    font-size: 40px;
+  }
+}

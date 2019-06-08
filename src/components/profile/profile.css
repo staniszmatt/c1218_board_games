@@ -13,22 +13,30 @@
 }
 
 div>a.nav-link {
-  padding: unset;
+  padding: 0 10px;
+  box-shadow: 2px 2px rgba(255, 255, 255, 0.5);
 }
 
 div>a.btn:hover {
   background-color: rgb(22, 134, 214);
+  box-shadow: 2px 2px rgba(255, 255, 255, 0.5);
 }
 
 div>a.btn:active {
   background-color: rgb(22, 134, 214);
+  box-shadow: 2px 2px rgba(255, 255, 255, 0.5);
   transform: scale(0.98);
 }
 
 .content-container {
-  margin-top: 50px;
+  margin: 18vh 10%;
   overflow: auto;
-  margin-bottom: 70px;
+  font-size: 20px;
+  background-color: rgba(217, 225, 232, 0.8);
+  color: red;
+  font-weight: 900;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 
@@ -38,6 +46,10 @@ div>a.btn:active {
   .profile-button-container>div {
     margin: 15px 200px;
   }
+
+  .content-container {
+    font-size: 28px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -45,5 +57,15 @@ div>a.btn:active {
   .profile-name-container,
   .profile-button-container>div {
     margin: 15px 400px;
+  }
+
+  a.btn.nav-link.available-events-btn {
+    width: unset;
+    font-size: 30px;
+  }
+
+  .content-container {
+    font-size: 40px;
+    margin: 20vh 30vw;
   }
 }
