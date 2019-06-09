@@ -30,7 +30,7 @@ input[type=date]:not(.browser-default),
 input[type=time]:not(.browser-default),
 input[type=number]:not(.browser-default) {
   font-size: 20px;
-  width: 90vw;
+  width: 90%;
   text-align: center;
   background-color: rgba(217, 225, 232, 0.750);
 }
@@ -62,8 +62,27 @@ button.edit-event-button {
 
 @media only screen and (min-width: 700px) {
   .form-group {
-    width: 95vw;
+    width: 95%;
     margin: auto;
+  }
+}
+
+@media only screen and (min-width: 800px) and (min-height: 600px) {
+  .content-container {
+    margin: 10vh 12vh 14vh 12vh;
+  }
+
+  label.form-label {
+    font-size: 16px;
+  }
+
+  input[type=text]:not(.browser-default),
+  input[type=password]:not(.browser-default),
+  input[type=date]:not(.browser-default),
+  input[type=time]:not(.browser-default),
+  input[type=number]:not(.browser-default) {
+    font-size: 16px;
+    width: 90%;
   }
 }
 
@@ -82,5 +101,24 @@ button.edit-event-button {
   button.sign-in-button,
   button.edit-event-button {
     font-size: 24px;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .content-container {
+      margin: 100px 20vw 40px 20vw;
+    }
+
+    label.form-label {
+      font-size: 22px;
+    }
+
+    input[type=text]:not(.browser-default),
+    input[type=password]:not(.browser-default),
+    input[type=date]:not(.browser-default),
+    input[type=time]:not(.browser-default),
+    input[type=number]:not(.browser-default) {
+      width: 70%;
+      font-size: 22px;
+    }
   }
 }
