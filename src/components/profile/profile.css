@@ -56,11 +56,15 @@ div>a.btn:active {
 
   .profile-name-container,
   .profile-button-container>div {
-    margin: 15px 400px;
+    margin: 15px 5%;
   }
 
   a.btn.nav-link.available-events-btn {
     width: unset;
     font-size: 30px;
+  }
+
+  .profile-button-container>div>a.profile-btn {
+    font-size: 26px;
   }
 }

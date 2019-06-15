@@ -101,6 +101,9 @@ function validate(values) {
   if (password && password.length > 20) {
     errors.password = 'Password must be less than 30 characters';
   }
+  if (password && password.length < 6) {
+    errors.password = "Password must be 6 characters or more"
+  }
   if (password !== confirmPassword) {
     errors.confirmPassword = 'Please make sure both password fields match!';
   }
